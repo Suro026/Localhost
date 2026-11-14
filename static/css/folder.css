@@ -321,7 +321,7 @@
 .ftp-rv{opacity:1;transform:none}
 }
 
-/* ---- LocalHost: Violet Dusk (light) palette, scoped to the landing page ---- */
+/* ---- Keystone: Violet Dusk (light) palette, scoped to the landing page ---- */
 .ftp-root{
   --ftp-bg:#f8fafc;--ftp-sheet:#ffffff;--ftp-ink:#0f1226;--ftp-soft:#4b5266;--ftp-muted:#6b7280;--ftp-faint:#d3d6e0;
   --ftp-line:#e5e7eb;--ftp-ghost:#efecf8;--ftp-glass:rgba(255,255,255,.7);

@@ -1,4 +1,4 @@
-# LocalHost
+# Keystone
 
 AI-powered exam and learning platform. FastAPI + PostgreSQL + Jinja2 + HTMX + Tailwind CSS.
 

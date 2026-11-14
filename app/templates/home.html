@@ -29,7 +29,7 @@
   <div class="ftp-head-row">
     <h2 id="s-{{ id }}-h" style="min-width:0;flex:1 1 auto"><span class="ftp-head-word" data-st="{{ word }}" data-weight="10" data-outline="2.2" data-color="var(--ftp-blue)">{{ word }}</span></h2>
   </div>
-  {% if sig %}<span class="ftp-head-sig" data-sig="LocalHost" data-delay="500"></span>{% endif %}
+  {% if sig %}<span class="ftp-head-sig" data-sig="Keystone" data-delay="500"></span>{% endif %}
   {% if kicker %}<p class="ftp-kicker" style="margin-top:14px">{{ kicker }}</p>{% endif %}
 </div>
 {%- endmacro %}
@@ -61,7 +61,7 @@
     <div class="ftp-mast-strip"></div>
     <div class="ftp-mast-row">
       <div class="ftp-mast-tab">
-        <span data-st="LocalHost" data-weight="17" data-tracking="20" data-color="#ffffff" data-label="LocalHost">LocalHost</span>
+        <span data-st="Keystone" data-weight="17" data-tracking="20" data-color="#ffffff" data-label="Keystone">Keystone</span>
         <span class="ftp-reg" aria-hidden="true">®</span>
       </div>
       <div class="ftp-mast-notes">
@@ -97,7 +97,7 @@
       <div class="ftp-cover-mid">
         <div class="ftp-sub">
           <span>Exam </span><b>ready</b>
-          <span class="ftp-sub-sig" data-sig="LocalHost" data-delay="900"></span>
+          <span class="ftp-sub-sig" data-sig="Keystone" data-delay="900"></span>
         </div>
         <div>
           <a class="ftp-pill" href="/signup">Start learning<span class="ftp-pill-arrow">{{ arrow("ne") }}</span></a>
@@ -152,7 +152,7 @@
       {{ head("about", "#LOCALHOST", "About us", sig=True) }}
       <div class="ftp-about">
         <div class="ftp-photo">
-          {% call folder("blue", tab="LocalHost · free", tab_at=0.08, body_cls="ftp-photo-body") %}
+          {% call folder("blue", tab="Keystone · free", tab_at=0.08, body_cls="ftp-photo-body") %}
             <div class="ftp-photo-frame" style="display:grid;place-items:center;padding:28px 22px;background:linear-gradient(160deg,#7c3aed,#3b1f9a);color:#fff;min-height:280px">
               <dl style="display:grid;gap:18px;width:100%;margin:0">
                 {% for label, value in [("Papers", stats.exams), ("Questions", stats.questions), ("PDF notes", stats.notes)] %}
@@ -166,7 +166,7 @@
           {% endcall %}
         </div>
         <div>
-          <p class="ftp-hi"><span>Hi, we are <b>LocalHost</b>!</span></p>
+          <p class="ftp-hi"><span>Hi, we are <b>Keystone</b>!</span></p>
           <p class="ftp-kicker" style="margin-top:12px;max-width:560px">An exam practice platform for students: official previous-year papers, timed and proctored like the real thing, free to take. We add papers and notes as they are prepared, and we read every piece of feedback.</p>
           <div class="ftp-cols">
             {% for label, tone, lines in [
