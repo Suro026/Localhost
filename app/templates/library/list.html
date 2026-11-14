@@ -4,6 +4,12 @@
 <section class="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14">
   <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">{{ title }}</h1>
   <p class="mt-2 max-w-2xl text-muted">{{ intro }}</p>
+  {% if kind == "book" %}
+  <aside role="note" class="mt-6 rounded-2xl border border-line bg-brand-50 p-4 text-sm leading-relaxed text-ink">
+    <p class="font-semibold">Disclaimer</p>
+    <p class="mt-1">These books were collected from Google and other public sources on the internet. {{ app_name }} does not own them and claims no rights over them. All rights belong to the respective authors and publishers. If you are a rights holder and want a book removed, email <a class="font-semibold text-brand-700 underline" href="mailto:{{ mentors[0].email }}">{{ mentors[0].email }}</a> and it will be taken down.</p>
+  </aside>
+  {% endif %}
 
   {% if groups %}
   <label class="mt-8 block">

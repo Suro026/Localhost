@@ -64,3 +64,9 @@ def test_titles_are_escaped(client, monkeypatch):
     monkeypatch.setattr(library, "load_library", lambda: [evil])
     r = client.get("/notes")
     assert "<b>" not in r.text and "A &amp; &lt;b&gt;" in r.text
+
+
+def test_books_page_shows_disclaimer_and_notes_page_does_not(client):
+    assert "Disclaimer" in client.get("/books").text
+    assert "collected from Google" in client.get("/books").text
+    assert "Disclaimer" not in client.get("/notes").text
