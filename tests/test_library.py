@@ -17,11 +17,10 @@ def test_catalog_excludes_ramakrishnan():
     assert "Ramakrishnan" not in raw
 
 
-def test_published_notes_exist_and_books_are_held():
-    files = library.load_library()
-    assert files and all(f.kind == "note" for f in files)
-    assert library.subjects("book") == []
-    assert not any("compiled book" in f.title for f in files)
+def test_books_and_notes_are_both_published():
+    kinds = {f.kind for f in library.load_library()}
+    assert kinds == {"book", "note"}
+    assert library.subjects("book") and library.subjects("note")
 
 
 def test_get_file_unknown_returns_none():
