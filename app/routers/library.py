@@ -19,12 +19,12 @@ def _list_page(request: Request, kind: str) -> HTMLResponse:
     )
 
 
-@router.get("/books", response_class=HTMLResponse)
+@router.api_route("/books", methods=["GET", "HEAD"], response_class=HTMLResponse)
 def books(request: Request) -> HTMLResponse:
     return _list_page(request, "book")
 
 
-@router.get("/notes", response_class=HTMLResponse)
+@router.api_route("/notes", methods=["GET", "HEAD"], response_class=HTMLResponse)
 def notes(request: Request) -> HTMLResponse:
     return _list_page(request, "note")
 
@@ -36,7 +36,7 @@ def _known(file_id: str) -> library.LibraryFile:
     return file
 
 
-@router.get("/read/{file_id}", response_class=HTMLResponse)
+@router.api_route("/read/{file_id}", methods=["GET", "HEAD"], response_class=HTMLResponse)
 def read(request: Request, file_id: str) -> HTMLResponse:
     file = _known(file_id)
     return templates.TemplateResponse(
@@ -46,7 +46,7 @@ def read(request: Request, file_id: str) -> HTMLResponse:
     )
 
 
-@router.get("/download/{file_id}")
+@router.api_route("/download/{file_id}", methods=["GET", "HEAD"])
 def download(file_id: str) -> RedirectResponse:
     file = _known(file_id)
     return RedirectResponse(f"https://drive.google.com/uc?export=download&id={file.id}", status_code=302)

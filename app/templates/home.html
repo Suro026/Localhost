@@ -285,7 +285,7 @@
         {% for m in mentors %}
         <div class="team-card">
           <span class="mq-ph{{ ' b' if not loop.first }}" aria-hidden="true">{{ m.initials }}</span>
-          {% if m.photo %}<img src="{{ m.photo }}" alt="{{ m.name }}" loading="lazy" onerror="this.remove()">{% endif %}
+          {% if m.photo %}<img src="{{ m.photo }}" alt="{{ m.name }}" loading="lazy" data-fallback>{% endif %}
           <span class="mq-cap">
             <b>{{ m.name }}</b><span class="mq-role">{{ m.role }}</span>
             <span class="mq-links">

@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 DEFAULT_NOTE_CATEGORIES = ["DSA", "DBMS", "OS", "CN", "AI/ML"]
 
 
-@router.get("/", response_class=HTMLResponse)
+@router.api_route("/", methods=["GET", "HEAD"], response_class=HTMLResponse)
 def home(request: Request, db: Session = Depends(get_db)) -> HTMLResponse:
     featured_exams: list[Exam] = []
     note_categories: list[tuple[str, int | None]] = []

@@ -22,7 +22,7 @@ Students should be able to read the LocalHost GATE CS books and notes on the sit
 ## Constraints
 - Stack stays FastAPI + Jinja2 + HTMX + Tailwind; minimal vanilla JS.
 - Vercel is serverless: no local file storage, no live Postgres yet. So the file list is a committed JSON catalog.
-- Source folders (both owned by genai24.surajit, shared as "anyone with link"): LocalHost BookBank `1DH-ORqGLK4f1DUpiOkRKQBKAsM9OhGxC` (10 subjects), LocalHost Notes `1k-172t3cs3BLh7xeobQvpNlvPC8QTH2s` (12 subjects).
+- Source folders (both shared as "anyone with link"): LocalHost BookBank `1DH-ORqGLK4f1DUpiOkRKQBKAsM9OhGxC` (10 subjects), LocalHost Notes `1k-172t3cs3BLh7xeobQvpNlvPC8QTH2s` (12 subjects).
 - Built `static/css/app.css` is committed; rebuild and commit after Tailwind class changes.
 
 ## Approaches considered

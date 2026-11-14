@@ -4,6 +4,6 @@
 {% macro avatar(src, name, size="h-10 w-10", text="text-sm") -%}
 <span class="relative inline-flex {{ size }} shrink-0 overflow-hidden rounded-full bg-brand-100 {{ text }} font-extrabold text-brand-700" data-slot="avatar">
   <span class="absolute inset-0 grid place-items-center" data-slot="avatar-fallback" aria-hidden="{{ 'true' if src else 'false' }}">{{ (name.split()[:2] | map('first') | join) | upper }}</span>
-  {% if src %}<img src="{{ src }}" alt="{{ name }}" loading="lazy" class="relative aspect-square h-full w-full object-cover" data-slot="avatar-image" onerror="this.remove()">{% endif %}
+  {% if src %}<img src="{{ src }}" alt="{{ name }}" loading="lazy" class="relative aspect-square h-full w-full object-cover" data-slot="avatar-image" data-fallback>{% endif %}
 </span>
 {%- endmacro %}
