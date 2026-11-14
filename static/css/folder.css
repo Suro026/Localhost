@@ -336,6 +336,21 @@ a.ftp-pill,a.ftp-btn,a.ftp-go{display:inline-flex;align-items:center}
 .ftp-card-art svg{display:block}
 .ftp-modal-art svg{display:block}
 
+/* landing page: the site navbar becomes the violet strip above the KEYSTONE tab, so header and masthead read as one piece */
+.ftp-mast-strip{display:none}
+body:has(.ftp-root) [data-nav]{background:#6b26d9;border-color:#6b26d9;backdrop-filter:none;-webkit-backdrop-filter:none;color:#fff}
+body:has(.ftp-root) [data-nav] label[for="nav-toggle"]:hover{background:rgba(255,255,255,.14)}
+body:has(.ftp-root) [data-nav] img{box-shadow:0 0 0 2px #fff;border-radius:8px}
+body:has(.ftp-root) [data-nav] > nav > a{color:#fff}
+@media (min-width:768px){
+  body:has(.ftp-root) [data-nav] a:not(.btn-primary):not([href*="whatsapp"]){color:rgba(255,255,255,.88)}
+  body:has(.ftp-root) [data-nav] a:not(.btn-primary):not([href*="whatsapp"]):hover{background:rgba(255,255,255,.16);color:#fff}
+  body:has(.ftp-root) [data-nav] > nav > a{color:#fff}
+  body:has(.ftp-root) [data-nav] .bg-line{background:rgba(255,255,255,.35)}
+  body:has(.ftp-root) [data-nav] .btn-primary{background:#fff;color:#5a1fb8}
+  body:has(.ftp-root) [data-nav] .btn-primary:hover{background:#e6dafb}
+}
+
 /* team sheet: dark, still. Follows the 21st.dev "team" component (heading squiggle, icon tile, grayscale photos that colour on hover, avatar block); no React, no marquee. */
 .ftp-sheet.ftp-dark{--ftp-sheet:#0e0a1f;--ftp-ink:#f5f5f5;--ftp-soft:#d4d4d4;--ftp-muted:#a3a3a3;--ftp-faint:#3a2f66;--ftp-line:#2a2050;--ftp-ghost:#262626;--ftp-blue:#8b5cf6;--ftp-shadow:0 1px 2px rgba(0,0,0,.4),0 20px 44px -22px rgba(0,0,0,.8);color:var(--ftp-ink)}
 .tm-corner{position:absolute;right:0;bottom:0;color:#262626;pointer-events:none}
