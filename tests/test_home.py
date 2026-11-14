@@ -66,3 +66,8 @@ def test_argon2_password_hashing():
     assert verify_password(h, "Correct-Horse-9")
     assert not verify_password(h, "wrong")
     assert not verify_password("not-a-hash", "x")
+
+
+def test_navbar_links_books_and_notes(client):
+    html = client.get("/").text
+    assert 'href="/books"' in html and 'href="/notes"' in html
