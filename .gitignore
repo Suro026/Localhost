@@ -4,6 +4,5 @@ __pycache__/
 storage/notes/*
 !storage/notes/.gitkeep
 bin/
-static/css/app.css
 static/img/mentors/originals/
 .pytest_cache/
