@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}{{ title }} — {{ app_name }}{% endblock %}
+{% block content %}
+<section class="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14">
+  <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">{{ title }}</h1>
+  <p class="mt-2 max-w-2xl text-muted">{{ intro }}</p>
+
+  {% if groups %}
+  <label class="mt-8 block">
+    <span class="sr-only">Search {{ title|lower }}</span>
+    <input id="lib-search" type="search" autocomplete="off" placeholder="Search {{ title|lower }}"
+           class="w-full rounded-xl border border-line bg-surface px-4 py-3 text-base outline-none focus:border-brand-600 focus:ring-2 focus:ring-brand-100">
+  </label>
+  <p id="lib-nomatch" class="mt-6 text-muted" hidden>No match. Try a different word.</p>
+
+  <div class="mt-8 space-y-10">
+    {% for subject, files in groups %}
+    <section data-subject>
+      <h2 class="flex items-baseline gap-2 text-xl font-bold">{{ subject }} <span class="text-sm font-medium text-muted">{{ files|length }} file{{ "s" if files|length != 1 }}</span></h2>
+      <ul class="mt-3 divide-y divide-line overflow-hidden rounded-2xl border border-line bg-surface">
+        {% for f in files %}
+        <li data-file data-title="{{ f.title|lower }}" class="flex flex-wrap items-center justify-between gap-3 px-4 py-3">
+          <div class="min-w-0">
+            <p class="break-words font-semibold">{{ f.title }}</p>
+            <p class="text-sm text-muted">{{ f.ext|upper }} · {{ "%.1f"|format(f.size_mb) }} MB</p>
+          </div>
+          <div class="flex shrink-0 gap-2">
+            <a href="/read/{{ f.id }}" class="btn-primary">Read</a>
+            <a href="/download/{{ f.id }}" class="btn-secondary" rel="noopener" aria-label="Download {{ f.title }}">Download</a>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="mt-10 rounded-2xl border border-dashed border-line bg-surface p-8 text-center">
+    <p class="font-semibold">No files yet.</p>
+    <p class="mt-1 text-muted">They appear here once they are added.</p>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}
+{% block scripts %}{% if groups %}<script src="{{ static_v('js/library.js') }}" defer></script>{% endif %}{% endblock %}
