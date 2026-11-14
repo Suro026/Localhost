@@ -1,0 +1,22 @@
+<header data-nav class="sticky top-0 z-30 border-b border-line bg-surface/85 backdrop-blur">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6" aria-label="Main">
+    <a href="/" class="flex items-center gap-2 text-lg font-bold tracking-tight">
+      <span class="grid h-8 w-8 place-items-center rounded-lg bg-brand-600 text-sm font-bold text-white">L</span>
+      {{ app_name }}
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="peer sr-only">
+    <label for="nav-toggle" class="cursor-pointer rounded-lg p-2 hover:bg-canvas md:hidden" aria-label="Toggle menu">
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </label>
+
+    <div class="absolute inset-x-0 top-full hidden flex-col gap-1 border-b border-line bg-surface p-4 shadow-sm peer-checked:flex md:static md:flex md:flex-row md:items-center md:gap-1 md:border-0 md:bg-transparent md:p-0 md:shadow-none">
+      <a href="/" class="rounded-lg px-3 py-2 text-sm font-medium text-muted hover:bg-canvas hover:text-ink">Home</a>
+      <a href="/exams" class="rounded-lg px-3 py-2 text-sm font-medium text-muted hover:bg-canvas hover:text-ink">Exams</a>
+      <a href="/notes" class="rounded-lg px-3 py-2 text-sm font-medium text-muted hover:bg-canvas hover:text-ink">Notes</a>
+      <span class="hidden h-5 w-px bg-line md:mx-2 md:block"></span>
+      <a href="/login" class="rounded-lg px-3 py-2 text-sm font-medium text-muted hover:bg-canvas hover:text-ink">Login</a>
+      <a href="/signup" class="btn-primary md:ml-1">Signup</a>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,20 @@
+{# One mentor card. Expects `m` (name, initials, role, linkedin) and `tone` (light/dark avatar). #}
+<article class="card lift spot flex items-center gap-5 p-6">
+  <div class="relative shrink-0">
+    <span class="absolute -inset-1.5 rounded-full border border-dashed border-brand-600/50" style="animation: spin 18s linear infinite"></span>
+    <span class="relative grid h-20 w-20 place-items-center rounded-full text-2xl font-extrabold text-white {{ 'bg-brand-600' if tone == 'light' else 'bg-brand-900' }}">{{ m.initials }}</span>
+  </div>
+  <div class="min-w-0 flex-1">
+    <span class="badge bg-brand-50 text-brand-700">{{ m.role }}</span>
+    <h3 class="mt-2 text-xl font-extrabold tracking-tight">{{ m.name }}</h3>
+    <p class="text-sm text-muted">Platform mentor at {{ app_name }}</p>
+    {% if m.linkedin %}
+    <a href="{{ m.linkedin }}" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 rounded-lg bg-[#0a66c2] px-4 py-2 text-sm font-bold text-white transition-transform hover:-translate-y-0.5">
+      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+      Connect on LinkedIn
+    </a>
+    {% else %}
+    <span class="mt-4 inline-flex items-center gap-2 rounded-lg border border-dashed border-line px-4 py-2 text-sm font-semibold text-muted">LinkedIn link coming soon</span>
+    {% endif %}
+  </div>
+</article>

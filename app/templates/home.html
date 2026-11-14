@@ -1,0 +1,360 @@
+{% extends "base.html" %}
+{% from "components/avatar.html" import avatar %}
+
+{# ---- macros (Jinja port of the Folder / TabBar / head helpers in the folder-tab template) ---- #}
+{% macro arrow(dir="right", size=14) -%}
+{%- set rot = {"right": 0, "down": 90, "left": 180, "up": -90, "ne": -45}[dir] -%}
+<svg width="{{ size }}" height="{{ size }}" viewBox="0 0 16 16" aria-hidden="true" style="transform:rotate({{ rot }}deg)"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+{%- endmacro %}
+
+{% macro folder(tone, tab=None, tab_at=0.1, glass=False, cls="", body_cls="", tag="div", attrs={}, style="", chip=None, tab_arrow=0, tab_html="") -%}
+{%- set flush = "left" if tab_at <= 0 else ("right" if tab_at >= 1 else "") -%}
+<{{ tag }} class="ftp-folder {{ cls }}" data-tone="{{ tone }}"{% if glass %} data-glass="true"{% endif %}{% if flush %} data-flush="{{ flush }}"{% endif %} style="--tx:{{ tab_at }};{{ style }}"{% for k, v in attrs.items() %} {{ k }}="{{ v }}"{% endfor %}>
+  {%- if tab or tab_html %}<span class="ftp-tabshape ftp-ftab" data-tone="{{ tone }}"{% if flush %} data-flush="{{ flush }}"{% endif %}>{{ tab or "" }}{{ tab_html|safe }}{% if chip is not none %}<span class="ftp-tchip">{{ chip }}</span>{% endif %}{% if tab_arrow %}{{ arrow("right", tab_arrow) }}{% endif %}</span>{% endif %}
+  <div class="ftp-fbody {{ body_cls }}">{{ caller() }}</div>
+</{{ tag }}>
+{%- endmacro %}
+
+{% macro meta(idx, page, bar=False) -%}
+<div class="ftp-meta{{ ' ftp-meta-bar' if bar }}" aria-hidden="true">
+  <span>Free</span><span>Year-wise</span><span>Subject-wise</span><span>Full-length</span>
+  <span data-on="true">{{ page }}</span><span>{{ "%02d / %02d"|format(idx, SECT|length) }}</span>
+</div>
+{%- endmacro %}
+
+{% macro head(id, tag, word, kicker=None, sig=False) -%}
+<div class="ftp-head">
+  <span class="ftp-plus" style="left:-18px;top:-6px"></span><span class="ftp-plus" style="right:-18px;top:-6px"></span>
+  <span class="ftp-head-tag" data-st="{{ tag }}" data-weight="9" data-outline="1.6" data-color="var(--ftp-faint)" data-decorative>{{ tag }}</span>
+  <div class="ftp-head-row">
+    <h2 id="s-{{ id }}-h" style="min-width:0;flex:1 1 auto"><span class="ftp-head-word" data-st="{{ word }}" data-weight="10" data-outline="2.2" data-color="var(--ftp-blue)">{{ word }}</span></h2>
+  </div>
+  {% if sig %}<span class="ftp-head-sig" data-sig="LocalHost" data-delay="500"></span>{% endif %}
+  {% if kicker %}<p class="ftp-kicker" style="margin-top:14px">{{ kicker }}</p>{% endif %}
+</div>
+{%- endmacro %}
+
+{# page order, label in the nav, name on the sheet #}
+{% set SECT = [("cover", "Cover", "Cover page"), ("contents", "Modes", "Practice modes"), ("about", "About", "About us"),
+               ("work", "Exams", "Exam papers"), ("process", "Process", "How it works"), ("team", "Team", "Mentors"),
+               ("contact", "Contact", "Join us")] %}
+{# key, label, tone, short line, description, points #}
+{% set MODES = [
+  ("year_wise", "Year-wise", "blue", "Papers by year", "One complete paper per year, in its original order, with the original time limit.", ["One paper per year", "Original question order", "Original time limit"]),
+  ("subject_wise", "Subject-wise", "green", "Topics by subject", "Every question from one subject. Narrow it to the topics you are weak in.", ["Pick one subject", "Choose your topics", "Practise at your own pace"]),
+  ("mixed", "Mixed", "orange", "Mixed sets", "A balanced set across several subjects, assembled when you start.", ["Several subjects at once", "Built when you start", "Good for revision"]),
+  ("full", "Full-length", "yellow", "Full paper", "The complete paper pattern, timed end to end, for a dress rehearsal.", ["Complete paper pattern", "Timed end to end", "Fullscreen exam window"]),
+] %}
+{% set TONES = ["blue", "green", "orange", "yellow"] %}
+{% set TONE_OF = {"year_wise": "blue", "subject_wise": "green", "mixed": "orange", "full": "yellow"} %}
+{% set LABEL_OF = {"year_wise": "Year-wise", "subject_wise": "Subject-wise", "mixed": "Mixed", "full": "Full-length"} %}
+{% set DECK = [(0, 0, 38, 8, 0.16), (1, 28, 34, 0, 0.7), (2, 57, 43, 14, 0.12), (3, 2, 41, 70, 0.06)] %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ static_v('css/folder.css') }}">
+<noscript><style>.ftp-rv{opacity:1!important;transform:none!important}</style></noscript>
+
+<div class="ftp-root">
+
+  {# masthead #}
+  <header class="ftp-mast">
+    <div class="ftp-mast-strip"></div>
+    <div class="ftp-mast-row">
+      <div class="ftp-mast-tab">
+        <span data-st="LocalHost" data-weight="17" data-tracking="20" data-color="#ffffff" data-label="LocalHost">LocalHost</span>
+        <span class="ftp-reg" aria-hidden="true">®</span>
+      </div>
+      <div class="ftp-mast-notes">
+        <span>Free mock tests</span><i aria-hidden="true"></i><span>Timed and proctored</span><i aria-hidden="true"></i><span>Scored on the server</span>
+      </div>
+    </div>
+  </header>
+
+  {# sticky page nav #}
+  <div class="ftp-navwrap">
+    <nav class="ftp-nav" aria-label="Page sections">
+      <span class="ftp-count" aria-hidden="true"><span data-cur>01</span><small>/{{ "%02d"|format(SECT|length) }}</small></span>
+      <div class="ftp-links">
+        <span class="ftp-ind" style="opacity:0"></span>
+        {% for id, label, page in SECT %}<button type="button" class="ftp-link" data-go="{{ id }}">{{ label }}</button>{% endfor %}
+      </div>
+    </nav>
+  </div>
+
+  <main class="ftp-wrap ftp-sheets">
+
+    {# ---------------- 01 cover ---------------- #}
+    <section class="ftp-sheet ftp-cover" data-sheet="cover" aria-labelledby="s-cover-h">
+      {{ meta(1, "Cover page", True) }}
+      <div class="ftp-cover-top">
+        <span class="ftp-palm" data-palm></span>
+        <span class="ftp-plus" style="left:-14px;top:8px"></span><span class="ftp-plus" style="right:-14px;top:8px"></span>
+        <span class="ftp-cover-tag" data-st="#MOCK" data-weight="8" data-outline="1.4" data-color="var(--ftp-muted)" data-decorative>#MOCK</span>
+        <h1 id="s-cover-h" style="position:relative">
+          <span class="ftp-cover-word" data-st="Mock tests" data-weight="9" data-outline="1.9" data-tracking="22" data-color="var(--ftp-blue)" data-delay="150" data-label="Free online mock tests">Free online mock tests</span>
+        </h1>
+      </div>
+      <div class="ftp-cover-mid">
+        <div class="ftp-sub">
+          <span>Exam </span><b>ready</b>
+          <span class="ftp-sub-sig" data-sig="LocalHost" data-delay="900"></span>
+        </div>
+        <div>
+          <a class="ftp-pill" href="/signup">Start learning<span class="ftp-pill-arrow">{{ arrow("ne") }}</span></a>
+          <div class="ftp-qlinks">
+            {% for key, label, tone, short, desc, pts in MODES[:3] %}<button type="button" class="ftp-qlink" data-open-cat="{{ key }}">{{ label }}</button>{% endfor %}
+          </div>
+          <p class="ftp-blurb">Take free year-wise, subject-wise, mixed and full-length mock tests in a timed, proctored window. Your score is worked out on the server the moment you submit, and PDF notes sit beside the papers.</p>
+        </div>
+      </div>
+      <div class="ftp-deck" style="--dhm:{{ 54 * 4 + 140 }}px">
+        {% for i, l, w, t, tab in DECK|sort(attribute=3) %}
+        {% set key, label, tone, short, desc, pts = MODES[i] %}
+        {% set n = mode_counts.get(key, 0) %}
+        {% call folder(tone, tab=label, chip="%02d"|format(n), tab_arrow=11, tab_at=tab, glass=(t > 40), cls="ftp-dfold ftp-dfold-btn", tag="button",
+                       attrs={"type": "button", "data-open-cat": key, "aria-label": "Open " ~ label ~ " papers, " ~ n ~ " available"},
+                       style="--l:" ~ l ~ ";--w:" ~ w ~ ";--t:" ~ t ~ "px;--mt:" ~ (i * 54) ~ "px") %}
+          <span class="ftp-dl"><span class="ftp-dl-local">{{ short }}</span><span class="ftp-dl-n">{{ "%02d"|format(i + 1) }}</span></span>
+          <span class="ftp-dl-en" style="display:block">{{ label }} · {{ n }} {{ "paper" if n == 1 else "papers" }}</span>
+        {% endcall %}
+        {% endfor %}
+      </div>
+    </section>
+
+    {# ---------------- 02 practice modes ---------------- #}
+    <section class="ftp-sheet ftp-rv" data-sheet="contents" aria-labelledby="s-contents-h">
+      {{ meta(2, "Practice modes") }}
+      {{ head("contents", "(04)", "Practice modes", "Four ways to take the same question bank, from one year's paper to a mixed set built for you. Open a folder to see what is inside.") }}
+      <div class="ftp-band-list">
+        {% for key, label, tone, short, desc, pts in MODES %}
+        {% set open = loop.first %}
+        {% set slot = [0.62, 0.08, 0.84, 0.3][loop.index0] %}
+        {% call folder("blue" if open else "sheet", tab="Mode " ~ loop.index, tab_arrow=12, tab_at=slot, cls="ftp-band", attrs={"data-open": "true" if open else "false"}) %}
+          <button type="button" class="ftp-band-head" aria-expanded="{{ 'true' if open else 'false' }}">
+            <span class="ftp-band-n">{{ "%02d"|format(loop.index) }}</span>
+            <span style="min-width:0"><span class="ftp-band-t" style="display:block">{{ label }}</span></span>
+            <ul class="ftp-band-pts">{% for p in pts %}<li>{{ p }}</li>{% endfor %}</ul>
+          </button>
+          <div class="ftp-band-fold"><div>
+            <div class="ftp-band-go">
+              <p>{{ desc }}</p>
+              <a class="ftp-go" href="/exams?mode={{ key }}" tabindex="{{ 0 if open else -1 }}">Open {{ label|lower }} papers {{ arrow("right", 12) }}</a>
+            </div>
+          </div></div>
+        {% endcall %}
+        {% endfor %}
+      </div>
+    </section>
+
+    {# ---------------- 03 about ---------------- #}
+    <section class="ftp-sheet ftp-rv" data-sheet="about" aria-labelledby="s-about-h">
+      {{ meta(3, "About us") }}
+      {{ head("about", "#LOCALHOST", "About us", sig=True) }}
+      <div class="ftp-about">
+        <div class="ftp-photo">
+          {% call folder("blue", tab="LocalHost · free", tab_at=0.08, body_cls="ftp-photo-body") %}
+            <div class="ftp-photo-frame" style="display:grid;place-items:center;padding:28px 22px;background:linear-gradient(160deg,#7c3aed,#3b1f9a);color:#fff;min-height:280px">
+              <dl style="display:grid;gap:18px;width:100%;margin:0">
+                {% for label, value in [("Papers", stats.exams), ("Questions", stats.questions), ("PDF notes", stats.notes)] %}
+                <div style="border-top:1px solid rgba(255,255,255,.3);padding-top:10px">
+                  <dd style="margin:0;font-size:34px;font-weight:800;line-height:1" data-count="{{ value }}">{{ "{:,}".format(value) if value else "Soon" }}</dd>
+                  <dt style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;opacity:.8;margin-top:4px">{{ label }}</dt>
+                </div>
+                {% endfor %}
+              </dl>
+            </div>
+          {% endcall %}
+        </div>
+        <div>
+          <p class="ftp-hi"><span>Hi, we are <b>LocalHost</b>!</span></p>
+          <p class="ftp-kicker" style="margin-top:12px;max-width:560px">An exam practice platform for students: official previous-year papers, timed and proctored like the real thing, free to take. We add papers and notes as they are prepared, and we read every piece of feedback.</p>
+          <div class="ftp-cols">
+            {% for label, tone, lines in [
+              ("Practise", "blue", ["Year-wise papers", "Subject-wise sets", "Mixed and full-length"]),
+              ("Track", "green", ["Score after you submit", "Accuracy per attempt", "Every past attempt"]),
+              ("Learn", "orange", ["PDF notes in the browser", "Notes by subject", "AI-generated practice exams"])] %}
+            <div>
+              <span class="ftp-badge" style="background:var(--ftp-{{ tone }});color:#fff">{{ label }}</span>
+              <ul>{% for l in lines %}<li>{{ l }}</li>{% endfor %}</ul>
+            </div>
+            {% endfor %}
+          </div>
+          <div class="ftp-contacts">
+            {% for m in mentors %}{% if m.linkedin %}
+            <a class="ftp-contact" href="{{ m.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="{{ m.name }} on LinkedIn"><i style="background:var(--ftp-{{ 'blue' if loop.first else 'green' }});color:#fff">in</i>{{ m.name.split()[0] }}</a>
+            {% endif %}{% endfor %}
+            <a class="ftp-contact" href="{{ whatsapp_group_url }}" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp group"><i style="background:var(--ftp-orange);color:#fff">W</i>WhatsApp group</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {# ---------------- 04 exam papers ---------------- #}
+    <section class="ftp-sheet ftp-rv" data-sheet="work" aria-labelledby="s-work-h">
+      {{ meta(4, "Exam papers") }}
+      {{ head("work", "(%02d)"|format(stats.exams), "Exam papers", "Filter the cabinet by mode. Open any paper for its details; arrow keys page through.") }}
+      <div class="ftp-filter">
+        <div class="ftp-tabbar" role="tablist" aria-label="Filter papers by mode" data-filterbar>
+          <button type="button" role="tab" class="ftp-tabshape ftp-tabbtn" data-filter="all" data-tab="blue">All<span class="ftp-tchip">{{ "%02d"|format(featured_exams|length) }}</span></button>
+          {% for key, label, tone, short, desc, pts in MODES %}{% if featured_exams|selectattr("mode.value", "equalto", key)|list %}
+          <button type="button" role="tab" class="ftp-tabshape ftp-tabbtn" data-filter="{{ key }}" data-tab="{{ tone }}">{{ label }}<span class="ftp-tchip">{{ "%02d"|format(featured_exams|selectattr("mode.value", "equalto", key)|list|length) }}</span></button>
+          {% endif %}{% endfor %}
+        </div>
+        <div class="ftp-bar"></div>
+      </div>
+      <div class="ftp-grid" role="tabpanel">
+        {% for exam in featured_exams %}
+        {% set key = exam.mode.value %}
+        {% set tone = TONE_OF[key] %}
+        {% set mark = (exam.exam_year|string) if exam.exam_year else (exam.title.split()[0][:6]) %}
+        {% call folder(tone, tab=LABEL_OF[key], chip="%02d"|format(loop.index), tab_at=[0.1, 0.47, 0.84, 0.21, 0.58, 0.05][loop.index0 % 6], cls="ftp-card", tag="button",
+                       attrs={"type": "button", "aria-haspopup": "dialog", "data-exam": "", "data-cat": key, "data-tone": tone, "data-cat-label": LABEL_OF[key],
+                              "data-title": exam.title, "data-sub": (exam.subject or "") ~ ((" · " ~ exam.topic_tags|join(", ")) if exam.topic_tags else ""),
+                              "data-year": exam.exam_year or "", "data-subject": "", "data-dur": exam.duration_minutes ~ " min", "data-qs": exam.total_questions,
+                              "data-level": exam.difficulty.value|capitalize, "data-href": "/exam/" ~ exam.id, "data-mark": mark,
+                              "aria-label": exam.title ~ ". Open details"},
+                       style="--i:" ~ loop.index0) %}
+          <span class="ftp-card-art" style="display:block"><span data-cover="{{ exam.title }}" data-tone="{{ tone }}" data-mark="{{ mark }}"></span></span>
+          <span class="ftp-card-cap"><span><span class="ftp-card-t" style="display:block">{{ exam.title }}</span></span><span class="ftp-card-y">{{ exam.exam_year or exam.duration_minutes ~ "m" }}</span></span>
+        {% endcall %}
+        {% endfor %}
+        {% if featured_exams %}
+        <p class="ftp-empty" data-empty hidden>No papers in this folder yet.</p>
+        {% else %}
+        <p class="ftp-empty">No papers are published yet. They appear here as soon as they are added.</p>
+        {% endif %}
+      </div>
+      {% if not featured_exams %}
+      <div style="margin-top:22px"><a class="ftp-btn" href="/signup">Create a free account {{ arrow("ne") }}</a></div>
+      {% endif %}
+    </section>
+
+    {# ---------------- 05 process ---------------- #}
+    {% set STEPS = [
+      ("Select topics", "Pick a subject, its topics and a difficulty.", ["Subject", "Topics", "Difficulty"]),
+      ("AI builds the exam", "A validated multiple-choice paper is built and saved for you.", ["Validated questions", "Saved to your account"]),
+      ("Take it securely", "Sit it in fullscreen with webcam checks running. Flags are logged for review, never treated as proof.", ["Fullscreen required", "One question at a time", "Scored on the server"]),
+      ("Analyse results", "See your score, accuracy and every past attempt in your dashboard.", ["Score", "Accuracy", "Past attempts"]),
+    ] %}
+    <section class="ftp-sheet ftp-rv" data-sheet="process" aria-labelledby="s-process-h">
+      {{ meta(5, "How it works") }}
+      {{ head("process", "(04)", "How it works") }}
+      <div class="ftp-tabbar" role="tablist" aria-label="Steps" data-stepbar>
+        {% for title, body, outs in STEPS %}
+        <button type="button" role="tab" class="ftp-tabshape ftp-tabbtn" data-tab="{{ TONES[loop.index0 % 4] }}">{{ "%02d"|format(loop.index) }} {{ title }}</button>
+        {% endfor %}
+      </div>
+      {% for title, body, outs in STEPS %}
+      {% set i = loop.index0 %}
+      <div class="ftp-panel" data-tone="{{ TONES[i % 4] }}" role="tabpanel" data-steppanel{% if not loop.first %} hidden{% endif %}>
+        <div class="ftp-step">
+          <div>
+            <div class="ftp-step-n">{{ "%02d"|format(loop.index) }}</div>
+            <h3 class="ftp-step-t">{{ title }}</h3>
+          </div>
+          <div>
+            <p class="ftp-step-b">{{ body }}</p>
+            <ul class="ftp-step-o">{% for o in outs %}<li>{{ o }}</li>{% endfor %}</ul>
+            <div class="ftp-dots" aria-hidden="true">{% for _ in STEPS %}<span data-on="{{ 'true' if loop.index0 == i else 'false' }}"></span>{% endfor %}</div>
+            <div class="ftp-btns" style="margin-top:22px">
+              <button type="button" class="ftp-btn" data-ghost="true" data-step-prev aria-label="Previous step">{{ arrow("left") }}</button>
+              <button type="button" class="ftp-btn" data-step-next>Next step {{ arrow() }}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+
+    {# ---------------- 06 team (dark, still cards; from the 21st.dev "team" component) ---------------- #}
+    <section class="ftp-sheet ftp-dark ftp-rv" data-sheet="team" aria-labelledby="s-team-h">
+      {{ meta(6, "Mentors") }}
+      <svg class="tm-corner" aria-hidden="true" width="460" height="154" viewBox="0 0 460 154" fill="none"><path d="M-87.463 458.432C-102.118 348.092 -77.3418 238.841 -15.0744 188.274C57.4129 129.408 180.708 150.071 351.748 341.128C278.246 -374.233 633.954 380.602 548.123 42.7707" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="40"/></svg>
+
+      <div class="tm-head">
+        <div class="tm-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.051 12.616a1 1 0 0 1 1.909.024l.737 1.452a1 1 0 0 0 .737.535l1.634.256a1 1 0 0 1 .588 1.806l-1.172 1.168a1 1 0 0 0-.282.866l.259 1.613a1 1 0 0 1-1.541 1.134l-1.465-.75a1 1 0 0 0-.912 0l-1.465.75a1 1 0 0 1-1.539-1.133l.258-1.613a1 1 0 0 0-.282-.866l-1.156-1.153a1 1 0 0 1 .572-1.822l1.633-.256a1 1 0 0 0 .737-.535z"/><path d="M8 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/></svg>
+        </div>
+        <h2 id="s-team-h" class="tm-title">Meet your mentors
+          <svg class="tm-squig" aria-hidden="true" width="108" height="86" viewBox="0 0 108 86" fill="currentColor"><path d="M38.8484 16.236L15 43.5793L78.2688 15L18.1218 71L93 34.1172L70.2047 65.2739" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="28"/></svg>
+        </h2>
+        <p class="tm-sub">The people behind {{ app_name }}. Reach out with questions, feedback or ideas for new papers.</p>
+      </div>
+
+      <div class="team-row">
+        {% for m in mentors %}
+        <div class="team-card">
+          <span class="mq-ph{{ ' b' if not loop.first }}" aria-hidden="true">{{ m.initials }}</span>
+          {% if m.photo %}<img src="{{ m.photo }}" alt="{{ m.name }}" loading="lazy" onerror="this.remove()">{% endif %}
+          <span class="mq-cap">
+            <b>{{ m.name }}</b><span class="mq-role">{{ m.role }}</span>
+            <span class="mq-links">
+              {% if m.linkedin %}<a href="{{ m.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="{{ m.name }} on LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>{% endif %}
+              {% if m.email %}<a href="mailto:{{ m.email }}" aria-label="Email {{ m.name }}" title="{{ m.email }}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>{% endif %}
+            </span>
+          </span>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="tm-foot">
+        <p class="tm-quote">Doubts, updates and new papers, shared with students and mentors in one group.</p>
+        <a class="ftp-btn" href="{{ whatsapp_group_url }}" target="_blank" rel="noopener noreferrer">Join the WhatsApp group {{ arrow("ne") }}</a>
+      </div>
+    </section>
+
+    {# ---------------- 07 contact ---------------- #}
+    <section class="ftp-sheet ftp-rv" data-sheet="contact" aria-labelledby="s-contact-h">
+      {{ meta(7, "Join us") }}
+      {{ head("contact", "(:)", "Join us", sig=True) }}
+      <div class="ftp-stack">
+        {% call folder("blue", tab="Start", tab_arrow=12, tab_at=0.78) %}
+          <div class="ftp-talk">
+            <span data-st="Take a test" data-weight="15" data-tracking="22" data-color="#ffffff" data-label="Take a test">Take a test</span>
+            <p>Free account, no payment details. Pick a mode and sit your first paper today.</p>
+          </div>
+        {% endcall %}
+        {% call folder("green", tab="Account", tab_arrow=12, tab_at=0.56) %}
+          <div class="ftp-mail">
+            <a class="ftp-mail-a" href="/signup">Create your free account</a>
+            <div class="ftp-btns">
+              <a class="ftp-btn" href="/signup">Sign up</a>
+              <a class="ftp-btn" data-ghost="true" href="/login">Log in {{ arrow("ne") }}</a>
+            </div>
+          </div>
+        {% endcall %}
+        {% call folder("sheet", tab="Browse", tab_arrow=12, tab_at=0.3, style="filter:drop-shadow(0 -6px 14px rgba(60,30,140,.08))") %}
+          <div class="ftp-else">
+            <a href="/exams"><span><small>Papers</small>All exams</span>{{ arrow("ne") }}</a>
+            <a href="/notes"><span><small>Notes</small>Study notes</span>{{ arrow("ne") }}</a>
+            <a href="{{ whatsapp_group_url }}" target="_blank" rel="noopener noreferrer"><span><small>Community</small>WhatsApp group</span>{{ arrow("ne") }}</a>
+          </div>
+        {% endcall %}
+      </div>
+    </section>
+  </main>
+
+  {# exam details sheet (filled by folder.js) #}
+  <div class="ftp-overlay" data-overlay hidden>
+    {% call folder("blue", tab_html='<span data-m="cat"></span><span class="ftp-tchip" data-m="n"></span>', tab_at=0.04, cls="ftp-modal", attrs={"role": "dialog", "aria-modal": "true", "aria-labelledby": "m-title"}) %}
+      <button type="button" class="ftp-close" data-m="close" aria-label="Close details">Close ✕</button>
+      <div class="ftp-modal-grid">
+        <div class="ftp-modal-art" data-m="art"></div>
+        <div class="ftp-modal-info">
+          <div><h3 class="ftp-modal-t" id="m-title" data-m="title"></h3><p class="ftp-modal-p" data-m="sub"></p></div>
+          <dl class="ftp-dl2" data-m="dl"></dl>
+          <div class="ftp-modal-nav">
+            <div class="ftp-btns">
+              <button type="button" class="ftp-btn" data-ghost="true" data-m="prev" aria-label="Previous paper">{{ arrow("left") }}</button>
+              <button type="button" class="ftp-btn" data-ghost="true" data-m="next" aria-label="Next paper">{{ arrow() }}</button>
+            </div>
+            <a class="ftp-btn" data-m="go" href="/exams">Start exam {{ arrow("ne") }}</a>
+          </div>
+        </div>
+      </div>
+    {% endcall %}
+  </div>
+</div>
+
+<script src="{{ static_v('js/folder.js') }}" defer></script>
+{% endblock %}

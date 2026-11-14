@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f5f8fc">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ app_name }} — AI-Powered Exam Preparation{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ static_v('css/app.css') }}">
+  <script>document.documentElement.classList.add("js")</script>
+  <script src="{{ static_v('js/htmx.min.js') }}" defer></script>
+  <script src="{{ static_v('js/motion.js') }}" defer></script>
+</head>
+<body class="min-h-screen flex flex-col">
+  <div id="progress" aria-hidden="true"></div>
+  <div id="cursor" aria-hidden="true"></div>
+  {% include "components/navbar.html" %}
+  <main class="flex-1">{% block content %}{% endblock %}</main>
+  {% include "components/footer.html" %}
+  {% include "components/mentor_panel.html" %}
+  {% block scripts %}{% endblock %}
+</body>
+</html>

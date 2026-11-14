@@ -1,0 +1,39 @@
+{# Floating mentors panel: avatar stack button that opens a card with both mentors and the WhatsApp group #}
+<div class="fixed bottom-4 right-4 z-40">
+  <input type="checkbox" id="mentor-toggle" class="peer sr-only">
+  <label for="mentor-toggle" class="flex cursor-pointer items-center gap-3 rounded-full border border-line bg-surface py-1.5 pl-1.5 pr-4 shadow-lg shadow-blue-900/15 transition-transform hover:-translate-y-0.5 peer-focus-visible:ring-2 peer-focus-visible:ring-brand-600">
+    <span class="flex -space-x-2">
+      {% for m in mentors %}
+      <span class="grid h-9 w-9 place-items-center rounded-full border-2 border-surface bg-brand-600 text-xs font-extrabold text-white {{ 'bg-brand-900' if loop.last }}">{{ m.initials }}</span>
+      {% endfor %}
+    </span>
+    <span class="text-sm font-bold">Platform Mentors</span>
+  </label>
+
+  <div class="absolute bottom-16 right-0 hidden w-[19rem] origin-bottom-right rounded-2xl border border-line bg-surface p-4 shadow-2xl shadow-blue-900/20 peer-checked:block peer-checked:[animation:rise_.35s_ease-out]">
+    <p class="text-sm font-extrabold">Platform Mentors</p>
+    <p class="mt-0.5 text-xs text-muted">Ask a question or share feedback.</p>
+    <ul class="mt-4 space-y-3">
+      {% for m in mentors %}
+      <li class="flex items-center gap-3 rounded-xl border border-line bg-canvas p-3">
+        <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full text-sm font-extrabold text-white {{ 'bg-brand-600' if loop.first else 'bg-brand-900' }}">{{ m.initials }}</span>
+        <div class="min-w-0 flex-1">
+          <p class="truncate text-sm font-bold">{{ m.name }}</p>
+          <p class="text-xs font-semibold text-brand-700">{{ m.role }}</p>
+        </div>
+        {% if m.linkedin %}
+        <a href="{{ m.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="{{ m.name }} on LinkedIn" class="grid h-9 w-9 place-items-center rounded-lg bg-[#0a66c2] text-white transition-transform hover:scale-105">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
+        {% else %}
+        <span class="rounded-md border border-dashed border-line px-2 py-1 text-[11px] font-semibold text-muted" title="LinkedIn link will be added soon">Link soon</span>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    <a href="{{ whatsapp_group_url }}" target="_blank" rel="noopener noreferrer" class="mt-4 flex items-center justify-center gap-2 rounded-xl bg-[#1fa855] px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-[#188a45]">
+      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2a9.9 9.9 0 00-8.46 15.03L2 22l5.1-1.55A9.9 9.9 0 1012.04 2zm5.8 14.08c-.24.68-1.42 1.3-1.95 1.34-.5.04-.97.23-3.27-.68-2.77-1.1-4.54-3.94-4.68-4.12-.13-.18-1.1-1.46-1.1-2.8 0-1.33.7-1.98.95-2.25.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.6.46.22.54.74 1.87.8 2 .07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.27-.12.53.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.22.6-.13.25.09 1.56.74 1.83.87.27.14.45.2.51.31.07.11.07.65-.17 1.33z"/></svg>
+      Join the WhatsApp group
+    </a>
+  </div>
+</div>
