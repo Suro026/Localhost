@@ -100,7 +100,7 @@
           <span class="ftp-sub-sig" data-sig="Keystone" data-delay="900"></span>
         </div>
         <div>
-          <a class="ftp-pill" href="/signup">Start learning<span class="ftp-pill-arrow">{{ arrow("ne") }}</span></a>
+          <a class="ftp-pill" href="/notes">Start learning<span class="ftp-pill-arrow">{{ arrow("ne") }}</span></a>
           <div class="ftp-qlinks">
             {% for key, label, tone, short, desc, pts in MODES[:3] %}<button type="button" class="ftp-qlink" data-open-cat="{{ key }}">{{ label }}</button>{% endfor %}
           </div>
@@ -221,11 +221,11 @@
         {% if featured_exams %}
         <p class="ftp-empty" data-empty hidden>No papers in this folder yet.</p>
         {% else %}
-        <p class="ftp-empty">No papers are published yet. They appear here as soon as they are added.</p>
+        <p class="ftp-empty">Mock tests are coming soon. Books and notes are open now.</p>
         {% endif %}
       </div>
       {% if not featured_exams %}
-      <div style="margin-top:22px"><a class="ftp-btn" href="/signup">Create a free account {{ arrow("ne") }}</a></div>
+      <div style="margin-top:22px"><a class="ftp-btn" href="/exams">See what is coming {{ arrow("ne") }}</a></div>
       {% endif %}
     </section>
 
@@ -310,22 +310,22 @@
       <div class="ftp-stack">
         {% call folder("blue", tab="Start", tab_arrow=12, tab_at=0.78) %}
           <div class="ftp-talk">
-            <span data-st="Take a test" data-weight="15" data-tracking="22" data-color="#ffffff" data-label="Take a test">Take a test</span>
-            <p>Free account, no payment details. Pick a mode and sit your first paper today.</p>
+            <span data-st="Read today" data-weight="15" data-tracking="22" data-color="#ffffff" data-label="Read today">Read today</span>
+            <p>Mock tests are coming soon. Until then, read the notes and books for every GATE subject, free.</p>
           </div>
         {% endcall %}
-        {% call folder("green", tab="Account", tab_arrow=12, tab_at=0.56) %}
+        {% call folder("green", tab="Library", tab_arrow=12, tab_at=0.56) %}
           <div class="ftp-mail">
-            <a class="ftp-mail-a" href="/signup">Create your free account</a>
+            <a class="ftp-mail-a" href="/notes">Open the notes</a>
             <div class="ftp-btns">
-              <a class="ftp-btn" href="/signup">Sign up</a>
-              <a class="ftp-btn" data-ghost="true" href="/login">Log in {{ arrow("ne") }}</a>
+              <a class="ftp-btn" href="/notes">Notes</a>
+              <a class="ftp-btn" data-ghost="true" href="/books">Books {{ arrow("ne") }}</a>
             </div>
           </div>
         {% endcall %}
         {% call folder("sheet", tab="Browse", tab_arrow=12, tab_at=0.3, style="filter:drop-shadow(0 -6px 14px rgba(60,30,140,.08))") %}
           <div class="ftp-else">
-            <a href="/exams"><span><small>Papers</small>All exams</span>{{ arrow("ne") }}</a>
+            <a href="/exams"><span><small>Papers</small>All exams (soon)</span>{{ arrow("ne") }}</a>
             <a href="/notes"><span><small>Notes</small>Study notes</span>{{ arrow("ne") }}</a>
             <a href="{{ whatsapp_group_url }}" target="_blank" rel="noopener noreferrer"><span><small>Community</small>WhatsApp group</span>{{ arrow("ne") }}</a>
           </div>

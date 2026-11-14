@@ -11,7 +11,7 @@ def test_homepage_static_content(client):
         "Select topics", "AI builds the exam", "Take it securely", "Analyse results",
         "Surajit Sadhukhan", "Sayan Karmakar", "Co Lead",
         "https://chat.whatsapp.com/FinfZJZ6CQLAWgI7uqiMux",
-        "No papers are published yet",
+        "Mock tests are coming soon",
     ]:
         assert expected in html
 
@@ -71,3 +71,15 @@ def test_argon2_password_hashing():
 def test_navbar_links_books_and_notes(client):
     html = client.get("/").text
     assert 'href="/books"' in html and 'href="/notes"' in html
+
+
+def test_no_login_or_signup_links_on_home(client):
+    html = client.get("/").text
+    assert "/login" not in html and "/signup" not in html
+
+
+def test_exams_page_is_coming_soon(client):
+    r = client.get("/exams")
+    assert r.status_code == 200
+    assert "coming soon" in r.text.lower()
+    assert "/login" not in r.text and "/signup" not in r.text
