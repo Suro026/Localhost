@@ -1,0 +1,802 @@
+[
+ {
+  "id": "117QiFb27n69VIRDHqcmIzFGV6GQwrFXi",
+  "title": "Michael Sipser - Introduction to the Theory of Computation (2012)",
+  "size_mb": 7.4,
+  "subject": "TOC",
+  "group": null,
+  "kind": "book",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1W2WkAsCBRs8WAV4eaXQZOyIeENwEywIn",
+  "title": "Operating System Galvin",
+  "size_mb": 5.9,
+  "subject": "OS",
+  "group": null,
+  "kind": "book",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1PvoXfWvScQykG2LJgxIK7NceMVnpY-PF",
+  "title": "Andrew S. Tanenbaum - Computer Networks",
+  "size_mb": 6.6,
+  "subject": "CN",
+  "group": null,
+  "kind": "book",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1puDRo_rmryyJKoENYrQ67GxrqB9-FH64",
+  "title": "BS Grewal",
+  "size_mb": 242.8,
+  "subject": "Mathematics",
+  "group": null,
+  "kind": "book",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1fPEfWXE-EAxU-N_b7QJv_Bt0DGBiZ-bp",
+  "title": "Rosen - Discrete Mathematics and its Applications 7th edition",
+  "size_mb": 35.3,
+  "subject": "Mathematics",
+  "group": null,
+  "kind": "book",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1GiOkFwLmtpE6SbgobM-dAYaLKJkC6EdZ",
+  "title": "Advanced Engineering Mathematics 9th Edition by Erwin Kreyszig",
+  "size_mb": 21.6,
+  "subject": "Mathematics",
+  "group": null,
+  "kind": "book",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1-HhRw2oW2kIaoLsDWyBHv9yVD3I-MS6B",
+  "title": "Engineering Mathematics",
+  "size_mb": 3.2,
+  "subject": "Mathematics",
+  "group": null,
+  "kind": "book",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1l80BmrXl9S1IJ_9ewoY7RNlZB5xFLWm-",
+  "title": "Gilbert Strang - Linear Algebra and Its Applications",
+  "size_mb": 5.1,
+  "subject": "Mathematics",
+  "group": null,
+  "kind": "book",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1RgbN_lxrp9jnrcKF4Xm4_JAJiP3WexhH",
+  "title": "Rosen - Discrete Mathematics and its Applications 8th ed (2019)",
+  "size_mb": 8.3,
+  "subject": "Mathematics",
+  "group": null,
+  "kind": "book",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "19K2IdD6Vn2nSAyvB4HTyXY0DJvxOm3_k",
+  "title": "Ullman - Compiler Design, Principles, Techniques and Tools 2e",
+  "size_mb": 48.2,
+  "subject": "Compiler Design",
+  "group": null,
+  "kind": "book",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1qFpx21-yEAvyXtlLIFIGIAgV0lh06bVO",
+  "title": "Compiler Design by Alfred Aho and Jeffrey Ullman",
+  "size_mb": 35.8,
+  "subject": "Compiler Design",
+  "group": null,
+  "kind": "book",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1s8HEhuC8TF-dWvgMJpJPpT1G_Mlii9zX",
+  "title": "Compilers - Principles, Techniques and Tools by Aho and Ullman",
+  "size_mb": 5.3,
+  "subject": "Compiler Design",
+  "group": null,
+  "kind": "book",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1iXagnpxgLRr82IJyc_UYCtO75kRCWu14",
+  "title": "Fundamentals of Computer Algorithms by Rajasekaran, Sahni, Horowitz",
+  "size_mb": 30.9,
+  "subject": "Algorithms",
+  "group": null,
+  "kind": "book",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "15u6esV21XuF15ziTI9slfKCTRsb4AZYC",
+  "title": "Introduction to Algorithms by Thomas H. Cormen",
+  "size_mb": 5.6,
+  "subject": "Algorithms",
+  "group": null,
+  "kind": "book",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1rjyy5mburuKxAOw9MUeNYdoVgCiUoWCp",
+  "title": "Kernighan and Ritchie - The C Programming Language",
+  "size_mb": 1.8,
+  "subject": "PDS",
+  "group": null,
+  "kind": "book",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1L9Y2Hace408xMBHCFevmcCRLuO1TBglf",
+  "title": "Fundamentals of Data Structures by Sartaj Sahni",
+  "size_mb": 20.4,
+  "subject": "PDS",
+  "group": null,
+  "kind": "book",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "12vZC_0S-mlWQekNeYOKENru03YTJ_VW2",
+  "title": "C The Complete Reference 4th Ed Herbert Schildt",
+  "size_mb": 5.5,
+  "subject": "PDS",
+  "group": null,
+  "kind": "book",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1dM41NVJ3fP5cPNvHFdBYxYQ9950h2ftR",
+  "title": "The C Programming Language by Dennis M. Ritchie",
+  "size_mb": 0.9,
+  "subject": "PDS",
+  "group": null,
+  "kind": "book",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1IdY0s9k6ZPnuxQLyZfAdz8AxRI4hs5Ku",
+  "title": "Computer Organization and Embedded Systems",
+  "size_mb": 3.2,
+  "subject": "COA",
+  "group": null,
+  "kind": "book",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1e6Cdc5IUy5hdJPgBFxxhIs_uv9mTv6NS",
+  "title": "Computer Organization and Architecture by William Stallings",
+  "size_mb": 52.8,
+  "subject": "COA",
+  "group": null,
+  "kind": "book",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1UVIxExA3ANaSWSkLiODG96bOeTXMcX5m",
+  "title": "Computer Architecture, A Quantitative Approach by Hennessy and Patterson",
+  "size_mb": 12.5,
+  "subject": "COA",
+  "group": null,
+  "kind": "book",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1ITX-hrxp_wzbQBJ3ao4hhXxLS_qgEtBk",
+  "title": "Computer Organization by Carl Hamacher",
+  "size_mb": 25.9,
+  "subject": "COA",
+  "group": null,
+  "kind": "book",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1LkP_gIhys7SOXbuIP5_hvsx0SPf5mnmr",
+  "title": "M. Morris Mano - Digital Logic and Computer Design (2017)",
+  "size_mb": 34.1,
+  "subject": "Digital Logic",
+  "group": null,
+  "kind": "book",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1h4L4XLWgLJX3iZP1SLBqFAyCD0JJhdHA",
+  "title": "Modern Digital Electronics by R P Jain",
+  "size_mb": 50.9,
+  "subject": "Digital Logic",
+  "group": null,
+  "kind": "book",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1IofuI3qsVCzWbflg32OeFX39w3q2Aota",
+  "title": "Digital Logic and Computer Design by M. Morris Mano",
+  "size_mb": 13.3,
+  "subject": "Digital Logic",
+  "group": null,
+  "kind": "book",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1RzHdjSe6Eb59R5tQ28qp8tCtnk1MToON",
+  "title": "Linear Algebra and Matrix",
+  "size_mb": 8.9,
+  "subject": "Maths",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1A4n9WTYZAyIUE-12tTyTuHCm3CGho5cC",
+  "title": "Math Notes GATE",
+  "size_mb": 8.9,
+  "subject": "Maths",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1qA9SLvQx-EsTCdlAj53yJRUchS0HQeHH",
+  "title": "Discrete Mathematics, compiled book of Rosen",
+  "size_mb": 28.9,
+  "subject": "Maths",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1EGXVQ2ZsOgj35Ujippez3850E9sO7T7c",
+  "title": "Prob and Stats ShortNotes",
+  "size_mb": 0.4,
+  "subject": "Maths",
+  "group": null,
+  "kind": "note",
+  "ext": "docx",
+  "published": true
+ },
+ {
+  "id": "1ulEy5hC2bT2ML3tY_AxtmSb8W6caOqPK",
+  "title": "Calculus ShortNotes",
+  "size_mb": 6.7,
+  "subject": "Maths",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1B_-oAlewAKZtZH093GP2nEBJUcb6ju6A",
+  "title": "Prob and Stats ShortNotes",
+  "size_mb": 2.5,
+  "subject": "Maths",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "12vVVvBuvszL4kmXc14_ph-_w35UZS7Gg",
+  "title": "Linear Algebra ShortNotes",
+  "size_mb": 3.5,
+  "subject": "Maths",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "18nAdDUN1OKM26k-ZXRl2y3oV0JsEjbh5",
+  "title": "Sorting",
+  "size_mb": 7.0,
+  "subject": "DSA",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1kzUgpHY3ca-Pi7qAyqx7J4f9qWX4qgvd",
+  "title": "Algorithms, compiled book of Cormen",
+  "size_mb": 18.4,
+  "subject": "DSA",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1cmhrqspe2rXXBiXDv6oXCcPHi4Ckq_5t",
+  "title": "Data Structures ShortNotes",
+  "size_mb": 7.9,
+  "subject": "DSA",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1aRwAMeVfTLINgq9kWcNGJACMmnPzbOyT",
+  "title": "Algo ShortNotes",
+  "size_mb": 13.4,
+  "subject": "DSA",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1pyf4NPsbJc3OhjE4iKzSBuguik4iEnS5",
+  "title": "Queue",
+  "size_mb": 12.4,
+  "subject": "DSA",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1q6q7LeOA7tkOMg5dbu2brIIQm3PmetEU",
+  "title": "Linked List",
+  "size_mb": 8.5,
+  "subject": "DSA",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "19-EfRgZMTTYC784ZO32Dl02jkpD-bnQt",
+  "title": "Tree",
+  "size_mb": 27.0,
+  "subject": "DSA",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1hWA3oxuRtaJjNT5l31W1dHZjZvvh0-5y",
+  "title": "Stack",
+  "size_mb": 25.8,
+  "subject": "DSA",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1T4uYAwZMTG4SUDDGHQLaLEcYzRco7oVk",
+  "title": "Digital Electronics 2",
+  "size_mb": 7.8,
+  "subject": "Digital Electronics",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1r0fL_n5w7JipdNGvEWJF6RLqz2lWlyfy",
+  "title": "Digital Electronics",
+  "size_mb": 11.2,
+  "subject": "Digital Electronics",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1qEGTNxjVpvqIoehwbKUU1dopkycFcTuS",
+  "title": "Digital Electronics, compiled book of Morris Mano",
+  "size_mb": 1.9,
+  "subject": "Digital Electronics",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1bovQNeKiGA8cyNsWfpvDxS84Q29S25Xu",
+  "title": "AI Foundations DPP 01",
+  "size_mb": 0.5,
+  "subject": "DA Paper",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1D9pBcl2rEUSStdnppTffjGSWCCcloRlp",
+  "title": "PDSA - Search Algo",
+  "size_mb": 0.4,
+  "subject": "DA Paper",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1uYZQQ06sMl9N8HDn37ObFYqyYUMjmKNA",
+  "title": "Data Structure using Python",
+  "size_mb": 0.8,
+  "subject": "DA Paper",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1MO8KkLRx-QdFOqTe6NE6RegxBw2R7ckk",
+  "title": "GATE DA Data Warehousing",
+  "size_mb": 3.5,
+  "subject": "DA Paper",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1bQExocvzeTTY0QFYrvq-7VstVGlfdcNK",
+  "title": "GATE DA DBMS updated",
+  "size_mb": 2.5,
+  "subject": "DA Paper",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1hy4VKnuYOFUMl7wp80Mv6Gq8teyhbsn3",
+  "title": "Algorithm Time Complexity",
+  "size_mb": 1.1,
+  "subject": "DA Paper",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1vLFUjkZGp_d_z0TO4gVEOGTBv7VqcE_X",
+  "title": "Adversarial Search",
+  "size_mb": 1.9,
+  "subject": "DA Paper",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1YMB-QQMKmLVYgyPwelHJH6L0wyOfRAGb",
+  "title": "Logic, propositional, predicate",
+  "size_mb": 7.2,
+  "subject": "DA Paper",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1Vxd9VzU_tr2n8ODnk6FgSJy9WY5tUeJW",
+  "title": "Informed Search",
+  "size_mb": 1.6,
+  "subject": "DA Paper",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "10gSPyEYxuWvpteXN6TGb3jx1hg5Mlqm0",
+  "title": "Reasoning under Uncertainty, study material",
+  "size_mb": 1.8,
+  "subject": "DA Paper",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1tMsEr2W-4g3gsLm4cesBYMhyjh-PyKQM",
+  "title": "Search, Uninformed algorithms",
+  "size_mb": 3.5,
+  "subject": "DA Paper",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1estAmia9p1yZbkOVsQatPITQ7YOjo7xf",
+  "title": "GATE DA Linear Algebra Notes",
+  "size_mb": 0.5,
+  "subject": "DA Paper",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1oc5godnhTZhi9T7Za7KCOHGCCYo3Y7oL",
+  "title": "GATE DA Calculus",
+  "size_mb": 0.8,
+  "subject": "DA Paper",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1A0NUqiF8xf5-nr6f1VKpMvLlTLmqAVjp",
+  "title": "ML Supervised Full Notes",
+  "size_mb": 4.0,
+  "subject": "DA Paper",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "12QZuGh8xtjJFTh5M96zxNgBiX7qEUMwz",
+  "title": "ML Unsupervised Notes",
+  "size_mb": 1.3,
+  "subject": "DA Paper",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1IAOYW57DmBeYTHwNJ0A30he06-y_fAKI",
+  "title": "SVM, KNN, Tree, NBC",
+  "size_mb": 2.1,
+  "subject": "DA Paper",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1_KpYIQvmQhgw869tpTTgCIWkz0OQUYS8",
+  "title": "Theory of Computation, compiled book of Sipser",
+  "size_mb": 1.1,
+  "subject": "TOC",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "10rjbuaHxyDN8EIF5J9biSbbHnU_8Iwp3",
+  "title": "Theory of Computation",
+  "size_mb": 55.3,
+  "subject": "TOC",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1FRlHU3TpqhWrNDwGK1zKvHzCxZdD9C79",
+  "title": "TOC ShortNotes",
+  "size_mb": 9.6,
+  "subject": "TOC",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "12-COa6LFy52YvGtH-L7XBRdpGwYumIDV",
+  "title": "C Programming ShortNotes",
+  "size_mb": 4.8,
+  "subject": "C",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1aRyvQD12kYoBaz86tOM5SMtKk4udnjvk",
+  "title": "Databases, compiled book of Korth and Navathe",
+  "size_mb": 10.9,
+  "subject": "DBMS",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1od2duClI0qPJodIv8NlDKvj--MAH8mOR",
+  "title": "DBMS ShortNotes",
+  "size_mb": 10.0,
+  "subject": "DBMS",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "12x5o5kzHD98Dch67wnU1v9mj1RZcIZ7i",
+  "title": "DM ShortNotes",
+  "size_mb": 11.6,
+  "subject": "DBMS",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1FX63i-NTTgzAHimnC5jnWxvcje4yUTaz",
+  "title": "Computer Networks, compiled book of Tanenbaum",
+  "size_mb": 5.4,
+  "subject": "CN",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1swPhK_aiNwxej3W3YG3MrXz35jNooxWE",
+  "title": "CN ShortNotes",
+  "size_mb": 9.9,
+  "subject": "CN",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1K9C0rcBfzDmCZyD4gU92U-bxkLMyp7Li",
+  "title": "Compilers, compiled book of Ullman",
+  "size_mb": 1.7,
+  "subject": "Compiler Design",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "14r8-CVLFlCcA6gjoYuOiQV8trJCpkomQ",
+  "title": "CD ShortNotes",
+  "size_mb": 10.5,
+  "subject": "Compiler Design",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1uNtENiRDHUztFKdAA0uXIW0TfXSyBVX1",
+  "title": "COA, compiled book of Hamacher",
+  "size_mb": 3.4,
+  "subject": "COA",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "1TznqMW_WIeMwhQdOe1j56tNJ-1VRNNjl",
+  "title": "COA ShortNotes",
+  "size_mb": 9.6,
+  "subject": "COA",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1mywBHKuOyU-2KTNuV-KZ4JIQvtMFBWf4",
+  "title": "Operating System, compiled book of Galvin",
+  "size_mb": 4.5,
+  "subject": "OS",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": false
+ },
+ {
+  "id": "12X8VIIvcZqAY0CfZQroTnR-w0DWcAXCH",
+  "title": "OS Notes",
+  "size_mb": 125.2,
+  "subject": "OS",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1hdtcz0Ve8YXAPqrafG1IxaIzwblPjrjf",
+  "title": "Apti ShortNotes",
+  "size_mb": 3.3,
+  "subject": "General Aptitude",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1mKibJCu_K82L5R3aYMRbioBqPwWF48SU",
+  "title": "Shortcuts",
+  "size_mb": 131.2,
+  "subject": "General Aptitude",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1IsKyYRKL0QSPTJZsNRFGv3In6CxFBEpB",
+  "title": "Cheat Sheet",
+  "size_mb": 5.0,
+  "subject": "General Aptitude",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1VJIgan36gXYftwFIsnoKFZeGk2bjN8Ev",
+  "title": "Quantitative",
+  "size_mb": 688.7,
+  "subject": "General Aptitude",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "1DYZOS9W0MdkQ6z2-1wWiaGA5GbeZrtfN",
+  "title": "Aptitude",
+  "size_mb": 44.9,
+  "subject": "General Aptitude",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ },
+ {
+  "id": "166ri0CMza-6sbNmLyBVlH5vo_eYmEDBN",
+  "title": "100 Aptitude Tricks",
+  "size_mb": 2.7,
+  "subject": "General Aptitude",
+  "group": null,
+  "kind": "note",
+  "ext": "pdf",
+  "published": true
+ }
+]
