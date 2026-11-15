@@ -36,6 +36,8 @@ class Question:
     answer_min: float | None
     answer_max: float | None
     mta: bool
+    alt_answers: tuple[tuple[str, ...], ...] = ()  # other accepted MSQ sets
+    alt_ranges: tuple[tuple[float, float], ...] = ()  # other accepted NAT ranges
 
 
 def _parse(r: dict) -> Question:
@@ -51,12 +53,23 @@ def _parse(r: dict) -> Question:
         raise ValueError("choice question needs 4 options")
     if qtype == "NAT" and (amin is None or amax is None or amin > amax):
         raise ValueError("NAT needs a range")
+    alts = r.get("answer_alt") or []
+    alt_answers: tuple[tuple[str, ...], ...] = ()
+    alt_ranges: tuple[tuple[float, float], ...] = ()
+    if qtype == "MSQ":
+        alt_answers = tuple(tuple(sorted(str(a) for a in alt)) for alt in alts)
+        if any(not a for a in alt_answers):
+            raise ValueError("empty alternate answer")
+    elif qtype == "NAT":
+        alt_ranges = tuple((float(lo), float(hi)) for lo, hi in alts)
+        if any(lo > hi for lo, hi in alt_ranges):
+            raise ValueError("bad alternate range")
     year, paper, number = int(r["year"]), str(r["paper"]), int(r["number"])
     return Question(
         id=f"{year}-{paper}-{number:02d}", year=year, paper=paper, number=number, section=str(r["section"]),
         marks=marks, qtype=qtype, subject=str(r["subject"]), topic=str(r.get("topic", "")), text=str(r["text"]),
         options=options, figure=r.get("figure"), answer=answer, answer_min=amin, answer_max=amax,
-        mta=bool(r.get("mta", False)),
+        mta=bool(r.get("mta", False)), alt_answers=alt_answers, alt_ranges=alt_ranges,
     )
 
 

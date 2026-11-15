@@ -114,13 +114,14 @@ def _grade(q: Question, given) -> tuple[str, float, object]:
         if given is None or str(given).strip() == "":
             return "skipped", 0.0, None
         v = _number(given)
-        if v is not None and q.answer_min - 1e-9 <= v <= q.answer_max + 1e-9:
+        ranges = ((q.answer_min, q.answer_max), *q.alt_ranges)
+        if v is not None and any(lo - 1e-9 <= v <= hi + 1e-9 for lo, hi in ranges):
             return "correct", float(q.marks), str(given).strip()
         return "wrong", 0.0, str(given).strip()
     letters = _letters(given) if given not in (None, "", []) else ()
     if not letters:
         return "skipped", 0.0, None
-    if letters == tuple(sorted(q.answer)):
+    if letters in (tuple(sorted(q.answer)), *q.alt_answers):
         return "correct", float(q.marks), letters
     penalty = -q.marks / 3 if q.qtype == "MCQ" else 0.0
     return "wrong", penalty, letters

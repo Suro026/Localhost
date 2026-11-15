@@ -33,7 +33,7 @@
       <p class="mt-3 text-sm">
         <span class="font-semibold {{ 'text-green-700' if r.status == 'correct' else ('text-red-700' if r.status == 'wrong' else 'text-muted') }}">{{ r.status|capitalize }} ({{ r.marks }})</span>
         · Your answer: {% if r.given is none %}none{% elif r.given is string %}{{ r.given }}{% else %}{{ r.given|join(", ") }}{% endif %}
-        · Correct: {% if r.question.mta %}marks to all{% elif r.question.qtype == "NAT" %}{{ r.question.answer_min }}{% if r.question.answer_max != r.question.answer_min %} to {{ r.question.answer_max }}{% endif %}{% else %}{{ r.question.answer|join(", ") }}{% endif %}
+        · Correct: {% if r.question.mta %}marks to all{% elif r.question.qtype == "NAT" %}{{ r.question.answer_min }}{% if r.question.answer_max != r.question.answer_min %} to {{ r.question.answer_max }}{% endif %}{% for lo, hi in r.question.alt_ranges %} or {{ lo }}{% if hi != lo %} to {{ hi }}{% endif %}{% endfor %}{% else %}{{ r.question.answer|join(", ") }}{% for alt in r.question.alt_answers %} or {{ alt|join(", ") }}{% endfor %}{% endif %}
       </p>
     </li>
     {% endfor %}

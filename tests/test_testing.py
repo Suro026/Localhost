@@ -137,3 +137,21 @@ def test_paper_returns_all_scorable_in_order(use):
     s = T.build_paper(2025, "CS1")
     assert s.ids == ("2025-CS1-01", "2025-CS1-02") and s.mode == "paper"
     assert T.build_paper(1999, "CS1") is None
+
+
+def test_msq_alternate_answer_set_is_accepted(use):
+    import dataclasses
+    q = dataclasses.replace(mk(1, qtype="MSQ", answer=("A", "C", "D")), alt_answers=(("C", "D"),))
+    use([q])
+    assert T.score([q.id], {q.id: ["D", "C"]}).correct == 1
+    assert T.score([q.id], {q.id: ["A", "C", "D"]}).correct == 1
+    assert T.score([q.id], {q.id: ["C"]}).wrong == 1
+
+
+def test_nat_alternate_range_is_accepted(use):
+    import dataclasses
+    q = dataclasses.replace(mk(1, qtype="NAT", amin=2, amax=2), alt_ranges=((4.0, 4.0),))
+    use([q])
+    assert T.score([q.id], {q.id: "4"}).correct == 1
+    assert T.score([q.id], {q.id: "2"}).correct == 1
+    assert T.score([q.id], {q.id: "3"}).wrong == 1

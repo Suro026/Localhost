@@ -76,3 +76,14 @@ def test_duplicate_ids_keep_first(bank):
     write(bank, "b.json", [mcq(1, text="second")])
     got = qs.load_questions()
     assert len(got) == 1 and got[0].text == "first"
+
+
+def test_parse_alternate_answers():
+    from app.services.questions import _parse
+    base = dict(year=2023, paper="CS", number=1, section="CS", marks=1, subject="s", text="t")
+    q = _parse(dict(base, type="MSQ", options=list("abcd"), answer=["A", "C", "D"], answer_alt=[["C", "D"]]))
+    assert q.alt_answers == (("C", "D"),)
+    n = _parse(dict(base, type="NAT", answer_min=2, answer_max=2, answer_alt=[[4, 4]]))
+    assert n.alt_ranges == ((4.0, 4.0),)
+    with pytest.raises(ValueError):
+        _parse(dict(base, type="NAT", answer_min=2, answer_max=2, answer_alt=[[5, 4]]))
