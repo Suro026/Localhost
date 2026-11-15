@@ -17,10 +17,13 @@
     </div>
 
     <div class="flex items-center gap-2 self-center">
-      <a href="{{ whatsapp_group_url }}" target="_blank" rel="noopener noreferrer"
-         class="hidden items-center gap-2 rounded-full bg-[#1fa855] px-4 py-2 text-sm font-bold text-white ring-2 ring-white/70 transition-colors hover:bg-[#188a45] md:inline-flex">
-        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 00-8.46 15.03L2 22l5.1-1.55A9.9 9.9 0 1012.04 2zm5.8 14.08c-.24.68-1.42 1.3-1.95 1.34-.5.04-.97.23-3.27-.68-2.77-1.1-4.54-3.94-4.68-4.12-.13-.18-1.1-1.46-1.1-2.8 0-1.33.7-1.98.95-2.25.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.6.46.22.54.74 1.87.8 2 .07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.27-.12.53.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.22.6-.13.25.09 1.56.74 1.83.87.27.14.45.2.51.31.07.11.07.65-.17 1.33z"/></svg>
-        WhatsApp group
+      <span data-streak hidden class="hidden items-center gap-1.5 rounded-full bg-white/15 px-3 py-1.5 text-xs font-bold lg:inline-flex" title="Days in a row you studied or took a test"></span>
+      {% if here != "/tests" %}
+      <a href="/tests" class="hidden items-center rounded-full bg-white px-4 py-2 text-sm font-bold text-brand-700 transition-colors hover:bg-brand-100 md:inline-flex">Take a test</a>
+      {% endif %}
+      <a href="{{ whatsapp_group_url }}" target="_blank" rel="noopener noreferrer" aria-label="Join the WhatsApp group" title="Join the WhatsApp group"
+         class="hidden h-10 w-10 items-center justify-center rounded-full bg-[#1fa855] text-white ring-2 ring-white/70 transition-colors hover:bg-[#188a45] md:inline-flex">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 00-8.46 15.03L2 22l5.1-1.55A9.9 9.9 0 1012.04 2zm5.8 14.08c-.24.68-1.42 1.3-1.95 1.34-.5.04-.97.23-3.27-.68-2.77-1.1-4.54-3.94-4.68-4.12-.13-.18-1.1-1.46-1.1-2.8 0-1.33.7-1.98.95-2.25.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.6.46.22.54.74 1.87.8 2 .07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.27-.12.53.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.22.6-.13.25.09 1.56.74 1.83.87.27.14.45.2.51.31.07.11.07.65-.17 1.33z"/></svg>
       </a>
       <label for="nav-toggle" class="cursor-pointer rounded-xl p-2 hover:bg-white/15 md:hidden" aria-label="Toggle menu">
         <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 8h16M4 16h16"/></svg>
@@ -32,8 +35,9 @@
       <a href="{{ href }}" {% if (href == "/" and here == "/") or (href != "/" and here.startswith(href)) %}aria-current="page"{% endif %}
          class="rounded-xl px-4 py-3 text-sm font-semibold uppercase tracking-[.08em] text-white/85 hover:bg-white/10 aria-[current=page]:bg-white aria-[current=page]:text-brand-700">{{ label }}</a>
       {% endfor %}
+      <a href="/tests" class="mt-1 inline-flex items-center justify-center rounded-xl bg-white px-4 py-3 text-sm font-bold text-brand-700">Take a test</a>
       <a href="{{ whatsapp_group_url }}" target="_blank" rel="noopener noreferrer"
-         class="mt-1 inline-flex items-center justify-center gap-2 rounded-xl bg-[#1fa855] px-4 py-3 text-sm font-bold text-white hover:bg-[#188a45]">WhatsApp group</a>
+         class="inline-flex items-center justify-center gap-2 rounded-xl bg-[#1fa855] px-4 py-3 text-sm font-bold text-white hover:bg-[#188a45]">WhatsApp group</a>
     </div>
   </nav>
 </header>

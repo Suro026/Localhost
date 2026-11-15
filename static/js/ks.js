@@ -80,5 +80,9 @@
     }
     s.reminder.last = KS.dayKey(); KS.saveStudy(s);
   };
-  document.addEventListener("DOMContentLoaded", function () { KS.checkReminder(); setInterval(KS.checkReminder, 60000); });
+  document.addEventListener("DOMContentLoaded", function () {
+    KS.checkReminder(); setInterval(KS.checkReminder, 60000);
+    var chip = document.querySelector("[data-streak]"), n = KS.streak();
+    if (chip && n > 0) { chip.textContent = n + "-day streak"; chip.hidden = false; }
+  });
 })();

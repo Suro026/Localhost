@@ -72,17 +72,6 @@
     </div>
   </header>
 
-  {# sticky page nav #}
-  <div class="ftp-navwrap">
-    <nav class="ftp-nav" aria-label="Page sections">
-      <span class="ftp-count" aria-hidden="true"><span data-cur>01</span><small>/{{ "%02d"|format(SECT|length) }}</small></span>
-      <div class="ftp-links">
-        <span class="ftp-ind" style="opacity:0"></span>
-        {% for id, label, page in SECT %}<button type="button" class="ftp-link" data-go="{{ id }}">{{ label }}</button>{% endfor %}
-      </div>
-    </nav>
-  </div>
-
   <main class="ftp-wrap ftp-sheets">
 
     {# ---------------- 01 cover ---------------- #}
