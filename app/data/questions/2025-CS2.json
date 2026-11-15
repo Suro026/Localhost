@@ -1,0 +1,1997 @@
+[
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 1,
+  "section": "GA",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Verbal Ability: Sentence Completion",
+  "text": "Despite his initial hesitation, Rehman’s _________ to contribute to the success of the project never wavered. Select the most appropriate option to complete the above sentence.",
+  "options": [
+   "ambivalence",
+   "satisfaction",
+   "resolve",
+   "revolve"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 1,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 2,
+  "section": "GA",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Verbal Ability: Analogies",
+  "text": "Bird : Nest :: Bee : _______ Select the correct option to complete the analogy.",
+  "options": [
+   "Kennel",
+   "Hammock",
+   "Hive",
+   "Lair"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 2,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 3,
+  "section": "GA",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Numerical Ability: Algebra",
+  "text": "If Peˣ = Qe⁻ˣ for all real values of x, which one of the following statements is true?",
+  "options": [
+   "P = Q = 0",
+   "P = Q = 1",
+   "P = 1; Q = −1",
+   "P/Q = 0"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 3,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 4,
+  "section": "GA",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Spatial Reasoning: Paper Folding",
+  "text": "The paper as shown in the figure is folded to make a cube where each square corresponds to a particular face of the cube. Which one of the following options correctly represents the cube? Note: The figures shown are representative.",
+  "options": [
+   "Cube (A) in the figure",
+   "Cube (B) in the figure",
+   "Cube (C) in the figure",
+   "Cube (D) in the figure"
+  ],
+  "figure": "img/q/2025-CS2-04.png",
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 4,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 5,
+  "section": "GA",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Numerical Ability: Number Theory",
+  "text": "Let p₁ and p₂ denote two arbitrary prime numbers. Which one of the following statements is correct for all values of p₁ and p₂?",
+  "options": [
+   "p₁ + p₂ is not a prime number.",
+   "p₁p₂ is not a prime number.",
+   "p₁ + p₂ + 1 is a prime number.",
+   "p₁p₂ + 1 is a prime number."
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 5,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 6,
+  "section": "GA",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Verbal Ability: Inference",
+  "text": "Based only on the conversation below, identify the logically correct inference: “Even if I had known that you were in the hospital, I would not have gone there to see you”, Ramya told Josephine.",
+  "options": [
+   "Ramya knew that Josephine was in the hospital.",
+   "Ramya did not know that Josephine was in the hospital.",
+   "Ramya and Josephine were once close friends; but now, they are not.",
+   "Josephine was in the hospital due to an injury to her leg."
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 6,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 7,
+  "section": "GA",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Reasoning: Coding",
+  "text": "If IMAGE and FIELD are coded as FHBNJ and EMFJG respectively then, which one among the given options is the most appropriate code for BEACH ?",
+  "options": [
+   "CEADP",
+   "IDBFC",
+   "JGIBC",
+   "IBCEC"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 7,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 8,
+  "section": "GA",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Reasoning: Data Interpretation",
+  "text": "Which one of the following options is correct for the given data in the table?\nIteration (i): 0, 1, 2, 3\nInput (I): 20, −4, 10, 15\nOutput (X): 20, 16, 26, 41\nOutput (Y): 20, −80, −800, −12000",
+  "options": [
+   "X(i) = X(i−1) + I(i); Y(i) = Y(i−1)·I(i); i > 0",
+   "X(i) = X(i−1)·I(i); Y(i) = Y(i−1) + I(i); i > 0",
+   "X(i) = X(i−1)·I(i); Y(i) = Y(i−1)·I(i); i > 0",
+   "X(i) = X(i−1) + I(i); Y(i) = Y(i−1)·I(i−1); i > 0"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 8,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 9,
+  "section": "GA",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Numerical Ability: Geometry",
+  "text": "In the given figure, PQRS is a square of side 2 cm and PLMN is a rectangle. The corner L of the rectangle is on the side QR. Side MN of the rectangle passes through the corner S of the square. What is the area (in cm²) of the rectangle PLMN?\nNote: The figure shown is representative.",
+  "options": [
+   "2√2",
+   "2",
+   "8",
+   "4"
+  ],
+  "figure": "img/q/2025-CS2-09.png",
+  "answer": [
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 9,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 10,
+  "section": "GA",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Spatial Reasoning: Connectivity",
+  "text": "The diagram below shows a river system consisting of 7 segments, marked P, Q, R, S, T, U, and V. It splits the land into 5 zones, marked Z1, Z2, Z3, Z4, and Z5. We need to connect these zones using the least number of bridges. Out of the following options, which one is correct? Note: The figure shown is representative.",
+  "options": [
+   "Bridges on P, Q, and T",
+   "Bridges on P, Q, S, and T",
+   "Bridges on Q, R, T, and V",
+   "Bridges on P, Q, S, U, and V"
+  ],
+  "figure": "img/q/2025-CS2-10.png",
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 10,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 11,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Linear Algebra",
+  "topic": "Matrices",
+  "text": "If A = [[1, 2], [2, −1]] (rows separated by commas), then which ONE of the following is A⁸?",
+  "options": [
+   "[[25, 0], [0, 25]]",
+   "[[125, 0], [0, 125]]",
+   "[[625, 0], [0, 625]]",
+   "[[3125, 0], [0, 3125]]"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 11,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 12,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Calculus",
+  "topic": "Integration",
+  "text": "The value of x such that x > 1, satisfying the equation ∫₁ˣ t ln t dt = 1/4 is",
+  "options": [
+   "√e",
+   "e",
+   "e²",
+   "e⁻¹"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 11,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 13,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Programming and Data Structures",
+  "topic": "Binary Trees",
+  "text": "Consider a binary tree T in which every node has either zero or two children. Let n> 0 be the number of nodes in T. Which ONE of the following is the number of nodes in T that have exactly two children?",
+  "options": [
+   "(n − 2)/2",
+   "(n − 1)/2",
+   "n/2",
+   "(n + 1)/2"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 12,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 14,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Linear Algebra",
+  "topic": "Determinants",
+  "text": "Let L, M, and N be non-singular matrices of order 3 satisfying the equations L² = L⁻¹, M = L⁸ and N = L². Which ONE of the following is the value of the determinant of (M − N)?",
+  "options": [
+   "0",
+   "1",
+   "2",
+   "3"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 13,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 15,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Discrete Mathematics",
+  "topic": "Mathematical Logic",
+  "text": "Let P(x) be an arbitrary predicate over the domain of natural numbers. Which ONE of the following statements is TRUE?",
+  "options": [
+   "(P(0) ∧ (∀x [P(x) ⇒ P(x+1)])) ⇒ (∀x P(x))",
+   "(P(0) ∧ (∀x [P(x) ⇒ P(x−1)])) ⇒ (∀x P(x))",
+   "(P(1000) ∧ (∀x [P(x) ⇒ P(x−1)])) ⇒ (∀x P(x))",
+   "(P(1000) ∧ (∀x [P(x) ⇒ P(x+1)])) ⇒ (∀x P(x))"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 13,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 16,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Computer Networks",
+  "topic": "ARP and TCP",
+  "text": "Consider the following statements:\n(i) Address Resolution Protocol (ARP) provides a mapping from an IP address to the corresponding hardware (link-layer) address.\n(ii) A single TCP segment from a sender S to a receiver R cannot carry both data from S to R and acknowledgement for a segment from R to S.\nWhich ONE of the following is CORRECT?",
+  "options": [
+   "Both (i) and (ii) are TRUE",
+   "(i) is TRUE and (ii) is FALSE",
+   "(i) is FALSE and (ii) is TRUE",
+   "Both (i) and (ii) are FALSE"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 14,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 17,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Computer Networks",
+  "topic": "Routing",
+  "text": "Consider the routing protocols given in List I and the names given in List II:\nList I: (i) Distance vector routing, (ii) Link state routing\nList II: (a) Bellman-Ford, (b) Dijkstra\nFor matching of items in List I with those in List II, which ONE of the following options is CORRECT?",
+  "options": [
+   "(i) – (a) and (ii) – (b)",
+   "(i) – (a) and (ii) – (a)",
+   "(i) – (b) and (ii) – (a)",
+   "(i) – (b) and (ii) – (b)"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 15,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 18,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Computer Networks",
+  "topic": "IPv4",
+  "text": "A machine receives an IPv4 datagram. The protocol field of the IPv4 header has the protocol number of a protocol X. Which ONE of the following is NOT a possible candidate for X?",
+  "options": [
+   "Internet Control Message Protocol (ICMP)",
+   "Internet Group Management Protocol (IGMP)",
+   "Open Shortest Path First (OSPF)",
+   "Routing Information Protocol (RIP)"
+  ],
+  "figure": null,
+  "answer": [
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 16,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 19,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Programming and Data Structures",
+  "topic": "C Pointers and Strings",
+  "text": "Consider the following C program:\n#include <stdio.h>\nvoid stringcopy(char *, char *);\nint main(){\n    char a[30] = \"@#Hello World!\";\n    stringcopy(a, a + 2);\n    printf(\"%s\\n\", a);\n    return 0;\n}\nvoid stringcopy(char *s, char *t) {\n    while(*t) *s++ = *t++;\n}\nWhich ONE of the following will be the output of the program?",
+  "options": [
+   "@#Hello World!",
+   "Hello World!",
+   "ello World!",
+   "Hello World!d!"
+  ],
+  "figure": null,
+  "answer": [
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 17,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 20,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Algorithms",
+  "topic": "Searching",
+  "text": "Consider an unordered list of N distinct integers. What is the minimum number of element comparisons required to find an integer in the list that is NOT the largest in the list?",
+  "options": [
+   "1",
+   "N−1",
+   "N",
+   "2N−1"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 18,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 21,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Compiler Design",
+  "topic": "Intermediate Code Generation",
+  "text": "Consider the following statements about the use of backpatching in a compiler for intermediate code generation: (I) Backpatching can be used to generate code for Boolean expression in one pass. (II) Backpatching can be used to generate code for flow-of-control statements in one pass. Which ONE of the following options is CORRECT?",
+  "options": [
+   "Only (I) is correct.",
+   "Only (II) is correct.",
+   "Both (I) and (II) are correct.",
+   "Neither (I) nor (II) is correct."
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 18,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 22,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Compiler Design",
+  "topic": "Syntax Directed Translation",
+  "text": "Given the following syntax directed translation rules:\nRule 1: R → AB {B.i = R.i − 1; A.i = B.i; R.i = A.i + 1;}\nRule 2: P → CD {P.i = C.i + D.i; D.i = C.i + 2;}\nRule 3: Q → EF {Q.i = E.i + F.i;}\nWhich ONE is the CORRECT option among the following?",
+  "options": [
+   "Rule 1 is S-attributed and L-attributed; Rule 2 is S-attributed and not L-attributed; Rule 3 is neither S-attributed nor L-attributed",
+   "Rule 1 is neither S-attributed nor L-attributed; Rule 2 is S-attributed and L- attributed; Rule 3 is S-attributed and L-attributed",
+   "Rule 1 is neither S-attributed nor L-attributed; Rule 2 is not S-attributed and is L-attributed; Rule 3 is S-attributed and L-attributed",
+   "Rule 1 is S-attributed and not L-attributed; Rule 2 is not S-attributed and is L-attributed; Rule 3 is S-attributed and L-attributed"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 19,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 23,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Computer Networks",
+  "topic": "IP Fragmentation",
+  "text": "Consider a network that uses Ethernet and IPv4. Assume that IPv4 headers do not use any options field. Each Ethernet frame can carry a maximum of 1500 bytes in its data field. A UDP segment is transmitted. The payload (data) in the UDP segment is 7488 bytes. Which ONE of the following choices has the CORRECT total number of fragments transmitted and the size of the last fragment including IPv4 header?",
+  "options": [
+   "5 fragments, 1488 bytes",
+   "6 fragments, 88 bytes",
+   "6 fragments, 108 bytes",
+   "6 fragments, 116 bytes"
+  ],
+  "figure": null,
+  "answer": [
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 20,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 24,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Theory of Computation",
+  "topic": "Pushdown Automata",
+  "text": "Which ONE of the following languages is accepted by a deterministic pushdown automaton?",
+  "options": [
+   "Any regular language.",
+   "Any context-free language.",
+   "Any language accepted by a non-deterministic pushdown automaton.",
+   "Any decidable language."
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 20,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 25,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Theory of Computation",
+  "topic": "Decidability",
+  "text": "Let G1, G2 be Context Free Grammars (CFGs) and R be a regular expression. For a grammar G, let L(G) denote the language generated by G. Which ONE among the following questions is decidable?",
+  "options": [
+   "Is L(G1) = L(G2)?",
+   "Is L(G1) ∩ L(G2) = ∅?",
+   "Is L(G1) = L(R)?",
+   "Is L(G1) = ∅?"
+  ],
+  "figure": null,
+  "answer": [
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 21,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 26,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Operating System",
+  "topic": "CPU Scheduling",
+  "text": "Processes P1, P2, P3, P4 arrive in that order at times 0, 1, 2, and 8 milliseconds respectively, and have execution times of 10, 13, 6, and 9 milliseconds respectively. Shortest Remaining Time First (SRTF) algorithm is used as the CPU scheduling policy. Ignore context switching times. Which ONE of the following correctly gives the average turnaround time of the four processes in milliseconds?",
+  "options": [
+   "22",
+   "15",
+   "37",
+   "19"
+  ],
+  "figure": null,
+  "answer": [
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 21,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 27,
+  "section": "CS",
+  "marks": 1,
+  "type": "MSQ",
+  "subject": "Databases",
+  "topic": "Transactions (ACID)",
+  "text": "An audit of a banking transactions system has found that on an earlier occasion, two joint holders of account A attempted simultaneous transfers of Rs. 10000 each from account A to account B. Both transactions read the same value, Rs. 11000, as the initial balance in A and were allowed to go through. B was credited Rs. 10000 twice. A was debited only once and ended up with a balance of Rs. 1000. Which of the following properties is/are certain to have been violated by the system?",
+  "options": [
+   "Atomicity",
+   "Consistency",
+   "Isolation",
+   "Durability"
+  ],
+  "figure": null,
+  "answer": [
+   "B",
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 22,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 28,
+  "section": "CS",
+  "marks": 1,
+  "type": "MSQ",
+  "subject": "Computer Organization",
+  "topic": "Instruction Set Architecture",
+  "text": "Which of the following is/are part of an Instruction Set Architecture of a processor?",
+  "options": [
+   "The size of the cache memory",
+   "The clock frequency of the processor",
+   "The number of cache memory levels",
+   "The total number of registers"
+  ],
+  "figure": null,
+  "answer": [
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 22,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 29,
+  "section": "CS",
+  "marks": 1,
+  "type": "MSQ",
+  "subject": "Algorithms",
+  "topic": "Graph Traversal",
+  "text": "Which of the following statements regarding Breadth First Search (BFS) and Depth First Search (DFS) on an undirected simple graph G is/are TRUE?",
+  "options": [
+   "A DFS tree of G is a Shortest Path tree of G.",
+   "Every non-tree edge of G with respect to a DFS tree is a forward/back edge.",
+   "If (u, v) is a non-tree edge of G with respect to a BFS tree, then the distances from the source vertex s to u and v in the BFS tree are within ±1 of each other.",
+   "Both BFS and DFS can be used to find the connected components of G."
+  ],
+  "figure": null,
+  "answer": [
+   "B",
+   "C",
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 23,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 30,
+  "section": "CS",
+  "marks": 1,
+  "type": "MSQ",
+  "subject": "Theory of Computation",
+  "topic": "Closure Properties",
+  "text": "Consider the two lists List I and List II given below:\nList I: (i) Context free languages, (ii) Recursive languages, (iii) Regular languages\nList II: (a) Closed under union, (b) Not closed under complementation, (c) Closed under intersection\nFor matching of items in List I with those in List II, which of the following option(s) is/are CORRECT?",
+  "options": [
+   "(i) – (a), (ii) – (b), and (iii) – (c)",
+   "(i) – (b), (ii) – (a), and (iii) – (c)",
+   "(i) – (b), (ii) – (c), and (iii) – (a)",
+   "(i) – (a), (ii) – (c), and (iii) – (b)"
+  ],
+  "figure": null,
+  "answer": [
+   "B",
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 24,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 31,
+  "section": "CS",
+  "marks": 1,
+  "type": "MSQ",
+  "subject": "Digital Logic",
+  "topic": "Combinational Circuits",
+  "text": "Consider the following logic circuit diagram (see figure). Which is/are the CORRECT option(s) for the output function F?",
+  "options": [
+   "NOT(X·Y)",
+   "X̄ + Ȳ + X·Ȳ",
+   "NOT(X·Y) + X̄ + X·Ȳ",
+   "X + Ȳ"
+  ],
+  "figure": "img/q/2025-CS2-31.png",
+  "answer": [
+   "A",
+   "B",
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 25,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 32,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Computer Organization",
+  "topic": "Booth's Algorithm",
+  "text": "The following two signed 2’s complement numbers (multiplicand M and multiplier Q) are being multiplied using Booth’s algorithm: M: 1100 1101 1110 1101 and Q: 1010 0100 1010 1010 The total number of addition and subtraction operations to be performed is ___________. (Answer in integer)",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 13.0,
+  "answer_max": 13.0,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 25,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 33,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Programming and Data Structures",
+  "topic": "C Programs",
+  "text": "int x=126, y=105;\ndo {\n    if (x>y)\n        x = x-y;\n    else\n        y = y-x;\n} while (x != y);\nprintf(\"%d\", x);\nThe output of the given C code segment is ________. (Answer in integer)",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 21.0,
+  "answer_max": 21.0,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 26,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 34,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Digital Logic",
+  "topic": "Counters",
+  "text": "In a 4-bit ripple counter, if the period of the waveform at the last flip-flop is 64 microseconds, then the frequency of the ripple counter in kHz is ________. (Answer in integer)",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 250.0,
+  "answer_max": 250.0,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 26,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 35,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Programming and Data Structures",
+  "topic": "Binary Search Trees",
+  "text": "Suppose the values 10, −4, 15, 30, 20, 5, 60, 19 are inserted in that order into an initially empty binary search tree. Let T be the resulting binary search tree. The number of edges in the path from the node containing 19 to the root node of T is ___________. (Answer in integer)",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 4.0,
+  "answer_max": 4.0,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 26,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 36,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Computer Networks",
+  "topic": "Flow Control",
+  "text": "Suppose we are transmitting frames between two nodes using Stop-and-Wait protocol. The frame size is 3000 bits. The transmission rate of the channel is 2000 bps (bits/second) and the propagation delay between the two nodes is 100 milliseconds. Assume that the processing times at the source and destination are negligible. Also, assume that the size of the acknowledgement packet is negligible. Which ONE of the following most accurately gives the channel utilization for the above scenario in percentage?",
+  "options": [
+   "88.23",
+   "93.75",
+   "85.44",
+   "66.67"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 27,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 37,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Algorithms",
+  "topic": "Minimum Spanning Tree and Shortest Paths",
+  "text": "Let G be an edge-weighted undirected graph with positive edge weights. Suppose a positive constant α is added to the weight of every edge. Which ONE of the following statements is TRUE about the minimum spanning trees (MSTs) and shortest paths (SPs) in G before and after the edge weight update?",
+  "options": [
+   "Every MST remains an MST, and every SP remains an SP.",
+   "MSTs need not remain MSTs, and every SP remains an SP.",
+   "Every MST remains an MST, and SPs need not remain SPs.",
+   "MSTs need not remain MSTs, and SPs need not remain SPs."
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 28,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 38,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Programming and Data Structures",
+  "topic": "Data Structures",
+  "text": "A meld operation on two instances of a data structure combines them into one single instance of the same data structure. Consider the following data structures: P: Unsorted doubly linked list with pointers to the head node and tail node of the list. Q: Min-heap implemented using an array. R: Binary Search Tree. Which ONE of the following options gives the worst-case time complexities for meld operation on instances of size n of these data structures?",
+  "options": [
+   "P: Θ(1), Q: Θ(n), R: Θ(n)",
+   "P: Θ(1), Q: Θ(n log n), R: Θ(n)",
+   "P: Θ(n), Q: Θ(n log n), R: Θ(n²)",
+   "P: Θ(1), Q: Θ(n), R: Θ(n log n)"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 29,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 39,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Computer Organization",
+  "topic": "Cache Memory",
+  "text": "For a direct-mapped cache, 4 bits are used for the tag field and 12 bits are used to index into a cache block. The size of each cache block is one byte. Assume that there is no other information stored for each cache block. Which ONE of the following is the CORRECT option for the sizes of the main memory and the cache memory in this system (byte addressable), respectively?",
+  "options": [
+   "64 KB and 4 KB",
+   "128 KB and 16 KB",
+   "64 KB and 8 KB",
+   "128 KB and 6 KB"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 30,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 40,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Compiler Design",
+  "topic": "Parsing",
+  "text": "Given a Context-Free Grammar G as follows:\nS → Aa | bAc | dc | bda\nA → d\nWhich ONE of the following statements is TRUE?",
+  "options": [
+   "G is neither LALR(1) nor SLR(1)",
+   "G is CLR(1), not LALR(1)",
+   "G is LALR(1), not SLR(1)",
+   "G is LALR(1), also SLR(1)"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 30,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 41,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Algorithms",
+  "topic": "Searching",
+  "text": "An array A of length n with distinct elements is said to be bitonic if there is an index 1 ≤i≤n such that A[1. . i] is sorted in the non-decreasing order and A[i+ 1 . . n] is sorted in the non-increasing order. Which ONE of the following represents the best possible asymptotic bound for the worst-case number of comparisons by an algorithm that searches for an element in a bitonic array A?",
+  "options": [
+   "Θ(n)",
+   "Θ(1)",
+   "Θ(log₂ n)",
+   "Θ(log n)"
+  ],
+  "figure": null,
+  "answer": [
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 31,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 42,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Discrete Mathematics",
+  "topic": "Partial Orders and Lattices",
+  "text": "Let ℱ be the set of all functions from {1, … , n} to {0,1}. Define the binary relation ≼ on ℱ as follows: ∀f, g∈ℱ, f≼g if and only if ∀x∈{1, … , n}, f(x) ≤g(x), where 0 ≤1. Which of the following statement(s) is/are TRUE?",
+  "options": [
+   "≼ is a symmetric relation",
+   "(ℱ, ≼ ) is a partial order",
+   "(ℱ, ≼ ) is a lattice",
+   "≼ is an equivalence relation"
+  ],
+  "figure": null,
+  "answer": [
+   "B",
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 31,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 43,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Digital Logic",
+  "topic": "K-Map",
+  "text": "Given the Karnaugh Map (see figure) for a Boolean function F(w, x, y, z). Which one or more of the following Boolean expression(s) represent(s) F?",
+  "options": [
+   "w̄x̄ȳz̄ + wx̄ȳz̄ + w̄x̄yz̄ + wx̄yz̄ + xz",
+   "w̄x̄ȳz̄ + w̄x̄yz̄ + wx̄yz + xz",
+   "w̄x̄ȳz̄ + wx̄ȳz̄ + wx̄ȳz + xz",
+   "x̄z̄ + xz"
+  ],
+  "figure": "img/q/2025-CS2-43.png",
+  "answer": [
+   "A",
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 32,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 44,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Linear Algebra",
+  "topic": "LU Decomposition",
+  "text": "Consider a system of linear equations PX = Q where P ∈ ℝ³ˣ³ and Q ∈ ℝ³ˣ¹. Suppose P has an LU decomposition, P = LU, where\nL = [[1, 0, 0], [l₂₁, 1, 0], [l₃₁, l₃₂, 1]] and U = [[u₁₁, u₁₂, u₁₃], [0, u₂₂, u₂₃], [0, 0, u₃₃]] (rows separated by commas).\nWhich of the following statement(s) is/are TRUE?",
+  "options": [
+   "The system PX= Q can be solved by first solving LY= Q and then UX= Y.",
+   "If P is invertible, then both L and U are invertible.",
+   "If P is singular, then at least one of the diagonal elements of U is zero.",
+   "If P is symmetric, then both L and U are symmetric."
+  ],
+  "figure": null,
+  "answer": [
+   "A",
+   "B",
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 33,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 45,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Programming and Data Structures",
+  "topic": "Stacks",
+  "text": "Consider a stack data structure into which we can PUSH and POP records. Assume that each record pushed in the stack has a positive integer key and that all keys are distinct. We wish to augment the stack data structure with an O(1) time MIN operation that returns a pointer to the record with smallest key present in the stack 1) without deleting the corresponding record, and 2) without increasing the complexities of the standard stack operations. Which one or more of the following approach(es) can achieve it?",
+  "options": [
+   "Keep with every record in the stack, a pointer to the record with the smallest key below it.",
+   "Keep a pointer to the record with the smallest key in the stack.",
+   "Keep an auxiliary array in which the key values of the records in the stack are maintained in sorted order.",
+   "Keep a Min-Heap in which the key values of the records in the stack are maintained."
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 34,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 46,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Databases",
+  "topic": "Normalization",
+  "text": "Consider the following relational schema along with all the functional dependencies that hold on them.\nR1(A, B, C, D, E): {D → E, EA → B, EB → C}\nR2(A, B, C, D): {A → D, A → B, C → A}\nWhich of the following statement(s) is/are TRUE?",
+  "options": [
+   "R1 is in 3NF",
+   "R2 is in 3NF",
+   "R1 is NOT in 3NF",
+   "R2 is NOT in 3NF"
+  ],
+  "figure": null,
+  "answer": [
+   "C",
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 35,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 47,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Operating System",
+  "topic": "Page Replacement",
+  "text": "Consider a demand paging system with three frames, and the following page reference string: 1 2 3 4 5 4 1 6 4 5 1 3 2.\nThe contents of the frames are as follows initially and after each reference (from left to right):\nReference: initially | 1* 2* 3* 4* 5* 4 1 6* 4 5 1* 3* 2*\nFrame 1:  - | 1 1 1 1 1 1 1 6 6 6 6 6 2\nFrame 2:  - | - 2 2 4 4 4 4 4 4 4 1 1 1\nFrame 3:  - | - - 3 3 5 5 5 5 5 5 5 3 3\nThe *-marked references cause page replacements.\nWhich one or more of the following could be the page replacement policy/policies in use?",
+  "options": [
+   "Least Recently Used page replacement policy",
+   "Least Frequently Used page replacement policy",
+   "Most Frequently Used page replacement policy",
+   "Optimal page replacement policy"
+  ],
+  "figure": null,
+  "answer": [
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 36,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 48,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Operating System",
+  "topic": "Deadlock",
+  "text": "P = {P1, P2, P3, P4} consists of all active processes in an operating system. R = {R1, R2, R3, R4} consists of single instances of distinct types of resources in the system. The resource allocation graph has the following assignment and claim edges.\nAssignment edges: R1 → P1, R2 → P2, R3 → P3, R4 → P4 (the assignment edge R1 → P1 means resource R1 is assigned to process P1, and so on for others)\nClaim edges: P1 → R2, P2 → R3, P3 → R1, P2 → R4, P4 → R2 (the claim edge P1 → R2 means process P1 is waiting for resource R2, and so on for others)\nWhich of the following statement(s) is/are CORRECT?",
+  "options": [
+   "Aborting P1 makes the system deadlock free.",
+   "Aborting P3 makes the system deadlock free.",
+   "Aborting P2 makes the system deadlock free.",
+   "Aborting P1 and P4 makes the system deadlock free."
+  ],
+  "figure": null,
+  "answer": [
+   "C",
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 37,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 49,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Computer Organization",
+  "topic": "IEEE 754",
+  "text": "Three floating point numbers X, Y, and Z are stored in three registers RX, RY, and RZ, respectively in IEEE 754 single precision format as given below in hexadecimal: RX = 0xC1100000, RY = 0x40C00000, and RZ = 0x41400000 Which of the following option(s) is/are CORRECT?",
+  "options": [
+   "4(X+ Y) + Z = 0",
+   "2Y – Z = 0",
+   "4X + 3Z = 0",
+   "X+ Y+ Z = 0"
+  ],
+  "figure": null,
+  "answer": [
+   "A",
+   "B",
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 38,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 50,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Digital Logic",
+  "topic": "Boolean Algebra",
+  "text": "Which of the following Boolean algebraic equation(s) is/are CORRECT?",
+  "options": [
+   "Ā·B·C + A·B̄·C̄ + Ā·B̄·C̄ + A·B̄·C + A·B·C = B·C + B̄·C̄ + Ā·B̄",
+   "A·B + Ā·C + B·C = A·B + Ā·C",
+   "(A + C)(Ā + B) = A·B + Ā·C",
+   "NOT[(A + B̄ + D̄)(C + D)(Ā + C + D)(A + B + D̄)] = Ā·D + C̄·D̄"
+  ],
+  "figure": null,
+  "answer": [
+   "B",
+   "C",
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 38,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 51,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Compiler Design",
+  "topic": "LL(1) Parsing",
+  "text": "Consider two grammars G₁ and G₂ with the production rules given below:\nG₁: S → if E then S | if E then S else S | a\n    E → b\nG₂: S → if E then S | M\n    M → if E then M else S | c\n    E → b\nwhere if, then, else, a, b, c are the terminals.\nWhich of the following option(s) is/are CORRECT?",
+  "options": [
+   "G₁ is not LL(1) and G₂ is LL(1).",
+   "G₁ is LL(1) and G₂ is not LL(1).",
+   "G₁ and G₂ are not LL(1).",
+   "G₁ and G₂ are ambiguous."
+  ],
+  "figure": null,
+  "answer": [
+   "C",
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 39,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 52,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Theory of Computation",
+  "topic": "Regular Languages",
+  "text": "Let Σ = {a, b, c}. For x∈Σ∗, and α∈Σ, let #α(x) denote the number of occurrences of α in x. Which one or more of the following option(s) define(s) regular language(s)?",
+  "options": [
+   "{aᵐbⁿ | m, n ≥ 0}",
+   "{a, b}* ∩ {aᵐbⁿcᵐ⁻ⁿ | m ≥ n ≥ 0}",
+   "{w | w ∈ {a, b}*, #a(w) ≡ 2 (mod 7), and #b(w) ≡ 3 (mod 9)}",
+   "{w | w ∈ {a, b}*, #a(w) ≡ 2 (mod 7), and #a(w) = #b(w)}"
+  ],
+  "figure": null,
+  "answer": [
+   "A",
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 40,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 53,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Databases",
+  "topic": "Serializability",
+  "text": "Consider the database transactions T1 and T2, and data items X and Y. Which of the schedule(s) is/are conflict serializable?\nTransaction T1: R1(X), W1(Y), R1(X), W1(X), COMMIT(T1)\nTransaction T2: W2(X), W2(Y), COMMIT(T2)",
+  "options": [
+   "R1(X), W2(X), W1(Y), W2(Y), R1(X), W1(X), COMMIT(T2), COMMIT(T1)",
+   "W2(X), R1(X), W2(Y), W1(Y), R1(X), COMMIT(T2), W1(X), COMMIT(T1)",
+   "R1(X), W1(Y), W2(X), W2(Y), R1(X), W1(X), COMMIT(T1), COMMIT(T2)",
+   "W2(X), R1(X), W1(Y), W2(Y), R1(X), COMMIT(T2), W1(X), COMMIT(T1)"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 41,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 54,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Databases",
+  "topic": "SQL",
+  "text": "Consider the following relational schema: Students (rollno: integer, name: string, age: integer, cgpa: real) Courses (courseno: integer, cname: string, credits: integer) Enrolled (rollno: integer, courseno: integer, grade: string) Which of the following options is/are correct SQL query/queries to retrieve the names of the students enrolled in course number (i.e., courseno) 1470?",
+  "options": [
+   "SELECT S.name FROM Students S WHERE EXISTS (SELECT * FROM Enrolled E WHERE E.courseno = 1470 AND E.rollno = S.rollno);",
+   "SELECT S.name FROM Students S WHERE SIZEOF (SELECT * FROM Enrolled E WHERE E.courseno = 1470 AND E.rollno = S.rollno) > 0;",
+   "SELECT S.name FROM Students S WHERE 0 < (SELECT COUNT(*) FROM Enrolled E WHERE E.courseno = 1470 AND E.rollno = S.rollno);",
+   "SELECT S.name FROM Students S NATURAL JOIN Enrolled E WHERE E.courseno = 1470;"
+  ],
+  "figure": null,
+  "answer": [
+   "A",
+   "C",
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 42,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 55,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Computer Organization",
+  "topic": "Memory Hierarchy",
+  "text": "Given a computing system with two levels of cache (L1 and L2) and a main memory. The first level (L1) cache access time is 1 nanosecond (ns) and the “hit rate” for L1 cache is 90% while the processor is accessing the data from L1 cache. Whereas, for the second level (L2) cache, the “hit rate” is 80% and the “miss penalty” for transferring data from L2 cache to L1 cache is 10 ns. The “miss penalty” for the data to be transferred from main memory to L2 cache is 100 ns. Then the average memory access time in this system in nanoseconds is ___________ . (rounded off to one decimal place)",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 4.0,
+  "answer_max": 4.0,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 43,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 56,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Computer Organization",
+  "topic": "Pipelining",
+  "text": "A 5-stage instruction pipeline has stage delays of 180, 250, 150, 170, and 250, respectively, in nanoseconds. The delay of an inter-stage latch is 10 nanoseconds. Assume that there are no pipeline stalls due to branches and other hazards. The time taken to process 1000 instructions in microseconds is __________ . (rounded off to two decimal places)",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 260.2,
+  "answer_max": 261.2,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 43,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 57,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Databases",
+  "topic": "B+ Trees",
+  "text": "In a B⁺-tree where each node can hold at most four key values, a root to leaf path consists of the following nodes:\nA = (49, 77, 83, -), B = (7, 19, 33, 44), C = (20*, 22*, 25*, 26*)\nThe *-marked keys signify that these are data entries in a leaf.\nAssume that a pointer between keys k₁ and k₂ points to a subtree containing keys in [k₁, k₂), and that when a leaf is created, the smallest key in it is copied up into its parent.\nA record with key value 23 is inserted into the B⁺-tree.\nThe smallest key value in the parent of the leaf that contains 25* is __________. (Answer in integer)",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 33.0,
+  "answer_max": 33.0,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 43,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 58,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Operating System",
+  "topic": "Paging",
+  "text": "A computer system supports a logical address space of 2³² bytes. It uses two-level hierarchical paging with a page size of 4096 bytes. A logical address is divided into a b-bit index to the outer page table, an offset within the page of the inner page table, and an offset within the desired page. Each entry of the inner page table uses eight bytes. All the pages in the system have the same size.\nThe value of b is ___________. (Answer in integer)",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 11.0,
+  "answer_max": 11.0,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 44,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 59,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Algorithms",
+  "topic": "BFS",
+  "text": "Consider the following algorithm someAlgo that takes an undirected graph G as input.\nsomeAlgo(G)\n1. Let v be any vertex in G. Run BFS on G starting at v. Let u be a vertex in G at maximum distance from v as given by the BFS.\n2. Run BFS on G again with u as the starting vertex. Let z be the vertex at maximum distance from u as given by the BFS.\n3. Output the distance between u and z in G.\nThe output of someAlgo(T) for the tree shown in the given figure is ___________. (Answer in integer)",
+  "options": [],
+  "figure": "img/q/2025-CS2-59.png",
+  "answer": [],
+  "answer_min": 6.0,
+  "answer_max": 6.0,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 44,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 60,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Theory of Computation",
+  "topic": "DFA Minimization",
+  "text": "Let Σ = {1,2,3,4}. For x ∈ Σ*, let prod(x) be the product of symbols in x modulo 7. We take prod(ε) = 1, where ε is the null string.\nFor example, prod(124) = (1 × 2 × 4) mod 7 = 1.\nDefine L = {x ∈ Σ* | prod(x) = 2}.\nThe number of states in a minimum state DFA for L is ___________. (Answer in integer)",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 6.0,
+  "answer_max": 6.0,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 45,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 61,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Computer Organization",
+  "topic": "CPI and Execution Time",
+  "text": "An application executes 6.4 × 10⁸ number of instructions in 6.3 seconds. There are four types of instructions, the details of which are given in the table. The duration of a clock cycle in nanoseconds is _________. (rounded off to one decimal place)\nInstruction type | CPI | Number of instructions executed\nBranch | 2 | 2.25 × 10⁸\nLoad | 5 | 1.20 × 10⁸\nStore | 4 | 1.65 × 10⁸\nArithmetic | 3 | 1.30 × 10⁸",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 3.0,
+  "answer_max": 3.0,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 45,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 62,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Programming and Data Structures",
+  "topic": "C Pointers",
+  "text": "Consider the following C program:\n#include <stdio.h>\nint main(){\n    int a;\n    int arr[5] = {30,50,10};\n    int *ptr;\n    ptr = &arr[0] + 1;\n    a = *ptr;\n    (*ptr)++;\n    ptr++;\n    printf(\"%d\", a + (*ptr) + arr[1]);\n    return 0;\n}\nThe output of the above program is ___________. (Answer in integer)",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 111.0,
+  "answer_max": 111.0,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 46,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 63,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Programming and Data Structures",
+  "topic": "Functions",
+  "text": "Consider the following C program:\n#include <stdio.h>\nint g(int n) {\n    return (n+10);\n}\nint f(int n) {\n    return g(n*2);\n}\nint main() {\n    int sum, n;\n    sum=0;\n    for (n=1; n<3; n++)\n        sum += g(f(n));\n    printf(\"%d\", sum);\n    return 0;\n}\nThe output of the given C program is ________. (Answer in integer)",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 46.0,
+  "answer_max": 46.0,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 47,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 64,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Probability and Statistics",
+  "topic": "Probability",
+  "text": "A quadratic polynomial (x − α)(x − β) over complex numbers is said to be square invariant if (x − α)(x − β) = (x − α²)(x − β²). Suppose from the set of all square invariant quadratic polynomials we choose one at random. The probability that the roots of the chosen polynomial are equal is __________. (rounded off to one decimal place)",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 0.5,
+  "answer_max": 0.5,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 47,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2025,
+  "paper": "CS2",
+  "number": 65,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Probability and Statistics",
+  "topic": "Expectation",
+  "text": "The unit interval (0,1) is divided at a point chosen uniformly distributed over (0,1) in ℝ into two disjoint subintervals. The expected length of the subinterval that contains 0.4 is ___________. (rounded off to two decimal places)",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 0.7,
+  "answer_max": 0.8,
+  "mta": false,
+  "source": {
+   "document": "CS22025.pdf",
+   "page": 48,
+   "source_type": "official GATE 2025 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2025 CS2 official answer key (gate2026.iitg.ac.in/doc/download/2025_Key/CS2_Keys.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ }
+]
