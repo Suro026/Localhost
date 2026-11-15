@@ -7,7 +7,7 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from app.core.dependencies import templates
 from app.core.headers import SecurityHeadersMiddleware
-from app.routers import home, library, pages
+from app.routers import home, library, tests
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
 
@@ -18,7 +18,7 @@ app.add_middleware(SecurityHeadersMiddleware)
 app.mount("/static", StaticFiles(directory=BASE_DIR / "static"), name="static")
 app.include_router(home.router)
 app.include_router(library.router)
-app.include_router(pages.router)
+app.include_router(tests.router)
 
 
 @app.exception_handler(StarletteHTTPException)

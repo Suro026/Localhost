@@ -78,8 +78,6 @@ def test_no_login_or_signup_links_on_home(client):
     assert "/login" not in html and "/signup" not in html
 
 
-def test_exams_page_is_coming_soon(client):
-    r = client.get("/exams")
-    assert r.status_code == 200
-    assert "coming soon" in r.text.lower()
-    assert "/login" not in r.text and "/signup" not in r.text
+def test_exams_redirects_to_tests(client):
+    r = client.get("/exams", follow_redirects=False)
+    assert r.status_code == 302 and r.headers["location"] == "/tests"
