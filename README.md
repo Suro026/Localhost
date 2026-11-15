@@ -15,3 +15,10 @@ AI-powered exam and learning platform. FastAPI + PostgreSQL + Jinja2 + HTMX + Ta
 
 - Phase 1 (setup, models, config) and Phase 2 (base template, homepage): done.
 - Next: Alembic migration, authentication.
+
+## Accounts and sync (Firebase)
+
+Sign-in (email/password and Google) and Firestore sync run in the browser. Source: `scripts/firebase/src/cloud.js`;
+rebuild the bundle after editing it: `cd scripts/firebase && npm install && npm run build` (writes `static/js/ks-cloud.js`, which is committed).
+Data lives under `users/<uid>/` in Firestore; `firestore.rules` restricts each user to their own path and must be published in the Firebase console.
+The Firebase web config in `cloud.js` is public by design. Signed-out visitors keep everything in localStorage only.

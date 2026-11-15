@@ -1,4 +1,4 @@
-/* Keystone: everything about the learner lives in this browser (localStorage). No account, nothing is sent anywhere.
+/* Keystone: the learner's data lives in this browser (localStorage). If they sign in, static/js/ks-cloud.js (Firebase) syncs it to their account via KS.hook.
    Attempts:  ks-attempts = [{t, title, mode, total, max, correct, wrong, skipped, secs, rows:[[id, subject, topic, status c|w|s, marks, max, seconds]]}]
    Study:     ks-study    = {sessions:[{t, subject, mins}], done:{key:true}, reminder:{on, time, last}, plan:{target, hours}} */
 (function () {
@@ -16,8 +16,8 @@
 
   // ---- attempts ----
   KS.attempts = function () { var a = read("ks-attempts", []); return Array.isArray(a) ? a.filter(function (x) { return x && Array.isArray(x.rows); }) : []; };
-  KS.addAttempt = function (a) { var all = KS.attempts(); all.push(a); if (all.length > 200) all = all.slice(-200); return write("ks-attempts", all); };
-  KS.clearAttempts = function () { try { localStorage.removeItem("ks-attempts"); } catch (e) { /* ignore */ } };
+  KS.addAttempt = function (a) { var all = KS.attempts(); all.push(a); if (all.length > 200) all = all.slice(-200); var ok = write("ks-attempts", all); if (KS.hook) KS.hook("attempt", a); return ok; };
+  KS.clearAttempts = function () { try { localStorage.removeItem("ks-attempts"); } catch (e) { /* ignore */ } if (KS.hook) KS.hook("clear"); };
 
   // by = "subject" | "topic"; returns rows sorted by name
   KS.stats = function (attempts, by) {
@@ -48,7 +48,7 @@
     s.plan = s.plan && typeof s.plan === "object" ? s.plan : {};
     return s;
   };
-  KS.saveStudy = function (s) { if (s.sessions.length > 1000) s.sessions = s.sessions.slice(-1000); return write("ks-study", s); };
+  KS.saveStudy = function (s) { if (s.sessions.length > 1000) s.sessions = s.sessions.slice(-1000); s.updated = Date.now(); var ok = write("ks-study", s); if (KS.hook) KS.hook("study"); return ok; };
   KS.studiedToday = function () {
     var k = KS.dayKey();
     return KS.attempts().some(function (a) { return KS.dayKey(new Date(a.t)) === k; }) ||
@@ -80,7 +80,24 @@
     }
     s.reminder.last = KS.dayKey(); KS.saveStudy(s);
   };
+  // ---- account: instant nav label from the saved hint; the cloud bundle loads only for signed-in visitors and the account pages ----
+  KS.renderAccount = function () {
+    var h = read("ks-auth", null);
+    document.querySelectorAll("[data-account]").forEach(function (a) {
+      var who = h && (h.n || h.e) ? (h.n || h.e) : "";
+      a.textContent = a.getAttribute("data-account") === "text" ? (who ? "Account" : "Sign in") : (who ? who.trim().charAt(0).toUpperCase() : "Sign in");
+      a.href = who ? "/account" : "/login";
+      a.setAttribute("aria-label", who ? "Account: " + who : "Sign in");
+      a.classList.toggle("ks-signed", !!who);
+    });
+  };
+  KS.loadCloud = function () {
+    if (window.KSCloud || document.getElementById("ks-cloud-js")) return;
+    var s = document.createElement("script"); s.id = "ks-cloud-js"; s.src = "/static/js/ks-cloud.js"; s.defer = true; document.head.appendChild(s);
+  };
   document.addEventListener("DOMContentLoaded", function () {
+    KS.renderAccount();
+    if (read("ks-auth", null)) KS.loadCloud();
     KS.checkReminder(); setInterval(KS.checkReminder, 60000);
     var chip = document.querySelector("[data-streak]"), n = KS.streak();
     if (chip && n > 0) { chip.textContent = n + "-day streak"; chip.hidden = false; }

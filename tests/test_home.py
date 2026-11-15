@@ -69,9 +69,10 @@ def test_navbar_links_books_and_notes(client):
     assert 'href="/books"' in html and 'href="/notes"' in html
 
 
-def test_no_login_or_signup_links_on_home(client):
+def test_home_links_only_to_pages_that_exist(client):
     html = client.get("/").text
-    assert "/login" not in html and "/signup" not in html
+    assert "/signup" not in html  # sign-up lives on /login
+    assert client.get("/login").status_code == 200
 
 
 def test_exams_redirects_to_tests(client):

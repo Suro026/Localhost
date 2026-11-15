@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Your account — {{ app_name }}{% endblock %}
+{% block content %}
+<section class="mx-auto max-w-md px-4 py-12 sm:px-6">
+  <h1 class="text-3xl font-extrabold tracking-tight">Your account</h1>
+  <noscript><p class="mt-4 rounded-xl border border-line bg-brand-50 p-4 font-semibold">This page needs JavaScript.</p></noscript>
+  <div id="account-root" class="mt-6"><p class="text-muted">Loading…</p></div>
+</section>
+{% endblock %}
+{% block scripts %}<script src="{{ static_v('js/ks-cloud.js') }}" defer></script><script src="{{ static_v('js/auth-page.js') }}" defer></script>{% endblock %}

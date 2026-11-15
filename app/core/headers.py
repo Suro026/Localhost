@@ -6,12 +6,12 @@ INLINE_JS_HASH = "sha256-qOhFsq0QMV2REqNwk5hGH5bZE9SkX6gt6yeyKdYPv+U="
 
 CSP = "; ".join([
     "default-src 'self'",
-    f"script-src 'self' '{INLINE_JS_HASH}'",
+    f"script-src 'self' '{INLINE_JS_HASH}' https://apis.google.com",
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     "font-src 'self' https://fonts.gstatic.com",
     "img-src 'self' data:",
-    "frame-src https://drive.google.com",
-    "connect-src 'self'",
+    "frame-src https://drive.google.com https://keystone-44f75.firebaseapp.com https://accounts.google.com",
+    "connect-src 'self' https://*.googleapis.com https://*.google.com",
     "form-action 'self'",
     "object-src 'none'",
     "base-uri 'self'",
@@ -24,7 +24,7 @@ HEADERS = {
     "X-Frame-Options": "DENY",
     "Referrer-Policy": "strict-origin-when-cross-origin",
     "Permissions-Policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
-    "Cross-Origin-Opener-Policy": "same-origin",
+    "Cross-Origin-Opener-Policy": "same-origin-allow-popups",  # Google sign-in opens a popup
     "Strict-Transport-Security": "max-age=63072000; includeSubDomains",
 }
 

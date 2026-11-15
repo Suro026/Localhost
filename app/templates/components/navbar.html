@@ -10,33 +10,35 @@
       <span class="nav-brand-name">{{ app_name }}</span>
     </a>
 
-    <div class="hidden items-end gap-1 px-4 md:flex">
+    <div class="hidden items-end gap-1 px-4 lg:flex">
       {% for label, href in links %}
       <a href="{{ href }}" {% if (href == "/" and here == "/") or (href != "/" and here.startswith(href)) %}aria-current="page"{% endif %} class="nav-tab">{{ label }}</a>
       {% endfor %}
     </div>
 
     <div class="flex items-center gap-2 self-center">
-      <span data-streak hidden class="hidden items-center gap-1.5 rounded-full bg-white/15 px-3 py-1.5 text-xs font-bold lg:inline-flex" title="Days in a row you studied or took a test"></span>
+      <span data-streak hidden class="hidden items-center gap-1.5 rounded-full bg-white/15 px-3 py-1.5 text-xs font-bold xl:inline-flex" title="Days in a row you studied or took a test"></span>
+      <a href="/login" data-account aria-label="Sign in" class="hidden h-10 min-w-10 whitespace-nowrap items-center justify-center rounded-full border border-white/60 px-3 text-sm font-bold text-white transition-colors hover:bg-white/15 lg:inline-flex [&.ks-signed]:bg-white [&.ks-signed]:px-0 [&.ks-signed]:text-brand-700 [&.ks-signed]:w-10">Sign in</a>
       {% if here != "/tests" %}
-      <a href="/tests" class="hidden items-center rounded-full border border-white/60 px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-white/15 md:inline-flex">Take a test</a>
+      <a href="/tests" class="hidden items-center whitespace-nowrap rounded-full border border-white/60 px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-white/15 xl:inline-flex">Take a test</a>
       {% endif %}
       <a href="{{ whatsapp_group_url }}" target="_blank" rel="noopener noreferrer"
-         class="hidden items-center gap-2 rounded-full bg-[#1fa855] px-5 py-2.5 text-sm font-extrabold text-white shadow-md ring-2 ring-white transition-colors hover:bg-[#188a45] md:inline-flex">
+         class="hidden items-center gap-2 whitespace-nowrap rounded-full bg-[#1fa855] px-4 py-2.5 text-sm font-extrabold text-white shadow-md ring-2 ring-white transition-colors hover:bg-[#188a45] lg:inline-flex">
         <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 00-8.46 15.03L2 22l5.1-1.55A9.9 9.9 0 1012.04 2zm5.8 14.08c-.24.68-1.42 1.3-1.95 1.34-.5.04-.97.23-3.27-.68-2.77-1.1-4.54-3.94-4.68-4.12-.13-.18-1.1-1.46-1.1-2.8 0-1.33.7-1.98.95-2.25.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.6.46.22.54.74 1.87.8 2 .07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.27-.12.53.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.22.6-.13.25.09 1.56.74 1.83.87.27.14.45.2.51.31.07.11.07.65-.17 1.33z"/></svg>
-        Join WhatsApp group
+        <span><span class="hidden xl:inline">Join </span>WhatsApp<span class="hidden xl:inline"> group</span></span>
       </a>
-      <label for="nav-toggle" class="cursor-pointer rounded-xl p-2 hover:bg-white/15 md:hidden" aria-label="Toggle menu">
+      <label for="nav-toggle" class="cursor-pointer rounded-xl p-2 hover:bg-white/15 lg:hidden" aria-label="Toggle menu">
         <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 8h16M4 16h16"/></svg>
       </label>
     </div>
 
-    <div class="absolute inset-x-0 top-full hidden flex-col gap-1 border-t border-white/15 bg-brand-700 p-3 shadow-lg peer-checked:flex md:!hidden">
+    <div class="absolute inset-x-0 top-full hidden flex-col gap-1 border-t border-white/15 bg-brand-700 p-3 shadow-lg peer-checked:flex lg:!hidden">
       {% for label, href in links %}
       <a href="{{ href }}" {% if (href == "/" and here == "/") or (href != "/" and here.startswith(href)) %}aria-current="page"{% endif %}
          class="rounded-xl px-4 py-3 text-sm font-semibold uppercase tracking-[.08em] text-white/85 hover:bg-white/10 aria-[current=page]:bg-white aria-[current=page]:text-brand-700">{{ label }}</a>
       {% endfor %}
       <a href="/tests" class="mt-1 inline-flex items-center justify-center rounded-xl bg-white px-4 py-3 text-sm font-bold text-brand-700">Take a test</a>
+      <a href="/login" data-account="text" class="inline-flex items-center justify-center rounded-xl border border-white/50 px-4 py-3 text-sm font-bold text-white">Sign in</a>
       <a href="{{ whatsapp_group_url }}" target="_blank" rel="noopener noreferrer"
          class="inline-flex items-center justify-center gap-2 rounded-xl bg-[#1fa855] px-4 py-3 text-sm font-extrabold text-white ring-2 ring-white hover:bg-[#188a45]">Join WhatsApp group</a>
     </div>

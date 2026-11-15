@@ -47,6 +47,16 @@ def progress(request: Request) -> HTMLResponse:
     return templates.TemplateResponse(request, "tests/progress.html", {})
 
 
+@router.api_route("/login", methods=["GET", "HEAD"], response_class=HTMLResponse)
+def login(request: Request) -> HTMLResponse:
+    return templates.TemplateResponse(request, "auth/login.html", {})
+
+
+@router.api_route("/account", methods=["GET", "HEAD"], response_class=HTMLResponse)
+def account(request: Request) -> HTMLResponse:
+    return templates.TemplateResponse(request, "auth/account.html", {})
+
+
 @router.api_route("/study", methods=["GET", "HEAD"], response_class=HTMLResponse)
 def study(request: Request) -> HTMLResponse:
     have = bank_stats()["by_subject"]

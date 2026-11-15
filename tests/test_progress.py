@@ -64,3 +64,23 @@ def test_pwa_files_served(client):
 
 def test_navbar_marks_current_page(client):
     assert 'aria-current="page"' in client.get("/progress").text
+
+
+def test_login_and_account_pages(client):
+    for url, marker in (("/login", "auth-root"), ("/account", "account-root")):
+        r = client.get(url)
+        assert r.status_code == 200 and marker in r.text and "ks-cloud.js" in r.text
+    assert "data-account" in client.get("/").text
+
+
+def test_csp_allows_firebase_sign_in_only(client):
+    h = client.get("/login").headers
+    csp = h["content-security-policy"]
+    assert "https://apis.google.com" in csp and "https://keystone-44f75.firebaseapp.com" in csp
+    assert "unsafe-eval" not in csp and h["cross-origin-opener-policy"] == "same-origin-allow-popups"
+
+
+def test_firestore_rules_lock_data_to_owner():
+    from pathlib import Path
+    rules = (Path(__file__).resolve().parent.parent / "firestore.rules").read_text()
+    assert "request.auth.uid == uid" in rules and "allow read, write: if true" not in rules

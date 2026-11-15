@@ -7,3 +7,4 @@ bin/
 static/img/mentors/originals/
 .pytest_cache/
 .superpowers/
+node_modules/
