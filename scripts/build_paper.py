@@ -47,15 +47,15 @@ for n in sorted(int(k) for k in drafts):
         options = [norm(HDR.sub("", dr["options"][c])) for c in "ABCD"] if typ != "NAT" else []
     if typ == "NAT": options = []
     answer, amin, amax, mta, alt = [], None, None, False, []
-    kv, *alt_raw = [x.strip() for x in k["key"].split("|")]  # "A;C;D|C;D" or "2 to 2|4 to 4"
+    kv, *alt_raw = [x.strip() for x in re.split(r"\s*\|\s*|\s+or\s+", k["key"], flags=re.I)]  # "A;C;D|C;D" or "2 to 2|4 to 4"
     kv = kv.strip()
     if kv.upper() == "MTA": mta = True
     elif typ == "NAT":
         lo, hi = [float(x) for x in re.split(r"\s+to\s+", kv)]; amin, amax = lo, hi
         alt = [[float(x) for x in re.split(r"\s+to\s+", a)] for a in alt_raw]
     else:
-        answer = kv.split(";")
-        alt = [a.split(";") for a in alt_raw]
+        answer = [x for x in re.split(r"[;,]\s*", kv) if x]
+        alt = [[x for x in re.split(r"[;,]\s*", a) if x] for a in alt_raw]
     subj, topic = D.META[n]
     out.append(dict(year=year, paper=paper, number=n, section="GA" if k["section"] == "GA" else "CS", marks=k["marks"], type=typ,
                     subject=subj, topic=topic, text=text, options=options,
