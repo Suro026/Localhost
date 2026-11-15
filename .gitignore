@@ -6,3 +6,4 @@ storage/notes/*
 bin/
 static/img/mentors/originals/
 .pytest_cache/
+.superpowers/
