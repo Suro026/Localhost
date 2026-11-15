@@ -7,6 +7,9 @@
   function el(tag, cls, text) { var n = document.createElement(tag); if (cls) n.className = cls; if (text !== undefined && text !== null) n.textContent = text; return n; }
   function field(label, input) { var l = el("label", "mt-4 block text-sm font-semibold", label); input.classList.add("input", "mt-1"); l.appendChild(input); return l; }
 
+  var hold = null, releaseHold = null; // keeps the redirect back until the new account's name is saved
+  function go() { (hold || Promise.resolve()).then(function () { location.replace("/progress"); }); }
+
   function start() {
     var C = window.KSCloud;
     if (!C) { root.replaceChildren(el("p", "text-sm text-muted", "Could not load sign-in. Check your connection and reload.")); return; }
@@ -14,48 +17,89 @@
     C.onChange(function (u) {
       if (first) {
         first = false;
-        if (loginRoot) { if (u) location.replace("/progress"); else drawLogin(C); }
+        if (loginRoot) { if (u) go(); else drawLogin(C); }
         else if (u) drawProfile(C, u); else location.replace("/login");
         return;
       }
-      if (loginRoot && u) location.replace("/progress");
+      if (loginRoot && u) go();
     });
   }
 
-  function drawLogin(C) {
-    var mode = "in";
-    var msg = el("p", "mt-4 min-h-[1.25rem] text-sm font-semibold"); msg.setAttribute("role", "status");
-    var email = el("input"); email.type = "email"; email.autocomplete = "email"; email.required = true; email.inputMode = "email";
-    var pw = el("input"); pw.type = "password"; pw.required = true; pw.minLength = 8;
-    var submit = el("button", "btn-primary mt-5 w-full", ""); submit.type = "submit";
-    var tabs = el("div", "grid grid-cols-2 gap-2 rounded-xl bg-canvas p-1");
-    var tIn = el("button", "", "Sign in"), tUp = el("button", "", "Create account"); tIn.type = tUp.type = "button";
-    tabs.append(tIn, tUp);
-    var forgot = el("button", "mt-3 text-sm font-semibold text-brand-700 underline", "Forgot password?"); forgot.type = "button";
-    var form = el("form");
-    form.append(field("Email", email), field("Password", pw), submit, forgot);
+  var SVGNS = "http://www.w3.org/2000/svg";
+  function svg(cls, paths, vb) {
+    var s = document.createElementNS(SVGNS, "svg"); s.setAttribute("viewBox", vb || "0 0 24 24"); s.setAttribute("class", cls); s.setAttribute("aria-hidden", "true");
+    paths.forEach(function (d) { var p = document.createElementNS(SVGNS, "path"); p.setAttribute("d", d[0]); if (d[1]) p.setAttribute("fill", d[1]); else { p.setAttribute("fill", "none"); p.setAttribute("stroke", "currentColor"); p.setAttribute("stroke-width", "2"); p.setAttribute("stroke-linecap", "round"); p.setAttribute("stroke-linejoin", "round"); } s.appendChild(p); });
+    return s;
+  }
+  var EYE = [["M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"], ["M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"]];
+  var EYE_OFF = [["M3 3l18 18"], ["M10.6 6.1A10 10 0 0 1 12 5c6.5 0 10 7 10 7a17 17 0 0 1-3.2 4.2M6.5 6.9C3.6 8.8 2 12 2 12s3.5 7 10 7a9.7 9.7 0 0 0 4-.9"]];
+  var GOOGLE = [["M21.6 12.2c0-.7-.1-1.3-.2-1.9H12v3.7h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.300 3-7.300z", "#4285F4"],
+    ["M12 22c2.7 0 5-.9 6.600-2.400l-3.200-2.500c-.9.600-2 1-3.400 1-2.600 0-4.800-1.800-5.600-4.100H3.100v2.600A10 10 0 0 0 12 22z", "#34A853"],
+    ["M6.400 14c-.2-.6-.3-1.300-.3-2s.1-1.400.3-2V7.400H3.100a10 10 0 0 0 0 9.200L6.400 14z", "#FBBC05"],
+    ["M12 5.900c1.500 0 2.800.5 3.800 1.500l2.900-2.900A10 10 0 0 0 3.100 7.400L6.400 10c.8-2.300 3-4.100 5.600-4.100z", "#EA4335"]];
 
-    var google = el("button", "btn-secondary mt-5 w-full gap-2", "Continue with Google"); google.type = "button";
-    var or = el("p", "mt-5 text-center text-xs text-muted", "or use your email");
+  function drawLogin(C) {
+    var mode = "in", shown = false;
+    var card = el("div", "relative rounded-3xl border border-line bg-surface p-6 shadow-xl sm:p-8");
+    card.appendChild(el("div", "absolute inset-x-8 -top-2 h-2 rounded-t-xl bg-brand-600"));
+
+    var badge = el("div", "mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-brand-50 text-brand-700 ring-1 ring-inset ring-brand-100");
+    badge.appendChild(svg("h-6 w-6", [["M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"], ["M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"], ["M19 8v6M22 11h-6"]]));
+    var h1 = el("h1", "mt-4 text-center text-2xl font-extrabold tracking-tight");
+    var sub = el("p", "mt-1 text-center text-sm text-muted");
+
+    var google = el("button", "btn-secondary mt-6 h-11 w-full gap-2"); google.type = "button";
+    google.append(svg("h-5 w-5", GOOGLE), document.createTextNode("Continue with Google"));
+    var or = el("div", "relative my-5 text-center text-xs uppercase text-muted before:absolute before:inset-x-0 before:top-1/2 before:h-px before:bg-line before:content-['']");
+    or.appendChild(el("span", "relative bg-surface px-2", "or"));
+
+    var name = el("input"); name.type = "text"; name.autocomplete = "name"; name.maxLength = 40; name.placeholder = "Your name (optional)";
+    var email = el("input"); email.type = "email"; email.autocomplete = "email"; email.required = true; email.inputMode = "email"; email.placeholder = "you@example.com";
+    var pw = el("input", "input pr-11"); pw.type = "password"; pw.required = true; pw.minLength = 8; pw.placeholder = "At least 8 characters";
+    var eye = el("button", "absolute right-1.5 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-md text-muted hover:text-ink"); eye.type = "button";
+    function paintEye() { var on = pw.type === "text"; eye.setAttribute("aria-label", on ? "Hide password" : "Show password"); eye.replaceChildren(svg("h-5 w-5", on ? EYE_OFF : EYE)); }
+    eye.addEventListener("click", function () { pw.type = pw.type === "password" ? "text" : "password"; paintEye(); });
+    paintEye();
+    var pwWrap = el("div", "relative"); pwWrap.append(pw, eye);
+    var pwLabel = field("Password", pwWrap); pwLabel.querySelector(".input").classList.remove("mt-1");
+    pwWrap.classList.add("mt-1");
+    var nameLabel = field("Full name", name);
+
+    var submit = el("button", "btn-primary mt-5 h-11 w-full"); submit.type = "submit";
+    var forgot = el("button", "mt-3 block text-sm font-semibold text-brand-700 underline", "Forgot password?"); forgot.type = "button";
+    var msg = el("p", "mt-3 min-h-[1.25rem] text-center text-sm font-semibold"); msg.setAttribute("role", "status");
+    var form = el("form"); form.noValidate = false;
+    var emailLabel = field("Email", email);
+    form.append(nameLabel, emailLabel, pwLabel, submit, forgot, msg);
+
+    var swap = el("div", "mt-5 flex items-center justify-center gap-1 text-sm text-muted");
+    var swapText = el("span"), swapBtn = el("button", "font-semibold text-brand-700 underline"); swapBtn.type = "button";
+    swap.append(swapText, swapBtn);
 
     function paint() {
-      [[tIn, "in"], [tUp, "up"]].forEach(function (p) {
-        p[0].className = "rounded-lg px-3 py-2 text-sm font-bold " + (mode === p[1] ? "bg-surface shadow-sm text-ink" : "text-muted");
-        p[0].setAttribute("aria-pressed", mode === p[1] ? "true" : "false");
-      });
-      submit.textContent = mode === "in" ? "Sign in" : "Create account";
-      pw.autocomplete = mode === "in" ? "current-password" : "new-password";
-      forgot.hidden = mode !== "in"; msg.textContent = ""; msg.className = "mt-4 min-h-[1.25rem] text-sm font-semibold";
+      var up = mode === "up";
+      h1.textContent = up ? "Create your account" : "Welcome back";
+      sub.textContent = up ? "Save your scores, weak topics and study plan on every device." : "Sign in to pick up where you left off.";
+      submit.textContent = up ? "Create account" : "Sign in";
+      swapText.textContent = up ? "Already have an account?" : "New to Keystone?";
+      swapBtn.textContent = up ? "Sign in" : "Create an account";
+      nameLabel.hidden = !up; forgot.hidden = up;
+      pw.autocomplete = up ? "new-password" : "current-password";
+      if (shown) { msg.textContent = ""; } shown = true;
+      msg.className = "mt-3 min-h-[1.25rem] text-center text-sm font-semibold";
     }
-    function say(text, ok) { msg.textContent = text; msg.className = "mt-4 min-h-[1.25rem] text-sm font-semibold " + (ok ? "text-ok" : "text-red-600"); }
-    function busy(b) { [submit, google, forgot, tIn, tUp].forEach(function (x) { x.disabled = b; }); }
+    function say(text, ok) { msg.textContent = text; msg.className = "mt-3 min-h-[1.25rem] text-center text-sm font-semibold " + (ok ? "text-ok" : "text-red-600"); }
+    function busy(b) { [submit, google, forgot, swapBtn].forEach(function (x) { x.disabled = b; }); }
 
-    tIn.addEventListener("click", function () { mode = "in"; paint(); });
-    tUp.addEventListener("click", function () { mode = "up"; paint(); });
+    swapBtn.addEventListener("click", function () { mode = mode === "in" ? "up" : "in"; paint(); });
     form.addEventListener("submit", function (e) {
       e.preventDefault(); busy(true); say("Please wait…", true);
-      (mode === "in" ? C.signIn(email.value.trim(), pw.value) : C.signUp(email.value.trim(), pw.value)).then(function (r) {
-        busy(false); if (!r.ok) say(r.error, false); else say("Signed in.", true);
+      var up = mode === "up", nm = name.value.trim();
+      if (up && nm) hold = new Promise(function (r) { releaseHold = r; });
+      (up ? C.signUp(email.value.trim(), pw.value) : C.signIn(email.value.trim(), pw.value)).then(function (r) {
+        if (!r.ok) { busy(false); say(r.error, false); if (releaseHold) releaseHold(); return; }
+        say("Signed in.", true);
+        if (up && nm) C.updateName(nm).then(function () { releaseHold(); }, function () { releaseHold(); });
       });
     });
     google.addEventListener("click", function () {
@@ -68,7 +112,8 @@
       C.reset(email.value.trim()).then(function (r) { busy(false); say(r.ok ? "If that email has an account, a reset link is on its way. Check spam too." : r.error, r.ok); });
     });
     paint();
-    root.replaceChildren(tabs, google, or, form, msg);
+    card.append(badge, h1, sub, google, or, form, swap);
+    root.replaceChildren(card);
   }
 
   function drawProfile(C, u) {
