@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="color-scheme" content="light">
-  <meta name="theme-color" content="#f5f8fc">
+  <meta name="theme-color" content="#6b26d9">
+  <link rel="manifest" href="/manifest.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}{{ app_name }} — AI-Powered Exam Preparation{% endblock %}</title>
   <link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml">
@@ -15,6 +16,7 @@
   <script>document.documentElement.classList.add("js")</script>
   <script src="{{ static_v('js/htmx.min.js') }}" defer></script>
   <script src="{{ static_v('js/ks.js') }}" defer></script>
+  <script src="{{ static_v('js/pwa.js') }}" defer></script>
   <script src="{{ static_v('js/motion.js') }}" defer></script>
   <script src="{{ static_v('js/img-fallback.js') }}" defer></script>
 </head>

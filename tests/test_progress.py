@@ -49,3 +49,18 @@ def test_study_subjects_attribute_is_valid_json(client):
 def test_navbar_links(client):
     t = client.get("/").text
     assert 'href="/progress"' in t and 'href="/study"' in t
+
+
+def test_pwa_files_served(client):
+    m = client.get("/manifest.webmanifest")
+    assert m.status_code == 200 and json.loads(m.text)["display"] == "standalone"
+    sw = client.get("/sw.js")
+    assert sw.status_code == 200 and sw.headers["service-worker-allowed"] == "/"
+    assert client.get("/offline").status_code == 200
+    for icon in ("icon-192.png", "icon-512.png", "icon-maskable-512.png"):
+        assert client.get(f"/static/img/{icon}").status_code == 200
+    assert 'rel="manifest"' in client.get("/").text
+
+
+def test_navbar_marks_current_page(client):
+    assert 'aria-current="page"' in client.get("/progress").text

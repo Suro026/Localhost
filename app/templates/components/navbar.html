@@ -1,26 +1,45 @@
-<header data-nav class="sticky top-0 z-30 border-b border-line bg-surface/85 backdrop-blur">
-  <nav class="flex w-full items-center justify-between px-4 py-3 sm:px-8" aria-label="Main">
-    <a href="/" class="flex items-center gap-2 text-lg font-bold tracking-tight">
-      <img src="/static/img/logo-mark.svg" alt="" width="32" height="32" class="h-8 w-8">
-      <span class="nav-brand-name">{{ app_name }}</span>
-    </a>
-
+{# Floating pill header, adapted from the 21st.dev "Sticky Header Navbar" (diarmuradi/header-2) as plain HTML + CSS. #}
+{% set links = [("Home", "/"), ("Tests", "/tests"), ("Progress", "/progress"), ("Study", "/study"), ("Books", "/books"), ("Notes", "/notes")] %}
+{% set here = request.url.path if request is defined else "" %}
+<header data-nav class="sticky top-0 z-30 flex w-full justify-center px-3 pt-3">
+  <nav class="relative w-full max-w-md md:max-w-fit" aria-label="Main">
     <input type="checkbox" id="nav-toggle" class="peer sr-only">
-    <label for="nav-toggle" class="cursor-pointer rounded-lg p-2 hover:bg-canvas md:hidden" aria-label="Toggle menu">
-      <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
-    </label>
 
-    <div class="absolute inset-x-0 top-full hidden flex-col gap-1 border-b border-line bg-surface p-4 shadow-sm peer-checked:flex md:static md:flex md:flex-row md:items-center md:gap-1 md:border-0 md:bg-transparent md:p-0 md:shadow-none">
-      <a href="/" class="rounded-lg px-3 py-2 text-sm font-medium text-muted hover:bg-canvas hover:text-ink">Home</a>
-      <a href="/tests" class="rounded-lg px-3 py-2 text-sm font-medium text-muted hover:bg-canvas hover:text-ink">Tests</a>
-      <a href="/progress" class="rounded-lg px-3 py-2 text-sm font-medium text-muted hover:bg-canvas hover:text-ink">Progress</a>
-      <a href="/study" class="rounded-lg px-3 py-2 text-sm font-medium text-muted hover:bg-canvas hover:text-ink">Study</a>
-      <a href="/books" class="rounded-lg px-3 py-2 text-sm font-medium text-muted hover:bg-canvas hover:text-ink">Books</a>
-      <a href="/notes" class="rounded-lg px-3 py-2 text-sm font-medium text-muted hover:bg-canvas hover:text-ink">Notes</a>
-      <a href="{{ whatsapp_group_url }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-[#1fa855] px-3 py-2 text-sm font-bold text-white transition-colors hover:bg-[#188a45] md:ml-1">
+    <div class="flex h-14 items-center justify-between gap-1 rounded-2xl border border-line bg-surface/90 px-2 shadow-sm backdrop-blur md:justify-start md:rounded-full md:px-2">
+      <a href="/" class="flex items-center gap-2 rounded-xl py-1 pl-1 pr-2 text-base font-bold tracking-tight" aria-label="{{ app_name }} home">
+        <img src="/static/img/logo-mark.svg" alt="" width="32" height="32" class="h-8 w-8">
+        <span class="nav-brand-name">{{ app_name }}</span>
+      </a>
+
+      <span class="mx-1 hidden h-5 w-px bg-line md:block" aria-hidden="true"></span>
+
+      <div class="group hidden items-center gap-0.5 md:flex">
+        {% for label, href in links %}
+        <a href="{{ href }}" {% if (href == "/" and here == "/") or (href != "/" and here.startswith(href)) %}aria-current="page"{% endif %}
+           class="rounded-full px-3 py-2 text-sm font-medium text-muted transition-colors duration-300 hover:!text-ink group-has-[a:hover]:text-muted/60 aria-[current=page]:bg-canvas aria-[current=page]:text-ink">{{ label }}</a>
+        {% endfor %}
+      </div>
+
+      <span class="mx-1 hidden h-5 w-px bg-line md:block" aria-hidden="true"></span>
+
+      <a href="{{ whatsapp_group_url }}" target="_blank" rel="noopener noreferrer"
+         class="hidden items-center gap-2 rounded-full bg-[#1fa855] px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-[#188a45] md:inline-flex">
         <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 00-8.46 15.03L2 22l5.1-1.55A9.9 9.9 0 1012.04 2zm5.8 14.08c-.24.68-1.42 1.3-1.95 1.34-.5.04-.97.23-3.27-.68-2.77-1.1-4.54-3.94-4.68-4.12-.13-.18-1.1-1.46-1.1-2.8 0-1.33.7-1.98.95-2.25.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.6.46.22.54.74 1.87.8 2 .07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.27-.12.53.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.22.6-.13.25.09 1.56.74 1.83.87.27.14.45.2.51.31.07.11.07.65-.17 1.33z"/></svg>
         WhatsApp group
       </a>
+
+      <label for="nav-toggle" class="cursor-pointer rounded-xl p-2 hover:bg-canvas md:hidden" aria-label="Toggle menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 8h16M4 16h16"/></svg>
+      </label>
+    </div>
+
+    <div class="absolute inset-x-0 top-full mt-2 hidden flex-col gap-1 rounded-3xl border border-line bg-surface p-2 shadow-lg peer-checked:flex md:!hidden">
+      {% for label, href in links %}
+      <a href="{{ href }}" {% if (href == "/" and here == "/") or (href != "/" and here.startswith(href)) %}aria-current="page"{% endif %}
+         class="rounded-2xl px-4 py-3 text-sm font-medium text-muted hover:bg-canvas hover:text-ink aria-[current=page]:bg-canvas aria-[current=page]:text-ink">{{ label }}</a>
+      {% endfor %}
+      <a href="{{ whatsapp_group_url }}" target="_blank" rel="noopener noreferrer"
+         class="mt-1 inline-flex items-center justify-center gap-2 rounded-2xl bg-[#1fa855] px-4 py-3 text-sm font-bold text-white hover:bg-[#188a45]">WhatsApp group</a>
     </div>
   </nav>
 </header>
