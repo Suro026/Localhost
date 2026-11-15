@@ -52,9 +52,14 @@ def login(request: Request) -> HTMLResponse:
     return templates.TemplateResponse(request, "auth/login.html", {})
 
 
-@router.api_route("/account", methods=["GET", "HEAD"], response_class=HTMLResponse)
-def account(request: Request) -> HTMLResponse:
-    return templates.TemplateResponse(request, "auth/account.html", {})
+@router.api_route("/profile", methods=["GET", "HEAD"], response_class=HTMLResponse)
+def profile(request: Request) -> HTMLResponse:
+    return templates.TemplateResponse(request, "auth/profile.html", {})
+
+
+@router.get("/account", include_in_schema=False)
+def account() -> RedirectResponse:
+    return RedirectResponse("/profile", status_code=302)
 
 
 @router.api_route("/study", methods=["GET", "HEAD"], response_class=HTMLResponse)

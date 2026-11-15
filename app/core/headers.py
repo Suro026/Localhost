@@ -14,7 +14,7 @@ def build_csp(path: str = "/") -> str:
         "default-src 'self'", script,
         "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
         "font-src 'self' https://fonts.gstatic.com",
-        "img-src 'self' data:", frames, connect,
+        "img-src 'self' data: https://lh3.googleusercontent.com", frames, connect,  # the last one: Google profile photos
         "form-action 'self'", "object-src 'none'", "base-uri 'self'", "frame-ancestors 'none'",
     ])
 

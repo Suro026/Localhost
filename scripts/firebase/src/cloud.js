@@ -4,7 +4,7 @@
 import { initializeApp } from "firebase/app";
 import {
   getAuth, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail,
-  GoogleAuthProvider, signInWithPopup, sendEmailVerification, signOut as fbSignOut, deleteUser,
+  GoogleAuthProvider, signInWithPopup, sendEmailVerification, updateProfile, signOut as fbSignOut, deleteUser,
 } from "firebase/auth";
 import { getFirestore, collection, doc, getDocs, getDoc, setDoc, deleteDoc, writeBatch } from "firebase/firestore";
 
@@ -50,6 +50,7 @@ const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) { /* ign
 const lsDel = (k) => { try { localStorage.removeItem(k); } catch (e) { /* ignore */ } };
 
 let user = null;
+let resolved = false; // Firebase restores a saved session asynchronously; until then "no user" would be a wrong answer
 const subs = [];
 
 // ---- Firestore shape: users/<uid>/attempts/<t>  and  users/<uid>/meta/study ----
@@ -127,7 +128,8 @@ async function pull(force) {
 }
 
 function wipeLocal() { LOCAL_KEYS.forEach(lsDel); }
-function notify() { subs.forEach((f) => { try { f(user); } catch (e) { /* ignore */ } }); if (KS.renderAccount) KS.renderAccount(); }
+function writeHint(u) { lsSet("ks-auth", JSON.stringify({ e: u.email || "", n: u.displayName || "", p: u.photoURL || "" })); }
+function notify() { if (!resolved) return; subs.forEach((f) => { try { f(user); } catch (e) { /* ignore */ } }); if (KS.renderAccount) KS.renderAccount(); }
 
 // KS tells us whenever local data changes; push it when someone is signed in.
 KS.hook = (kind, payload) => {
@@ -139,8 +141,9 @@ KS.hook = (kind, payload) => {
 
 onAuthStateChanged(auth, async (u) => {
   user = u;
+  resolved = true;
   if (u) {
-    lsSet("ks-auth", JSON.stringify({ e: u.email || "", n: u.displayName || "" }));
+    writeHint(u);
     notify();
     try {
       if (await pull(false)) {
@@ -156,7 +159,17 @@ onAuthStateChanged(auth, async (u) => {
 
 window.KSCloud = {
   get user() { return user; },
-  onChange: (f) => { subs.push(f); f(user); },
+  onChange: (f) => { subs.push(f); if (resolved) f(user); },
+  profile: () => user && ({
+    email: user.email || "", name: user.displayName || "", photo: user.photoURL || "", verified: user.emailVerified,
+    created: user.metadata && user.metadata.creationTime ? Date.parse(user.metadata.creationTime) : 0,
+    providers: user.providerData.map((p) => p.providerId),
+  }),
+  updateName: wrap(async (name) => {
+    if (!auth.currentUser) throw new Error("no user");
+    await updateProfile(auth.currentUser, { displayName: String(name).trim().slice(0, 40) });
+    writeHint(auth.currentUser); notify();
+  }),
   signIn: wrap((email, pw) => signInWithEmailAndPassword(auth, email, pw)),
   signUp: wrap(async (email, pw) => {
     if (pw.length < 8) throw Object.assign(new Error("short"), { code: "auth/weak-password" });

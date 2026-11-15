@@ -67,10 +67,10 @@ def test_navbar_marks_current_page(client):
 
 
 def test_login_and_account_pages(client):
-    for url, marker in (("/login", "auth-root"), ("/account", "account-root")):
+    for url, marker in (("/login", "auth-root"), ("/profile", "profile-root")):
         r = client.get(url)
         assert r.status_code == 200 and marker in r.text and "ks-cloud.js" in r.text
-    assert "data-account" in client.get("/").text
+    assert "data-avatar" in client.get("/").text
 
 
 def test_csp_allows_google_sign_in_only_on_login(client):
@@ -78,7 +78,7 @@ def test_csp_allows_google_sign_in_only_on_login(client):
     csp = h["content-security-policy"]
     assert "https://apis.google.com" in csp and "https://keystone-44f75.firebaseapp.com" in csp
     assert "unsafe-eval" not in csp and h["cross-origin-opener-policy"] == "same-origin-allow-popups"
-    for path in ("/", "/tests", "/progress", "/account"):
+    for path in ("/", "/tests", "/progress", "/profile"):
         other = client.get(path).headers["content-security-policy"]
         assert "apis.google.com" not in other and "firebaseapp.com" not in other and "accounts.google.com" not in other, path
         assert "https://*.googleapis.com" in other  # cloud sync for signed-in learners
@@ -103,3 +103,13 @@ def test_firestore_rules_lock_data_to_owner():
     from pathlib import Path
     rules = (Path(__file__).resolve().parent.parent / "firestore.rules").read_text()
     assert "request.auth.uid == uid" in rules and "allow read, write: if true" not in rules
+
+
+def test_account_redirects_to_profile(client):
+    r = client.get("/account", follow_redirects=False)
+    assert r.status_code == 302 and r.headers["location"] == "/profile"
+
+
+def test_navbar_has_both_auth_states_and_boot_script(client):
+    html = client.get("/").text
+    assert "ks-boot.js" in html and "ks-out" in html and "ks-in" in html and 'href="/profile"' in html

@@ -57,3 +57,9 @@
 .ticker:hover .ticker-track { animation-play-state: paused; }
 @media (prefers-reduced-motion: reduce) { .ticker-track { animation: none; } }
 
+
+/* signed-in / signed-out navbar parts: ks-boot.js sets html[data-auth] before first paint, so there is no flash of the wrong state */
+.ks-in { display: none; }
+html[data-auth="in"] .ks-in { display: contents; }
+html[data-auth="in"] .ks-out { display: none; }
+.ks-out { display: contents; }

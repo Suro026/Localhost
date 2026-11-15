@@ -18,7 +18,15 @@
 
     <div class="flex items-center gap-2 self-center">
       <span data-streak hidden class="hidden items-center gap-1.5 rounded-full bg-white/15 px-3 py-1.5 text-xs font-bold xl:inline-flex" title="Days in a row you studied or took a test"></span>
-      <a href="/login" data-account aria-label="Sign in" class="hidden h-10 min-w-10 whitespace-nowrap items-center justify-center rounded-full border border-white/60 px-3 text-sm font-bold text-white transition-colors hover:bg-white/15 lg:inline-flex [&.ks-signed]:bg-white [&.ks-signed]:px-0 [&.ks-signed]:text-brand-700 [&.ks-signed]:w-10">Sign in</a>
+      <span class="ks-out">
+        <a href="/login" class="hidden h-10 min-w-10 items-center justify-center whitespace-nowrap rounded-full border border-white/60 px-4 text-sm font-bold text-white transition-colors hover:bg-white/15 lg:inline-flex">Sign in</a>
+      </span>
+      <span class="ks-in">
+        <a href="/profile" data-avatar aria-label="Your profile" title="Your profile" class="relative hidden h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-white text-sm font-extrabold text-brand-700 ring-2 ring-white/70 lg:inline-flex">
+          <span data-avatar-letter aria-hidden="true"></span>
+          <img data-avatar-img alt="" hidden width="40" height="40" referrerpolicy="no-referrer" class="absolute inset-0 h-full w-full object-cover">
+        </a>
+      </span>
       {% if here != "/tests" %}
       <a href="/tests" class="hidden items-center whitespace-nowrap rounded-full border border-white/60 px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-white/15 xl:inline-flex">Take a test</a>
       {% endif %}
@@ -38,7 +46,8 @@
          class="rounded-xl px-4 py-3 text-sm font-semibold uppercase tracking-[.08em] text-white/85 hover:bg-white/10 aria-[current=page]:bg-white aria-[current=page]:text-brand-700">{{ label }}</a>
       {% endfor %}
       <a href="/tests" class="mt-1 inline-flex items-center justify-center rounded-xl bg-white px-4 py-3 text-sm font-bold text-brand-700">Take a test</a>
-      <a href="/login" data-account="text" class="inline-flex items-center justify-center rounded-xl border border-white/50 px-4 py-3 text-sm font-bold text-white">Sign in</a>
+      <span class="ks-out contents"><a href="/login" class="inline-flex items-center justify-center rounded-xl border border-white/50 px-4 py-3 text-sm font-bold text-white">Sign in</a></span>
+      <span class="ks-in contents"><a href="/profile" class="inline-flex items-center justify-center rounded-xl border border-white/50 px-4 py-3 text-sm font-bold text-white">Your profile</a></span>
       <a href="{{ whatsapp_group_url }}" target="_blank" rel="noopener noreferrer"
          class="inline-flex items-center justify-center gap-2 rounded-xl bg-[#1fa855] px-4 py-3 text-sm font-extrabold text-white ring-2 ring-white hover:bg-[#188a45]">Join WhatsApp group</a>
     </div>

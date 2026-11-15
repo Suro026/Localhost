@@ -82,13 +82,16 @@
   };
   // ---- account: instant nav label from the saved hint; the cloud bundle loads only for signed-in visitors and the account pages ----
   KS.renderAccount = function () {
-    var h = read("ks-auth", null);
-    document.querySelectorAll("[data-account]").forEach(function (a) {
-      var who = h && (h.n || h.e) ? (h.n || h.e) : "";
-      a.textContent = a.getAttribute("data-account") === "text" ? (who ? "Account" : "Sign in") : (who ? who.trim().charAt(0).toUpperCase() : "Sign in");
-      a.href = who ? "/account" : "/login";
-      a.setAttribute("aria-label", who ? "Account: " + who : "Sign in");
-      a.classList.toggle("ks-signed", !!who);
+    var h = read("ks-auth", null), who = h && (h.n || h.e) ? (h.n || h.e) : "";
+    if (who) document.documentElement.setAttribute("data-auth", "in"); else document.documentElement.removeAttribute("data-auth");
+    document.querySelectorAll("[data-avatar]").forEach(function (a) {
+      var letter = a.querySelector("[data-avatar-letter]"), img = a.querySelector("[data-avatar-img]");
+      if (letter) letter.textContent = who ? who.trim().charAt(0).toUpperCase() : "";
+      a.setAttribute("aria-label", who ? "Your profile: " + who : "Your profile");
+      if (img) {
+        if (h && h.p) { if (img.getAttribute("src") !== h.p) { img.onload = function () { img.hidden = false; }; img.onerror = function () { img.hidden = true; }; img.src = h.p; } }
+        else { img.hidden = true; img.removeAttribute("src"); }
+      }
     });
   };
   KS.loadCloud = function () {
