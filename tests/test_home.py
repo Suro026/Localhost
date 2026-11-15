@@ -7,7 +7,7 @@ def test_homepage_static_content(client):
     assert r.status_code == 200
     html = r.text
     for expected in [
-        "AI-Powered Exam Preparation", "Free online mock tests", "Start learning", "How it works",
+        "Free GATE Mock Tests", "Free online mock tests", "Start learning", "How it works",
         "Pick a test", "Sit it timed", "Get scored", "Review",
         "Surajit Sadhukhan", "Sayan Karmakar", "Co Lead",
         "https://chat.whatsapp.com/FinfZJZ6CQLAWgI7uqiMux",
