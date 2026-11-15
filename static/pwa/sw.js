@@ -1,5 +1,5 @@
 /* Keystone service worker: offline fallback + faster repeat loads. Pages stay network-first so scores and tests are never stale. */
-const VERSION = "ks-v1";
+const VERSION = "ks-v2";
 const SHELL = "/offline";
 
 self.addEventListener("install", (e) => {
@@ -16,6 +16,10 @@ self.addEventListener("fetch", (e) => {
 
   if (req.mode === "navigate") {
     e.respondWith(fetch(req).catch(() => caches.match(req).then((r) => r || caches.match(SHELL))));
+    return;
+  }
+  if (/\.(css|js)$/.test(url.pathname)) {  // code: network first so a new deploy is never masked by a stale copy
+    e.respondWith(fetch(req).then((res) => { if (res.ok) caches.open(VERSION).then((c) => c.put(req, res.clone())); return res; }).catch(() => caches.match(req)));
     return;
   }
   if (url.pathname.startsWith("/static/")) {
