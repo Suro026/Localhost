@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "./motion.css";
 @source "../../app/templates";
+@source "../js";
 
 @theme {
   /* 21st.dev "Violet Dusk", light variant */

@@ -103,3 +103,15 @@ def test_question_text_is_escaped(client, monkeypatch):
     assert "<script>alert(1)</script>" not in html
     res = client.post("/tests/result", json={"ids": [q.id], "answers": {q.id: "B"}}).text
     assert "<script>alert(1)</script>" not in res and "&lt;script&gt;" in res
+
+
+def test_run_page_loads_runner_without_inline_handlers(client):
+    html = client.get("/tests/start?mode=mock").text
+    assert "js/test-runner.js" in html
+    assert not re.search(r"\son[a-z]+\s*=", html)
+
+
+def test_runner_script_served_and_never_uses_inner_html(client):
+    r = client.get("/static/js/test-runner.js")
+    assert r.status_code == 200
+    assert "innerHTML" not in r.text.replace("never innerHTML", "")
