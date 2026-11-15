@@ -5,6 +5,9 @@
   <h1 class="text-3xl font-extrabold tracking-tight">Your result</h1>
   <p class="mt-4 text-5xl font-extrabold">{{ res.total }} <span class="text-xl font-semibold text-muted">/ {{ res.max_marks }}</span></p>
   <p class="mt-2 text-muted">{{ res.correct }} correct · {{ res.wrong }} wrong · {{ res.skipped }} skipped</p>
+  {% set lost = res.rows|selectattr("marks", "lt", 0)|sum(attribute="marks") %}
+  <p class="mt-1 text-sm text-muted">Negative marks: {{ lost|round(2) }}{% if res.correct + res.wrong %} · Accuracy on attempted: {{ (100 * res.correct / (res.correct + res.wrong))|round|int }}%{% endif %}</p>
+  <script type="application/json" id="result-data">{{ data|tojson }}</script>
 
   <h2 class="mt-8 text-xl font-bold">By subject</h2>
   <div class="mt-3 overflow-x-auto rounded-2xl border border-line bg-surface">
@@ -17,6 +20,8 @@
       </tbody>
     </table>
   </div>
+
+  <div id="analysis"></div>
 
   <h2 class="mt-10 text-xl font-bold">Review</h2>
   <ol class="mt-3 space-y-4">

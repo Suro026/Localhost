@@ -84,6 +84,18 @@ def build_mixed(subjects: list[str], count: int, rng: random.Random | None = Non
     return TestSpec("mixed", tuple(q.id for q in picked), _minutes(n), f"Mixed practice: {n} questions")
 
 
+def build_weak(topics: list[str], count: int = 20, rng: random.Random | None = None) -> TestSpec | None:
+    """Practice set from "Subject|Topic" pairs (the learner's weak topics, read from their own device)."""
+    rng = rng or random.Random()
+    wanted = {t.strip() for t in topics[:20] if isinstance(t, str) and "|" in t}
+    pool = [q for q in _pool() if f"{q.subject}|{q.topic}" in wanted]
+    if not pool:
+        return None
+    n = max(1, min(count, len(pool), MAX_IDS))
+    picked = rng.sample(pool, n)
+    return TestSpec("weak", tuple(q.id for q in picked), _minutes(n), f"Weak-topic practice: {n} questions")
+
+
 def build_mock(rng: random.Random | None = None) -> TestSpec | None:
     """GATE pattern: GA 5x1 + 5x2, then 25x1 + 30x2 from the other subjects (uniform draw = bank share)."""
     rng = rng or random.Random()

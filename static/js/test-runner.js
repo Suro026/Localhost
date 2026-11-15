@@ -20,7 +20,7 @@
   if (!st || typeof st.end !== "number" || typeof st.answers !== "object" || !st.answers) {
     st = { end: Date.now() + data.minutes * 60000, answers: {}, marked: {}, visited: {}, cur: 0 };
   }
-  st.marked = st.marked || {}; st.visited = st.visited || {};
+  st.marked = st.marked || {}; st.visited = st.visited || {}; st.time = st.time && typeof st.time === "object" ? st.time : {};
   if (typeof st.cur !== "number" || st.cur < 0 || st.cur >= qs.length) st.cur = 0;
   st.visited[qs[st.cur].id] = true;
   save();
@@ -162,20 +162,87 @@
 
   function go(i) {
     if (i < 0 || i >= qs.length) return;
+    accrue();
     st.cur = i; st.visited[qs[i].id] = true; save();
     renderQuestion(); renderPalette();
     card.scrollIntoView({ block: "nearest" });
+  }
+
+  // ---- time spent per question (only while the tab is visible) ----
+  var lastAcc = Date.now(), ticks = 0;
+  function accrue() {
+    var now = Date.now(), d = (now - lastAcc) / 1000; lastAcc = now;
+    if (document.visibilityState === "visible" && d > 0 && d < 5) {
+      var id = qs[st.cur].id; st.time[id] = (st.time[id] || 0) + d;
+    }
   }
 
   // ---- timer ----
   var done = false;
   function tick() {
     if (done) return;
+    accrue();
+    if (++ticks % 5 === 0) save();
     var left = Math.max(0, Math.round((st.end - Date.now()) / 1000));
     var h = Math.floor(left / 3600), m = Math.floor((left % 3600) / 60), s = left % 60;
     timerEl.textContent = (h ? h + ":" : "") + String(m).padStart(h ? 2 : 1, "0") + ":" + String(s).padStart(2, "0");
     timerEl.className = "font-mono text-lg font-semibold" + (left <= 300 ? " text-red-700" : "");
     if (left === 0) submit(true);
+  }
+
+  // ---- history + analysis (kept on this device only) ----
+  function saveAttempt(doc) {
+    var node = doc.getElementById("result-data"), rd;
+    try { rd = JSON.parse(node.textContent); } catch (e) { return null; }
+    if (!rd || !Array.isArray(rd.rows) || !window.KS) return null;
+    var used = Math.round(data.minutes * 60 - Math.max(0, (st.end - Date.now()) / 1000));
+    var a = {
+      t: Date.now(), title: data.title, mode: data.mode, total: rd.total, max: rd.max,
+      correct: rd.correct, wrong: rd.wrong, skipped: rd.skipped, secs: Math.max(0, used),
+      rows: rd.rows.map(function (r) { return r.concat([Math.round(st.time[r[0]] || 0)]); })
+    };
+    KS.addAttempt(a);
+    return a;
+  }
+
+  function showAnalysis(a) {
+    var host = document.getElementById("analysis");
+    if (!host) return;
+    var rows = a.rows;
+    var totalSecs = rows.reduce(function (n, r) { return n + r[6]; }, 0);
+    var box = el("div", "mt-8");
+    box.appendChild(el("h2", "text-xl font-bold", "Time and weak spots"));
+    box.appendChild(el("p", "mt-2 text-sm text-muted",
+      "You spent " + KS.fmtTime(totalSecs) + " on questions, " + KS.fmtTime(totalSecs / Math.max(1, rows.length)) + " on average per question."));
+
+    var slow = rows.map(function (r, i) { return { n: i + 1, r: r }; })
+      .sort(function (x, y) { return y.r[6] - x.r[6]; }).slice(0, 5).filter(function (x) { return x.r[6] > 0; });
+    if (slow.length) {
+      box.appendChild(el("h3", "mt-4 text-sm font-bold", "Slowest questions"));
+      var ul = el("ul", "mt-1 space-y-1 text-sm");
+      slow.forEach(function (x) {
+        var word = x.r[3] === "c" ? "correct" : x.r[3] === "w" ? "wrong" : "skipped";
+        ul.appendChild(el("li", "", "Q" + x.n + " · " + x.r[1] + (x.r[2] ? " · " + x.r[2] : "") + " · " + KS.fmtTime(x.r[6]) + " · " + word));
+      });
+      box.appendChild(ul);
+    }
+
+    var miss = {};
+    rows.forEach(function (r) { if (r[3] === "w" && r[2]) { var k = r[1] + "|" + r[2]; miss[k] = (miss[k] || 0) + 1; } });
+    var keys = Object.keys(miss).sort(function (x, y) { return miss[y] - miss[x]; }).slice(0, 4);
+    if (keys.length) {
+      box.appendChild(el("h3", "mt-4 text-sm font-bold", "Topics you got wrong here"));
+      var ul2 = el("ul", "mt-1 space-y-1 text-sm");
+      keys.forEach(function (k) { ul2.appendChild(el("li", "", k.replace("|", " · ") + " (" + miss[k] + " wrong)")); });
+      box.appendChild(ul2);
+      var practise = el("a", "btn-primary mt-3 inline-flex", "Practise these topics");
+      practise.href = "/tests/start?mode=weak&" + keys.map(function (k) { return "t=" + encodeURIComponent(k); }).join("&");
+      box.appendChild(practise);
+    }
+    var prog = el("a", "btn-secondary mt-3 inline-flex sm:ml-2", "See your progress");
+    prog.href = "/progress";
+    box.appendChild(prog);
+    host.replaceChildren(box);
   }
 
   // ---- submit ----
@@ -201,10 +268,13 @@
       var doc = new DOMParser().parseFromString(html, "text/html");
       var res = doc.getElementById("result");
       if (!res) throw new Error("bad");
-      done = true; clear();
+      accrue(); done = true;
+      var attempt = saveAttempt(doc);
+      clear();
       document.title = doc.title;
       var main = document.querySelector("main");
       main.replaceChildren(document.importNode(res, true));
+      if (attempt) showAnalysis(attempt);
       window.scrollTo(0, 0);
     }).catch(function () {
       busy = false; submitBtn.disabled = false;

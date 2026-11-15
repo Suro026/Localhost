@@ -42,6 +42,18 @@ def _int(value: str | None, default: int) -> int:
         return default
 
 
+@router.api_route("/progress", methods=["GET", "HEAD"], response_class=HTMLResponse)
+def progress(request: Request) -> HTMLResponse:
+    return templates.TemplateResponse(request, "tests/progress.html", {})
+
+
+@router.api_route("/study", methods=["GET", "HEAD"], response_class=HTMLResponse)
+def study(request: Request) -> HTMLResponse:
+    have = bank_stats()["by_subject"]
+    return templates.TemplateResponse(
+        request, "tests/study.html", {"subjects": [s for s in testing.SUBJECTS if have.get(s)]})
+
+
 @router.api_route("/tests/start", methods=["GET", "HEAD"], response_class=HTMLResponse)
 def start(request: Request) -> HTMLResponse:
     p = request.query_params
@@ -54,6 +66,8 @@ def start(request: Request) -> HTMLResponse:
         spec = testing.build_subject(p.get("subject", ""), _int(p.get("count"), 20))
     elif mode == "mixed":
         spec = testing.build_mixed(p.getlist("subjects"), _int(p.get("count"), 20))
+    elif mode == "weak":
+        spec = testing.build_weak(p.getlist("t"), _int(p.get("count"), 20))
     elif mode == "mock":
         spec = testing.build_mock()
     if spec is None:
@@ -108,4 +122,9 @@ async def result(request: Request):
         res = testing.score(ids, answers)
     except ValueError:
         return bad
-    return templates.TemplateResponse(request, "tests/result.html", {"res": res})
+    data = {
+        "total": res.total, "max": res.max_marks, "correct": res.correct, "wrong": res.wrong, "skipped": res.skipped,
+        "rows": [[r.question.id, r.question.subject, r.question.topic, r.status[0], r.marks, r.question.marks]
+                 for r in res.rows],
+    }
+    return templates.TemplateResponse(request, "tests/result.html", {"res": res, "data": data})
