@@ -46,6 +46,10 @@ def _pool() -> list[Question]:
     return [q for q in load_questions() if scorable(q)]
 
 
+def _is_da(paper: str) -> bool:
+    return paper.upper().startswith("DA")
+
+
 def _minutes(n: int) -> int:
     return max(10, round(n * MINUTES_PER_QUESTION))
 
@@ -54,7 +58,8 @@ def build_paper(year: int, paper: str) -> TestSpec | None:
     qs = sorted((q for q in _pool() if q.year == year and q.paper == paper), key=lambda q: q.number)
     if not qs:
         return None
-    return TestSpec("paper", tuple(q.id for q in qs), 180, f"GATE CS {year} ({paper})")
+    title = f"GATE DA {year}" if _is_da(paper) else f"GATE CS {year} ({paper})"
+    return TestSpec("paper", tuple(q.id for q in qs), 180, title)
 
 
 def build_subject(subject: str, count: int = 20, rng: random.Random | None = None) -> TestSpec | None:
@@ -87,7 +92,8 @@ def build_mock(rng: random.Random | None = None) -> TestSpec | None:
     plan = [("GA", 1, 5), ("GA", 2, 5), ("CS", 1, 25), ("CS", 2, 30)]
     ids: list[str] = []
     for section, marks, want in plan:
-        cand = [q for q in pool if (q.section == "GA") == (section == "GA") and q.marks == marks]
+        cand = [q for q in pool if (q.section == "GA") == (section == "GA") and q.marks == marks
+                and (section == "GA" or not _is_da(q.paper))]  # the mock follows the CS pattern
         ids += [q.id for q in rng.sample(cand, min(want, len(cand)))]
     full = len(ids) == 65
     title = "Full mock test" if full else f"Mock test (partial: {len(ids)} questions available so far)"

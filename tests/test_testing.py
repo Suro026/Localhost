@@ -155,3 +155,18 @@ def test_nat_alternate_range_is_accepted(use):
     assert T.score([q.id], {q.id: "4"}).correct == 1
     assert T.score([q.id], {q.id: "2"}).correct == 1
     assert T.score([q.id], {q.id: "3"}).wrong == 1
+
+
+def test_mock_excludes_data_science_paper_questions_outside_ga(use):
+    qs = [mk(i, paper="CS1", section="GA", marks=1) for i in range(1, 6)]
+    qs += [mk(i, paper="DA", section="CS", marks=1, subject="Machine Learning") for i in range(1, 30)]
+    qs += [mk(i, paper="CS1", section="CS", marks=1) for i in range(40, 70)]
+    use(qs)
+    spec = T.build_mock()
+    assert not any(i.startswith("2025-DA-") for i in spec.ids)
+
+
+def test_paper_title_names_the_exam(use):
+    use([mk(1, paper="DA", section="CS"), mk(1, paper="CS1", section="CS")])
+    assert T.build_paper(2025, "DA").title == "GATE DA 2025"
+    assert T.build_paper(2025, "CS1").title == "GATE CS 2025 (CS1)"

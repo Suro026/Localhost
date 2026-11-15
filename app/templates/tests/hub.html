@@ -3,7 +3,7 @@
 {% block content %}
 <section class="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14">
   <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Mock tests</h1>
-  <p class="mt-2 max-w-2xl text-muted">Real GATE CS papers, subject-wise practice, mixed sets and a full mock in the GATE pattern. No login. Your answers stay in this browser.</p>
+  <p class="mt-2 max-w-2xl text-muted">Real GATE CS and DA papers, subject-wise practice, mixed sets and a full mock in the GATE pattern. No login. Your answers stay in this browser.</p>
   {% if message %}<p role="alert" class="mt-6 rounded-xl border border-line bg-brand-50 px-4 py-3 text-sm font-semibold">{{ message }}</p>{% endif %}
 
   {% if total %}
@@ -38,7 +38,7 @@
   <ul class="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
     {% for year, paper, n in papers %}
     <li><a href="/tests/start?mode=paper&amp;year={{ year }}&amp;paper={{ paper }}" class="flex min-h-[48px] items-center justify-between rounded-xl border border-line bg-surface px-4 py-3 font-semibold hover:border-brand-600">
-      <span>GATE CS {{ year }} <span class="text-muted">({{ paper }})</span></span><span class="text-sm font-medium text-muted">{{ n }} Q</span></a></li>
+      <span>{% if paper == "DA" %}GATE DA {{ year }}{% else %}GATE CS {{ year }} <span class="text-muted">({{ paper }})</span>{% endif %}</span><span class="text-sm font-medium text-muted">{{ n }} Q</span></a></li>
     {% endfor %}
   </ul>
 
