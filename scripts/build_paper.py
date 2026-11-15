@@ -12,7 +12,9 @@ HDR = re.compile(r"\s*Computer Science and Information Technology[^\n]*\s*Organi
 doc = fitz.open(pdf)
 imgdir = os.path.join(repo, "static", "img", "q"); os.makedirs(imgdir, exist_ok=True)
 
+PAGE_JUNK = re.compile(r"\s*(GATE \d{4} Computer Science and Information Technology \(CS\)|Q\.\s*\d+\s*[–-]\s*Q\.\s*\d+.{0,40}?[Cc]arry.{0,30}?[Ee]ach\.?)\s*$")
 def norm(s):
+    s = PAGE_JUNK.sub("", s)
     # math-italic letters (U+1D400..1D7FF) -> plain letters; everything else untouched
     out = []
     for ch in s:
@@ -31,6 +33,17 @@ def figure(n):
         order = sorted(ys)
         x0 = min(v[0] for v in ys.values()); x1 = max(v[1] for v in ys.values())
         rect = fitz.Rect(x0 + 1, order[sp[1]] + 1, x1 - 1, order[sp[2]] - 1)
+    elif sp[0] == "stack":  # several rects on one page stacked vertically
+        from PIL import Image
+        ims = []
+        for r in sp[1:]:
+            pm = pg.get_pixmap(dpi=170, clip=fitz.Rect(*r))
+            ims.append(Image.frombytes("RGB", (pm.width, pm.height), pm.samples))
+        W = max(i.width for i in ims); H = sum(i.height for i in ims) + 12 * (len(ims) - 1)
+        sh = Image.new("RGB", (W, H), "white"); y = 0
+        for i in ims:
+            sh.paste(i, (0, y)); y += i.height + 12
+        name = f"{year}-{paper}-{n:02d}.png"; sh.save(os.path.join(imgdir, name)); return "img/q/" + name
     else:
         rect = fitz.Rect(*sp[1:])
     name = f"{year}-{paper}-{n:02d}.png"
