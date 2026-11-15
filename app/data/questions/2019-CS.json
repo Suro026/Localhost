@@ -1,0 +1,1925 @@
+[
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 1,
+  "section": "GA",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Verbal Ability: Subject-Verb Agreement",
+  "text": "The expenditure on the project ______ as follows: equipment Rs.20 lakhs, salaries Rs.12 lakhs, and contingency Rs.3 lakhs.",
+  "options": [
+   "break down",
+   "break",
+   "breaks down",
+   "breaks"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 1,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 2,
+  "section": "GA",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Verbal Ability: Word Choice",
+  "text": "The search engine’s business model ______ around the fulcrum of trust.",
+  "options": [
+   "revolves",
+   "plays",
+   "sinks",
+   "bursts"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 1,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 3,
+  "section": "GA",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Numerical Ability: Relative Speed",
+  "text": "Two cars start at the same time from the same location and go in the same direction. The speed of the first car is 50 km/h and the speed of the second car is 60 km/h. The number of hours it takes for the distance between the two cars to be 20 km is ______.",
+  "options": [
+   "1",
+   "2",
+   "3",
+   "6"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 1,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 4,
+  "section": "GA",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Numerical Ability: Cost Sharing",
+  "text": "Ten friends planned to share equally the cost of buying a gift for their teacher. When two of them decided not to contribute, each of the other friends had to pay Rs. 150 more. The cost of the gift was Rs. ______.",
+  "options": [
+   "666",
+   "3000",
+   "6000",
+   "12000"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 1,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 5,
+  "section": "GA",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Verbal Ability: Analogy",
+  "text": "A court is to a judge as ______ is to a teacher.",
+  "options": [
+   "a student",
+   "a punishment",
+   "a syllabus",
+   "a school"
+  ],
+  "figure": null,
+  "answer": [
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 1,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 6,
+  "section": "GA",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Logical Reasoning: Statements",
+  "text": "The police arrested four criminals – P, Q, R and S. The criminals knew each other. They made the following statements:\nP says “Q committed the crime.”\nQ says “S committed the crime.”\nR says “I did not do it.”\nS says “What Q said about me is false.”\nAssume only one of the arrested four committed the crime and only one of the statements made above is true. Who committed the crime?",
+  "options": [
+   "P",
+   "R",
+   "S",
+   "Q"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 1,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 7,
+  "section": "GA",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Data Interpretation: Venn Diagram",
+  "text": "In the given diagram, teachers are represented in the triangle, researchers in the circle and administrators in the rectangle. Out of the total number of people, the percentage of administrators shall be in the range of ______.",
+  "options": [
+   "0 to 15",
+   "16 to 30",
+   "31 to 45",
+   "46 to 60"
+  ],
+  "figure": "img/q/2019-CS-07.png",
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 2,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 8,
+  "section": "GA",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Verbal Ability: Inference",
+  "text": "“A recent High Court judgement has sought to dispel the idea of begging as a disease — which leads to its stigmatization and criminalization — and to regard it as a symptom. The underlying disease is the failure of the state to protect citizens who fall through the social security net.”\nWhich one of the following statements can be inferred from the given passage?",
+  "options": [
+   "Beggars are lazy people who beg because they are unwilling to work",
+   "Beggars are created because of the lack of social welfare schemes",
+   "Begging is an offence that has to be dealt with firmly",
+   "Begging has to be banned because it adversely affects the welfare of the state"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 2,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 9,
+  "section": "GA",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Numerical Ability: Sets",
+  "text": "In a college, there are three student clubs. Sixty students are only in the Drama club, 80 students are only in the Dance club, 30 students are only in the Maths club, 40 students are both in Drama and Dance clubs, 12 students are both in Dance and Maths clubs, 7 students are both in Drama and Maths clubs, and 2 students are in all the clubs. If 75% of the students in the college are not in any of these clubs, then the total number of students in the college is ______.",
+  "options": [
+   "1000",
+   "975",
+   "900",
+   "225"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 2,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 10,
+  "section": "GA",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Spatial Reasoning: Floor Plans",
+  "text": "Three of the five students allocated to a hostel put in special requests to the warden. Given the floor plan of the hostel, select the allocation plan that will accommodate all their requests.\nRequest by X: Due to pollen allergy, I want to avoid a wing next to the garden.\nRequest by Y: I want to live as far from the washrooms as possible, since I am very sensitive to smell.\nRequest by Z: I believe in Vaastu and so want to stay in the South-west wing.\nThe shaded rooms are already occupied. WR is washroom.",
+  "options": [
+   "Plan (A)",
+   "Plan (B)",
+   "Plan (C)",
+   "Plan (D)"
+  ],
+  "figure": "img/q/2019-CS-10.png",
+  "answer": [
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 3,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 11,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Computer Organization",
+  "topic": "Cache Memory",
+  "text": "A certain processor uses a fully associative cache of size 16 kB. The cache block size is 16 bytes. Assume that the main memory is byte addressable and uses a 32-bit address. How many bits are required for the Tag and the Index fields respectively in the addresses generated by the processor?",
+  "options": [
+   "24 bits and 0 bits",
+   "28 bits and 4 bits",
+   "24 bits and 4 bits",
+   "28 bits and 0 bits"
+  ],
+  "figure": null,
+  "answer": [
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 4,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 12,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Digital Logic",
+  "topic": "Memory Chip Select",
+  "text": "The chip select logic for a certain DRAM chip in a memory system design is shown below. Assume that the memory system has 16 address lines denoted by A15 to A0. What is the range of addresses (in hexadecimal) of the memory system that can get enabled by the chip select (CS) signal?",
+  "options": [
+   "C800 to CFFF",
+   "CA00 to CAFF",
+   "C800 to C8FF",
+   "DA00 to DFFF"
+  ],
+  "figure": "img/q/2019-CS-12.png",
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 4,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 13,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Compiler Design",
+  "topic": "LR Parsing",
+  "text": "Which one of the following kinds of derivation is used by LR parsers?",
+  "options": [
+   "Leftmost",
+   "Leftmost in reverse",
+   "Rightmost",
+   "Rightmost in reverse"
+  ],
+  "figure": null,
+  "answer": [
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 4,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 14,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Computer Organization",
+  "topic": "Number Representation",
+  "text": "In 16-bit 2’s complement representation, the decimal number −28 is:",
+  "options": [
+   "1111 1111 0001 1100",
+   "0000 0000 1110 0100",
+   "1111 1111 1110 0100",
+   "1000 0000 1110 0100"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 4,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 15,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Discrete Mathematics",
+  "topic": "Combinatorics",
+  "text": "Let U = {1, 2, …, n}. Let A = {(x, X) | x ∈ X, X ⊆ U}. Consider the following two statements on |A|.\nI. |A| = n·2ⁿ⁻¹\nII. |A| = Σₖ₌₁ⁿ k·C(n, k)\nWhich of the above statements is/are TRUE?",
+  "options": [
+   "Only I",
+   "Only II",
+   "Both I and II",
+   "Neither I nor II"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 4,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 16,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Digital Logic",
+  "topic": "XOR Identities",
+  "text": "Which one of the following is NOT a valid identity?",
+  "options": [
+   "(x ⊕ y) ⊕ z = x ⊕ (y ⊕ z)",
+   "(x + y) ⊕ z = x ⊕ (y + z)",
+   "x ⊕ y = x + y, if xy = 0",
+   "x ⊕ y = (xy + x′y′)′"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 5,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 17,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Theory of Computation",
+  "topic": "Closure Properties",
+  "text": "If L is a regular language over Σ = {a, b}, which one of the following languages is NOT regular?",
+  "options": [
+   "L · Lᴿ = {xy | x ∈ L, yᴿ ∈ L}",
+   "{wwᴿ | w ∈ L}",
+   "Prefix(L) = {x ∈ Σ* | ∃y ∈ Σ* such that xy ∈ L}",
+   "Suffix(L) = {y ∈ Σ* | ∃x ∈ Σ* such that xy ∈ L}"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 5,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 18,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Computer Organization",
+  "topic": "Sign-Magnitude Representation",
+  "text": "Consider Z = X − Y, where X, Y and Z are all in sign-magnitude form. X and Y are each represented in n bits. To avoid overflow, the representation of Z would require a minimum of:",
+  "options": [
+   "n bits",
+   "n − 1 bits",
+   "n + 1 bits",
+   "n + 2 bits"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 5,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 19,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Linear Algebra",
+  "topic": "Invertible Matrices",
+  "text": "Let X be a square matrix. Consider the following two statements on X.\nI. X is invertible.\nII. Determinant of X is non-zero.\nWhich one of the following is TRUE?",
+  "options": [
+   "I implies II; II does not imply I.",
+   "II implies I; I does not imply II.",
+   "I does not imply II; II does not imply I.",
+   "I and II are equivalent statements."
+  ],
+  "figure": null,
+  "answer": [
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 5,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 20,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Discrete Mathematics",
+  "topic": "Equivalence Relations",
+  "text": "Let G be an arbitrary group. Consider the following relations on G:\nR₁: ∀a, b ∈ G, a R₁ b if and only if ∃g ∈ G such that a = g⁻¹bg\nR₂: ∀a, b ∈ G, a R₂ b if and only if a = b⁻¹\nWhich of the above is/are equivalence relation/relations?",
+  "options": [
+   "R₁ and R₂",
+   "R₁ only",
+   "R₂ only",
+   "Neither R₁ nor R₂"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 5,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 21,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Databases",
+  "topic": "Concurrency Control",
+  "text": "Consider the following two statements about database transaction schedules:\nI. Strict two-phase locking protocol generates conflict serializable schedules that are also recoverable.\nII. Timestamp-ordering concurrency control protocol with Thomas’ Write Rule can generate view serializable schedules that are not conflict serializable.\nWhich of the above statements is/are TRUE?",
+  "options": [
+   "I only",
+   "II only",
+   "Both I and II",
+   "Neither I nor II"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 6,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 22,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Discrete Mathematics",
+  "topic": "Hamiltonian Cycles",
+  "text": "Let G be an undirected complete graph on n vertices, where n > 2. Then, the number of different Hamiltonian cycles in G is equal to",
+  "options": [
+   "n!",
+   "(n − 1)!",
+   "1",
+   "(n − 1)!/2"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "answer_alt": [
+   [
+    "D"
+   ]
+  ],
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 6,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 23,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Calculus",
+  "topic": "Limits",
+  "text": "Compute lim (x→3) (x⁴ − 81) / (2x² − 5x − 3)",
+  "options": [
+   "1",
+   "53/12",
+   "108/7",
+   "Limit does not exist"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 6,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 24,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Databases",
+  "topic": "B+ Trees",
+  "text": "Which one of the following statements is NOT correct about the B+ tree data structure used for creating an index of a relational database table?",
+  "options": [
+   "B+ Tree is a height-balanced tree",
+   "Non-leaf nodes have pointers to data records",
+   "Key values in each node are kept in sorted order",
+   "Each leaf node has a pointer to the next leaf node"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 6,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 25,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Theory of Computation",
+  "topic": "Pumping Lemma",
+  "text": "For Σ = {a, b}, let us consider the regular language L = {x | x = a²⁺³ᵏ or x = b¹⁰⁺¹²ᵏ, k ≥ 0}. Which one of the following can be a pumping length (the constant guaranteed by the pumping lemma) for L?",
+  "options": [
+   "3",
+   "5",
+   "9",
+   "24"
+  ],
+  "figure": null,
+  "answer": [
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 6,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 26,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Computer Networks",
+  "topic": "Email Protocols",
+  "text": "Which one of the following protocol pairs can be used to send and retrieve e-mails (in that order)?",
+  "options": [
+   "IMAP, POP3",
+   "SMTP, POP3",
+   "SMTP, MIME",
+   "IMAP, SMTP"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 6,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 27,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Operating System",
+  "topic": "fork()",
+  "text": "The following C program is executed on a Unix/Linux system:\n#include <unistd.h>\nint main()\n{\n    int i;\n    for (i=0; i<10; i++)\n        if (i%2 == 0) fork();\n    return 0;\n}\nThe total number of child processes created is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 31.0,
+  "answer_max": 31.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 7,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 28,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Programming and Data Structures",
+  "topic": "C Programs: Functions",
+  "text": "Consider the following C program:\n#include <stdio.h>\nint jumble(int x, int y){\n    x = 2*x + y;\n    return x;\n}\nint main(){\n    int x=2, y=5;\n    y = jumble(y, x);\n    x = jumble(y, x);\n    printf(\"%d \\n\", x);\n    return 0;\n}\nThe value printed by the program is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 26.0,
+  "answer_max": 26.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 7,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 29,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Compiler Design",
+  "topic": "FOLLOW Sets",
+  "text": "Consider the grammar given below:\nS → Aa\nA → BD\nB → b | ε\nD → d | ε\nLet a, b, d, and $ be indexed as follows: a = 3, b = 2, d = 1, $ = 0.\nCompute the FOLLOW set of the non-terminal B and write the index values for the symbols in the FOLLOW set in the descending order. (For example, if the FOLLOW set is {a, b, d, $}, then the answer should be 3210)\nAnswer: ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 31.0,
+  "answer_max": 31.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 7,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 30,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Algorithms",
+  "topic": "Quicksort",
+  "text": "An array of 25 distinct elements is to be sorted using quicksort. Assume that the pivot element is chosen uniformly at random. The probability that the pivot element gets placed in the worst possible location in the first round of partitioning (rounded off to 2 decimal places) is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 0.08,
+  "answer_max": 0.08,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 8,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 31,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Discrete Mathematics",
+  "topic": "Modular Arithmetic",
+  "text": "The value of 3⁵¹ mod 5 is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 2.0,
+  "answer_max": 2.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 8,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 32,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Probability and Statistics",
+  "topic": "Probability: Random Numbers",
+  "text": "Two numbers are chosen independently and uniformly at random from the set {1, 2, …, 13}. The probability (rounded off to 3 decimal places) that their 4-bit (unsigned) binary representations have the same most significant bit is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 0.502,
+  "answer_max": 0.504,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 8,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 33,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Operating System",
+  "topic": "Process Synchronization",
+  "text": "Consider three concurrent processes P1, P2 and P3 as shown below, which access a shared variable D that has been initialized to 100.\nP1: D = D + 20\nP2: D = D − 50\nP3: D = D + 10\nThe processes are executed on a uniprocessor system running a time-shared operating system. If the minimum and maximum possible values of D after the three processes have completed execution are X and Y respectively, then the value of Y − X is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 80.0,
+  "answer_max": 80.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 8,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 34,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Programming and Data Structures",
+  "topic": "C Programs: Arrays and Pointers",
+  "text": "Consider the following C program:\n#include <stdio.h>\nint main(){\n    int arr[]={1,2,3,4,5,6,7,8,9,0,1,2,5}, *ip=arr+4;\n    printf(\"%d\\n\", ip[1]);\n    return 0;\n}\nThe number that will be displayed on execution of the program is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 6.0,
+  "answer_max": 6.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 8,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 35,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Algorithms",
+  "topic": "Divide and Conquer: Maximum Subarray",
+  "text": "Consider a sequence of 14 elements: A = [−5, −10, 6, 3, −1, −2, 13, 4, −9, −1, 4, 12, −3, 0]. The subsequence sum S(i, j) = Σₖ₌ᵢʲ A[k], where 0 ≤ i ≤ j < 14. (Divide and conquer approach may be used.) Determine the maximum of S(i, j).",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 29.0,
+  "answer_max": 29.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 9,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 36,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Programming and Data Structures",
+  "topic": "Recursion",
+  "text": "Consider the following C function.\nvoid convert(int n){\n    if(n<0)\n        printf(\"%d\",n);\n    else {\n        convert(n/2);\n        printf(\"%d\",n%2);\n    }\n}\nWhich one of the following will happen when the function convert is called with any positive integer n as argument?",
+  "options": [
+   "It will print the binary representation of n and terminate",
+   "It will print the binary representation of n in the reverse order and terminate",
+   "It will print the binary representation of n but will not terminate",
+   "It will not print anything and will not terminate"
+  ],
+  "figure": null,
+  "answer": [
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 9,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 37,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Programming and Data Structures",
+  "topic": "C Programs: Static Variables",
+  "text": "Consider the following C program:\n#include <stdio.h>\nint r(){\n    static int num=7;\n    return num--;\n}\nint main(){\n    for (r();r();r())\n        printf(\"%d\",r());\n    return 0;\n}\nWhich one of the following values will be displayed on execution of the programs?",
+  "options": [
+   "41",
+   "52",
+   "63",
+   "630"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 9,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 38,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Computer Networks",
+  "topic": "Subnetting",
+  "text": "Consider three machines M, N, and P with IP addresses 100.10.5.2, 100.10.5.5, and 100.10.5.6 respectively. The subnet mask is set to 255.255.255.252 for all the three machines. Which one of the following is true?",
+  "options": [
+   "M, N, and P all belong to the same subnet",
+   "Only M and N belong to the same subnet",
+   "Only N and P belong to the same subnet",
+   "M, N, and P belong to three different subnets"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 10,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 39,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Computer Networks",
+  "topic": "ARP",
+  "text": "Suppose that in an IP-over-Ethernet network, a machine X wishes to find the MAC address of another machine Y in its subnet. Which one of the following techniques can be used for this?",
+  "options": [
+   "X sends an ARP request packet to the local gateway’s IP address which then finds the MAC address of Y and sends to X",
+   "X sends an ARP request packet to the local gateway’s MAC address which then finds the MAC address of Y and sends to X",
+   "X sends an ARP request packet with broadcast MAC address in its local subnet",
+   "X sends an ARP request packet with broadcast IP address in its local subnet"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 10,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 40,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Digital Logic",
+  "topic": "Combinational Circuits",
+  "text": "Consider three 4-variable functions f₁, f₂, and f₃, which are expressed in sum-of-minterms as\nf₁ = Σ(0, 2, 5, 8, 14), f₂ = Σ(2, 3, 6, 8, 14, 15), f₃ = Σ(2, 7, 11, 14)\nFor the following circuit with one AND gate and one XOR gate, the output function f can be expressed as:",
+  "options": [
+   "Σ(7, 8, 11)",
+   "Σ(2, 7, 8, 11, 14)",
+   "Σ(2, 14)",
+   "Σ(0, 2, 3, 5, 6, 7, 8, 11, 14, 15)"
+  ],
+  "figure": "img/q/2019-CS-40.png",
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 10,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 41,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Theory of Computation",
+  "topic": "Context-Free Languages",
+  "text": "Which one of the following languages over Σ = {a, b} is NOT context-free?",
+  "options": [
+   "{wwᴿ | w ∈ {a, b}*}",
+   "{waⁿbⁿwᴿ | w ∈ {a, b}*, n ≥ 0}",
+   "{waⁿwᴿbⁿ | w ∈ {a, b}*, n ≥ 0}",
+   "{aⁿbⁱ | i ∈ {n, 3n, 5n}, n ≥ 0}"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 10,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 42,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Databases",
+  "topic": "Normalization: BCNF",
+  "text": "Let the set of functional dependencies F = {QR → S, R → P, S → Q} hold on a relation schema X = (PQRS). X is not in BCNF. Suppose X is decomposed into two schemas Y and Z, where Y = (PR) and Z = (QRS).\nConsider the two statements given below.\nI. Both Y and Z are in BCNF\nII. Decomposition of X into Y and Z is dependency preserving and lossless\nWhich of the above statements is/are correct?",
+  "options": [
+   "Both I and II",
+   "I only",
+   "II only",
+   "Neither I nor II"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 11,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 43,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Computer Organization",
+  "topic": "TLB and Virtual Memory",
+  "text": "Assume that in a certain computer, the virtual addresses are 64 bits long and the physical addresses are 48 bits long. The memory is word addressable. The page size is 8 kB and the word size is 4 bytes. The Translation Look-aside Buffer (TLB) in the address translation path has 128 valid entries. At most how many distinct virtual addresses can be translated without any TLB miss?",
+  "options": [
+   "16×2¹⁰",
+   "256×2¹⁰",
+   "4×2²⁰",
+   "8×2²⁰"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 11,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 44,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Theory of Computation",
+  "topic": "Countability",
+  "text": "Consider the following sets:\nS1. Set of all recursively enumerable languages over the alphabet {0,1}\nS2. Set of all syntactically valid C programs\nS3. Set of all languages over the alphabet {0,1}\nS4. Set of all non-regular languages over the alphabet {0,1}\nWhich of the above sets are uncountable?",
+  "options": [
+   "S1 and S2",
+   "S3 and S4",
+   "S2 and S3",
+   "S1 and S4"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 11,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 45,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Discrete Mathematics",
+  "topic": "First-Order Logic",
+  "text": "Consider the first order predicate formula φ:\n∀x [(∀z z|x ⇒ ((z = x) ∨ (z = 1))) ⇒ ∃w ((w > x) ∧ (∀z z|w ⇒ ((w = z) ∨ (z = 1))))]\nHere ‘a|b’ denotes that ‘a divides b’, where a and b are integers. Consider the following sets:\nS1. {1, 2, 3, …, 100}\nS2. Set of all positive integers\nS3. Set of all integers\nWhich of the above sets satisfy φ?",
+  "options": [
+   "S1 and S2",
+   "S1 and S3",
+   "S2 and S3",
+   "S1, S2 and S3"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 11,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 46,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Compiler Design",
+  "topic": "Syntax Directed Translation",
+  "text": "Consider the following grammar and the semantic actions to support the inherited type declaration attributes. Let X₁, X₂, X₃, X₄, X₅, and X₆ be the placeholders for the non-terminals D, T, L or L₁ in the following table:\nProduction rule → Semantic action\nD → T L → X₁.type = X₂.type\nT → int → T.type = int\nT → float → T.type = float\nL → L₁ , id → X₃.type = X₄.type; addType(id.entry, X₅.type)\nL → id → addType(id.entry, X₆.type)\nWhich one of the following are the appropriate choices for X₁, X₂, X₃ and X₄?",
+  "options": [
+   "X₁ = L, X₂ = T, X₃ = L₁, X₄ = L",
+   "X₁ = T, X₂ = L, X₃ = L₁, X₄ = T",
+   "X₁ = L, X₂ = L, X₃ = L₁, X₄ = T",
+   "X₁ = T, X₂ = L, X₃ = T, X₄ = L₁"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 12,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 47,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Algorithms",
+  "topic": "Order Statistics",
+  "text": "There are n unsorted arrays: A₁, A₂, …, Aₙ. Assume that n is odd. Each of A₁, A₂, …, Aₙ contains n distinct elements. There are no common elements between any two arrays. The worst-case time complexity of computing the median of the medians of A₁, A₂, …, Aₙ is",
+  "options": [
+   "O(n)",
+   "O(n log n)",
+   "O(n²)",
+   "Ω(n² log n)"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 12,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 48,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Algorithms",
+  "topic": "Minimum Spanning Trees",
+  "text": "Let G be any connected, weighted, undirected graph.\nI. G has a unique minimum spanning tree, if no two edges of G have the same weight.\nII. G has a unique minimum spanning tree, if, for every cut of G, there is a unique minimum-weight edge crossing the cut.\nWhich of the above two statements is/are TRUE?",
+  "options": [
+   "I only",
+   "II only",
+   "Both I and II",
+   "Neither I nor II"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 12,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 49,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Operating System",
+  "topic": "Deadlock",
+  "text": "Consider the following snapshot of a system running n concurrent processes. Process i is holding Xᵢ instances of a resource R, 1 ≤ i ≤ n. Assume that all instances of R are currently in use. Further, for all i, process i can place a request for at most Yᵢ additional instances of R while holding the Xᵢ instances it already has. Of the n processes, there are exactly two processes p and q such that Yₚ = Y_q = 0. Which one of the following conditions guarantees that no other process apart from p and q can complete execution?",
+  "options": [
+   "Xₚ + X_q < Min {Yₖ | 1 ≤ k ≤ n, k ≠ p, k ≠ q}",
+   "Xₚ + X_q < Max {Yₖ | 1 ≤ k ≤ n, k ≠ p, k ≠ q}",
+   "Min (Xₚ, X_q) ≥ Min {Yₖ | 1 ≤ k ≤ n, k ≠ p, k ≠ q}",
+   "Min (Xₚ, X_q) ≤ Max {Yₖ | 1 ≤ k ≤ n, k ≠ p, k ≠ q}"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 13,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 50,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Programming and Data Structures",
+  "topic": "Heaps and BSTs",
+  "text": "Consider the following statements:\nI. The smallest element in a max-heap is always at a leaf node\nII. The second largest element in a max-heap is always a child of the root node\nIII. A max-heap can be constructed from a binary search tree in Θ(n) time\nIV. A binary search tree can be constructed from a max-heap in Θ(n) time\nWhich of the above statements are TRUE?",
+  "options": [
+   "I, II and III",
+   "I, II and IV",
+   "I, III and IV",
+   "II, III and IV"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 13,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 51,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Operating System",
+  "topic": "CPU Scheduling: SRTF",
+  "text": "Consider the following four processes with arrival times (in milliseconds) and their length of CPU bursts (in milliseconds) as shown below:\nProcess P1: arrival 0, CPU burst 3\nProcess P2: arrival 1, CPU burst 1\nProcess P3: arrival 3, CPU burst 3\nProcess P4: arrival 4, CPU burst Z\nThese processes are run on a single processor using preemptive Shortest Remaining Time First scheduling algorithm. If the average waiting time of the processes is 1 millisecond, then the value of Z is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 2.0,
+  "answer_max": 2.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 13,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 52,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Operating System",
+  "topic": "File System: Inodes",
+  "text": "The index node (inode) of a Unix-like file system has 12 direct, one single-indirect and one double-indirect pointers. The disk block size is 4 kB, and the disk block address is 32-bits long. The maximum possible file size is (rounded off to 1 decimal place) ______ GB.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 3.7,
+  "answer_max": 3.8,
+  "mta": false,
+  "answer_alt": [
+   [
+    4.0,
+    4.1
+   ]
+  ],
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 13,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 53,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Compiler Design",
+  "topic": "LR(0) Items",
+  "text": "Consider the augmented grammar given below:\nS′ → S\nS → ⟨L⟩ | id\nL → L, S | S\nLet I₀ = CLOSURE({[S′ → •S]}). The number of items in the set GOTO(I₀, ⟨) is: ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 5.0,
+  "answer_max": 5.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 14,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 54,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Linear Algebra",
+  "topic": "Eigenvalues",
+  "text": "Consider the following matrix:\nR = [[1, 2, 4, 8], [1, 3, 9, 27], [1, 4, 16, 64], [1, 5, 25, 125]]\nThe absolute value of the product of Eigen values of R is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 12.0,
+  "answer_max": 12.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 14,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 55,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Computer Organization",
+  "topic": "Memory Bandwidth",
+  "text": "A certain processor deploys a single-level cache. The cache block size is 8 words and the word size is 4 bytes. The memory system uses a 60-MHz clock. To service a cache miss, the memory controller first takes 1 cycle to accept the starting address of the block, it then takes 3 cycles to fetch all the eight words of the block, and finally transmits the words of the requested block at the rate of 1 word per cycle. The maximum bandwidth for the memory system when the program running on the processor issues a series of read operations is ______ × 10⁶ bytes/sec.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 160.0,
+  "answer_max": 160.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 14,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 56,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Discrete Mathematics",
+  "topic": "Trees: Expected Distance",
+  "text": "Let T be a full binary tree with 8 leaves. (A full binary tree has every level full.) Suppose two leaves a and b of T are chosen uniformly and independently at random. The expected value of the distance between a and b in T (i.e., the number of edges in the unique path between a and b) is (rounded off to 2 decimal places) ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 4.25,
+  "answer_max": 4.25,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 14,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 57,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Probability and Statistics",
+  "topic": "Uniform Distribution",
+  "text": "Suppose Y is distributed uniformly in the open interval (1, 6). The probability that the polynomial 3x² + 6xY + 3Y + 6 has only real roots is (rounded off to 1 decimal place) ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 0.8,
+  "answer_max": 0.8,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 14,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 58,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Theory of Computation",
+  "topic": "DFA Minimization",
+  "text": "Let Σ be the set of all bijections from {1, …, 5} to {1, …, 5}, where id denotes the identity function, i.e. id(j) = j, ∀j. Let ∘ denote composition on functions. For a string x = x₁x₂⋯xₙ ∈ Σⁿ, n ≥ 0, let π(x) = x₁ ∘ x₂ ∘ ⋯ ∘ xₙ.\nConsider the language L = {x ∈ Σ* | π(x) = id}. The minimum number of states in any DFA accepting L is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 120.0,
+  "answer_max": 120.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 14,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 59,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Computer Networks",
+  "topic": "LAN Switching",
+  "text": "Consider that 15 machines need to be connected in a LAN using 8-port Ethernet switches. Assume that these switches do not have any separate uplink ports. The minimum number of switches needed is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 3.0,
+  "answer_max": 3.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 15,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 60,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Digital Logic",
+  "topic": "NOR Gate Implementation",
+  "text": "What is the minimum number of 2-input NOR gates required to implement a 4-variable function expressed in sum-of-minterms form as f = Σ(0, 2, 5, 7, 8, 10, 13, 15)? Assume that all the inputs and their complements are available. Answer: ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 3.0,
+  "answer_max": 3.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 15,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 61,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Databases",
+  "topic": "SQL: GROUP BY",
+  "text": "A relational database contains two tables Student and Performance as shown below:\nStudent (Roll_no, Student_name): (1, Amit), (2, Priya), (3, Vinit), (4, Rohan), (5, Smita)\nPerformance (Roll_no, Subject_code, Marks): (1, A, 86), (1, B, 95), (1, C, 90), (2, A, 89), (2, C, 92), (3, C, 80)\nThe primary key of the Student table is Roll_no. For the Performance table, the columns Roll_no and Subject_code together form the primary key. Consider the SQL query given below:\nSELECT S.Student_name, sum(P.Marks)\nFROM Student S, Performance P\nWHERE P.Marks > 84\nGROUP BY S.Student_name;\nThe number of rows returned by the above SQL query is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 5.0,
+  "answer_max": 5.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 15,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 62,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Programming and Data Structures",
+  "topic": "C Programs: Floating Point",
+  "text": "Consider the following C program:\n#include <stdio.h>\nint main(){\n    float sum = 0.0, j = 1.0, i = 2.0;\n    while (i/j > 0.0625){\n        j = j + j;\n        sum = sum + i/j;\n        printf(\"%f\\n\", sum);\n    }\n    return 0;\n}\nThe number of times the variable sum will be printed, when the above program is executed, is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 5.0,
+  "answer_max": 5.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 15,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 63,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Programming and Data Structures",
+  "topic": "C Programs: Pointers",
+  "text": "Consider the following C program:\n#include <stdio.h>\nint main()\n{\n    int a[] = {2, 4, 6, 8, 10};\n    int i, sum = 0, *b = a + 4;\n    for (i = 0; i < 5; i++)\n        sum = sum + (*b - i) - *(b - i);\n    printf (\"%d\\n\", sum);\n    return 0;\n}\nThe output of the above C program is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 10.0,
+  "answer_max": 10.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 16,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 64,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Computer Networks",
+  "topic": "RSA Cryptosystem",
+  "text": "In an RSA cryptosystem, the value of the public modulus parameter n is 3007. If it is also known that φ(n) = 2880, where φ() denotes Euler’s Totient Function, then the prime factor of n which is greater than 50 is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 97.0,
+  "answer_max": 97.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 16,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2019,
+  "paper": "CS",
+  "number": 65,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Databases",
+  "topic": "Relational Algebra",
+  "text": "Consider the following relations P(X, Y, Z), Q(X, Y, T) and R(Y, V) (shown in the figure).\nHow many tuples will be returned by the following relational algebra query?\nΠ_X(σ_{(P.Y = R.Y ∧ R.V = V2)}(P × R)) − Π_X(σ_{(Q.Y = R.Y ∧ Q.T > 2)}(Q × R))\nAnswer: ______.",
+  "options": [],
+  "figure": "img/q/2019-CS-65.png",
+  "answer": [],
+  "answer_min": 1.0,
+  "answer_max": 1.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2019 CS question paper (Set-2)",
+   "page": 16,
+   "source_type": "official GATE 2019 question paper",
+   "answer_key": "https://web.archive.org/web/2023id_/http://gate.iitm.ac.in/gate2019/pdfs/Anskey/CS_key_Published.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ }
+]
