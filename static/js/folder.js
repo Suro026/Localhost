@@ -435,7 +435,7 @@ function frondPath(seed, size = 400) {
       f("title").textContent = d.title;
       f("sub").textContent = d.sub || "";
       f("sub").hidden = !d.sub;
-      var rows = [["Year", d.year], ["Subject", d.subject], ["Duration", d.dur], ["Questions", d.qs], ["Level", d.level]];
+      var rows = [["Year", d.year], ["Subject", d.subject], ["Duration", d.dur], ["Questions", d.qs], ["Source", d.level]];
       var dl = f("dl");
       dl.textContent = "";
       rows.forEach(function (r) {

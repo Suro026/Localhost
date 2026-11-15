@@ -7,33 +7,29 @@ def test_homepage_static_content(client):
     assert r.status_code == 200
     html = r.text
     for expected in [
-        "AI-Powered Exam Preparation", "Free online mock tests", "Start learning", "All exams", "How it works",
-        "Select topics", "AI builds the exam", "Take it securely", "Analyse results",
+        "AI-Powered Exam Preparation", "Free online mock tests", "Start learning", "How it works",
+        "Pick a test", "Sit it timed", "Get scored", "Review",
         "Surajit Sadhukhan", "Sayan Karmakar", "Co Lead",
         "https://chat.whatsapp.com/FinfZJZ6CQLAWgI7uqiMux",
-        "Mock tests are coming soon",
+        "Official answer keys",
     ]:
         assert expected in html
 
 
-def test_homepage_lists_real_exams_and_note_categories(client, db):
-    exam = Exam(title="GATE Sample Paper", subject="CSE", mode=ExamMode.year_wise, exam_year=2024,
-                difficulty=Difficulty.hard, topic_tags=["Stack", "Queue"], duration_minutes=90,
-                total_questions=1, is_paid=False, price=0, is_active=True)
-    exam.questions = [Question(order_index=1, subject="DSA", question_text="Q?", options={"A": "1"},
-                               correct_answer="A")]
-    hidden = Exam(title="Inactive Paper", subject="CSE", mode=ExamMode.full,
-                  difficulty=Difficulty.easy, is_active=False)
-    db.add_all([exam, hidden, Note(category="DSA", title="Stacks", file_path="x.pdf"),
+def test_homepage_lists_bank_papers_and_note_counts(client, db):
+    from app.services.questions import bank_stats
+    db.add_all([Note(category="DSA", title="Stacks", file_path="x.pdf"),
                 Note(category="DSA", title="Queues", file_path="y.pdf"),
                 Note(category="DBMS", title="Hidden", file_path="z.pdf", is_active=False)])
     db.commit()
 
     html = client.get("/").text
-    assert "GATE Sample Paper" in html and "Stack, Queue" in html and "90 min" in html
-    assert 'data-level="Hard"' in html
-    assert "Inactive Paper" not in html
-    # the About sheet shows live counts: 1 paper, 1 question, 2 active notes
+    assert "GATE CS 2021 (CS1)" in html and "GATE DA 2025" in html
+    assert "/tests/start?mode=paper&amp;year=2021&amp;paper=CS1" in html or "/tests/start?mode=paper&year=2021&paper=CS1" in html
+    assert 'data-dur="180 min"' in html and 'data-qs="65"' in html
+    assert "coming soon" not in html.lower()
+    # the About sheet shows live counts: bank questions and 2 active notes
+    assert f'data-count="{bank_stats()["total"]}"' in html
     assert 'data-count="2"' in html
 
 

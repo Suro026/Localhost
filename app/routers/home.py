@@ -9,7 +9,9 @@ from sqlalchemy.orm import Session
 
 from app.core.database import get_db
 from app.core.dependencies import templates
-from app.models import Exam, Note
+from app.models import Note
+from app.services import testing
+from app.services.questions import bank_stats, load_questions, scorable
 
 router = APIRouter()
 logger = logging.getLogger(__name__)
@@ -17,19 +19,28 @@ logger = logging.getLogger(__name__)
 DEFAULT_NOTE_CATEGORIES = ["DSA", "DBMS", "OS", "CN", "AI/ML"]
 
 
+def _bank_view() -> tuple[list[SimpleNamespace], int, int]:
+    """Papers (newest first), subject count and scorable-question total, read from the JSON question bank."""
+    stats = bank_stats()
+    papers: list[SimpleNamespace] = []
+    for year, paper in sorted({(q.year, q.paper) for q in load_questions() if scorable(q)}, reverse=True):
+        spec = testing.build_paper(year, paper)
+        if spec is None:
+            continue
+        branch = "da" if paper.upper().startswith("DA") else "cs"
+        papers.append(SimpleNamespace(
+            title=spec.title, year=year, branch=branch, minutes=spec.minutes, total=len(spec.ids),
+            href=f"/tests/start?mode=paper&year={year}&paper={paper}"))
+    subjects = sum(1 for s in testing.SUBJECTS if stats["by_subject"].get(s))
+    return papers, subjects, stats["total"]
+
+
 @router.api_route("/", methods=["GET", "HEAD"], response_class=HTMLResponse)
 def home(request: Request, db: Session = Depends(get_db)) -> HTMLResponse:
-    featured_exams: list[Exam] = []
     note_categories: list[tuple[str, int | None]] = []
-    mode_counts: dict[str, int] = {}
-    stats = SimpleNamespace(exams=0, questions=0, notes=0)
+    notes = 0
     try:
-        active = Exam.is_active.is_(True)
-        featured_exams = list(db.scalars(select(Exam).where(active).order_by(Exam.created_at.desc()).limit(6)))
-        mode_counts = {m.value: n for m, n in db.execute(select(Exam.mode, func.count(Exam.id)).where(active).group_by(Exam.mode))}
-        stats.exams = sum(mode_counts.values())
-        stats.questions = db.scalar(select(func.coalesce(func.sum(Exam.total_questions), 0)).where(active)) or 0
-        stats.notes = db.scalar(select(func.count(Note.id)).where(Note.is_active.is_(True))) or 0
+        notes = db.scalar(select(func.count(Note.id)).where(Note.is_active.is_(True))) or 0
         note_categories = [
             (row[0], row[1])
             for row in db.execute(
@@ -41,12 +52,14 @@ def home(request: Request, db: Session = Depends(get_db)) -> HTMLResponse:
             )
         ]
     except SQLAlchemyError:
-        logger.exception("Homepage data unavailable; rendering empty sections")
+        logger.exception("Homepage notes unavailable; rendering without them")
     if not note_categories:
         note_categories = [(name, None) for name in DEFAULT_NOTE_CATEGORIES]
+    papers, subjects, total = _bank_view()
+    stats = SimpleNamespace(exams=len(papers), questions=total, notes=notes, subjects=subjects)
+    mode_counts = {"year_wise": len(papers), "subject_wise": subjects, "mixed": subjects, "full": 1}
     return templates.TemplateResponse(
         request,
         "home.html",
-        {"featured_exams": featured_exams, "note_categories": note_categories,
-         "mode_counts": mode_counts, "stats": stats},
+        {"papers": papers, "note_categories": note_categories, "mode_counts": mode_counts, "stats": stats},
     )

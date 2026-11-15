@@ -43,11 +43,13 @@
   ("year_wise", "Year-wise", "blue", "Papers by year", "One complete paper per year, in its original order, with the original time limit.", ["One paper per year", "Original question order", "Original time limit"]),
   ("subject_wise", "Subject-wise", "green", "Topics by subject", "Every question from one subject. Narrow it to the topics you are weak in.", ["Pick one subject", "Choose your topics", "Practise at your own pace"]),
   ("mixed", "Mixed", "orange", "Mixed sets", "A balanced set across several subjects, assembled when you start.", ["Several subjects at once", "Built when you start", "Good for revision"]),
-  ("full", "Full-length", "yellow", "Full paper", "The complete paper pattern, timed end to end, for a dress rehearsal.", ["Complete paper pattern", "Timed end to end", "Fullscreen exam window"]),
+  ("full", "Full-length", "yellow", "Full paper", "The complete paper pattern, timed end to end, for a dress rehearsal.", ["Complete paper pattern", "Timed end to end", "65 questions, 180 minutes"]),
 ] %}
 {% set TONES = ["blue", "green", "orange", "yellow"] %}
 {% set TONE_OF = {"year_wise": "blue", "subject_wise": "green", "mixed": "orange", "full": "yellow"} %}
 {% set LABEL_OF = {"year_wise": "Year-wise", "subject_wise": "Subject-wise", "mixed": "Mixed", "full": "Full-length"} %}
+{% set MODE_HREF = {"year_wise": "/tests", "subject_wise": "/tests", "mixed": "/tests", "full": "/tests/start?mode=mock"} %}
+{% set UNIT = {"year_wise": ("paper", "papers"), "subject_wise": ("subject", "subjects"), "mixed": ("subject", "subjects"), "full": ("mock test", "mock tests")} %}
 {% set DECK = [(0, 0, 38, 8, 0.16), (1, 28, 34, 0, 0.7), (2, 57, 43, 14, 0.12), (3, 2, 41, 70, 0.06)] %}
 
 {% block content %}
@@ -65,7 +67,7 @@
         <span class="ftp-reg" aria-hidden="true">®</span>
       </div>
       <div class="ftp-mast-notes">
-        <span>Free mock tests</span><i aria-hidden="true"></i><span>Timed and proctored</span><i aria-hidden="true"></i><span>Scored on the server</span>
+        <span>Free mock tests</span><i aria-hidden="true"></i><span>Official GATE papers</span><i aria-hidden="true"></i><span>Official answer keys</span>
       </div>
     </div>
   </header>
@@ -104,7 +106,7 @@
           <div class="ftp-qlinks">
             {% for key, label, tone, short, desc, pts in MODES[:3] %}<button type="button" class="ftp-qlink" data-open-cat="{{ key }}">{{ label }}</button>{% endfor %}
           </div>
-          <p class="ftp-blurb">Take free year-wise, subject-wise, mixed and full-length mock tests in a timed, proctored window. Your score is worked out on the server the moment you submit, and PDF notes sit beside the papers.</p>
+          <p class="ftp-blurb">Take free year-wise, subject-wise, mixed and full-length mock tests built from official GATE papers. The clock runs like the real exam, marking follows the GATE scheme, and every answer is checked against the official key the moment you submit.</p>
         </div>
       </div>
       <div class="ftp-deck" style="--dhm:{{ 54 * 4 + 140 }}px">
@@ -112,10 +114,10 @@
         {% set key, label, tone, short, desc, pts = MODES[i] %}
         {% set n = mode_counts.get(key, 0) %}
         {% call folder(tone, tab=label, chip="%02d"|format(n), tab_arrow=11, tab_at=tab, glass=(t > 40), cls="ftp-dfold ftp-dfold-btn", tag="button",
-                       attrs={"type": "button", "data-open-cat": key, "aria-label": "Open " ~ label ~ " papers, " ~ n ~ " available"},
+                       attrs={"type": "button", "data-open-cat": key, "aria-label": "Open " ~ label ~ ", " ~ n ~ " " ~ (UNIT[key][0] if n == 1 else UNIT[key][1]) ~ " available"},
                        style="--l:" ~ l ~ ";--w:" ~ w ~ ";--t:" ~ t ~ "px;--mt:" ~ (i * 54) ~ "px") %}
           <span class="ftp-dl"><span class="ftp-dl-local">{{ short }}</span><span class="ftp-dl-n">{{ "%02d"|format(i + 1) }}</span></span>
-          <span class="ftp-dl-en" style="display:block">{{ label }} · {{ n }} {{ "paper" if n == 1 else "papers" }}</span>
+          <span class="ftp-dl-en" style="display:block">{{ label }} · {{ n }} {{ UNIT[key][0] if n == 1 else UNIT[key][1] }}</span>
         {% endcall %}
         {% endfor %}
       </div>
@@ -138,7 +140,7 @@
           <div class="ftp-band-fold"><div>
             <div class="ftp-band-go">
               <p>{{ desc }}</p>
-              <a class="ftp-go" href="/exams?mode={{ key }}" tabindex="{{ 0 if open else -1 }}">Open {{ label|lower }} papers {{ arrow("right", 12) }}</a>
+              <a class="ftp-go" href="{{ MODE_HREF[key] }}" tabindex="{{ 0 if open else -1 }}">{{ "Start the full-length mock" if key == "full" else "Open " ~ label|lower ~ " tests" }} {{ arrow("right", 12) }}</a>
             </div>
           </div></div>
         {% endcall %}
@@ -167,12 +169,12 @@
         </div>
         <div>
           <p class="ftp-hi"><span>Hi, we are <b>Keystone</b>!</span></p>
-          <p class="ftp-kicker" style="margin-top:12px;max-width:560px">An exam practice platform for students: official previous-year papers, timed and proctored like the real thing, free to take. We add papers and notes as they are prepared, and we read every piece of feedback.</p>
+          <p class="ftp-kicker" style="margin-top:12px;max-width:560px">A free GATE practice platform for CS and Data Science &amp; AI students. Every question comes from an official GATE paper and is marked against the official answer key. We add new papers as the official keys are published, and we read every piece of feedback.</p>
           <div class="ftp-cols">
             {% for label, tone, lines in [
               ("Practise", "blue", ["Year-wise papers", "Subject-wise sets", "Mixed and full-length"]),
-              ("Track", "green", ["Score after you submit", "Accuracy per attempt", "Every past attempt"]),
-              ("Learn", "orange", ["PDF notes in the browser", "Notes by subject", "AI-generated practice exams"])] %}
+              ("Track", "green", ["Score after you submit", "Marks, accuracy and negatives", "Review every answer"]),
+              ("Learn", "orange", ["PDF notes in the browser", "Notes by subject", "Free books library"])] %}
             <div>
               <span class="ftp-badge" style="background:var(--ftp-{{ tone }});color:#fff">{{ label }}</span>
               <ul>{% for l in lines %}<li>{{ l }}</li>{% endfor %}</ul>
@@ -192,49 +194,47 @@
     {# ---------------- 04 exam papers ---------------- #}
     <section class="ftp-sheet ftp-rv" data-sheet="work" aria-labelledby="s-work-h">
       {{ meta(4, "Exam papers") }}
-      {{ head("work", "(%02d)"|format(stats.exams), "Exam papers", "Filter the cabinet by mode. Open any paper for its details; arrow keys page through.") }}
+      {{ head("work", "(%02d)"|format(stats.exams), "Exam papers", "Every paper is a full 65-question GATE paper with its official key. Filter by branch, open one for its details; arrow keys page through.") }}
+      {% set BR = {"cs": ("Computer Science", "blue"), "da": ("Data Science & AI", "green")} %}
       <div class="ftp-filter">
-        <div class="ftp-tabbar" role="tablist" aria-label="Filter papers by mode" data-filterbar>
-          <button type="button" role="tab" class="ftp-tabshape ftp-tabbtn" data-filter="all" data-tab="blue">All<span class="ftp-tchip">{{ "%02d"|format(featured_exams|length) }}</span></button>
-          {% for key, label, tone, short, desc, pts in MODES %}{% if featured_exams|selectattr("mode.value", "equalto", key)|list %}
-          <button type="button" role="tab" class="ftp-tabshape ftp-tabbtn" data-filter="{{ key }}" data-tab="{{ tone }}">{{ label }}<span class="ftp-tchip">{{ "%02d"|format(featured_exams|selectattr("mode.value", "equalto", key)|list|length) }}</span></button>
+        <div class="ftp-tabbar" role="tablist" aria-label="Filter papers by branch" data-filterbar>
+          <button type="button" role="tab" class="ftp-tabshape ftp-tabbtn" data-filter="all" data-tab="blue">All<span class="ftp-tchip">{{ "%02d"|format(papers|length) }}</span></button>
+          {% for key, info in BR.items() %}{% if papers|selectattr("branch", "equalto", key)|list %}
+          <button type="button" role="tab" class="ftp-tabshape ftp-tabbtn" data-filter="{{ key }}" data-tab="{{ info[1] }}">{{ key|upper }}<span class="ftp-tchip">{{ "%02d"|format(papers|selectattr("branch", "equalto", key)|list|length) }}</span></button>
           {% endif %}{% endfor %}
         </div>
         <div class="ftp-bar"></div>
       </div>
       <div class="ftp-grid" role="tabpanel">
-        {% for exam in featured_exams %}
-        {% set key = exam.mode.value %}
-        {% set tone = TONE_OF[key] %}
-        {% set mark = (exam.exam_year|string) if exam.exam_year else (exam.title.split()[0][:6]) %}
-        {% call folder(tone, tab=LABEL_OF[key], chip="%02d"|format(loop.index), tab_at=[0.1, 0.47, 0.84, 0.21, 0.58, 0.05][loop.index0 % 6], cls="ftp-card", tag="button",
-                       attrs={"type": "button", "aria-haspopup": "dialog", "data-exam": "", "data-cat": key, "data-tone": tone, "data-cat-label": LABEL_OF[key],
-                              "data-title": exam.title, "data-sub": (exam.subject or "") ~ ((" · " ~ exam.topic_tags|join(", ")) if exam.topic_tags else ""),
-                              "data-year": exam.exam_year or "", "data-subject": "", "data-dur": exam.duration_minutes ~ " min", "data-qs": exam.total_questions,
-                              "data-level": exam.difficulty.value|capitalize, "data-href": "/exam/" ~ exam.id, "data-mark": mark,
-                              "aria-label": exam.title ~ ". Open details"},
+        {% for paper in papers %}
+        {% set key = paper.branch %}
+        {% set tone = BR[key][1] %}
+        {% call folder(tone, tab="GATE " ~ key|upper, chip="%02d"|format(loop.index), tab_at=[0.1, 0.47, 0.84, 0.21, 0.58, 0.05][loop.index0 % 6], cls="ftp-card", tag="button",
+                       attrs={"type": "button", "aria-haspopup": "dialog", "data-exam": "", "data-cat": key, "data-tone": tone, "data-cat-label": "GATE " ~ key|upper,
+                              "data-title": paper.title, "data-sub": BR[key][0],
+                              "data-year": paper.year, "data-subject": "", "data-dur": paper.minutes ~ " min", "data-qs": paper.total,
+                              "data-level": "Official paper and key", "data-href": paper.href, "data-mark": paper.year,
+                              "aria-label": paper.title ~ ". Open details"},
                        style="--i:" ~ loop.index0) %}
-          <span class="ftp-card-art" style="display:block"><span data-cover="{{ exam.title }}" data-tone="{{ tone }}" data-mark="{{ mark }}"></span></span>
-          <span class="ftp-card-cap"><span><span class="ftp-card-t" style="display:block">{{ exam.title }}</span></span><span class="ftp-card-y">{{ exam.exam_year or exam.duration_minutes ~ "m" }}</span></span>
+          <span class="ftp-card-art" style="display:block"><span data-cover="{{ paper.title }}" data-tone="{{ tone }}" data-mark="{{ paper.year }}"></span></span>
+          <span class="ftp-card-cap"><span><span class="ftp-card-t" style="display:block">{{ paper.title }}</span></span><span class="ftp-card-y">{{ paper.year }}</span></span>
         {% endcall %}
         {% endfor %}
-        {% if featured_exams %}
+        {% if papers %}
         <p class="ftp-empty" data-empty hidden>No papers in this folder yet.</p>
         {% else %}
-        <p class="ftp-empty">Mock tests are coming soon. Books and notes are open now.</p>
+        <p class="ftp-empty">Papers are being added. Books and notes are open now.</p>
         {% endif %}
       </div>
-      {% if not featured_exams %}
-      <div style="margin-top:22px"><a class="ftp-btn" href="/exams">See what is coming {{ arrow("ne") }}</a></div>
-      {% endif %}
+      <div style="margin-top:22px"><a class="ftp-btn" href="/tests">See every test {{ arrow("ne") }}</a></div>
     </section>
 
     {# ---------------- 05 process ---------------- #}
     {% set STEPS = [
-      ("Select topics", "Pick a subject, its topics and a difficulty.", ["Subject", "Topics", "Difficulty"]),
-      ("AI builds the exam", "A validated multiple-choice paper is built and saved for you.", ["Validated questions", "Saved to your account"]),
-      ("Take it securely", "Sit it in fullscreen with webcam checks running. Flags are logged for review, never treated as proof.", ["Fullscreen required", "One question at a time", "Scored on the server"]),
-      ("Analyse results", "See your score, accuracy and every past attempt in your dashboard.", ["Score", "Accuracy", "Past attempts"]),
+      ("Pick a test", "Choose a year's paper, one subject, a mix of subjects, or the full 65-question mock.", ["Year-wise", "Subject-wise", "Mixed and full-length"]),
+      ("Sit it timed", "Answer one question at a time with the clock running. Multiple-select and numerical questions work as in the real exam.", ["Countdown timer", "MCQ, MSQ and NAT", "Mark for review"]),
+      ("Get scored", "Marks follow the GATE scheme: one-third negative for one-mark MCQs, two-thirds for two-mark MCQs, none for MSQ and NAT.", ["Official answer key", "Negative marking", "Per-subject score"]),
+      ("Review", "See what you got right and wrong, with the correct answer for every question, and know which subject to revise next.", ["Right answer shown", "Subject-wise accuracy", "Saved on your device"]),
     ] %}
     <section class="ftp-sheet ftp-rv" data-sheet="process" aria-labelledby="s-process-h">
       {{ meta(5, "How it works") }}
@@ -310,22 +310,22 @@
       <div class="ftp-stack">
         {% call folder("blue", tab="Start", tab_arrow=12, tab_at=0.78) %}
           <div class="ftp-talk">
-            <span data-st="Read today" data-weight="15" data-tracking="22" data-color="#ffffff" data-label="Read today">Read today</span>
-            <p>Mock tests are coming soon. Until then, read the notes and books for every GATE subject, free.</p>
+            <span data-st="Start today" data-weight="15" data-tracking="22" data-color="#ffffff" data-label="Start today">Start today</span>
+            <p>Take a paper from any year, or build a test around the subjects you find hardest. Free, with the official answer keys.</p>
           </div>
         {% endcall %}
-        {% call folder("green", tab="Library", tab_arrow=12, tab_at=0.56) %}
+        {% call folder("green", tab="Tests", tab_arrow=12, tab_at=0.56) %}
           <div class="ftp-mail">
-            <a class="ftp-mail-a" href="/notes">Open the notes</a>
+            <a class="ftp-mail-a" href="/tests">Open the tests</a>
             <div class="ftp-btns">
-              <a class="ftp-btn" href="/notes">Notes</a>
+              <a class="ftp-btn" href="/tests">Tests</a>
               <a class="ftp-btn" data-ghost="true" href="/books">Books {{ arrow("ne") }}</a>
             </div>
           </div>
         {% endcall %}
         {% call folder("sheet", tab="Browse", tab_arrow=12, tab_at=0.3, style="filter:drop-shadow(0 -6px 14px rgba(60,30,140,.08))") %}
           <div class="ftp-else">
-            <a href="/exams"><span><small>Papers</small>All exams (soon)</span>{{ arrow("ne") }}</a>
+            <a href="/tests/start?mode=mock"><span><small>Full mock</small>65 questions, 180 minutes</span>{{ arrow("ne") }}</a>
             <a href="/notes"><span><small>Notes</small>Study notes</span>{{ arrow("ne") }}</a>
             <a href="{{ whatsapp_group_url }}" target="_blank" rel="noopener noreferrer"><span><small>Community</small>WhatsApp group</span>{{ arrow("ne") }}</a>
           </div>
@@ -348,7 +348,7 @@
               <button type="button" class="ftp-btn" data-ghost="true" data-m="prev" aria-label="Previous paper">{{ arrow("left") }}</button>
               <button type="button" class="ftp-btn" data-ghost="true" data-m="next" aria-label="Next paper">{{ arrow() }}</button>
             </div>
-            <a class="ftp-btn" data-m="go" href="/exams">Start exam {{ arrow("ne") }}</a>
+            <a class="ftp-btn" data-m="go" href="/tests">Start exam {{ arrow("ne") }}</a>
           </div>
         </div>
       </div>
