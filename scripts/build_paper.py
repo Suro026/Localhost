@@ -17,7 +17,7 @@ def norm(s):
     out = []
     for ch in s:
         out.append(unicodedata.normalize("NFKC", ch) if 0x1D400 <= ord(ch) <= 0x1D7FF else ch)
-    s = "".join(out).replace(" ", " ")
+    s = "".join(out).replace(" ", " ").replace("⁡", " ").replace("⁢", "")
     return " ".join(s.split()) if "\n" not in s else "\n".join(" ".join(l.split()) for l in s.split("\n")).strip()
 
 def figure(n):

@@ -1,0 +1,1997 @@
+[
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 1,
+  "section": "GA",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Verbal Ability: Analogies",
+  "text": "If ‘→’ denotes increasing order of intensity, then the meaning of the words [walk → jog → sprint] is analogous to [bothered → ________ → daunted]. Which one of the given options is appropriate to fill the blank?",
+  "options": [
+   "phased",
+   "phrased",
+   "fazed",
+   "fused"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 1,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 2,
+  "section": "GA",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Numerical Ability: Permutations",
+  "text": "Two wizards try to create a spell using all the four elements, water, air, fire, and earth. For this, they decide to mix all these elements in all possible orders. They also decide to work independently. After trying all possible combination of elements, they conclude that the spell does not work. How many attempts does each wizard make before coming to this conclusion, independently?",
+  "options": [
+   "24",
+   "48",
+   "16",
+   "12"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 1,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 3,
+  "section": "GA",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Numerical Ability: Sets",
+  "text": "In an engineering college of 10,000 students, 1,500 like neither their core branches nor other branches. The number of students who like their core branches is 1/4th of the number of students who like other branches. The number of students who like both their core and other branches is 500. The number of students who like their core branches is",
+  "options": [
+   "1,800",
+   "3,500",
+   "1,600",
+   "1,500"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 2,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 4,
+  "section": "GA",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Numerical Ability: Logarithms",
+  "text": "For positive non-zero real variables x and y, if ln((x + y)/2) = ½[ln(x) + ln(y)], then the value of x/y + y/x is",
+  "options": [
+   "1",
+   "1/2",
+   "2",
+   "4"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 2,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 5,
+  "section": "GA",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Reasoning: Number Series",
+  "text": "In the sequence 6, 9, 14, x, 30, 41, a possible value of x is",
+  "options": [
+   "25",
+   "21",
+   "18",
+   "20"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 3,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 6,
+  "section": "GA",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Verbal Ability: Sentence Sequencing",
+  "text": "Sequence the following sentences in a coherent passage. P: This fortuitous geological event generated a colossal amount of energy and heat that resulted in the rocks rising to an average height of 4 km across the contact zone. Q: Thus, the geophysicists tend to think of the Himalayas as an active geological event rather than as a static geological feature. R: The natural process of the cooling of this massive edifice absorbed large quantities of atmospheric carbon dioxide, altering the earth’s atmosphere and making it better suited for life. S: Many millennia ago, a breakaway chunk of bedrock from the Antarctic Plate collided with the massive Eurasian Plate.",
+  "options": [
+   "QPSR",
+   "QSPR",
+   "SPRQ",
+   "SRPQ"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 4,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 7,
+  "section": "GA",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Numerical Ability: Profit and Loss",
+  "text": "A person sold two different items at the same price. He made 10% profit in one item, and 10% loss in the other item. In selling these two items, the person made a total of",
+  "options": [
+   "1% profit",
+   "2% profit",
+   "1% loss",
+   "2% loss"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 5,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 8,
+  "section": "GA",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Data Interpretation: Pie Chart",
+  "text": "The pie charts depict the shares of various power generation technologies in the total electricity generation of a country for the years 2007 and 2023 (see figure). The renewable sources of electricity generation consist of Hydro, Solar and Wind. Assuming that the total electricity generated remains the same from 2007 to 2023, what is the percentage increase in the share of the renewable sources of electricity generation over this period?",
+  "options": [
+   "25%",
+   "50%",
+   "77.5%",
+   "62.5%"
+  ],
+  "figure": "img/q/2024-CS2-08.png",
+  "answer": [
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 6,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 9,
+  "section": "GA",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Spatial Reasoning: Cutting a Cube",
+  "text": "A cube is to be cut into 8 pieces of equal size and shape. Here, each cut should be straight and it should not stop till it reaches the other end of the cube. The minimum number of such cuts required is",
+  "options": [
+   "3",
+   "4",
+   "7",
+   "8"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 7,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 10,
+  "section": "GA",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Reasoning: Grid Puzzle",
+  "text": "In the 4 × 4 array shown in the figure, each cell of the first three rows has either a cross (X) or a number. The number in a cell represents the count of the immediate neighboring cells (left, right, top, bottom, diagonals) NOT having a cross (X). Given that the last row has no crosses (X), the sum of the four numbers to be filled in the last row is",
+  "options": [
+   "11",
+   "10",
+   "12",
+   "9"
+  ],
+  "figure": "img/q/2024-CS2-10.png",
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 8,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 11,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Computer Organization",
+  "topic": "DMA",
+  "text": "Consider a computer with a 4 MHz processor. Its DMA controller can transfer 8 bytes in 1 cycle from a device to main memory through cycle stealing at regular intervals. Which one of the following is the data transfer rate (in bits per second) of the DMA controller if 1% of the processor cycles are used for DMA?",
+  "options": [
+   "2,56,000",
+   "3,200",
+   "25,60,000",
+   "32,000"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 9,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 12,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Discrete Mathematics",
+  "topic": "Propositional Logic",
+  "text": "Let p and q be the following propositions: p: Fail grade can be given. q: Student scores more than 50% marks. Consider the statement: “Fail grade cannot be given when student scores more than 50% marks.” Which one of the following is the CORRECT representation of the above statement in propositional logic?",
+  "options": [
+   "q→¬ p",
+   "q→p",
+   "p→q",
+   "¬ p→q"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 9,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 13,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Programming and Data Structures",
+  "topic": "C Function Calls",
+  "text": "Consider the following C program. Assume parameters to a function are evaluated from right to left.\n#include <stdio.h>\nint g(int p) { printf(\"%d\", p); return p; }\nint h(int q) { printf(\"%d\", q); return q; }\nvoid f(int x, int y) {\n    g(x);\n    h(y);\n}\nint main() {\n    f(g(10), h(20));\n}\nWhich one of the following options is the CORRECT output of the above C program?",
+  "options": [
+   "20101020",
+   "10202010",
+   "20102010",
+   "10201020"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 10,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 14,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Computer Organization",
+  "topic": "IEEE 754",
+  "text": "The format of a single-precision floating-point number as per the IEEE 754 standard is: Sign (1 bit) | Exponent (8 bits) | Mantissa (23 bits). Choose the largest floating-point number among the following options.",
+  "options": [
+   "0 | 0111 1111 | 1111 1111 1111 1111 1111 111",
+   "0 | 1111 1110 | 1111 1111 1111 1111 1111 111",
+   "0 | 1111 1111 | 1111 1111 1111 1111 1111 111",
+   "0 | 0111 1111 | 0000 0000 0000 0000 0000 000"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 11,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 15,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Discrete Mathematics",
+  "topic": "Recurrence Relations",
+  "text": "Let T(n) be the recurrence relation defined as follows: T(0) = 1, T(1) = 2, and T(n) = 5T(n−1) − 6T(n−2) for n ≥ 2. Which one of the following statements is TRUE?",
+  "options": [
+   "T(n) = Θ(2ⁿ)",
+   "T(n) = Θ(n2ⁿ)",
+   "T(n) = Θ(3ⁿ)",
+   "T(n) = Θ(n3ⁿ)"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 12,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 16,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Calculus",
+  "topic": "Definite Integrals",
+  "text": "Let f(x) be a continuous function from ℝ to ℝ such that f(x) = 1 − f(2 − x). Which one of the following options is the CORRECT value of ∫₀² f(x) dx ?",
+  "options": [
+   "0",
+   "1",
+   "2",
+   "−1"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 12,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 17,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Discrete Mathematics",
+  "topic": "Graph Theory",
+  "text": "Let A be the adjacency matrix of a simple undirected graph G. Suppose A is its own inverse. Which one of the following statements is always TRUE?",
+  "options": [
+   "G is a cycle",
+   "G is a perfect matching",
+   "G is a complete graph",
+   "There is no such graph G"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 13,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 18,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Probability and Statistics",
+  "topic": "Probability",
+  "text": "When six unbiased dice are rolled simultaneously, the probability of getting all distinct numbers (i.e., 1, 2, 3, 4, 5, and 6) is",
+  "options": [
+   "1/324",
+   "5/324",
+   "7/324",
+   "11/324"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 13,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 19,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Databases",
+  "topic": "Transactions (ACID)",
+  "text": "Once the DBMS informs the user that a transaction has been successfully completed, its effect should persist even if the system crashes before all its changes are reflected on disk. This property is called",
+  "options": [
+   "durability",
+   "atomicity",
+   "consistency",
+   "isolation"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 14,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 20,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Databases",
+  "topic": "ER Model",
+  "text": "In the context of owner and weak entity sets in the ER (Entity-Relationship) data model, which one of the following statements is TRUE?",
+  "options": [
+   "The weak entity set MUST have total participation in the identifying relationship",
+   "The owner entity set MUST have total participation in the identifying relationship",
+   "Both weak and owner entity sets MUST have total participation in the identifying relationship",
+   "Neither weak entity set nor owner entity set MUST have total participation in the identifying relationship"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 14,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 21,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Compiler Design",
+  "topic": "Compiler Phases",
+  "text": "Consider the following two sets:\nSet X: P. Lexical Analyzer; Q. Syntax Analyzer; R. Intermediate Code Generator; S. Code Optimizer\nSet Y: 1. Abstract Syntax Tree; 2. Token; 3. Parse Tree; 4. Constant Folding\nWhich one of the following options is the CORRECT match from Set X to Set Y ?",
+  "options": [
+   "P – 4; Q – 1; R – 3; S – 2",
+   "P – 2; Q – 3; R – 1; S – 4",
+   "P – 2; Q – 1; R – 3; S – 4",
+   "P – 4; Q – 3; R – 2; S – 1"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 15,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 22,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Theory of Computation",
+  "topic": "Regular Expressions",
+  "text": "Which one of the following regular expressions is equivalent to the language accepted by the DFA given in the figure?",
+  "options": [
+   "0*1(0 + 10*1)*",
+   "0*(10*11)*0*",
+   "0*1(010*1)*0*",
+   "0(1 + 0*10*1)*0*"
+  ],
+  "figure": "img/q/2024-CS2-22.png",
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 16,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 23,
+  "section": "CS",
+  "marks": 1,
+  "type": "MSQ",
+  "subject": "Computer Networks",
+  "topic": "IP and MAC Addressing",
+  "text": "Node X has a TCP connection open to node Y. The packets from X to Y go through an intermediate IP router R. Ethernet switch S is the first switch on the network path between X and R. Consider a packet sent from X to Y over this connection. Which of the following statements is/are TRUE about the destination IP and MAC addresses on this packet at the time it leaves X?",
+  "options": [
+   "The destination IP address is the IP address of R",
+   "The destination IP address is the IP address of Y",
+   "The destination MAC address is the MAC address of S",
+   "The destination MAC address is the MAC address of Y"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 17,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 24,
+  "section": "CS",
+  "marks": 1,
+  "type": "MSQ",
+  "subject": "Operating System",
+  "topic": "Memory Management",
+  "text": "Which of the following tasks is/are the responsibility/responsibilities of the memory management unit (MMU) in a system with paging-based memory management?",
+  "options": [
+   "Allocate a new page table for a newly created process",
+   "Translate a virtual address to a physical address using the page table",
+   "Raise a trap when a virtual address is not found in the page table",
+   "Raise a trap when a process tries to write to a page marked with read-only permission in the page table"
+  ],
+  "figure": null,
+  "answer": [
+   "B",
+   "C",
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 17,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 25,
+  "section": "CS",
+  "marks": 1,
+  "type": "MSQ",
+  "subject": "Operating System",
+  "topic": "Context Switching",
+  "text": "Consider a process P running on a CPU. Which one or more of the following events will always trigger a context switch by the OS that results in process P moving to a non-running state (e.g., ready, blocked)?",
+  "options": [
+   "P makes a blocking system call to read a block of data from the disk",
+   "P tries to access a page that is in the swap space, triggering a page fault",
+   "An interrupt is raised by the disk to deliver data requested by some other process",
+   "A timer interrupt is raised by the hardware"
+  ],
+  "figure": null,
+  "answer": [
+   "A",
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 18,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 26,
+  "section": "CS",
+  "marks": 1,
+  "type": "MSQ",
+  "subject": "Databases",
+  "topic": "File Organization",
+  "text": "Which of the following file organizations is/are I/O efficient for the scan operation in DBMS?",
+  "options": [
+   "Sorted",
+   "Heap",
+   "Unclustered tree index",
+   "Unclustered hash index"
+  ],
+  "figure": null,
+  "answer": [
+   "A",
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 18,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 27,
+  "section": "CS",
+  "marks": 1,
+  "type": "MSQ",
+  "subject": "Databases",
+  "topic": "Two Phase Locking",
+  "text": "Which of the following statements about the Two Phase Locking (2PL) protocol is/are TRUE?",
+  "options": [
+   "2PL permits only serializable schedules",
+   "With 2PL, a transaction always locks the data item being read or written just before every operation and always releases the lock just after the operation",
+   "With 2PL, once a lock is released on any data item inside a transaction, no more locks on any data item can be obtained inside that transaction",
+   "A deadlock is possible with 2PL"
+  ],
+  "figure": null,
+  "answer": [
+   "A",
+   "C",
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 19,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 28,
+  "section": "CS",
+  "marks": 1,
+  "type": "MSQ",
+  "subject": "Computer Networks",
+  "topic": "IPv4 Fragmentation",
+  "text": "Which of the following statements about IPv4 fragmentation is/are TRUE?",
+  "options": [
+   "The fragmentation of an IP datagram is performed only at the source of the datagram",
+   "The fragmentation of an IP datagram is performed at any IP router which finds that the size of the datagram to be transmitted exceeds the MTU",
+   "The reassembly of fragments is performed only at the destination of the datagram",
+   "The reassembly of fragments is performed at all intermediate routers along the path from the source to the destination"
+  ],
+  "figure": null,
+  "answer": [
+   "B",
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 19,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 29,
+  "section": "CS",
+  "marks": 1,
+  "type": "MSQ",
+  "subject": "Compiler Design",
+  "topic": "Syntax Directed Translation",
+  "text": "Which of the following statements is/are FALSE?",
+  "options": [
+   "An attribute grammar is a syntax-directed definition (SDD) in which the functions in the semantic rules have no side effects",
+   "The attributes in a L-attributed definition cannot always be evaluated in a depth- first order",
+   "Synthesized attributes can be evaluated by a bottom-up parser as the input is parsed",
+   "All L-attributed definitions based on LR(1) grammar can be evaluated using a bottom-up parsing strategy"
+  ],
+  "figure": null,
+  "answer": [
+   "B",
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 20,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 30,
+  "section": "CS",
+  "marks": 1,
+  "type": "MSQ",
+  "subject": "Digital Logic",
+  "topic": "Boolean Algebra",
+  "text": "For a Boolean variable x, which of the following statements is/are FALSE?",
+  "options": [
+   "x · 1 = x",
+   "x + 1 = x",
+   "x · x = 0",
+   "x + x̄ = 1"
+  ],
+  "figure": null,
+  "answer": [
+   "B",
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 20,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 31,
+  "section": "CS",
+  "marks": 1,
+  "type": "MSQ",
+  "subject": "Computer Organization",
+  "topic": "Pipeline Hazards",
+  "text": "An instruction format has the following structure: Instruction Number: Opcode destination reg, source reg-1, source reg-2.\nConsider the following sequence of instructions to be executed in a pipelined processor:\nI1: DIV R3, R1, R2\nI2: SUB R5, R3, R4\nI3: ADD R3, R5, R6\nI4: MUL R7, R3, R8\nWhich of the following statements is/are TRUE?",
+  "options": [
+   "There is a RAW dependency on R3 between I1 and I2",
+   "There is a WAR dependency on R3 between I1 and I3",
+   "There is a RAW dependency on R3 between I2 and I3",
+   "There is a WAW dependency on R3 between I3 and I4"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 21,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 32,
+  "section": "CS",
+  "marks": 1,
+  "type": "MSQ",
+  "subject": "Computer Networks",
+  "topic": "IP Header",
+  "text": "Which of the following fields of an IP header is/are always modified by any router before it forwards the IP packet?",
+  "options": [
+   "Source IP Address",
+   "Protocol",
+   "Time to Live (TTL)",
+   "Header Checksum"
+  ],
+  "figure": null,
+  "answer": [
+   "C",
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 22,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 33,
+  "section": "CS",
+  "marks": 1,
+  "type": "MSQ",
+  "subject": "Programming and Data Structures",
+  "topic": "C Pointers",
+  "text": "Consider the following C function definition.\nint fX(char *a){\n    char *b = a;\n    while(*b)\n        b++;\n    return b - a;\n}\nWhich of the following statements is/are TRUE?",
+  "options": [
+   "The function call fX(\"abcd\") will always return a value",
+   "Assuming a character array c is declared as char c[] = \"abcd\" in main(), the function call fX(c) will always return a value",
+   "The code of the function will not compile",
+   "Assuming a character pointer c is declared as char *c = \"abcd\" in main(), the function call fX(c) will always return a value"
+  ],
+  "figure": null,
+  "answer": [
+   "A",
+   "B",
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 22,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 34,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Discrete Mathematics",
+  "topic": "Partial Orders",
+  "text": "Let P be the partial order defined on the set {1, 2, 3, 4} as follows: P = {(x, x) | x ∈ {1, 2, 3, 4}} ∪ {(1, 2), (3, 2), (3, 4)}. The number of total orders on {1, 2, 3, 4} that contain P is __________",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 5.0,
+  "answer_max": 5.0,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 23,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 35,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Algorithms",
+  "topic": "Dynamic Programming",
+  "text": "Let A be an array containing integer values. The distance of A is defined as the minimum number of elements in A that must be replaced with another integer so that the resulting array is sorted in non-decreasing order. The distance of the array [2, 5, 3, 1, 4, 2, 6] is ___________",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 3.0,
+  "answer_max": 3.0,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 23,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 36,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Programming and Data Structures",
+  "topic": "C Pointers",
+  "text": "What is the output of the following C program?\n#include <stdio.h>\nint main() {\n    double a[2] = {20.0, 25.0}, *p, *q;\n    p = a;\n    q = p + 1;\n    printf(\"%d,%d\", (int)(q - p), (int)(*q - *p));\n    return 0;\n}",
+  "options": [
+   "4,8",
+   "1,5",
+   "8,5",
+   "1,8"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 24,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 37,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Operating System",
+  "topic": "CPU Scheduling",
+  "text": "Consider a single processor system with four processes A, B, C, and D, represented as given below, where for each process the first value is its arrival time, and the second value is its CPU burst time. A (0, 10), B (2, 6), C (4, 3), and D (6, 7). Which one of the following options gives the average waiting times when preemptive Shortest Remaining Time First (SRTF) and Non-Preemptive Shortest Job First (NP-SJF) CPU scheduling algorithms are applied to the processes?",
+  "options": [
+   "SRTF = 6, NP-SJF = 7",
+   "SRTF = 6, NP-SJF = 7.5",
+   "SRTF = 7, NP-SJF = 7.5",
+   "SRTF = 7, NP-SJF = 8.5"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 25,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 38,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Computer Networks",
+  "topic": "CIDR",
+  "text": "Which one of the following CIDR prefixes exactly represents the range of IP addresses 10.12.2.0 to 10.12.3.255?",
+  "options": [
+   "10.12.2.0/23",
+   "10.12.2.0/24",
+   "10.12.0.0/22",
+   "10.12.2.0/22"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 25,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 39,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Programming and Data Structures",
+  "topic": "Binary Search Trees",
+  "text": "You are given a set V of distinct integers. A binary search tree T is created by inserting all elements of V one by one, starting with an empty tree. The tree T follows the convention that, at each node, all values stored in the left subtree of the node are smaller than the value stored at the node. You are not aware of the sequence in which these values were inserted into T, and you do not have access to T. Which one of the following statements is TRUE?",
+  "options": [
+   "Inorder traversal of T can be determined from V",
+   "Root node of T can be determined from V",
+   "Preorder traversal of T can be determined from V",
+   "Postorder traversal of T can be determined from V"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 26,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 40,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Compiler Design",
+  "topic": "LL(1) Parsing",
+  "text": "Consider the following context-free grammar where the start symbol is S and the set of terminals is {a, b, c, d}.\nS → AaAb | BbBa\nA → cS | ε\nB → dS | ε\nThe following is a partially-filled LL(1) parsing table (rows: non-terminals, columns: a, b, c, d, $):\nS: a = S → AaAb; b = S → BbBa; c = (1); d = (2); $ = empty\nA: a = A → ε; b = (3); c = A → cS; d = empty; $ = empty\nB: a = (4); b = B → ε; c = empty; d = B → dS; $ = empty\nWhich one of the following options represents the CORRECT combination for the numbered cells in the parsing table?\nNote: In the options, \"blank\" denotes that the corresponding cell is empty.",
+  "options": [
+   "(1) S → AaAb; (2) S → BbBa; (3) A → ε; (4) B → ε",
+   "(1) S → BbBa; (2) S → AaAb; (3) A → ε; (4) B → ε",
+   "(1) S → AaAb; (2) S → BbBa; (3) blank; (4) blank",
+   "(1) S → BbBa; (2) S → AaAb; (3) blank; (4) blank"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 27,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 41,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Theory of Computation",
+  "topic": "NFA to Regular Expression",
+  "text": "Let M be the 5-state NFA with ε-transitions shown in the diagram. Which one of the following regular expressions represents the language accepted by M ?",
+  "options": [
+   "(00)* + 1(11)*",
+   "0* + (1 + 0(00)*)(11)*",
+   "(00)* + (1 + (00)*)(11)*",
+   "0⁺ + 1(11)* + 0(11)*"
+  ],
+  "figure": "img/q/2024-CS2-41.png",
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 28,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 42,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Algorithms",
+  "topic": "Sliding Window",
+  "text": "Consider an array X that contains n positive integers. A subarray of X is defined to be a sequence of array locations with consecutive indices. The C code snippet given below has been written to compute the length of the longest subarray of X that contains at most two distinct integers. The code has two missing expressions labelled (P) and (Q).\nint first=0, second=0, len1=0, len2=0, maxlen=0;\nfor (int i=0; i < n; i++) {\n    if (X[i] == first) {\n        len2++;\n        len1++;\n    } else if (X[i] == second) {\n        len2++;\n        len1 = (P);\n        second = first;\n    } else {\n        len2 = (Q);\n        len1 = 1;\n        second = first;\n    }\n    if (len2 > maxlen) {\n        maxlen = len2;\n    }\n    first = X[i];\n}\nWhich one of the following options gives the CORRECT missing expressions?\n(Hint: At the end of the i-th iteration, the value of len1 is the length of the longest subarray ending with X[i] that contains all equal values, and len2 is the length of the longest subarray ending with X[i] that contains at most two distinct values.)",
+  "options": [
+   "(P) len1+1; (Q) len2+1",
+   "(P) 1; (Q) len1+1",
+   "(P) 1; (Q) len2+1",
+   "(P) len2+1; (Q) len1+1"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 29,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 43,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Compiler Design",
+  "topic": "Intermediate Code (Triples)",
+  "text": "Consider the following expression: x[i] = (p + r) ∗ −s[i] + u/w.\nThe following sequence shows the list of triples representing the given expression, with entries missing for triples (1), (3), and (6).\n(0) + p r\n(1) ?\n(2) uminus (1)\n(3) ?\n(4) / u w\n(5) + (3) (4)\n(6) ?\n(7) = (6) (5)\nWhich one of the following options fills in the missing entries CORRECTLY?",
+  "options": [
+   "(1) =[] s i; (3) * (0) (2); (6) []= x i",
+   "(1) []= s i; (3) − (0) (2); (6) =[] x (5)",
+   "(1) =[] s i; (3) * (0) (2); (6) []= x (5)",
+   "(1) []= s i; (3) − (0) (2); (6) =[] x i"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 30,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 44,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Probability and Statistics",
+  "topic": "Random Variables",
+  "text": "Let x and y be random variables, not necessarily independent, that take real values in the interval [0, 1]. Let z = xy and let the mean values of x, y, z be x̄, ȳ, z̄, respectively. Which one of the following statements is TRUE?",
+  "options": [
+   "z̄ = x̄ȳ",
+   "z̄ ≤ x̄ȳ",
+   "z̄ ≥ x̄ȳ",
+   "z̄ ≤ x̄"
+  ],
+  "figure": null,
+  "answer": [
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 31,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 45,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Databases",
+  "topic": "Relational Algebra",
+  "text": "The relation schema, Person(pid,city), describes the city of residence for every person uniquely identified by pid. The following relational algebra operators are available: selection, projection, cross product, and rename. To find the list of cities where at least 3 persons reside, using the above operators, the minimum number of cross product operations that must be used is",
+  "options": [
+   "1",
+   "2",
+   "3",
+   "4"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 31,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 46,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Operating System",
+  "topic": "Semaphores",
+  "text": "Consider a multi-threaded program with two threads T1 and T2. The threads share two semaphores: s1 (initialized to 1) and s2 (initialized to 0). The threads also share a global variable x (initialized to 0). The threads execute the code shown below.\n// code of T1\nwait(s1);\nx = x+1;\nprint(x);\nwait(s2);\nsignal(s1);\n// code of T2\nwait(s1);\nx = x+1;\nprint(x);\nsignal(s2);\nsignal(s1);\nWhich of the following outcomes is/are possible when threads T1 and T2 execute concurrently?",
+  "options": [
+   "T1 runs first and prints 1, T2 runs next and prints 2",
+   "T2 runs first and prints 1, T1 runs next and prints 2",
+   "T1 runs first and prints 1, T2 does not print anything (deadlock)",
+   "T2 runs first and prints 1, T1 does not print anything (deadlock)"
+  ],
+  "figure": null,
+  "answer": [
+   "B",
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 32,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 47,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Linear Algebra",
+  "topic": "Determinants",
+  "text": "Let A be an n× n matrix over the set of all real numbers ℝ. Let B be a matrix obtained from A by swapping two rows. Which of the following statements is/are TRUE?",
+  "options": [
+   "The determinant of B is the negative of the determinant of A",
+   "If A is invertible, then B is also invertible",
+   "If A is symmetric, then B is also symmetric",
+   "If the trace of A is zero, then the trace of B is also zero"
+  ],
+  "figure": null,
+  "answer": [
+   "A",
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 32,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 48,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Programming and Data Structures",
+  "topic": "Stacks",
+  "text": "Let S1 and S2 be two stacks. S1 has capacity of 4 elements. S2 has capacity of 2 elements. S1 already has 4 elements: 100, 200, 300, and 400 (400 on top), whereas S2 is empty. Only the following three operations are available:\nPushToS2: Pop the top element from S1 and push it on S2.\nPushToS1: Pop the top element from S2 and push it on S1.\nGenerateOutput: Pop the top element from S1 and output it to the user.\nNote that the pop operation is not allowed on an empty stack and the push operation is not allowed on a full stack.\nWhich of the following output sequences can be generated by using the above operations?",
+  "options": [
+   "100, 200, 400, 300",
+   "200, 300, 400, 100",
+   "400, 200, 100, 300",
+   "300, 200, 400, 100"
+  ],
+  "figure": null,
+  "answer": [
+   "B",
+   "C",
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 33,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 49,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Digital Logic",
+  "topic": "Number Systems",
+  "text": "Which of the following is/are EQUAL to 224 in radix-5 (i.e., base-5) notation?",
+  "options": [
+   "64 in radix-10",
+   "100 in radix-8",
+   "50 in radix-16",
+   "121 in radix-7"
+  ],
+  "figure": null,
+  "answer": [
+   "A",
+   "B",
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 34,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 50,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Digital Logic",
+  "topic": "Minterms",
+  "text": "Consider 4-variable functions f1, f2, f3, f4 expressed in sum-of-minterms form as given below.\nf1 = Σ(0,2,3,5,7,8,11,13)\nf2 = Σ(1,3,5,7,11,13,15)\nf3 = Σ(0,1,4,11)\nf4 = Σ(0,2,6,13)\nWith respect to the circuit given in the figure, which of the following options is/are CORRECT?",
+  "options": [
+   "Y = Σ(0,1,2,11,13)",
+   "Y = Π(3,4,5,6,7,8,9,10,12,14,15)",
+   "Y = Σ(0,1,2,3,4,5,6,7)",
+   "Y = Π(8,9,10,11,12,13,14,15)"
+  ],
+  "figure": "img/q/2024-CS2-50.png",
+  "answer": [
+   "C",
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 35,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 51,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Discrete Mathematics",
+  "topic": "Graph Theory",
+  "text": "Let G be an undirected connected graph in which every edge has a positive integer weight. Suppose that every spanning tree in G has even weight. Which of the following statements is/are TRUE for every such graph G ?",
+  "options": [
+   "All edges in G have even weight",
+   "All edges in G have even weight OR all edges in G have odd weight",
+   "In each cycle C in G, all edges in C have even weight",
+   "In each cycle C in G, either all edges in C have even weight OR all edges in C have odd weight"
+  ],
+  "figure": null,
+  "answer": [
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 36,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 52,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Theory of Computation",
+  "topic": "Context-Free Grammars",
+  "text": "Consider a context-free grammar G with the following 3 rules: S → aS, S → aSbS, S → c. Let w ∈ L(G). Let nₐ(w), n_b(w), n_c(w) denote the number of times a, b, c occur in w, respectively. Which of the following statements is/are TRUE?",
+  "options": [
+   "nₐ(w) > n_b(w)",
+   "nₐ(w) > n_c(w) − 2",
+   "n_c(w) = n_b(w) + 1",
+   "n_c(w) = n_b(w) ∗ 2"
+  ],
+  "figure": null,
+  "answer": [
+   "B",
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 36,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 53,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Computer Organization",
+  "topic": "Disk Access Time",
+  "text": "Consider a disk with the following specifications: rotation speed of 6000 RPM, average seek time of 5 milliseconds, 500 sectors/track, 512-byte sectors. A file has content stored in 3000 sectors located randomly on the disk. Assuming average rotational latency, the total time (in seconds, rounded off to 2 decimal places) to read the entire file from the disk is _________",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 29.5,
+  "answer_max": 30.5,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 37,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 54,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Computer Networks",
+  "topic": "TCP Congestion Control",
+  "text": "Consider a TCP connection operating at a point of time with the congestion window of size 12 MSS (Maximum Segment Size), when a timeout occurs due to packet loss. Assuming that all the segments transmitted in the next two RTTs (Round Trip Time) are acknowledged correctly, the congestion window size (in MSS) during the third RTT will be _________",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 4.0,
+  "answer_max": 4.0,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 37,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 55,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Computer Networks",
+  "topic": "Ethernet",
+  "text": "Consider an Ethernet segment with a transmission speed of 10⁸ bits/sec and a maximum segment length of 500 meters. If the speed of propagation of the signal in the medium is 2×10⁸ meters/sec, then the minimum frame size (in bits) required for collision detection is _________",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 500.0,
+  "answer_max": 500.0,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 37,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 56,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Databases",
+  "topic": "Functional Dependencies",
+  "text": "A functional dependency F: X → Y is termed as a useful functional dependency if and only if it satisfies all the following three conditions:\n• X is not the empty set.\n• Y is not the empty set.\n• Intersection of X and Y is the empty set.\nFor a relation R with 4 attributes, the total number of possible useful functional dependencies is ________",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 50.0,
+  "answer_max": 50.0,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 37,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 57,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Computer Organization",
+  "topic": "Instruction Format",
+  "text": "A processor with 16 general purpose registers uses a 32-bit instruction format. The instruction format consists of an opcode field, an addressing mode field, two register operand fields, and a 16-bit scalar field. If 8 addressing modes are to be supported, the maximum number of unique opcodes possible for every addressing mode is _________",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 32.0,
+  "answer_max": 32.0,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 37,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 58,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Computer Organization",
+  "topic": "Pipelining Speedup",
+  "text": "A non-pipelined instruction execution unit operating at 2 GHz takes an average of 6 cycles to execute an instruction of a program P. The unit is then redesigned to operate on a 5-stage pipeline at 2 GHz. Assume that the ideal throughput of the pipelined unit is 1 instruction per cycle. In the execution of program P, 20% instructions incur an average of 2 cycles stall due to data hazards and 20% instructions incur an average of 3 cycles stall due to control hazards. The speedup (rounded off to one decimal place) obtained by the pipelined design over the non-pipelined design is _________",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 2.9,
+  "answer_max": 3.1,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 38,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 59,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Algorithms",
+  "topic": "Minimum Spanning Tree",
+  "text": "The number of distinct minimum-weight spanning trees of the graph shown in the figure is _________",
+  "options": [],
+  "figure": "img/q/2024-CS2-59.png",
+  "answer": [],
+  "answer_min": 9.0,
+  "answer_max": 9.0,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 38,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 60,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Discrete Mathematics",
+  "topic": "Graph Coloring",
+  "text": "The chromatic number of a graph is the minimum number of colours used in a proper colouring of the graph. The chromatic number of the graph shown in the figure is _________",
+  "options": [],
+  "figure": "img/q/2024-CS2-60.png",
+  "answer": [],
+  "answer_min": 2.0,
+  "answer_max": 2.0,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 38,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 61,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Computer Organization",
+  "topic": "Instruction Encoding",
+  "text": "A processor uses a 32-bit instruction format and supports byte-addressable memory access. The ISA of the processor has 150 distinct instructions. The instructions are equally divided into two types, namely R-type and I-type, whose formats are shown below.\nR-type: OPCODE | UNUSED | DST Register | SRC Register 1 | SRC Register 2\nI-type: OPCODE | DST Register | SRC Register | Immediate value/address\nIn the OPCODE, 1 bit is used to distinguish between I-type and R-type instructions and the remaining bits indicate the operation. The processor has 50 architectural registers, and all register fields in the instructions are of equal size. Let X be the number of bits used to encode the UNUSED field, Y be the number of bits used to encode the OPCODE field, and Z be the number of bits used to encode the immediate value/address field. The value of X + 2Y + Z is ________",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 34.0,
+  "answer_max": 34.0,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 39,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 62,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Theory of Computation",
+  "topic": "Regular Languages",
+  "text": "Let L₁ be the language represented by the regular expression b*ab*(ab*ab*)* and L₂ = {w ∈ (a + b)* | |w| ≤ 4}, where |w| denotes the length of string w. The number of strings in L₂ which are also in L₁ is ___________",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 15.0,
+  "answer_max": 15.0,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 39,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 63,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Discrete Mathematics",
+  "topic": "Group Theory",
+  "text": "Let Zₙ be the group of integers {0, 1, 2, …, n−1} with addition modulo n as the group operation. The number of elements in the group Z₂ × Z₃ × Z₄ that are their own inverses is ________",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 4.0,
+  "answer_max": 4.0,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 39,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 64,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Operating System",
+  "topic": "Paging",
+  "text": "Consider a 32-bit system with 4 KB page size and page table entries of size 4 bytes each. Assume 1 KB = 2¹⁰ bytes. The OS uses a 2-level page table for memory management, with the page table containing an outer page directory and an inner page table. The OS allocates a page for the outer page directory upon process creation. The OS uses demand paging when allocating memory for the inner page table, i.e., a page of the inner page table is allocated only if it contains at least one valid page table entry. An active process in this system accesses 2000 unique pages during its execution, and none of the pages are swapped out to disk. After it completes the page accesses, let X denote the minimum and Y denote the maximum number of pages across the two levels of the page table of the process. The value of X + Y is ________",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 1028.0,
+  "answer_max": 1028.0,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 40,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2024,
+  "paper": "CS2",
+  "number": 65,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Compiler Design",
+  "topic": "SLR Parsing",
+  "text": "Consider the following augmented grammar, which is to be parsed with a SLR parser. The set of terminals is {a, b, c, d, #, @}.\nS′ → S\nS → SS | Aa | bAc | Bc | bBa\nA → d#\nB → @\nLet I₀ = CLOSURE({S′ → • S}). The number of items in the set GOTO(I₀, S) is ___________",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 9.0,
+  "answer_max": 9.0,
+  "mta": false,
+  "source": {
+   "document": "CS22024.pdf",
+   "page": 40,
+   "source_type": "official GATE 2024 question paper (IIT Roorkee)",
+   "answer_key": "GATE 2024 CS2 official final answer key (gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf)"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ }
+]
