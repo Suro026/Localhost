@@ -5,11 +5,11 @@ from starlette.middleware.base import BaseHTTPMiddleware
 INLINE_JS_HASH = "sha256-qOhFsq0QMV2REqNwk5hGH5bZE9SkX6gt6yeyKdYPv+U="
 
 def build_csp(path: str = "/") -> str:
-    """Strict by default. Google's sign-in script and frames are allowed only on /login, where the popup flow runs."""
+    """Strict by default. Google's sign-in script and frames are allowed only on /login. reCAPTCHA (App Check) is allowed everywhere because cloud sync runs on every page for signed-in learners."""
     login = path.startswith("/login")
-    script = f"script-src 'self' '{INLINE_JS_HASH}'" + (" https://apis.google.com" if login else "")
-    frames = "frame-src https://drive.google.com" + (" https://keystone-44f75.firebaseapp.com https://accounts.google.com" if login else "")
-    connect = "connect-src 'self' https://*.googleapis.com" + (" https://*.google.com" if login else "")
+    script = f"script-src 'self' '{INLINE_JS_HASH}' https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/" + (" https://apis.google.com" if login else "")
+    frames = "frame-src https://drive.google.com https://www.google.com/recaptcha/ https://recaptcha.google.com" + (" https://keystone-44f75.firebaseapp.com https://accounts.google.com" if login else "")
+    connect = "connect-src 'self' https://*.googleapis.com https://www.google.com/recaptcha/" + (" https://*.google.com" if login else "")
     return "; ".join([
         "default-src 'self'", script,
         "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",

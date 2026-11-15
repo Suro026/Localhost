@@ -2,6 +2,7 @@
    Built into static/js/ks-cloud.js with `npm run build` (scripts/firebase). The web config below is public by design;
    what protects the data is firestore.rules (each user can only touch users/<their uid>/...). */
 import { initializeApp } from "firebase/app";
+import { initializeAppCheck, ReCaptchaEnterpriseProvider } from "firebase/app-check";
 import {
   getAuth, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail,
   GoogleAuthProvider, signInWithPopup, sendEmailVerification, updateProfile, signOut as fbSignOut, deleteUser,
@@ -19,6 +20,8 @@ const CONFIG = {
 
 const KS = window.KS;
 const app = initializeApp(CONFIG);
+// App Check (reCAPTCHA Enterprise / Fraud Defense): proves requests come from this site. Public site key; the secret lives in the Firebase console.
+try { initializeAppCheck(app, { provider: new ReCaptchaEnterpriseProvider("6Lep7yEuAAAAAD4FKDZlROZGBz24keyPmZ-QWGR7"), isTokenAutoRefreshEnabled: true }); } catch (e) { /* sign-in still works while App Check is not enforced */ }
 const auth = getAuth(app);
 const db = getFirestore(app);
 const PULL_EVERY = 10 * 60 * 1000;
