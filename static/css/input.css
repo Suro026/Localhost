@@ -29,6 +29,14 @@
 @layer components {
   .btn-primary { @apply btn bg-brand-600 text-white hover:bg-brand-700; }
   .btn-secondary { @apply btn border border-line bg-surface text-ink hover:border-brand-600; }
+
+  /* navbar link: a folder tab; the active one opens into the page below (flares match .ftp-tabshape) */
+  .nav-tab { --tab-bg: var(--color-canvas); position: relative; display: inline-flex; align-items: center; height: 2.5rem; padding: 0 1rem; border-radius: 12px 12px 0 0; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: rgb(255 255 255 / .82); white-space: nowrap; transition: color .2s, background-color .2s; }
+  .nav-tab:hover { color: #fff; background: rgb(255 255 255 / .14); }
+  .nav-tab[aria-current="page"] { background: var(--tab-bg); color: var(--color-brand-600); }
+  .nav-tab[aria-current="page"]::before, .nav-tab[aria-current="page"]::after { content: ""; position: absolute; bottom: 0; width: 12px; height: 12px; }
+  .nav-tab[aria-current="page"]::before { right: 100%; background: radial-gradient(circle at 0 0, transparent 11.5px, var(--tab-bg) 12px); }
+  .nav-tab[aria-current="page"]::after { left: 100%; background: radial-gradient(circle at 100% 0, transparent 11.5px, var(--tab-bg) 12px); }
   .card { @apply rounded-xl border border-line bg-surface; }
   .badge { @apply inline-flex items-center rounded-md px-2 py-0.5 text-xs font-medium; }
   .input { @apply w-full rounded-lg border border-line bg-surface px-3 py-2.5 text-sm placeholder:text-slate-400 focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-100; }
