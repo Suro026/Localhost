@@ -73,11 +73,30 @@ def test_login_and_account_pages(client):
     assert "data-account" in client.get("/").text
 
 
-def test_csp_allows_firebase_sign_in_only(client):
+def test_csp_allows_google_sign_in_only_on_login(client):
     h = client.get("/login").headers
     csp = h["content-security-policy"]
     assert "https://apis.google.com" in csp and "https://keystone-44f75.firebaseapp.com" in csp
     assert "unsafe-eval" not in csp and h["cross-origin-opener-policy"] == "same-origin-allow-popups"
+    for path in ("/", "/tests", "/progress", "/account"):
+        other = client.get(path).headers["content-security-policy"]
+        assert "apis.google.com" not in other and "firebaseapp.com" not in other and "accounts.google.com" not in other, path
+        assert "https://*.googleapis.com" in other  # cloud sync for signed-in learners
+
+
+def test_security_txt_only_when_contact_is_set(client, monkeypatch):
+    from app.core.config import get_settings
+    monkeypatch.setenv("SECURITY_CONTACT", "")
+    get_settings.cache_clear()
+    assert client.get("/.well-known/security.txt").status_code == 404
+    monkeypatch.setenv("SECURITY_CONTACT", "mailto:security@example.com")
+    get_settings.cache_clear()
+    r = client.get("/.well-known/security.txt")
+    assert r.status_code == 200 and "Contact: mailto:security@example.com" in r.text and "Expires: " in r.text
+    monkeypatch.setenv("SECURITY_CONTACT", "javascript:alert(1)")
+    get_settings.cache_clear()
+    assert client.get("/.well-known/security.txt").status_code == 404
+    get_settings.cache_clear()
 
 
 def test_firestore_rules_lock_data_to_owner():

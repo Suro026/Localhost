@@ -26,7 +26,7 @@
     var mode = "in";
     var msg = el("p", "mt-4 min-h-[1.25rem] text-sm font-semibold"); msg.setAttribute("role", "status");
     var email = el("input"); email.type = "email"; email.autocomplete = "email"; email.required = true; email.inputMode = "email";
-    var pw = el("input"); pw.type = "password"; pw.required = true; pw.minLength = 6;
+    var pw = el("input"); pw.type = "password"; pw.required = true; pw.minLength = 8;
     var submit = el("button", "btn-primary mt-5 w-full", ""); submit.type = "submit";
     var tabs = el("div", "grid grid-cols-2 gap-2 rounded-xl bg-canvas p-1");
     var tIn = el("button", "", "Sign in"), tUp = el("button", "", "Create account"); tIn.type = tUp.type = "button";
@@ -90,7 +90,13 @@
       if (!window.confirm("Sign out? Your data stays in your account, and is removed from this device.")) return;
       C.signOut().then(function (r) { if (r.ok) location.replace("/"); else say(r.error, false); });
     });
-    card.append(sync, syncBtn, out, msg);
+    card.append(sync);
+    if (u.providerData.some(function (x) { return x.providerId === "password"; }) && !C.verified) {
+      var vb = el("button", "mt-3 text-sm font-semibold text-brand-700 underline", "Email not verified. Send the verification link again"); vb.type = "button";
+      vb.addEventListener("click", function () { C.resendVerification().then(function (r) { say(r.ok ? "Verification email sent. Check your inbox and spam." : r.error, r.ok); }); });
+      card.appendChild(vb);
+    }
+    card.append(syncBtn, out, msg);
 
     var danger = el("div", "mt-6 rounded-2xl border border-red-200 bg-surface p-5");
     danger.append(el("h2", "font-bold", "Delete my account"), el("p", "mt-1 text-sm text-muted", "Removes your email, test results, study log and plan from our cloud, and deletes the account. This cannot be undone."));

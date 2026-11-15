@@ -35,6 +35,24 @@ async def offline():
     return FileResponse(PWA / "offline.html", media_type="text/html")
 
 
+@app.get("/.well-known/security.txt", include_in_schema=False)
+async def security_txt():
+    """RFC 9116. Only published once SECURITY_CONTACT is set, so we never advertise a contact nobody reads."""
+    from datetime import datetime, timedelta, timezone
+
+    from fastapi.responses import PlainTextResponse
+
+    from app.core.config import get_settings
+
+    contact = get_settings().security_contact.strip()
+    if not contact.startswith(("mailto:", "https://")):
+        raise StarletteHTTPException(status_code=404)
+    expires = (datetime.now(timezone.utc) + timedelta(days=180)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    lines = [f"Contact: {contact}", f"Expires: {expires}", "Preferred-Languages: en, hi", ""]
+    body = chr(10).join(lines)
+    return PlainTextResponse(body, headers={"Cache-Control": "public, max-age=3600"})
+
+
 app.include_router(home.router)
 app.include_router(library.router)
 app.include_router(tests.router)

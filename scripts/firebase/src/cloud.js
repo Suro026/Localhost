@@ -4,7 +4,7 @@
 import { initializeApp } from "firebase/app";
 import {
   getAuth, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail,
-  GoogleAuthProvider, signInWithPopup, signOut as fbSignOut, deleteUser,
+  GoogleAuthProvider, signInWithPopup, sendEmailVerification, signOut as fbSignOut, deleteUser,
 } from "firebase/auth";
 import { getFirestore, collection, doc, getDocs, getDoc, setDoc, deleteDoc, writeBatch } from "firebase/firestore";
 
@@ -30,7 +30,7 @@ const MESSAGES = {
   "auth/user-not-found": "No account with that email. Create one instead.",
   "auth/invalid-email": "That email address does not look right.",
   "auth/email-already-in-use": "An account with that email already exists. Sign in instead.",
-  "auth/weak-password": "Use a password with at least 6 characters.",
+  "auth/weak-password": "Use a password with at least 8 characters.",
   "auth/missing-password": "Enter your password.",
   "auth/too-many-requests": "Too many attempts. Wait a few minutes and try again.",
   "auth/network-request-failed": "No connection. Check your internet and try again.",
@@ -158,7 +158,14 @@ window.KSCloud = {
   get user() { return user; },
   onChange: (f) => { subs.push(f); f(user); },
   signIn: wrap((email, pw) => signInWithEmailAndPassword(auth, email, pw)),
-  signUp: wrap((email, pw) => createUserWithEmailAndPassword(auth, email, pw)),
+  signUp: wrap(async (email, pw) => {
+    if (pw.length < 8) throw Object.assign(new Error("short"), { code: "auth/weak-password" });
+    const cred = await createUserWithEmailAndPassword(auth, email, pw);
+    try { await sendEmailVerification(cred.user); } catch (e) { /* the account exists; verification can be resent later */ }
+    return cred;
+  }),
+  resendVerification: wrap(async () => { if (auth.currentUser) await sendEmailVerification(auth.currentUser); }),
+  get verified() { return !!(auth.currentUser && auth.currentUser.emailVerified); },
   google: wrap(() => signInWithPopup(auth, new GoogleAuthProvider())),
   reset: wrap((email) => sendPasswordResetEmail(auth, email)),
   syncNow: wrap(() => pull(true)),

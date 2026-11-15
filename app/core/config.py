@@ -23,6 +23,7 @@ class Settings(BaseSettings):
     stripe_secret_key: str = ""
     stripe_webhook_secret: str = ""
 
+    security_contact: str = ""  # mailto: or https: address for /.well-known/security.txt; the file is served only when set
     linkedin_surajit: str = ""
     linkedin_sayan: str = ""
     whatsapp_group_url: str = Field(default="https://chat.whatsapp.com/FinfZJZ6CQLAWgI7uqiMux")
