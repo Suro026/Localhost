@@ -1,0 +1,1974 @@
+[
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 1,
+  "section": "GA",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Verbal Ability: Comparatives",
+  "text": "Gauri said that she can play the keyboard ______ her sister.",
+  "options": [
+   "as well as",
+   "as better as",
+   "as nicest as",
+   "as worse as"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 46,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 2,
+  "section": "GA",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Spatial Reasoning: Folding",
+  "text": "A transparent square sheet shown above is folded along the dotted line. The folded sheet will look like ______.",
+  "options": [
+   "Option (A)",
+   "Option (B)",
+   "Option (C)",
+   "Option (D)"
+  ],
+  "figure": "img/q/2021-CS2-02.png",
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 47,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 3,
+  "section": "GA",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Numerical Ability: Geometry",
+  "text": "If θ is the angle, in degrees, between the longest diagonal of the cube and any one of the edges of the cube, then, cos θ =",
+  "options": [
+   "1/2",
+   "1/√3",
+   "1/√2",
+   "√3/2"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 48,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 4,
+  "section": "GA",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Numerical Ability: Algebra",
+  "text": "If (x − 1/2)² − (x − 3/2)² = x + 2, then the value of x is:",
+  "options": [
+   "2",
+   "4",
+   "6",
+   "8"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 48,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 5,
+  "section": "GA",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Verbal Ability: Analogy",
+  "text": "Pen : Write :: Knife : ______\nWhich one of the following options maintains a similar logical relation in the above?",
+  "options": [
+   "Vegetables",
+   "Sharp",
+   "Cut",
+   "Blunt"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 49,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 6,
+  "section": "GA",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Verbal Ability: Passage Inference",
+  "text": "Listening to music during exercise improves exercise performance and reduces discomfort. Scientists researched whether listening to music while studying can help students learn better and the results were inconclusive. Students who needed external stimulation for studying fared worse while students who did not need any external stimulation benefited from music.\nWhich one of the following statements is the CORRECT inference of the above passage?",
+  "options": [
+   "Listening to music has no effect on learning and a positive effect on physical exercise.",
+   "Listening to music has a clear positive effect both on physical exercise and on learning.",
+   "Listening to music has a clear positive effect on physical exercise. Music has a positive effect on learning only in some students.",
+   "Listening to music has a clear positive effect on learning in all students. Music has a positive effect only in some students who exercise."
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 50,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 7,
+  "section": "GA",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Spatial Reasoning: Jigsaw",
+  "text": "A jigsaw puzzle has 2 pieces. One of the pieces is shown above. Which one of the given options for the missing piece when assembled will form a rectangle? The piece can be moved, rotated or flipped to assemble with the above piece.",
+  "options": [
+   "Piece (A)",
+   "Piece (B)",
+   "Piece (C)",
+   "Piece (D)"
+  ],
+  "figure": "img/q/2021-CS2-07.png",
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 51,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 8,
+  "section": "GA",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Numerical Ability: Ratios",
+  "text": "The number of students in three classes is in the ratio 3:13:6. If 18 students are added to each class, the ratio changes to 15:35:21.\nThe total number of students in all the three classes in the beginning was:",
+  "options": [
+   "22",
+   "66",
+   "88",
+   "110"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 52,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 9,
+  "section": "GA",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Numerical Ability: Data Interpretation",
+  "text": "The number of units of a product sold in three different years and the respective net profits are presented in the figure above. The cost/unit in Year 3 was ₹1, which was half the cost/unit in Year 2. The cost/unit in Year 3 was one-third of the cost/unit in Year 1. Taxes were paid on the selling price at 10%, 13% and 15% respectively for the three years. Net profit is calculated as the difference between the selling price and the sum of cost and taxes paid in that year.\nThe ratio of the selling price in Year 2 to the selling price in Year 3 is ______.",
+  "options": [
+   "4:3",
+   "1:1",
+   "3:4",
+   "1:2"
+  ],
+  "figure": "img/q/2021-CS2-09.png",
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 53,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 10,
+  "section": "GA",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Logical Reasoning: Ordering",
+  "text": "Six students P, Q, R, S, T and U, with distinct heights, compare their heights and make the following observations.\nObservation I: S is taller than R.\nObservation II: Q is the shortest of all.\nObservation III: U is taller than only one student.\nObservation IV: T is taller than S but is not the tallest.\nThe number of students that are taller than R is the same as the number of students shorter than ______.",
+  "options": [
+   "T",
+   "R",
+   "S",
+   "P"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 54,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 11,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Algorithms",
+  "topic": "Minimum Spanning Trees",
+  "text": "Let G be a connected undirected weighted graph. Consider the following two statements.\nS₁: There exists a minimum weight edge in G which is present in every minimum spanning tree of G.\nS₂: If every edge in G has distinct weight, then G has a unique minimum spanning tree.\nWhich one of the following options is correct?",
+  "options": [
+   "Both S₁ and S₂ are true.",
+   "S₁ is true and S₂ is false.",
+   "S₁ is false and S₂ is true.",
+   "Both S₁ and S₂ are false."
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 55,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 12,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Programming and Data Structures",
+  "topic": "Heaps",
+  "text": "Let H be a binary min-heap consisting of n elements implemented as an array. What is the worst case time complexity of an optimal algorithm to find the maximum element in H?",
+  "options": [
+   "Θ(1)",
+   "Θ(log n)",
+   "Θ(n)",
+   "Θ(n log n)"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 55,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 13,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Compiler Design",
+  "topic": "Phases of Compilation",
+  "text": "Consider the following ANSI C program:\nint main() {\n    Integer x;\n    return 0;\n}\nWhich one of the following phases in a seven-phase C compiler will throw an error?",
+  "options": [
+   "Lexical analyzer",
+   "Syntax analyzer",
+   "Semantic analyzer",
+   "Machine dependent optimizer"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 56,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 14,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Computer Organization",
+  "topic": "IEEE-754 Floating Point",
+  "text": "The format of the single-precision floating-point representation of a real number as per the IEEE 754 standard is as follows:\nsign | exponent | mantissa\nWhich one of the following choices is correct with respect to the smallest normalized positive number represented using the standard?",
+  "options": [
+   "exponent = 00000000 and mantissa = 00000000000000000000000",
+   "exponent = 00000000 and mantissa = 00000000000000000000001",
+   "exponent = 00000001 and mantissa = 00000000000000000000000",
+   "exponent = 00000001 and mantissa = 00000000000000000000001"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 56,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 15,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Digital Logic",
+  "topic": "Multiplexers",
+  "text": "Which one of the following circuits implements the Boolean function given below?\nf(x, y, z) = m₀ + m₁ + m₃ + m₄ + m₅ + m₆, where mᵢ is the iᵗʰ minterm.",
+  "options": [
+   "Circuit (A)",
+   "Circuit (B)",
+   "Circuit (C)",
+   "Circuit (D)"
+  ],
+  "figure": "img/q/2021-CS2-15.png",
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 57,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 16,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Databases",
+  "topic": "Relational Model",
+  "text": "Consider the following statements S1 and S2 about the relational data model:\nS1: A relation scheme can have at most one foreign key.\nS2: A foreign key in a relation scheme R cannot be used to refer to tuples of R.\nWhich one of the following choices is correct?",
+  "options": [
+   "Both S1 and S2 are true.",
+   "S1 is true and S2 is false.",
+   "S1 is false and S2 is true.",
+   "Both S1 and S2 are false."
+  ],
+  "figure": null,
+  "answer": [
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 58,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 17,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Computer Networks",
+  "topic": "TCP Connection Establishment",
+  "text": "Consider the three-way handshake mechanism followed during TCP connection establishment between hosts P and Q. Let X and Y be two random 32-bit starting sequence numbers chosen by P and Q respectively. Suppose P sends a TCP connection request message to Q with a TCP segment having SYN bit = 1, SEQ number = X, and ACK bit = 0. Suppose Q accepts the connection request. Which one of the following choices represents the information present in the TCP segment header that is sent by Q to P?",
+  "options": [
+   "SYN bit = 1, SEQ number = X+1, ACK bit = 0, ACK number = Y, FIN bit = 0",
+   "SYN bit = 0, SEQ number = X+1, ACK bit = 0, ACK number = Y, FIN bit = 1",
+   "SYN bit = 1, SEQ number = Y, ACK bit = 1, ACK number = X+1, FIN bit = 0",
+   "SYN bit = 1, SEQ number = Y, ACK bit = 1, ACK number = X, FIN bit = 0"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 58,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 18,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Algorithms",
+  "topic": "Binary Search",
+  "text": "What is the worst-case number of arithmetic operations performed by recursive binary search on a sorted array of size n?",
+  "options": [
+   "Θ(√n)",
+   "Θ(log₂(n))",
+   "Θ(n²)",
+   "Θ(n)"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 59,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 19,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Theory of Computation",
+  "topic": "Minimal DFA",
+  "text": "Let L ⊆ {0,1}* be an arbitrary regular language accepted by a minimal DFA with k states. Which one of the following languages must necessarily be accepted by a minimal DFA with k states?",
+  "options": [
+   "L − {01}",
+   "L ∪ {01}",
+   "{0,1}* − L",
+   "L · L"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 59,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 20,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Programming and Data Structures",
+  "topic": "Arrays and Pointers",
+  "text": "Consider the following ANSI C program.\n#include <stdio.h>\nint main(){\n    int arr[4][5];\n    int i, j;\n    for (i=0; i<4; i++){\n        for (j=0; j<5; j++){\n            arr[i][j] = 10*i + j;\n        }\n    }\n    printf(\"%d\", *(arr[1] + 9));\n    return 0;\n}\nWhat is the output of the above program?",
+  "options": [
+   "14",
+   "20",
+   "24",
+   "30"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 60,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 21,
+  "section": "CS",
+  "marks": 1,
+  "type": "MSQ",
+  "subject": "Discrete Mathematics",
+  "topic": "Functions",
+  "text": "Consider the following sets, where n ≥ 2:\nS₁: Set of all n × n matrices with entries from the set {a, b, c}\nS₂: Set of all functions from the set {0, 1, 2, …, n² − 1} to the set {0, 1, 2}\nWhich of the following choice(s) is/are correct?",
+  "options": [
+   "There does not exist a bijection from S₁ to S₂.",
+   "There exists a surjection from S₁ to S₂.",
+   "There exists a bijection from S₁ to S₂.",
+   "There does not exist an injection from S₁ to S₂."
+  ],
+  "figure": null,
+  "answer": [
+   "B",
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 61,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 22,
+  "section": "CS",
+  "marks": 1,
+  "type": "MSQ",
+  "subject": "Theory of Computation",
+  "topic": "Closure Properties",
+  "text": "Let L₁ be a regular language and L₂ be a context-free language. Which of the following languages is/are context-free?",
+  "options": [
+   "L₁ ∩ L̅₂",
+   "Complement of (L̅₁ ∪ L̅₂)",
+   "L₁ ∪ (L₂ ∪ L̅₂)",
+   "(L₁ ∩ L₂) ∪ (L̅₁ ∩ L₂)"
+  ],
+  "figure": null,
+  "answer": [
+   "B",
+   "C",
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 61,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 23,
+  "section": "CS",
+  "marks": 1,
+  "type": "MSQ",
+  "subject": "Compiler Design",
+  "topic": "Intermediate Code",
+  "text": "In the context of compilers, which of the following is/are NOT an intermediate representation of the source program?",
+  "options": [
+   "Three address code",
+   "Abstract Syntax Tree (AST)",
+   "Control Flow Graph (CFG)",
+   "Symbol table"
+  ],
+  "figure": null,
+  "answer": [
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 62,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 24,
+  "section": "CS",
+  "marks": 1,
+  "type": "MSQ",
+  "subject": "Operating System",
+  "topic": "CPU Scheduling",
+  "text": "Which of the following statement(s) is/are correct in the context of CPU scheduling?",
+  "options": [
+   "Turnaround time includes waiting time.",
+   "The goal is to only maximize CPU utilization and minimize throughput.",
+   "Round-robin policy can be used even when the CPU time required by each of the processes is not known apriori.",
+   "Implementing preemptive scheduling needs hardware support."
+  ],
+  "figure": null,
+  "answer": [
+   "A",
+   "C",
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 62,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 25,
+  "section": "CS",
+  "marks": 1,
+  "type": "MSQ",
+  "subject": "Discrete Mathematics",
+  "topic": "Propositional Logic",
+  "text": "Choose the correct choice(s) regarding the following propositional logic assertion S:\nS: ((P ∧ Q) → R) → ((P ∧ Q) → (Q → R))",
+  "options": [
+   "S is neither a tautology nor a contradiction.",
+   "S is a tautology.",
+   "S is a contradiction.",
+   "The antecedent of S is logically equivalent to the consequent of S."
+  ],
+  "figure": null,
+  "answer": [
+   "B",
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 63,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 26,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Programming and Data Structures",
+  "topic": "Tree Traversals",
+  "text": "Consider a complete binary tree with 7 nodes. Let A denote the set of first 3 elements obtained by performing Breadth-First Search (BFS) starting from the root. Let B denote the set of first 3 elements obtained by performing Depth-First Search (DFS) starting from the root.\nThe value of |A − B| is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 1.0,
+  "answer_max": 1.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 64,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 27,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Theory of Computation",
+  "topic": "DFA Counting",
+  "text": "Consider the following deterministic finite automaton (DFA).\nThe number of strings of length 8 accepted by the above automaton is ______.",
+  "options": [],
+  "figure": "img/q/2021-CS2-27.png",
+  "answer": [],
+  "answer_min": 256.0,
+  "answer_max": 256.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 64,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 28,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Computer Organization",
+  "topic": "Number Systems",
+  "text": "If x and y are two decimal digits and (0.1101)₂ = (0.8xy5)₁₀, the decimal value of x + y is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 3.0,
+  "answer_max": 3.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 64,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 29,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Computer Organization",
+  "topic": "Cache Memory",
+  "text": "Consider a set-associative cache of size 2KB (1KB = 2¹⁰ bytes) with cache block size of 64 bytes. Assume that the cache is byte-addressable and a 32-bit address is used for accessing the cache. If the width of the tag field is 22 bits, the associativity of the cache is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 2.0,
+  "answer_max": 2.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 64,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 30,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Computer Organization",
+  "topic": "DMA",
+  "text": "Consider a computer system with DMA support. The DMA module is transferring one 8-bit character in one CPU cycle from a device to memory through cycle stealing at regular intervals. Consider a 2 MHz processor. If 0.5% processor cycles are used for DMA, the data transfer rate of the device is ______ bits per second.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 80000.0,
+  "answer_max": 80000.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 65,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 31,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Databases",
+  "topic": "Indexing",
+  "text": "A data file consisting of 1,50,000 student-records is stored on a hard disk with block size of 4096 bytes. The data file is sorted on the primary key RollNo. The size of a record pointer for this disk is 7 bytes. Each student-record has a candidate key attribute called ANum of size 12 bytes. Suppose an index file with records consisting of two fields, ANum value and the record pointer to the corresponding student record, is built and stored on the same disk. Assume that the records of data file and index file are not split across disk blocks. The number of blocks in the index file is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 698.0,
+  "answer_max": 698.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 65,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 32,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Probability and Statistics",
+  "topic": "Binomial Distribution",
+  "text": "For a given biased coin, the probability that the outcome of a toss is a head is 0.4. This coin is tossed 1,000 times. Let X denote the random variable whose value is the number of times that head appeared in these 1,000 tosses. The standard deviation of X (rounded to 2 decimal places) is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 15.0,
+  "answer_max": 16.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 65,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 33,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Programming and Data Structures",
+  "topic": "Recursion",
+  "text": "Consider the following ANSI C function:\nint SomeFunction(int x, int y)\n{\n    if ((x == 1) || (y == 1)) return 1;\n    if (x == y) return x;\n    if (x > y) return SomeFunction(x - y, y);\n    if (y > x) return SomeFunction(x, y - x);\n}\nThe value returned by SomeFunction(15, 255) is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 15.0,
+  "answer_max": 15.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 65,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 34,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Linear Algebra",
+  "topic": "Rank of a Matrix",
+  "text": "Suppose that P is a 4 × 5 matrix such that every solution of the equation Px = 0 is a scalar multiple of [2 5 4 3 1]ᵀ. The rank of P is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 4.0,
+  "answer_max": 4.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 66,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 35,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Calculus",
+  "topic": "Mean Value Theorem",
+  "text": "Suppose that f: ℝ → ℝ is a continuous function on the interval [−3, 3] and a differentiable function in the interval (−3, 3) such that for every x in the interval, f′(x) ≤ 2. If f(−3) = 7, then f(3) is at most ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 19.0,
+  "answer_max": 19.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 66,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 36,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Algorithms",
+  "topic": "Huffman Coding",
+  "text": "Consider the string abbccddeee. Each letter in the string must be assigned a binary code satisfying the following properties:\n1. For any two letters, the code assigned to one letter must not be a prefix of the code assigned to the other letter.\n2. For any two letters of the same frequency, the letter which occurs earlier in the dictionary order is assigned a code whose length is at most the length of the code assigned to the other letter.\nAmong the set of all binary code assignments which satisfy the above two properties, what is the minimum length of the encoded string?",
+  "options": [
+   "21",
+   "23",
+   "25",
+   "30"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 67,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 37,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Computer Organization",
+  "topic": "Cache Memory",
+  "text": "Assume a two-level inclusive cache hierarchy, L1 and L2, where L2 is the larger of the two. Consider the following statements.\nS₁: Read misses in a write through L1 cache do not result in writebacks of dirty lines to the L2.\nS₂: Write allocate policy must be used in conjunction with write through caches and no-write allocate policy is used with writeback caches.\nWhich of the following statements is correct?",
+  "options": [
+   "S₁ is true and S₂ is false",
+   "S₁ is false and S₂ is true",
+   "S₁ is true and S₂ is true",
+   "S₁ is false and S₂ is false"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 68,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 38,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Digital Logic",
+  "topic": "Sequential Circuits: Mealy Machines",
+  "text": "Suppose we want to design a synchronous circuit that processes a string of 0's and 1's. Given a string, it produces another string by replacing the first 1 in any subsequence of consecutive 1's by a 0. Consider the following example.\nInput sequence:   00100011000011100\nOutput sequence: 00000001000001100\nA Mealy Machine is a state machine where both the next state and the output are functions of the present state and the current input.\nThe above mentioned circuit can be designed as a two-state Mealy machine. The states in the Mealy machine can be represented using Boolean values 0 and 1. We denote the current state, the next state, the next incoming bit, and the output bit of the Mealy machine by the variables s, t, b and y respectively.\nAssume that the initial state of the Mealy machine is 0.\nWhat are the Boolean expressions corresponding to t and y in terms of s and b?",
+  "options": [
+   "t = s + b, y = s b",
+   "t = b, y = s b",
+   "t = b, y = s b̅",
+   "t = s + b, y = s b̅"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 69,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 39,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Probability and Statistics",
+  "topic": "Expectation",
+  "text": "In an examination, a student can choose the order in which two questions (QuesA and QuesB) must be attempted.\n- If the first question is answered wrong, the student gets zero marks.\n- If the first question is answered correctly and the second question is not answered correctly, the student gets the marks only for the first question.\n- If both the questions are answered correctly, the student gets the sum of the marks of the two questions.\nThe following table shows the probability of correctly answering a question and the marks of the question respectively.\nquestion | probability of answering correctly | marks\nQuesA | 0.8 | 10\nQuesB | 0.5 | 20\nAssuming that the student always wants to maximize her expected marks in the examination, in which order should she attempt the questions and what is the expected marks for that order (assume that the questions are independent)?",
+  "options": [
+   "First QuesA and then QuesB. Expected marks 14.",
+   "First QuesB and then QuesA. Expected marks 14.",
+   "First QuesB and then QuesA. Expected marks 22.",
+   "First QuesA and then QuesB. Expected marks 16."
+  ],
+  "figure": null,
+  "answer": [
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 70,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 40,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Compiler Design",
+  "topic": "Code Optimization",
+  "text": "Consider the following ANSI C code segment:\nz = x + 3 + y->f1 + y->f2;\nfor (i = 0; i < 200; i = i + 2){\n    if (z > i) {\n        p = p + x + 3;\n        q = q + y->f1;\n    } else {\n        p = p + y->f2;\n        q = q + x + 3;\n    }\n}\nAssume that the variable y points to a struct (allocated on the heap) containing two fields f1 and f2, and the local variables x, y, z, p, q, and i are allotted registers. Common sub-expression elimination (CSE) optimization is applied on the code. The number of addition and dereference operations (of the form y->f1 or y->f2) in the optimized code, respectively, are:",
+  "options": [
+   "403 and 102",
+   "203 and 2",
+   "303 and 102",
+   "303 and 2"
+  ],
+  "figure": null,
+  "answer": [
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 71,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 41,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Databases",
+  "topic": "SQL",
+  "text": "The relation scheme given below is used to store information about the employees of a company, where empId is the key and deptId indicates the department to which the employee is assigned. Each employee is assigned to exactly one department.\nemp(empId, name, gender, salary, deptId)\nConsider the following SQL query:\nselect deptId, count(*)\nfrom emp\nwhere gender = \"female\" and salary > (select avg(salary) from emp)\ngroup by deptId;\nThe above query gives, for each department in the company, the number of female employees whose salary is greater than the average salary of",
+  "options": [
+   "employees in the department.",
+   "employees in the company.",
+   "female employees in the department.",
+   "female employees in the company."
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 72,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 42,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Databases",
+  "topic": "Serializability and Recoverability",
+  "text": "Let S be the following schedule of operations of three transactions T₁, T₂ and T₃ in a relational database system:\nR₂(Y), R₁(X), R₃(Z), R₁(Y), W₁(X), R₂(Z), W₂(Y), R₃(X), W₃(Z)\nConsider the statements P and Q below:\nP: S is conflict-serializable.\nQ: If T₃ commits before T₁ finishes, then S is recoverable.\nWhich one of the following choices is correct?",
+  "options": [
+   "Both P and Q are true.",
+   "P is true and Q is false.",
+   "P is false and Q is true.",
+   "Both P and Q are false."
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 73,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 43,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Probability and Statistics",
+  "topic": "Conditional Probability",
+  "text": "A bag has r red balls and b black balls. All balls are identical except for their colours. In a trial, a ball is randomly drawn from the bag, its colour is noted and the ball is placed back into the bag along with another ball of the same colour. Note that the number of balls in the bag will increase by one, after the trial. A sequence of four such trials is conducted. Which one of the following choices gives the probability of drawing a red ball in the fourth trial?",
+  "options": [
+   "r/(r+b)",
+   "r/(r+b+3)",
+   "(r+3)/(r+b+3)",
+   "(r/(r+b)) · ((r+1)/(r+b+1)) · ((r+2)/(r+b+2)) · ((r+3)/(r+b+3))"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 73,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 44,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Computer Networks",
+  "topic": "Error Detection: CRC",
+  "text": "Consider the cyclic redundancy check (CRC) based error detecting scheme having the generator polynomial X³ + X + 1. Suppose the message m₄m₃m₂m₁m₀ = 11000 is to be transmitted. Check bits c₂c₁c₀ are appended at the end of the message by the transmitter using the above CRC scheme. The transmitted bit string is denoted by m₄m₃m₂m₁m₀c₂c₁c₀. The value of the checkbit sequence c₂c₁c₀ is",
+  "options": [
+   "101",
+   "110",
+   "100",
+   "111"
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 74,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 45,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Programming and Data Structures",
+  "topic": "Linked Lists",
+  "text": "Consider the following ANSI C program:\n#include <stdio.h>\n#include <stdlib.h>\nstruct Node{\n    int value;\n    struct Node *next;};\nint main(){\n    struct Node *boxE, *head, *boxN; int index = 0;\n    boxE = head = (struct Node *) malloc(sizeof(struct Node));\n    head->value = index;\n    for (index = 1; index <= 3; index++){\n        boxN = (struct Node *) malloc(sizeof(struct Node));\n        boxE->next = boxN;\n        boxN->value = index;\n        boxE = boxN; }\n    for (index = 0; index <= 3; index++) {\n        printf(\"Value at index %d is %d\\n\", index, head->value);\n        head = head->next;\n        printf(\"Value at index %d is %d\\n\", index+1, head->value); } }\nWhich one of the statements below is correct about the program?",
+  "options": [
+   "Upon execution, the program creates a linked-list of five nodes.",
+   "Upon execution, the program goes into an infinite loop.",
+   "It has a missing return which will be reported as an error by the compiler.",
+   "It dereferences an uninitialized pointer that may result in a run-time error."
+  ],
+  "figure": null,
+  "answer": [
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 75,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 46,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Theory of Computation",
+  "topic": "Regular Languages",
+  "text": "Consider the following two statements about regular languages:\nS₁: Every infinite regular language contains an undecidable language as a subset.\nS₂: Every finite language is regular.\nWhich one of the following choices is correct?",
+  "options": [
+   "Only S₁ is true.",
+   "Only S₂ is true.",
+   "Both S₁ and S₂ are true.",
+   "Neither S₁ nor S₂ is true."
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 76,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 47,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Linear Algebra",
+  "topic": "Orthogonal Vectors",
+  "text": "For two n-dimensional real vectors P and Q, the operation s(P, Q) is defined as follows:\ns(P, Q) = Σ (i = 1 to n) P[i] · Q[i]\nLet L be a set of 10-dimensional non-zero real vectors such that for every pair of distinct vectors P, Q ∈ L, s(P, Q) = 0. What is the maximum cardinality possible for the set L?",
+  "options": [
+   "9",
+   "10",
+   "11",
+   "100"
+  ],
+  "figure": null,
+  "answer": [
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 76,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 48,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Compiler Design",
+  "topic": "Liveness Analysis",
+  "text": "For a statement S in a program, in the context of liveness analysis, the following sets are defined:\nUSE(S): the set of variables used in S\nIN(S): the set of variables that are live at the entry of S\nOUT(S): the set of variables that are live at the exit of S\nConsider a basic block that consists of two statements, S₁ followed by S₂. Which one of the following statements is correct?",
+  "options": [
+   "OUT(S₁) = IN(S₂)",
+   "OUT(S₁) = IN(S₁) ∪ USE(S₁)",
+   "OUT(S₁) = IN(S₂) ∪ OUT(S₂)",
+   "OUT(S₁) = USE(S₁) ∪ IN(S₂)"
+  ],
+  "figure": null,
+  "answer": [
+   "A"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 77,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 49,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Algorithms",
+  "topic": "Master Theorem",
+  "text": "For constants a ≥ 1 and b > 1, consider the following recurrence defined on the non-negative integers:\nT(n) = a · T(n/b) + f(n)\nWhich one of the following options is correct about the recurrence T(n)?",
+  "options": [
+   "If f(n) is n log₂(n), then T(n) is Θ(n log₂(n)).",
+   "If f(n) is n / log₂(n), then T(n) is Θ(log₂(n)).",
+   "If f(n) is O(n^(log_b(a) − ε)) for some ε > 0, then T(n) is Θ(n^(log_b(a))).",
+   "If f(n) is Θ(n^(log_b(a))), then T(n) is Θ(n^(log_b(a)))."
+  ],
+  "figure": null,
+  "answer": [
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 77,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 50,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Databases",
+  "topic": "Functional Dependencies",
+  "text": "Suppose the following functional dependencies hold on a relation U with attributes P, Q, R, S, and T:\nP → QR\nRS → T\nWhich of the following functional dependencies can be inferred from the above functional dependencies?",
+  "options": [
+   "PS → T",
+   "R → T",
+   "P → R",
+   "PS → Q"
+  ],
+  "figure": null,
+  "answer": [
+   "A",
+   "C",
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 78,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 51,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Theory of Computation",
+  "topic": "Context-Free Languages",
+  "text": "For a string w, we define wᴿ to be the reverse of w. For example, if w = 01101 then wᴿ = 10110.\nWhich of the following languages is/are context-free?",
+  "options": [
+   "{w x wᴿ xᴿ | w, x ∈ {0,1}*}",
+   "{w wᴿ x xᴿ | w, x ∈ {0,1}*}",
+   "{w x wᴿ | w, x ∈ {0,1}*}",
+   "{w x xᴿ wᴿ | w, x ∈ {0,1}*}"
+  ],
+  "figure": null,
+  "answer": [
+   "B",
+   "C",
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 78,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 52,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Operating System",
+  "topic": "Threads and Synchronization",
+  "text": "Consider the following multi-threaded code segment (in a mix of C and pseudo-code), invoked by two processes P1 and P2, and each of the processes spawns two threads T1 and T2:\nint x = 0;  // global\nLock L1;    // global\nmain() {\n    create a thread to execute foo();  // Thread T1\n    create a thread to execute foo();  // Thread T2\n    wait for the two threads to finish execution;\n    print (x);}\n\nfoo() {\n    int y = 0;\n    Acquire L1;\n    x = x + 1;\n    y = y + 1;\n    Release L1;\n    print (y);}\nWhich of the following statement(s) is/are correct?",
+  "options": [
+   "Both P1 and P2 will print the value of x as 2.",
+   "At least one of P1 and P2 will print the value of x as 4.",
+   "At least one of the threads will print the value of y as 2.",
+   "Both T1 and T2, in both the processes, will print the value of y as 1."
+  ],
+  "figure": null,
+  "answer": [
+   "A",
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 79,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 53,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Operating System",
+  "topic": "Deadlock",
+  "text": "Consider a computer system with multiple shared resource types, with one instance per resource type. Each instance can be owned by only one process at a time. Owning and freeing of resources are done by holding a global lock (L). The following scheme is used to own a resource instance:\nfunction OwnResource(Resource R)\n    Acquire lock L // a global lock\n    if R is available then\n        Acquire R\n        Release lock L\n    else\n        if R is owned by another process P then\n            Terminate P, after releasing all resources owned by P\n            Acquire R\n            Restart P\n            Release lock L\n        end if\n    end if\nend function\nWhich of the following choice(s) about the above scheme is/are correct?",
+  "options": [
+   "The scheme ensures that deadlocks will not occur.",
+   "The scheme may lead to live-lock.",
+   "The scheme may lead to starvation.",
+   "The scheme violates the mutual exclusion property."
+  ],
+  "figure": null,
+  "answer": [
+   "A",
+   "B",
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 80,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 54,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Computer Organization",
+  "topic": "Endianness",
+  "text": "If the numerical value of a 2-byte unsigned integer on a little endian computer is 255 more than that on a big endian computer, which of the following choices represent(s) the unsigned integer on a little endian computer?",
+  "options": [
+   "0x6665",
+   "0x0001",
+   "0x4243",
+   "0x0100"
+  ],
+  "figure": null,
+  "answer": [
+   "A",
+   "D"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 81,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 55,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Computer Networks",
+  "topic": "Distance Vector Routing",
+  "text": "Consider a computer network using the distance vector routing algorithm in its network layer. The partial topology of the network is as shown below (see figure).\nThe objective is to find the shortest-cost path from the router R to routers P and Q. Assume that R does not initially know the shortest routes to P and Q. Assume that R has three neighbouring routers denoted as X, Y, and Z. During one iteration, R measures its distance to its neighbours X, Y, and Z as 3, 2, and 5, respectively. Router R gets routing vectors from its neighbours that indicate that the distance to router P from routers X, Y, and Z are 7, 6, and 5, respectively. The routing vector also indicates that the distance to router Q from routers X, Y, and Z are 4, 6, and 8, respectively. Which of the following statement(s) is/are correct with respect to the new routing table of R, after updation during this iteration?",
+  "options": [
+   "The distance from R to P will be stored as 10.",
+   "The distance from R to Q will be stored as 7.",
+   "The next hop router for a packet from R to P is Y.",
+   "The next hop router for a packet from R to Q is Z."
+  ],
+  "figure": "img/q/2021-CS2-55.png",
+  "answer": [
+   "B",
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 82,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 56,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Algorithms",
+  "topic": "Graph Traversal",
+  "text": "Consider the following directed graph (see figure).\nWhich of the following is/are correct about the graph?",
+  "options": [
+   "The graph does not have a topological order.",
+   "A depth-first traversal starting at vertex S classifies three directed edges as back edges.",
+   "The graph does not have a strongly connected component.",
+   "For each pair of vertices u and v, there is a directed path from u to v."
+  ],
+  "figure": "img/q/2021-CS2-56.png",
+  "answer": [
+   "A",
+   "B"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 83,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 57,
+  "section": "CS",
+  "marks": 2,
+  "type": "MSQ",
+  "subject": "Theory of Computation",
+  "topic": "Regular Expressions",
+  "text": "Which of the following regular expressions represent(s) the set of all binary numbers that are divisible by three? Assume that the string ε is divisible by three.",
+  "options": [
+   "(0 + 1(01*0)*1)*",
+   "(0 + 11 + 10(1 + 00)*01)*",
+   "(0*(1(01*0)*1)*)*",
+   "(0 + 11 + 11(1 + 00)*00)*"
+  ],
+  "figure": null,
+  "answer": [
+   "A",
+   "B",
+   "C"
+  ],
+  "answer_min": null,
+  "answer_max": null,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 84,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 58,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Operating System",
+  "topic": "Page Tables",
+  "text": "Consider a three-level page table to translate a 39-bit virtual address to a physical address as shown in the figure.\nThe page size is 4KB (1KB = 2¹⁰ bytes) and page table entry size at every level is 8 bytes. A process P is currently using 2GB (1GB = 2³⁰ bytes) virtual memory which is mapped to 2GB of physical memory. The minimum amount of memory required for the page table of P across all levels is ______ KB.",
+  "options": [],
+  "figure": "img/q/2021-CS2-58.png",
+  "answer": [],
+  "answer_min": 4108.0,
+  "answer_max": 4108.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 85,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 59,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Programming and Data Structures",
+  "topic": "Recursion",
+  "text": "Consider the following ANSI C program.\n#include <stdio.h>\n\nint foo(int x, int y, int q)\n{\n    if ((x <= 0) && (y <= 0))\n        return q;\n    if (x <= 0)\n        return foo(x, y-q, q);\n    if (y <= 0)\n        return foo(x-q, y, q);\n    return foo(x, y-q, q) + foo(x-q, y, q);\n}\n\nint main()\n{\n    int r = foo(15,15,10);\n    printf(\"%d\", r);\n    return 0;\n}\nThe output of the program upon execution is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 60.0,
+  "answer_max": 60.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 85,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 60,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Discrete Mathematics",
+  "topic": "Combinatorics",
+  "text": "Let S be a set consisting of 10 elements. The number of tuples of the form (A, B) such that A and B are subsets of S, and A ⊆ B is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 59049.0,
+  "answer_max": 59049.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 86,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 61,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Compiler Design",
+  "topic": "LR Parsing",
+  "text": "Consider the following augmented grammar with {#, @, <, >, a, b, c} as the set of terminals.\nS′ → S\nS → S # c S\nS → S S\nS → S @\nS → < S >\nS → a\nS → b\nS → c\nLet I₀ = CLOSURE({S′ → •S}). The number of items in the set GOTO(GOTO(I₀, <), <) is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 8.0,
+  "answer_max": 8.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 86,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 62,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Digital Logic",
+  "topic": "Minimization of Boolean Functions",
+  "text": "Consider a Boolean function f(w, x, y, z) such that\nf(w, 0, 0, z) = 1\nf(1, x, 1, z) = x + z\nf(w, 1, y, z) = wz + y\nThe number of literals in the minimal sum-of-products expression of f is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 6.0,
+  "answer_max": 6.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 86,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 63,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Computer Organization",
+  "topic": "Pipelining",
+  "text": "Consider a pipelined processor with 5 stages, Instruction Fetch (IF), Instruction Decode (ID), Execute (EX), Memory Access (MEM), and Write Back (WB). Each stage of the pipeline, except the EX stage, takes one cycle. Assume that the ID stage merely decodes the instruction and the register read is performed in the EX stage. The EX stage takes one cycle for ADD instruction and two cycles for MUL instruction. Ignore pipeline register latencies.\nConsider the following sequence of 8 instructions:\nADD, MUL, ADD, MUL, ADD, MUL, ADD, MUL\nAssume that every MUL instruction is data-dependent on the ADD instruction just before it and every ADD instruction (except the first ADD) is data-dependent on the MUL instruction just before it. The Speedup is defined as follows:\nSpeedup = (Execution time without operand forwarding) / (Execution time with operand forwarding)\nThe Speedup achieved in executing the given instruction sequence on the pipelined processor (rounded to 2 decimal places) is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 1.87,
+  "answer_max": 1.88,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 87,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 64,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Computer Networks",
+  "topic": "ALOHA",
+  "text": "Consider a network using the pure ALOHA medium access control protocol, where each frame is of length 1,000 bits. The channel transmission rate is 1 Mbps (= 10⁶ bits per second). The aggregate number of transmissions across all the nodes (including new frame transmissions and retransmitted frames due to collisions) is modelled as a Poisson process with a rate of 1,000 frames per second. Throughput is defined as the average number of frames successfully transmitted per second.\nThe throughput of the network (rounded to the nearest integer) is ______.",
+  "options": [],
+  "figure": null,
+  "answer": [],
+  "answer_min": 130.0,
+  "answer_max": 140.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 87,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ },
+ {
+  "year": 2021,
+  "paper": "CS2",
+  "number": 65,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Algorithms",
+  "topic": "Shortest Paths in DAGs",
+  "text": "In a directed acyclic graph with a source vertex s, the quality-score of a directed path is defined to be the product of the weights of the edges on the path. Further, for a vertex v other than s, the quality-score of v is defined to be the maximum among the quality-scores of all the paths from s to v. The quality-score of s is assumed to be 1.\nThe sum of the quality-scores of all the vertices in the graph shown above is ______.",
+  "options": [],
+  "figure": "img/q/2021-CS2-65.png",
+  "answer": [],
+  "answer_min": 929.0,
+  "answer_max": 929.0,
+  "mta": false,
+  "source": {
+   "document": "GATE 2021 CS question paper (Set-2)",
+   "page": 88,
+   "source_type": "official GATE 2021 question paper",
+   "answer_key": "https://gate2026.iitg.ac.in/doc/download/Answer_keys2021/cs_merged_2021.pdf"
+  },
+  "validation_status": "manually verified against page images",
+  "copyright_status": "unverified"
+ }
+]
