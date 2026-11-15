@@ -12,8 +12,9 @@ HDR = re.compile(r"\s*Computer Science and Information Technology[^\n]*\s*Organi
 doc = fitz.open(pdf)
 imgdir = os.path.join(repo, "static", "img", "q"); os.makedirs(imgdir, exist_ok=True)
 
-PAGE_JUNK = re.compile(r"\s*(Data Science and Artificial Intelligence \(DA\)|GATE \d{4} Computer Science and Information Technology \(CS\)|Q\.\s*\d+\s*[–-]\s*Q\.\s*\d+.{0,40}?[Cc]arry.{0,30}?[Ee]ach\.?)\s*$")
+PAGE_JUNK = re.compile(r"\s*(Data Science (?:and|&) Artificial Intelligence(?: \(DA\)| - DA)|GATE \d{4} Computer Science and Information Technology \(CS\)|Q\.\s*\d+\s*[–-]\s*Q\.\s*\d+.{0,40}?[Cc]arry.{0,30}?[Ee]ach\.?)\s*$")
 def norm(s):
+    s = s.replace("ﬁ", "fi").replace("ﬂ", "fl")
     s = PAGE_JUNK.sub("", s)
     # math-italic letters (U+1D400..1D7FF) -> plain letters; everything else untouched
     out = []

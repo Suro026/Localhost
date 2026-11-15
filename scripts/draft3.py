@@ -21,7 +21,7 @@ print("key entries", len(key))
 pages = []
 for pn, pg in enumerate(doc, 1):
     t = pg.get_text()
-    t = chr(10).join(l for l in t.split(chr(10)) if not re.match(r"\s*(Computer Science and Information Technology|Page \d+ of \d+|Organi[sz]ing Institute)", l))
+    t = chr(10).join(l for l in t.split(chr(10)) if not re.match(r"\s*(Computer Science and Information Technology|Data Science (and|&) Artificial Intelligence|GATE 20\d\d\s*$|Page \d+ of \d+|Organi[sz]ing Institute|Q\.\s*\d+\s*\S\s*Q\.\s*\d+\s+[Cc]arry)", l))
     pages.append((pn, t))
 full = ""; where = {}
 for pn, t in pages:
@@ -29,13 +29,13 @@ for pn, t in pages:
 def page_of(pos):
     for (a,b),pn in where.items():
         if a <= pos < b: return pn
-marks = [(m.start(), int(m.group(1))) for m in re.finditer(r"(?m)^Q\.(\d+)\s", full)]
+marks = [(m.start(), int(m.group(1))) for m in re.finditer(r"(?m)^Q\.\s*(\d+)\s", full)]
 GARBLE = re.compile(r"[\u00f0\u00f1\u00e2\u00ce\u00cf][\u0080-\u00bf]|\ufffd")
 qs = {}
 for idx, (pos, n) in enumerate(marks):
     end = marks[idx+1][0] if idx+1 < len(marks) else len(full)
     body = full[pos:end]
-    body = re.sub(r"^Q\.\d+\s*", "", body, count=1)
+    body = re.sub(r"^Q\.\s*\d+\s*", "", body, count=1)
     body = re.sub(r"\n(Q\.\d+ . Q\.\d+ Carry .*)", "", body)
     opts = re.split(r"(?m)^\(([A-D])\)\s*", body)
     stem = opts[0].strip()
