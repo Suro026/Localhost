@@ -124,72 +124,74 @@
     if (run.end <= Date.now()) { finish(false); } else { begin(); }
   } else { run = null; }
 
-  // =============== planner ===============
-  var P = el("div"), planCard = card("7-day plan", "Weak subjects first. Tests you take change the order.");
+  // =============== planner (the learner decides every task) ===============
+  var P = el("div"), planCard = card("Your plan", "You decide what to do and when. Add a task for any day; tick it off when done.");
   var examIn = el("input"); examIn.type = "date";
-  var hoursIn = el("input"); hoursIn.type = "number"; hoursIn.min = "1"; hoursIn.max = "12"; hoursIn.step = "0.5"; hoursIn.inputMode = "decimal";
-  var saved = KS.study().plan;
-  examIn.value = typeof saved.target === "string" ? saved.target : "";
-  hoursIn.value = saved.hours >= 1 && saved.hours <= 12 ? String(saved.hours) : "3";
-  var pform = el("div", "mt-4 grid gap-3 sm:grid-cols-2");
-  pform.append(field("Exam date (optional)", examIn), field("Hours per day (1 to 12)", hoursIn));
-  var leftEl = el("p", "mt-3 text-sm font-semibold");
-  var days = el("div", "mt-4 space-y-3");
-  planCard.append(pform, leftEl, days);
+  var savedPlan = KS.study().plan;
+  examIn.value = typeof savedPlan.target === "string" ? savedPlan.target : "";
+  var leftEl = el("p", "mt-2 text-sm font-semibold");
+  var tDate = el("input"); tDate.type = "date"; tDate.value = KS.dayKey();
+  var tText = el("input"); tText.type = "text"; tText.maxLength = 120; tText.placeholder = "e.g. Finish Graph algorithms notes";
+  var tSubj = el("select");
+  [["", "No practice link"]].concat(SUBJECTS.map(function (s) { return [s, "Practice: " + s]; })).forEach(function (o) {
+    var op = el("option", "", o[1]); op.value = o[0]; tSubj.appendChild(op);
+  });
+  var addBtn = el("button", "btn-primary", "Add task"); addBtn.type = "button";
+  var pmsg = el("p", "mt-2 min-h-[1.25rem] text-sm text-muted");
+  var addRow = el("div", "mt-4 grid gap-3 sm:grid-cols-2");
+  addRow.append(field("Day", tDate), field("Practice link (optional)", tSubj));
+  var textRow = el("div", "mt-3"); textRow.appendChild(field("Task", tText));
+  var days = el("div", "mt-5 space-y-3");
+  var examRow = el("div", "mt-4 max-w-xs"); examRow.appendChild(field("Exam date (optional)", examIn));
+  planCard.append(examRow, leftEl, addRow, textRow, el("div", "mt-3", ""), pmsg, days);
+  planCard.children[planCard.children.length - 3].appendChild(addBtn);
   P.appendChild(planCard);
 
-  function order() {
-    var st = KS.stats(KS.attempts(), "subject"), acc = {};
-    st.forEach(function (o) { acc[o.subject] = o.correct / o.seen; });
-    var list = SUBJECTS.filter(function (s) { return s !== "General Aptitude"; });
-    list.sort(function (a, b) { return (a in acc ? acc[a] : 0.5) - (b in acc ? acc[b] : 0.5); });
-    return list.length ? list : SUBJECTS.slice();
-  }
-  function round5(x) { return Math.max(0.5, Math.round(x * 2) / 2); }
+  function tasks() { var s = KS.study(); return Array.isArray(s.tasks) ? s.tasks.filter(function (t) { return t && typeof t.text === "string" && typeof t.date === "string"; }) : []; }
+  function saveTasks(list) { var s = KS.study(); s.tasks = list.slice(-500); KS.saveStudy(s); }
   function drawPlan() {
-    var plan = KS.study().plan, h = Math.max(1, Math.min(12, Number(hoursIn.value) || 3));
-    var ord = order(), weak = KS.weak(KS.attempts(), 3, 3), done = KS.study().done;
-    var target = examIn.value ? new Date(examIn.value + "T00:00:00") : null, today = new Date(); today.setHours(0, 0, 0, 0);
-    if (target && !isNaN(target)) {
-      var dl = Math.round((target - today) / 86400000);
-      leftEl.textContent = dl > 0 ? dl + " days to your exam, about " + Math.max(1, Math.floor(dl / 7)) + " full mocks if you take one a week." : "Your exam date has passed. Pick a new one.";
-    } else { leftEl.textContent = "Add your exam date to see how many days are left."; }
+    var today = KS.dayKey(), list = tasks();
+    if (examIn.value) {
+      var dl = Math.round((new Date(examIn.value + "T00:00:00") - new Date(today + "T00:00:00")) / 86400000);
+      leftEl.textContent = dl > 0 ? dl + " days to your exam." : dl === 0 ? "Your exam is today." : "Your exam date has passed. Pick a new one.";
+    } else { leftEl.textContent = ""; }
     days.replaceChildren();
-    for (var i = 0; i < 7; i++) {
-      var d = new Date(today); d.setDate(d.getDate() + i);
-      var key = KS.dayKey(d), tasks = [];
-      if (d.getDay() === 0) {
-        tasks.push({ id: "mock", text: "Full mock test (3 h), then review every mistake", href: "/tests/start?mode=mock" });
-      } else {
-        var s = ord[i % ord.length];
-        tasks.push({ id: "study|" + s, text: "Study " + s + " (" + round5(h * 0.6) + " h)" });
-        tasks.push({ id: "prac|" + s, text: "Practise 20 " + s + " questions (" + round5(h * 0.4) + " h)",
-          href: "/tests/start?mode=subject&subject=" + encodeURIComponent(s) + "&count=20" });
-        if (i === 0 && weak.length) {
-          tasks.push({ id: "weak", text: "Fix your weakest topics: " + weak.map(function (o) { return o.topic; }).join(", "),
-            href: "/tests/start?mode=weak&" + weak.map(function (o) { return "t=" + encodeURIComponent(o.key); }).join("&") });
-        }
-      }
-      var box = el("div", "rounded-xl border border-line p-4" + (i === 0 ? " bg-brand-50" : ""));
-      box.appendChild(el("p", "text-sm font-bold", (i === 0 ? "Today · " : "") + d.toLocaleDateString(undefined, { weekday: "long", day: "numeric", month: "short" })));
+    if (!list.length) { days.appendChild(el("p", "text-sm text-muted", "No tasks yet. Add your first one above.")); return; }
+    var dates = Array.from(new Set(list.map(function (t) { return t.date; }))).sort();
+    dates.forEach(function (dk) {
+      var d = new Date(dk + "T00:00:00");
+      var box = el("div", "rounded-xl border border-line p-4" + (dk === today ? " bg-brand-50" : ""));
+      box.appendChild(el("p", "text-sm font-bold", (dk === today ? "Today · " : dk < today ? "Earlier · " : "") + d.toLocaleDateString(undefined, { weekday: "long", day: "numeric", month: "short" })));
       var ul = el("ul", "mt-2 space-y-2");
-      tasks.forEach(function (t) {
-        var dk = key + "|" + t.id, li = el("li", "flex items-start gap-3 text-sm");
-        var cb = el("input", "mt-1 h-4 w-4 shrink-0"); cb.type = "checkbox"; cb.checked = !!done[dk];
-        cb.setAttribute("aria-label", t.text);
-        cb.addEventListener("change", function () {
-          var s2 = KS.study(); if (cb.checked) s2.done[dk] = true; else delete s2.done[dk]; KS.saveStudy(s2);
-        });
+      list.filter(function (t) { return t.date === dk; }).forEach(function (t) {
+        var li = el("li", "flex items-start gap-3 text-sm");
+        var cb = el("input", "mt-1 h-4 w-4 shrink-0"); cb.type = "checkbox"; cb.checked = !!t.done; cb.setAttribute("aria-label", t.text);
+        cb.addEventListener("change", function () { t.done = cb.checked; saveTasks(list); li.classList.toggle("opacity-60", cb.checked); });
         li.appendChild(cb);
-        if (t.href) { var a = el("a", "min-w-0 break-words font-medium text-brand-700 underline", t.text); a.href = t.href; li.appendChild(a); }
-        else li.appendChild(el("span", "min-w-0 break-words", t.text));
-        ul.appendChild(li);
+        var body = el("div", "min-w-0 flex-1 break-words");
+        body.appendChild(el("span", t.done ? "line-through" : "", t.text));
+        if (t.subject) {
+          var a = el("a", "ml-2 font-medium text-brand-700 underline", "Practise " + t.subject);
+          a.href = "/tests/start?mode=subject&subject=" + encodeURIComponent(t.subject) + "&count=20"; body.appendChild(a);
+        }
+        li.appendChild(body);
+        var del = el("button", "text-xs text-muted underline", "Remove"); del.type = "button";
+        del.setAttribute("aria-label", "Remove task " + t.text);
+        del.addEventListener("click", function () { saveTasks(list.filter(function (x) { return x !== t; })); drawPlan(); });
+        li.appendChild(del); ul.appendChild(li);
       });
       box.appendChild(ul); days.appendChild(box);
-    }
+    });
   }
-  function savePlan() { var s = KS.study(); s.plan = { target: examIn.value, hours: Number(hoursIn.value) || 3 }; KS.saveStudy(s); drawPlan(); }
-  examIn.addEventListener("change", savePlan); hoursIn.addEventListener("change", savePlan);
+  addBtn.addEventListener("click", function () {
+    var text = tText.value.trim();
+    if (!text) { pmsg.textContent = "Write what you want to do."; return; }
+    if (!tDate.value) { pmsg.textContent = "Pick a day."; return; }
+    var list = tasks(); list.push({ id: Date.now(), date: tDate.value, text: text, subject: tSubj.value, done: false });
+    saveTasks(list); tText.value = ""; pmsg.textContent = "Added."; drawPlan();
+  });
+  tText.addEventListener("keydown", function (e) { if (e.key === "Enter") addBtn.click(); });
+  examIn.addEventListener("change", function () { var s = KS.study(); s.plan = { target: examIn.value }; KS.saveStudy(s); drawPlan(); });
 
   // =============== reminder ===============
   var R = el("div"), remCard = card("Daily reminder", "Pick a time. A browser reminder shows only while a Keystone tab is open. The calendar file below also works when the browser is closed.");
