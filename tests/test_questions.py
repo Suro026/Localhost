@@ -87,3 +87,12 @@ def test_parse_alternate_answers():
     assert n.alt_ranges == ((4.0, 4.0),)
     with pytest.raises(ValueError):
         _parse(dict(base, type="NAT", answer_min=2, answer_max=2, answer_alt=[[5, 4]]))
+
+
+def test_parse_nat_marked_to_all_needs_no_range():
+    from app.services.questions import _parse
+    base = dict(year=2024, paper="DA", number=59, section="CS", marks=2, subject="s", text="t", type="NAT")
+    q = _parse(dict(base, mta=True))
+    assert q.mta and q.answer_min is None
+    with pytest.raises(ValueError):
+        _parse(dict(base))  # no range and not MTA is still invalid

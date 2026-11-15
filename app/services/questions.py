@@ -51,7 +51,7 @@ def _parse(r: dict) -> Question:
         raise ValueError("bad type or marks")
     if qtype in ("MCQ", "MSQ") and len(options) != 4:
         raise ValueError("choice question needs 4 options")
-    if qtype == "NAT" and (amin is None or amax is None or amin > amax):
+    if qtype == "NAT" and not r.get("mta") and (amin is None or amax is None or amin > amax):
         raise ValueError("NAT needs a range")
     alts = r.get("answer_alt") or []
     alt_answers: tuple[tuple[str, ...], ...] = ()

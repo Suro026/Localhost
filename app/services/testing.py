@@ -9,6 +9,7 @@ SUBJECTS: tuple[str, ...] = (
     "General Aptitude", "Discrete Mathematics", "Linear Algebra", "Calculus", "Probability and Statistics",
     "Digital Logic", "Computer Organization", "Programming and Data Structures", "Algorithms",
     "Theory of Computation", "Compiler Design", "Operating System", "Databases", "Computer Networks",
+    "Machine Learning", "Artificial Intelligence",
 )
 MAX_IDS = 100
 MINUTES_PER_QUESTION = 180 / 65

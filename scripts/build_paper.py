@@ -12,7 +12,7 @@ HDR = re.compile(r"\s*Computer Science and Information Technology[^\n]*\s*Organi
 doc = fitz.open(pdf)
 imgdir = os.path.join(repo, "static", "img", "q"); os.makedirs(imgdir, exist_ok=True)
 
-PAGE_JUNK = re.compile(r"\s*(GATE \d{4} Computer Science and Information Technology \(CS\)|Q\.\s*\d+\s*[–-]\s*Q\.\s*\d+.{0,40}?[Cc]arry.{0,30}?[Ee]ach\.?)\s*$")
+PAGE_JUNK = re.compile(r"\s*(Data Science and Artificial Intelligence \(DA\)|GATE \d{4} Computer Science and Information Technology \(CS\)|Q\.\s*\d+\s*[–-]\s*Q\.\s*\d+.{0,40}?[Cc]arry.{0,30}?[Ee]ach\.?)\s*$")
 def norm(s):
     s = PAGE_JUNK.sub("", s)
     # math-italic letters (U+1D400..1D7FF) -> plain letters; everything else untouched
@@ -74,7 +74,7 @@ for n in sorted(int(k) for k in drafts):
                     subject=subj, topic=topic, text=text, options=options,
                     figure=figure(n) if n in D.FIG else None, answer=answer, answer_min=amin, answer_max=amax, mta=mta,
                     **({"answer_alt": alt} if alt else {}),
-                    source=dict(document=docname, page=dr["page"], source_type=f"official GATE {year} question paper (IIT Roorkee)", answer_key=keyurl),
+                    source=dict(document=docname, page=dr["page"], source_type=f"official GATE {year} question paper", answer_key=keyurl),
                     validation_status="manually verified against page images", copyright_status="unverified"))
 os.makedirs(os.path.join(repo, "app", "data", "questions"), exist_ok=True)
 fn = os.path.join(repo, "app", "data", "questions", f"{year}-{paper}.json")
