@@ -27,6 +27,8 @@ class Settings(BaseSettings):
     security_contact: str = ""  # mailto: or https: address for /.well-known/security.txt; the file is served only when set
     linkedin_surajit: str = ""
     linkedin_sayan: str = ""
+    gate_site_url: str = "https://gate2027.iitm.ac.in"  # official GATE 2027 website (IIT Madras)
+    gate_channel_url: str = "https://whatsapp.com/channel/0029VbAY5biBVJkyO3GOT72S"  # official GATE WhatsApp channel
     whatsapp_group_url: str = Field(default="https://chat.whatsapp.com/FinfZJZ6CQLAWgI7uqiMux")
 
     max_pdf_bytes: int = 25 * 1024 * 1024

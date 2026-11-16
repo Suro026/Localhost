@@ -31,6 +31,8 @@ templates.env.globals.update(
     static_v=static_v,
     app_name=_s.app_name,
     whatsapp_group_url=_s.whatsapp_group_url,
+    gate_site_url=_s.gate_site_url,
+    gate_channel_url=_s.gate_channel_url,
     mentors=[
         {"name": "Surajit Sadhukhan", "initials": "SS", "role": "Lead", "linkedin": _s.linkedin_surajit,
          "email": "surajitsadhukhan870@gmail.com", "photo": mentor_photo("surajit")},

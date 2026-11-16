@@ -6,6 +6,20 @@
   <p class="mt-2 max-w-2xl text-muted">Real GATE CS and DA papers, subject-wise practice, mixed sets and a full mock in the GATE pattern. Free, and no sign-in needed. Sign in to keep your results on every device.</p>
   {% if message %}<p role="alert" class="mt-6 rounded-xl border border-line bg-brand-50 px-4 py-3 text-sm font-semibold">{{ message }}</p>{% endif %}
 
+  <aside class="mt-6 rounded-2xl border border-line bg-brand-50 p-5" aria-labelledby="gate-dates">
+    <h2 id="gate-dates" class="text-lg font-bold">GATE 2027 key dates</h2>
+    <dl class="mt-3 grid gap-x-6 gap-y-2 text-sm sm:grid-cols-[auto_1fr]">
+      <dt class="font-semibold">Exam days</dt><dd>6, 7, 13, 14, 20 and 21 February 2027</dd>
+      <dt class="font-semibold">City allotment</dt><dd>4 January 2027</dd>
+      <dt class="font-semibold">Results</dt><dd>19 March 2027</dd>
+    </dl>
+    <p class="mt-3 text-xs text-muted">All dates are liable to change. Check the official site before you plan around them.</p>
+    <p class="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-sm font-semibold">
+      <a class="text-brand-700 underline" href="{{ gate_site_url }}/important_dates" target="_blank" rel="noopener noreferrer">Full dates on the official GATE 2027 site</a>
+      <a class="text-brand-700 underline" href="{{ gate_channel_url }}" target="_blank" rel="noopener noreferrer">Official GATE WhatsApp channel</a>
+    </p>
+  </aside>
+
   {% if total %}
   <div class="mt-8 grid gap-6 lg:grid-cols-2">
     <section class="rounded-2xl border border-line bg-surface p-5">

@@ -115,3 +115,11 @@ def test_runner_script_served_and_never_uses_inner_html(client):
     r = client.get("/static/js/test-runner.js")
     assert r.status_code == 200
     assert "innerHTML" not in r.text.replace("never innerHTML", "")
+
+
+def test_hub_shows_official_gate_links_and_dates(client):
+    r = client.get("/tests")
+    assert "https://gate2027.iitm.ac.in/important_dates" in r.text
+    assert "https://whatsapp.com/channel/0029VbAY5biBVJkyO3GOT72S" in r.text
+    assert "6, 7, 13, 14, 20 and 21 February 2027" in r.text and "19 March 2027" in r.text
+    assert "https://gate2027.iitm.ac.in" in client.get("/").text
