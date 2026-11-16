@@ -20,6 +20,7 @@ TEST_TOKEN = "test.eyJleHAiOjk5OTk5OTk5OTl9.sig"  # payload {"exp": 9999999999};
 def fake_google(monkeypatch):
     monkeypatch.setattr(gate, "lookup", lambda token: "uid-1" if token == TEST_TOKEN else None)
     gate._cache.clear()
+    gate._hits.clear()
 
 
 @pytest.fixture(scope="session")
@@ -57,6 +58,7 @@ def db(scratch_engine: Engine) -> Iterator[Session]:
 def client(db: Session) -> Iterator[TestClient]:
     app.dependency_overrides[get_db] = lambda: db
     c = TestClient(app)
+    c.cookies.set(gate.CONSENT_COOKIE, gate.LEGAL_VERSION)
     c.cookies.set(gate.COOKIE, TEST_TOKEN)  # a signed-in learner; use anon_client for the logged-out view
     yield c
     app.dependency_overrides.clear()

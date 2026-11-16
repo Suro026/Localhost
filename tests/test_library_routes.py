@@ -15,6 +15,7 @@ def client() -> TestClient:
     library.load_library.cache_clear()
     c = TestClient(app, follow_redirects=False)
     c.cookies.set(gate.COOKIE, TEST_TOKEN)
+    c.cookies.set(gate.CONSENT_COOKIE, gate.LEGAL_VERSION)
     return c
 
 

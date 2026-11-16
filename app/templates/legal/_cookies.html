@@ -1,0 +1,30 @@
+<h3>1. What this page covers</h3>
+<p>Cookies are small files a website stores in your browser. Browsers also offer similar storage (local storage, session storage, IndexedDB). In this policy, "cookies" means all of these. {{ app_name }} uses them only to make the site work. We do <b>not</b> use advertising cookies, and at the time of this version we do not use analytics cookies.</p>
+
+<h3>2. What we set</h3>
+<table class="ks-legal-table">
+  <thead><tr><th>Name</th><th>What it does</th><th>How long</th></tr></thead>
+  <tbody>
+    <tr><td><code>ks_session</code> (cookie)</td><td>Keeps you signed in on our server. It is protected, so scripts on the page cannot read it.</td><td>Up to 1 hour, renewed while you use the site</td></tr>
+    <tr><td><code>ks_consent</code> (cookie)</td><td>Remembers that you read and accepted these policies, so we do not ask on every visit.</td><td>1 year</td></tr>
+    <tr><td><code>ks-attempts</code>, <code>ks-study</code>, <code>ks-timer</code> (local storage)</td><td>Your test results, study sessions, plan and timer on this device.</td><td>Until you clear them or delete your account</td></tr>
+    <tr><td><code>ks-test-…</code> (local storage)</td><td>Your answers and remaining time in a test that is in progress, so a reload does not lose them.</td><td>Removed when you submit</td></tr>
+    <tr><td><code>ks-auth</code>, <code>ks-synced-uid</code>, <code>ks-last-pull</code> (local storage)</td><td>Remember who is signed in and when your data last synced.</td><td>Until you sign out</td></tr>
+    <tr><td><code>ks-install-dismissed</code> (local storage)</td><td>Remembers that you closed the "install app" prompt.</td><td>Until you clear it</td></tr>
+  </tbody>
+</table>
+
+<h3>3. Set by Google, which we use</h3>
+<ul>
+  <li><b>Firebase Authentication</b> keeps your sign-in state in your browser (IndexedDB) so you stay signed in.</li>
+  <li><b>reCAPTCHA Enterprise / App Check</b> stores tokens and may set cookies to tell real visitors from bots.</li>
+  <li><b>Google Drive viewer</b> (books and notes) may set Google cookies when it loads inside a page.</li>
+</ul>
+<p>These are controlled by Google under <a class="ks-link" href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener noreferrer">Google's own policy</a>.</p>
+
+<h3>4. Your choices</h3>
+<p>The cookies and storage in sections 2 and 3 are needed for sign-in, security and your saved progress, so the site cannot work without them. You can delete them at any time in your browser's settings, or by signing out. If you block them, you will not be able to sign in.</p>
+<p>If we add analytics or any non-essential cookie in future, we will list it here, update the version date and ask for your consent first.</p>
+
+<h3>5. Version</h3>
+<p>This Cookie Policy is dated {{ version }}. Questions: <a class="ks-link" href="mailto:{{ mentors[0].email }}">{{ mentors[0].email }}</a>.</p>

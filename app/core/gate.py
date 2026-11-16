@@ -19,12 +19,17 @@ COOKIE = "ks_session"
 API_KEY = "AIzaSyANEqFgTIpfBB12vaXDgHKON0qTM_VMor0"  # public Firebase web key (same one the browser uses)
 LOOKUP_URL = "https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=" + API_KEY
 CACHE_SECONDS = 300
+CONSENT_COOKIE = "ks_consent"
+LEGAL_VERSION = "2026-11-16"  # bump when the Privacy, Terms or Cookie text changes materially: everyone is asked to read and accept again
+# path -> (requests, seconds) allowed per client address. In-memory, so each server instance counts for itself: a brake on abuse, not an exact quota.
+RATE_LIMITS = {"/auth/session": (20, 60), "/tests/result": (30, 60), "/legal/accept": (20, 60)}
 MAX_TOKEN = 4096
 
-PUBLIC_EXACT = {"/", "/login", "/account", "/sw.js", "/manifest.webmanifest", "/offline", "/sitemap.xml", "/robots.txt", "/auth/session", "/auth/logout"}
+PUBLIC_EXACT = {"/", "/login", "/account", "/privacy", "/terms", "/cookies", "/consent", "/legal/accept", "/sw.js", "/manifest.webmanifest", "/offline", "/sitemap.xml", "/robots.txt", "/auth/session", "/auth/logout"}
 PUBLIC_PREFIX = ("/static/", "/.well-known/")
 
 router = APIRouter()
+_hits: dict[tuple[str, str], list[float]] = {}
 _cache: dict[str, tuple[float, str]] = {}  # sha256(token) -> (checked_at, uid)
 
 
@@ -93,9 +98,36 @@ def safe_next(value: str | None) -> str:
     return "/tests"
 
 
+def client_ip(request: Request) -> str:
+    fwd = request.headers.get("x-forwarded-for", "")
+    return (fwd.split(",")[0].strip() or (request.client.host if request.client else "?"))[:64]
+
+
+def rate_limited(request: Request) -> int | None:
+    """Seconds to wait if this client has used up its allowance for the path, else None."""
+    rule = RATE_LIMITS.get(request.url.path)
+    if not rule or request.method != "POST":
+        return None
+    limit, window = rule
+    now = time.time()
+    key = (client_ip(request), request.url.path)
+    recent = [t for t in _hits.get(key, []) if now - t < window]
+    if len(recent) >= limit:
+        _hits[key] = recent
+        return max(1, int(window - (now - recent[0])))
+    recent.append(now)
+    _hits[key] = recent
+    if len(_hits) > 5000:
+        _hits.clear()
+    return None
+
+
 class LoginGateMiddleware(BaseHTTPMiddleware):
     async def dispatch(self, request: Request, call_next):
         path = request.url.path
+        wait = rate_limited(request)
+        if wait:
+            return JSONResponse({"detail": "Too many requests. Try again shortly."}, status_code=429, headers={"Retry-After": str(wait)})
         if is_public(path):
             return await call_next(request)
         try:
@@ -104,6 +136,12 @@ class LoginGateMiddleware(BaseHTTPMiddleware):
             return Response("Sign-in check is unavailable right now. Try again in a moment.", status_code=503, headers={"Retry-After": "5"})
         if uid:
             request.state.uid = uid
+            if request.cookies.get(CONSENT_COOKIE) != LEGAL_VERSION:  # signed in, but has not read and accepted the policies yet
+                if request.method in ("GET", "HEAD"):
+                    from urllib.parse import quote
+                    target = path + (("?" + request.url.query) if request.url.query else "")
+                    return RedirectResponse("/consent?next=" + quote(target, safe="/"), status_code=302)
+                return JSONResponse({"detail": "Accept the policies first"}, status_code=403)
             response = await call_next(request)
             response.headers["Cache-Control"] = "private, no-store"
             return response

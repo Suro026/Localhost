@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% from "components/ftp.html" import arrow, page %}
+{% block title %}Read and accept — {{ app_name }}{% endblock %}
+{% block content %}
+{% call page("consent", "#BEFORE YOU START", "Read first", "Read each document to the end. The button unlocks when you have scrolled through all three.", h1="Read and accept the policies") %}
+  <div id="consent" data-next="{{ next }}" data-keys="{{ docs.keys()|list|join(',') }}">
+    <noscript><p class="ks-alert">This page needs JavaScript so we can tell that you scrolled to the end of each document.</p></noscript>
+    <ol class="ks-steps" aria-label="Progress">
+      {% for key, doc in docs.items() %}<li data-step="{{ key }}"><span>{{ loop.index }}</span>{{ doc[0] }}</li>{% endfor %}
+    </ol>
+    {% for key, doc in docs.items() %}
+    <section class="ks-doc" data-doc="{{ key }}" aria-labelledby="doc-{{ key }}">
+      <div class="ks-doc-head">
+        <h2 id="doc-{{ key }}" class="ks-h">{{ doc[0] }}</h2>
+        <span class="ks-doc-state" data-state>Scroll to the end</span>
+      </div>
+      <div class="ks-doc-bar" aria-hidden="true"><i data-bar></i></div>
+      <div class="ks-legal ks-doc-body" tabindex="0" role="region" aria-label="{{ doc[0] }}, scroll to read" data-scroll>
+        {% include doc[1] %}
+      </div>
+    </section>
+    {% endfor %}
+    <p class="ks-p" style="margin:16px 0 8px">Also available as separate pages: <a class="ks-link" href="/privacy" target="_blank" rel="noopener">Privacy</a>, <a class="ks-link" href="/terms" target="_blank" rel="noopener">Terms</a>, <a class="ks-link" href="/cookies" target="_blank" rel="noopener">Cookies</a>.</p>
+    <label class="ks-agree"><input type="checkbox" id="agree" disabled><span>I have read the Privacy Policy, Terms of Use and Cookie Policy, and I agree to them.</span></label>
+    <p id="consent-msg" class="ks-p" role="status" style="margin:8px 0 0;min-height:1.4em">Scroll all three documents to the end to continue.</p>
+    <button type="button" id="accept" class="ks-act" disabled>Accept and continue {{ arrow("ne") }}</button>
+  </div>
+{% endcall %}
+{% endblock %}
+{% block scripts %}<script src="{{ static_v('js/folder.js') }}" defer></script><script src="{{ static_v('js/consent.js') }}" defer></script>{% endblock %}

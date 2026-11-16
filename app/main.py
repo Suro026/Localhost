@@ -9,7 +9,7 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 from app.core.dependencies import templates
 from app.core import gate
 from app.core.headers import SecurityHeadersMiddleware
-from app.routers import home, library, tests
+from app.routers import home, legal, library, tests
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
 
@@ -93,6 +93,7 @@ async def security_txt():
 
 app.include_router(gate.router)
 app.include_router(home.router)
+app.include_router(legal.router)
 app.include_router(library.router)
 app.include_router(tests.router)
 

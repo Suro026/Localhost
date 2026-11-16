@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% from "components/ftp.html" import page %}
+{% block title %}{{ title }} — {{ app_name }}{% endblock %}
+{% block content %}
+{% call page("legal", "#LEGAL", title, "Version " ~ version ~ ". Please read it in full.", h1=title) %}
+  <nav class="ks-legal-nav" aria-label="Legal pages">
+    <a href="/privacy"{% if key == "privacy" %} aria-current="page"{% endif %}>Privacy</a>
+    <a href="/terms"{% if key == "terms" %} aria-current="page"{% endif %}>Terms</a>
+    <a href="/cookies"{% if key == "cookies" %} aria-current="page"{% endif %}>Cookies</a>
+  </nav>
+  <article class="ks-legal">{% include partial %}</article>
+{% endcall %}
+{% endblock %}
+{% block scripts %}<script src="{{ static_v('js/folder.js') }}" defer></script>{% endblock %}

@@ -8,6 +8,7 @@ from app.main import app
 from tests.conftest import TEST_TOKEN
 
 client = TestClient(app)
+client.cookies.set(gate.CONSENT_COOKIE, gate.LEGAL_VERSION)
 client.cookies.set(gate.COOKIE, TEST_TOKEN)  # signed-in learner (gate.lookup is faked in conftest)
 
 

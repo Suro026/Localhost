@@ -38,6 +38,9 @@
   timerEl.setAttribute("role", "timer");
   var submitBtn = el("button", "btn-primary", "Submit test");
   submitBtn.type = "button";
+  var warnEl = el("span", "hidden rounded-full bg-brand-50 px-3 py-1 text-xs font-bold text-brand-700", "");
+  var calcBtn = el("button", "btn-secondary", "Calculator");
+  calcBtn.type = "button";
   var paletteToggle = el("button", "btn-secondary lg:hidden", "Palette");
   paletteToggle.type = "button";
   paletteToggle.setAttribute("aria-expanded", "false");
@@ -45,7 +48,7 @@
   var head = el("div", "sticky top-[57px] z-20 -mx-4 flex flex-wrap items-center justify-between gap-2 border-b border-line bg-surface/95 px-4 py-2 backdrop-blur sm:mx-0 sm:rounded-xl sm:border");
   var title = el("h1", "min-w-0 flex-1 break-words text-base font-bold sm:text-lg", data.title);
   var right = el("div", "flex items-center gap-2");
-  right.append(timerEl, paletteToggle, submitBtn);
+  right.append(warnEl, timerEl, calcBtn, paletteToggle, submitBtn);
   head.append(title, right);
 
   var body = el("div", "mt-4 grid gap-4 lg:grid-cols-[1fr_280px]");
@@ -64,6 +67,134 @@
     var open = side.classList.toggle("hidden");
     paletteToggle.setAttribute("aria-expanded", open ? "false" : "true");
   });
+
+  // ---- calculator (GATE gives every candidate an on-screen scientific calculator) ----
+  function calcEval(s, deg) {
+    var i = 0;
+    function ws() { while (s.charAt(i) === " ") i++; }
+    function fail() { throw new Error("syntax"); }
+    function expr() {
+      var v = term(); ws();
+      while (s.charAt(i) === "+" || s.charAt(i) === "-") { var op = s.charAt(i++); var r = term(); v = op === "+" ? v + r : v - r; ws(); }
+      return v;
+    }
+    function term() {
+      var v = pow(); ws();
+      while (s.charAt(i) === "*" || s.charAt(i) === "/") { var op = s.charAt(i++); var r = pow(); v = op === "*" ? v * r : v / r; ws(); }
+      return v;
+    }
+    function pow() { var b = unary(); ws(); if (s.charAt(i) === "^") { i++; return Math.pow(b, pow()); } return b; }
+    function unary() { ws(); if (s.charAt(i) === "-") { i++; return -unary(); } if (s.charAt(i) === "+") { i++; return unary(); } return primary(); }
+    function primary() {
+      ws();
+      var rest = s.slice(i), m;
+      if ((m = /^(\d+\.?\d*|\.\d+)(e[+-]?\d+)?/i.exec(rest))) { i += m[0].length; return parseFloat(m[0]); }
+      if (s.charAt(i) === "(") { i++; var v = expr(); ws(); if (s.charAt(i) !== ")") fail(); i++; return v; }
+      if ((m = /^(pi|e)(?![a-z])/i.exec(rest))) { i += m[0].length; return m[1].toLowerCase() === "pi" ? Math.PI : Math.E; }
+      if ((m = /^(sin|cos|tan|log|ln|sqrt|exp|abs)\(/.exec(rest))) {
+        i += m[0].length; var a = expr(); ws(); if (s.charAt(i) !== ")") fail(); i++;
+        var t = deg ? a * Math.PI / 180 : a;
+        switch (m[1]) {
+          case "sin": return Math.sin(t); case "cos": return Math.cos(t); case "tan": return Math.tan(t);
+          case "log": return Math.log10(a); case "ln": return Math.log(a); case "sqrt": return Math.sqrt(a);
+          case "exp": return Math.exp(a); default: return Math.abs(a);
+        }
+      }
+      return fail();
+    }
+    var out = expr(); ws();
+    if (i < s.length) fail();
+    return out;
+  }
+  var calc = null, calcDeg = true;
+  function toggleCalc() {
+    if (calc) { calc.remove(); calc = null; return; }
+    calc = el("div", "ks-calc"); calc.setAttribute("role", "dialog"); calc.setAttribute("aria-label", "Calculator");
+    var top = el("div", "ks-calc-top");
+    var degBtn = el("button", "ks-calc-mode", "Deg"); degBtn.type = "button";
+    var closeBtn = el("button", "ks-calc-mode", "Close"); closeBtn.type = "button";
+    top.append(el("b", "", "Calculator"), degBtn, closeBtn);
+    var screen = el("input", "ks-calc-screen"); screen.type = "text"; screen.readOnly = true; screen.setAttribute("aria-label", "Calculator display"); screen.value = "";
+    var keys = el("div", "ks-calc-keys");
+    var layout = [
+      ["sin", "sin("], ["cos", "cos("], ["tan", "tan("], ["(", "("], [")", ")"],
+      ["log", "log("], ["ln", "ln("], ["√", "sqrt("], ["x^y", "^"], ["⌫", "BS"],
+      ["7", "7"], ["8", "8"], ["9", "9"], ["÷", "/"], ["C", "CLR"],
+      ["4", "4"], ["5", "5"], ["6", "6"], ["×", "*"], ["π", "pi"],
+      ["1", "1"], ["2", "2"], ["3", "3"], ["−", "-"], ["e", "e"],
+      ["0", "0"], [".", "."], ["exp", "exp("], ["+", "+"], ["=", "EQ"]
+    ];
+    layout.forEach(function (k) {
+      var b = el("button", "ks-calc-key" + (k[1] === "EQ" ? " is-eq" : ""), k[0]); b.type = "button";
+      b.addEventListener("click", function () {
+        if (k[1] === "CLR") screen.value = "";
+        else if (k[1] === "BS") screen.value = screen.value.slice(0, -1);
+        else if (k[1] === "EQ") {
+          try { var v = calcEval(screen.value, calcDeg); screen.value = isFinite(v) ? String(parseFloat(v.toPrecision(12))) : "Error"; } catch (e) { screen.value = "Error"; }
+        } else { if (screen.value === "Error") screen.value = ""; screen.value += k[1]; }
+      });
+      keys.appendChild(b);
+    });
+    degBtn.addEventListener("click", function () { calcDeg = !calcDeg; degBtn.textContent = calcDeg ? "Deg" : "Rad"; });
+    degBtn.textContent = calcDeg ? "Deg" : "Rad";
+    closeBtn.addEventListener("click", toggleCalc);
+    calc.append(top, screen, keys);
+    document.body.appendChild(calc);
+  }
+  calcBtn.addEventListener("click", toggleCalc);
+
+  // ---- proctored full mock: full screen is required; leaving it twice submits the test ----
+  var proctorOn = data.mode === "mock" && !!document.documentElement.requestFullscreen && document.fullscreenEnabled !== false;
+  var allowExit = false, autoReason = "", gateEl = null;
+  if (proctorOn) { st.viol = typeof st.viol === "number" ? st.viol : 0; if (typeof st.started !== "boolean") st.started = false; }
+  function fsActive() { return !!document.fullscreenElement; }
+  function warnText() { return "Warnings: " + (st.viol || 0) + " / 2"; }
+  function hideGate() { if (gateEl) { gateEl.remove(); gateEl = null; } }
+  function enterFs() { return document.documentElement.requestFullscreen(); }
+  function showGate(kind) {
+    hideGate();
+    gateEl = el("div", "ks-gate"); gateEl.setAttribute("role", "dialog"); gateEl.setAttribute("aria-modal", "true");
+    var c = el("div", "ks-gate-card");
+    var first = kind === "start";
+    c.appendChild(el("h2", "ks-gate-h", first ? "Full mock test: proctored" : "You left full screen"));
+    var ul = el("ul", "ks-gate-list");
+    if (first) {
+      ["The test runs in full screen. You have " + data.minutes + " minutes and the clock starts when you press the button.",
+       "If you leave full screen you get one warning. Leaving a second time submits your test automatically.",
+       "Copying and the right-click menu are turned off. A calculator is available on the test screen."].forEach(function (t) { ul.appendChild(el("li", "", t)); });
+    } else {
+      ul.appendChild(el("li", "", "This is warning " + st.viol + " of 2. Leave full screen once more and your test is submitted automatically."));
+      ul.appendChild(el("li", "", "The timer is still running."));
+    }
+    var go = el("button", "btn-primary", first ? "Enter full screen and start" : "Return to full screen"); go.type = "button";
+    var note = el("p", "ks-gate-note", "");
+    go.addEventListener("click", function () {
+      enterFs().then(function () {
+        if (first) { st.started = true; st.end = Date.now() + data.minutes * 60000; lastAcc = Date.now(); save(); }
+        hideGate(); renderPalette();
+      }).catch(function () { note.textContent = "Your browser did not allow full screen. Press the button again, or use a desktop browser."; });
+    });
+    c.append(ul, go, note);
+    gateEl.appendChild(c);
+    document.body.appendChild(gateEl);
+    go.focus();
+  }
+  function onFsChange() {
+    if (!proctorOn || !st.started || done || allowExit) return;
+    if (fsActive()) { hideGate(); return; }
+    st.viol = (st.viol || 0) + 1; save(); warnEl.textContent = warnText();
+    if (st.viol >= 2) { autoReason = "Your test was submitted automatically because you left full screen twice."; hideGate(); submit(true); }
+    else showGate("return");
+  }
+  function leaveProctor() { allowExit = true; hideGate(); if (calc) toggleCalc(); if (fsActive() && document.exitFullscreen) document.exitFullscreen().catch(function () {}); }
+  function initProctor() {
+    if (!proctorOn) return;
+    warnEl.classList.remove("hidden"); warnEl.textContent = warnText();
+    document.addEventListener("fullscreenchange", onFsChange);
+    ["contextmenu", "copy", "cut"].forEach(function (ev) { document.addEventListener(ev, function (e) { if (st.started && !done) e.preventDefault(); }); });
+    if (!st.started) { showGate("start"); return; }
+    if (!fsActive()) onFsChange(); // a reload or closed tab counts as leaving full screen
+  }
 
   // ---- answers ----
   function answered(q) {
@@ -116,6 +247,16 @@
       inp.addEventListener("input", function () { setAnswer(q, inp.value.trim()); });
       lab.appendChild(inp);
       parts.push(lab);
+      var pad = el("div", "ks-keypad"); pad.setAttribute("aria-label", "Number keypad");
+      ["7", "8", "9", "4", "5", "6", "1", "2", "3", "0", ".", "-", "BS", "CLR"].forEach(function (k) {
+        var kb = el("button", "ks-key", k === "BS" ? "\u232b" : k === "CLR" ? "Clear" : k); kb.type = "button";
+        kb.addEventListener("click", function () {
+          if (k === "BS") inp.value = inp.value.slice(0, -1); else if (k === "CLR") inp.value = ""; else if (inp.value.length < 31) inp.value += k;
+          setAnswer(q, inp.value.trim());
+        });
+        pad.appendChild(kb);
+      });
+      parts.push(pad);
     } else {
       var multi = q.type === "MSQ";
       var list = el("div", "mt-4 space-y-2");
@@ -181,6 +322,7 @@
   var done = false;
   function tick() {
     if (done) return;
+    if (proctorOn && !st.started) { lastAcc = Date.now(); timerEl.textContent = Math.floor(data.minutes / 60) + ":" + String(data.minutes % 60).padStart(2, "0") + ":00"; return; }
     accrue();
     if (++ticks % 5 === 0) save();
     var left = Math.max(0, Math.round((st.end - Date.now()) / 1000));
@@ -273,7 +415,9 @@
       clear();
       document.title = doc.title;
       var main = document.querySelector("main");
+      leaveProctor();
       main.replaceChildren(document.importNode(res, true));
+      if (autoReason) { var why = el("p", "ks-alert", autoReason); why.setAttribute("role", "alert"); var host0 = main.querySelector(".ks-skin"); if (host0) host0.prepend(why); }
       if (attempt) showAnalysis(attempt);
       window.scrollTo(0, 0);
     }).catch(function () {
@@ -293,4 +437,5 @@
 
   renderQuestion(); renderPalette(); tick();
   setInterval(tick, 1000);
+  initProctor();
 })();

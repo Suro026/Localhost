@@ -455,3 +455,57 @@ body:has(.ftp-root) [data-nav] .nav-tab[aria-current="page"]::before,body:has(.f
 .ks-resulth{margin:6px 0 10px}
 .ks-run{padding-top:clamp(18px,3vw,30px)}
 .ks-alert{margin-top:6px}
+
+/* ---- legal pages and the read-to-accept page ---- */
+.ks-legal{max-width:760px;font-size:15px;line-height:1.7;color:var(--ftp-soft)}
+.ks-legal h3{margin:26px 0 8px;font-size:18px;font-weight:800;color:var(--ftp-ink);letter-spacing:-.005em}
+.ks-legal h3:first-child{margin-top:0}
+.ks-legal p{margin:0 0 12px}
+.ks-legal ul{margin:0 0 12px;padding-left:20px;list-style:disc}
+.ks-legal li{margin:4px 0}
+.ks-legal b{color:var(--ftp-ink)}
+.ks-legal code{padding:1px 6px;border-radius:6px;background:#f4effd;color:#5a1fb8;font-size:13px}
+.ks-legal-table{width:100%;border-collapse:collapse;margin:0 0 14px;font-size:14px}
+.ks-legal-table th,.ks-legal-table td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid #e6dafb}
+.ks-legal-table th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ftp-ink);background:#f4effd}
+.ks-legal-nav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+.ks-legal-nav a{padding:8px 16px;border-radius:99px;background:#f4effd;color:#5a1fb8;font-size:13px;font-weight:700}
+.ks-legal-nav a[aria-current="page"]{background:#6b26d9;color:#fff}
+.ks-steps{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px;padding:0;list-style:none}
+.ks-steps li{display:flex;align-items:center;gap:8px;padding:8px 14px 8px 8px;border-radius:99px;background:#f4effd;color:#5a1fb8;font-size:13px;font-weight:700}
+.ks-steps li span{display:grid;place-items:center;width:24px;height:24px;border-radius:99px;background:#fff;font-size:12px}
+.ks-steps li[data-done="true"]{background:#6b26d9;color:#fff}
+.ks-steps li[data-done="true"] span{background:#fff;color:#6b26d9}
+.ks-doc{margin:0 0 22px}
+.ks-doc-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:8px}
+.ks-doc-state{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ftp-muted)}
+.ks-doc[data-done="true"] .ks-doc-state{color:#0f9d6b}
+.ks-doc-bar{height:4px;border-radius:99px;background:#e6dafb;overflow:hidden}
+.ks-doc-bar i{display:block;height:100%;width:0;background:#6b26d9;transition:width .15s}
+.ks-doc-body{max-width:none;height:min(52vh,360px);overflow-y:auto;margin-top:10px;padding:18px 22px;border-radius:16px;background:#f4effd;border:1.5px solid #e6dafb}
+.ks-doc-body:focus-visible{border-color:#6b26d9}
+.ks-agree{display:flex;align-items:flex-start;gap:10px;margin-top:10px;font-size:15px;font-weight:600;cursor:pointer}
+.ks-agree input{width:20px;height:20px;margin-top:2px;accent-color:#6b26d9}
+.ks-agree input:disabled+span{opacity:.5}
+#accept{margin-top:14px;font:inherit;font-size:12px;cursor:pointer}
+#accept:disabled{background:#c9bfe3;border-color:#c9bfe3;cursor:not-allowed;transform:none}
+
+/* ---- test runner: proctor gate, calculator, NAT keypad ---- */
+.ks-gate{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:20px;background:rgba(27,34,52,.82);backdrop-filter:blur(6px)}
+.ks-gate-card{width:min(520px,100%);padding:28px;border-radius:22px;background:#fff;color:#1b2234;box-shadow:0 30px 80px -20px rgba(0,0,0,.5)}
+.ks-gate-h{margin:0 0 14px;font-size:24px;font-weight:800;color:#5a1fb8;letter-spacing:-.01em}
+.ks-gate-list{margin:0 0 20px;padding-left:20px;list-style:disc;font-size:15px;line-height:1.6;color:#4a5268}
+.ks-gate-list li{margin:6px 0}
+.ks-gate-note{min-height:1.2em;margin:10px 0 0;font-size:13px;font-weight:600;color:#b42318}
+.ks-calc{position:fixed;right:16px;bottom:16px;z-index:150;width:min(320px,calc(100vw - 32px));padding:12px;border-radius:18px;background:#fff;box-shadow:0 20px 60px -16px rgba(27,34,52,.55);border:1.5px solid #e6dafb}
+.ks-calc-top{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.ks-calc-top b{flex:1;font-size:14px;color:#1b2234}
+.ks-calc-mode{height:30px;padding:0 10px;border-radius:8px;border:1.5px solid #6b26d9;background:#fff;color:#5a1fb8;font-size:12px;font-weight:700;cursor:pointer}
+.ks-calc-screen{width:100%;height:46px;margin-bottom:8px;padding:0 12px;border-radius:10px;border:1.5px solid #e6dafb;background:#f4effd;font:600 20px ui-monospace,Menlo,Consolas,monospace;text-align:right;color:#1b2234}
+.ks-calc-keys{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.ks-calc-key{height:40px;border-radius:10px;border:0;background:#f4effd;color:#1b2234;font-size:14px;font-weight:700;cursor:pointer}
+.ks-calc-key:hover{background:#e6dafb}
+.ks-calc-key.is-eq{background:#6b26d9;color:#fff}
+.ks-keypad{display:grid;grid-template-columns:repeat(3,64px);gap:8px;margin-top:12px}
+.ks-key{height:44px;border-radius:10px;border:1.5px solid #e6dafb;background:#fff;color:#1b2234;font-size:16px;font-weight:700;cursor:pointer}
+.ks-key:hover{background:#f4effd}
