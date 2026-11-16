@@ -7,6 +7,7 @@ from fastapi.staticfiles import StaticFiles
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from app.core.dependencies import templates
+from app.core import gate
 from app.core.headers import SecurityHeadersMiddleware
 from app.routers import home, library, tests
 
@@ -15,6 +16,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 app = FastAPI(title="Keystone", docs_url=None, redoc_url=None, openapi_url=None)
+app.add_middleware(gate.LoginGateMiddleware)  # added first so security headers wrap its redirects too
 app.add_middleware(SecurityHeadersMiddleware)
 app.mount("/static", StaticFiles(directory=BASE_DIR / "static"), name="static")
 PWA = BASE_DIR / "static" / "pwa"
@@ -35,7 +37,7 @@ async def offline():
     return FileResponse(PWA / "offline.html", media_type="text/html")
 
 
-SITEMAP_PATHS = ["/", "/tests", "/books", "/notes", "/progress", "/study"]
+SITEMAP_PATHS = ["/"]  # everything else needs sign-in, so only the public landing page is listed
 
 
 @app.get("/sitemap.xml", include_in_schema=False)
@@ -89,6 +91,7 @@ async def security_txt():
     return PlainTextResponse(body, headers={"Cache-Control": "public, max-age=3600"})
 
 
+app.include_router(gate.router)
 app.include_router(home.router)
 app.include_router(library.router)
 app.include_router(tests.router)

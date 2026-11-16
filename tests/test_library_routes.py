@@ -1,6 +1,9 @@
 import pytest
 from fastapi.testclient import TestClient
 
+from app.core import gate
+from tests.conftest import TEST_TOKEN
+
 from app.main import app
 from app.services import library
 
@@ -10,7 +13,9 @@ BOOK_ID = "1W2WkAsCBRs8WAV4eaXQZOyIeENwEywIn"
 @pytest.fixture()
 def client() -> TestClient:
     library.load_library.cache_clear()
-    return TestClient(app, follow_redirects=False)
+    c = TestClient(app, follow_redirects=False)
+    c.cookies.set(gate.COOKIE, TEST_TOKEN)
+    return c
 
 
 @pytest.fixture()

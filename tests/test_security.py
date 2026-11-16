@@ -3,9 +3,12 @@ import re
 import pytest
 from fastapi.testclient import TestClient
 
+from app.core import gate
 from app.main import app
+from tests.conftest import TEST_TOKEN
 
 client = TestClient(app)
+client.cookies.set(gate.COOKIE, TEST_TOKEN)  # signed-in learner (gate.lookup is faked in conftest)
 
 
 @pytest.mark.parametrize("path", ["/", "/books", "/notes", "/exams", "/tests", "/tests/start?mode=mock", "/nope"])

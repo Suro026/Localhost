@@ -8,7 +8,15 @@
   function field(label, input) { var l = el("label", "mt-4 block text-sm font-semibold", label); input.classList.add("input", "mt-1"); l.appendChild(input); return l; }
 
   var hold = null, releaseHold = null; // keeps the redirect back until the new account's name is saved
-  function go() { (hold || Promise.resolve()).then(function () { location.replace("/progress"); }); }
+  function dest() { // where the gate sent them from; same-site paths only
+    var n = new URLSearchParams(location.search).get("next");
+    return n && n.charAt(0) === "/" && n.charAt(1) !== "/" && n.indexOf("\\") < 0 ? n : "/tests";
+  }
+  function go() {
+    (hold || Promise.resolve()).then(function () { return window.KSCloud.session(); }).then(function (ok) {
+      if (ok) location.replace(dest()); else { var m = el("p", "mt-3 text-center text-sm font-semibold text-red-600", "Signed in, but the site could not confirm it. Check your connection and reload."); m.setAttribute("role", "alert"); root.prepend(m); }
+    });
+  }
 
   function start() {
     var C = window.KSCloud;

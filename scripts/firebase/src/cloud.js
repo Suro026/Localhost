@@ -4,7 +4,7 @@
 import { initializeApp } from "firebase/app";
 import { initializeAppCheck, ReCaptchaEnterpriseProvider } from "firebase/app-check";
 import {
-  getAuth, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail,
+  getAuth, onAuthStateChanged, onIdTokenChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail,
   GoogleAuthProvider, signInWithPopup, sendEmailVerification, updateProfile, signOut as fbSignOut, deleteUser,
 } from "firebase/auth";
 import { getFirestore, collection, doc, getDocs, getDoc, setDoc, deleteDoc, writeBatch } from "firebase/firestore";
@@ -142,6 +142,17 @@ KS.hook = (kind, payload) => {
   else if (kind === "clear") clearRemoteAttempts(user.uid).catch(() => {});
 };
 
+// The server only lets signed-in learners past the landing page. It checks the Firebase ID token with Google and keeps it in an HttpOnly cookie.
+async function startSession(u) {
+  try {
+    const token = await u.getIdToken();
+    const r = await fetch("/auth/session", { method: "POST", credentials: "same-origin", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ token }) });
+    return r.ok;
+  } catch (e) { return false; }
+}
+const endSession = () => fetch("/auth/logout", { method: "POST", credentials: "same-origin" }).catch(() => {});
+onIdTokenChanged(auth, (u) => { if (u) startSession(u); }); // sign-in and the hourly token refresh both renew the cookie
+
 onAuthStateChanged(auth, async (u) => {
   user = u;
   resolved = true;
@@ -185,13 +196,15 @@ window.KSCloud = {
   google: wrap(() => signInWithPopup(auth, new GoogleAuthProvider())),
   reset: wrap((email) => sendPasswordResetEmail(auth, email)),
   syncNow: wrap(() => pull(true)),
-  signOut: wrap(async () => { await fbSignOut(auth); wipeLocal(); }),
+  session: async () => (auth.currentUser ? startSession(auth.currentUser) : false),
+  signOut: wrap(async () => { await endSession(); await fbSignOut(auth); wipeLocal(); }),
   deleteAccount: wrap(async () => {
     if (!auth.currentUser) throw new Error("no user");
     const uid = auth.currentUser.uid;
     await clearRemoteAttempts(uid);
     await deleteDoc(studyRef(uid));
     await deleteUser(auth.currentUser);
+    await endSession();
     wipeLocal();
   }),
   lastSync: () => Number(lsGet("ks-last-pull") || 0),

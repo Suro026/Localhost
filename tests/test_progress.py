@@ -124,7 +124,7 @@ def test_google_search_console_verification_file(client):
 def test_sitemap_and_robots(client):
     r = client.get("/sitemap.xml")
     assert r.status_code == 200 and r.headers["content-type"].startswith("application/xml")
-    assert "<loc>https://keystonee.vercel.app/tests</loc>" in r.text and "/login" not in r.text
+    assert "<loc>https://keystonee.vercel.app/</loc>" in r.text and "/tests" not in r.text and "/login" not in r.text  # only the public page
     t = client.get("/robots.txt")
     assert t.status_code == 200 and "Sitemap: https://keystonee.vercel.app/sitemap.xml" in t.text
     assert "Disallow: /login" in t.text
