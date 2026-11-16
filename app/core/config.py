@@ -8,6 +8,7 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
     app_name: str = "Keystone"
+    site_url: str = "https://keystonee.vercel.app"  # canonical origin used in sitemap.xml and robots.txt
     app_env: str = "development"
     database_url: str = "postgresql+psycopg://postgres:postgres@localhost:5432/localhost"
     secret_key: str = ""

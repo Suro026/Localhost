@@ -35,6 +35,32 @@ async def offline():
     return FileResponse(PWA / "offline.html", media_type="text/html")
 
 
+SITEMAP_PATHS = ["/", "/tests", "/books", "/notes", "/progress", "/study"]
+
+
+@app.get("/sitemap.xml", include_in_schema=False)
+async def sitemap():
+    from fastapi.responses import Response
+
+    from app.core.config import get_settings
+
+    base = get_settings().site_url.rstrip("/")
+    urls = [f"  <url><loc>{base}{p}</loc></url>" for p in SITEMAP_PATHS]
+    lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">', *urls, "</urlset>", ""]
+    return Response(chr(10).join(lines), media_type="application/xml", headers={"Cache-Control": "public, max-age=3600"})
+
+
+@app.get("/robots.txt", include_in_schema=False)
+async def robots():
+    from fastapi.responses import PlainTextResponse
+
+    from app.core.config import get_settings
+
+    base = get_settings().site_url.rstrip("/")
+    lines = ["User-agent: *", "Disallow: /login", "Disallow: /profile", "Disallow: /tests/start", "Disallow: /tests/result", "Disallow: /download/", "", f"Sitemap: {base}/sitemap.xml", ""]
+    return PlainTextResponse(chr(10).join(lines), headers={"Cache-Control": "public, max-age=3600"})
+
+
 GOOGLE_VERIFY = "google1589151a9c65e3a8.html"  # Search Console ownership file; must stay live to keep the site verified
 
 

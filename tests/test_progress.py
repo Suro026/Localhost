@@ -119,3 +119,12 @@ def test_google_search_console_verification_file(client):
     r = client.get("/google1589151a9c65e3a8.html")
     assert r.status_code == 200
     assert r.text == "google-site-verification: google1589151a9c65e3a8.html"
+
+
+def test_sitemap_and_robots(client):
+    r = client.get("/sitemap.xml")
+    assert r.status_code == 200 and r.headers["content-type"].startswith("application/xml")
+    assert "<loc>https://keystonee.vercel.app/tests</loc>" in r.text and "/login" not in r.text
+    t = client.get("/robots.txt")
+    assert t.status_code == 200 and "Sitemap: https://keystonee.vercel.app/sitemap.xml" in t.text
+    assert "Disallow: /login" in t.text
