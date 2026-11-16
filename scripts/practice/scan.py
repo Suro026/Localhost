@@ -23,10 +23,10 @@ DPI, GAP = 100, 13
 FOOT_BAND = 110  # rows above the page bottom searched for the footer rule (spec "foot_band" overrides)
 
 
-def ink_of(page):
+def ink_of(page, thr=150):
     pm = page.get_pixmap(dpi=DPI, colorspace=pymupdf.csGRAY)
     a = np.frombuffer(pm.samples, dtype=np.uint8).reshape(pm.height, pm.width)
-    return a < 150
+    return a < thr
 
 
 def blocks(page):
@@ -83,12 +83,17 @@ def long_run(row):
     return best
 
 
+RULE_TRIES = ((150, 40), (200, 120), (200, 60))  # (gray threshold, min run): faint or broken rules on pale scans need the later tries
+
+
 def page_body(page):
     """(top, bottom) of the printed area in 100-dpi px: below the header rule, above the footer rule"""
-    ink = ink_of(page)
-    H = ink.shape[0]
-    head = [y for y in range(0, 110) if long_run(ink[y, 60:-60]) >= 40]
-    foot = [y for y in range(H - FOOT_BAND, H) if long_run(ink[y, 60:-60]) >= 40]
+    H = ink_of(page).shape[0]
+    head = foot = []
+    for thr, run in RULE_TRIES:
+        ink = ink_of(page, thr)
+        head = head or [y for y in range(0, 110) if long_run(ink[y, 60:-60]) >= run]
+        foot = foot or [y for y in range(H - FOOT_BAND, H) if long_run(ink[y, 60:-60]) >= run]
     top = min(head[0] + 9, head[-1] + 2) if head else 80
     bottom = (foot[0] - 3) if foot else H - 85
     return top, bottom
