@@ -1,9 +1,9 @@
 /* Keystone service worker: offline fallback + faster repeat loads. Pages stay network-first so scores and tests are never stale. */
-const VERSION = "ks-v2";
+const VERSION = "ks-v3";
 const SHELL = "/offline";
 
 self.addEventListener("install", (e) => {
-  e.waitUntil(caches.open(VERSION).then((c) => c.add(new Request(SHELL, { cache: "reload" }))).then(() => self.skipWaiting()));
+  e.waitUntil(caches.open(VERSION).then((c) => c.addAll([new Request(SHELL, { cache: "reload" }), new Request("/static/js/ks-offline.js", { cache: "reload" })])).then(() => self.skipWaiting()));
 });
 
 self.addEventListener("activate", (e) => {

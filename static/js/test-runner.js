@@ -390,12 +390,18 @@
   // ---- submit ----
   var busy = false;
   function showMsg(t) { msg.textContent = t; msg.classList.remove("hidden"); }
+  var asking = false;
   function submit(auto) {
+    if (busy || done || asking) return;
+    if (auto) return send();
+    var n = qs.filter(answered).length, left = qs.length - n;
+    var body = "You answered " + n + " of " + qs.length + " questions." + (left ? " " + left + " " + (left === 1 ? "is" : "are") + " still blank." : "");
+    asking = true;
+    (window.KSUI ? KSUI.confirm({ title: "Submit this test?", body: body, ok: "Submit now", cancel: "Keep going" }) : Promise.resolve(window.confirm("Submit now? " + body)))
+      .then(function (yes) { asking = false; if (yes) send(); });
+  }
+  function send() {
     if (busy || done) return;
-    if (!auto) {
-      var n = qs.filter(answered).length;
-      if (!window.confirm("Submit now? You answered " + n + " of " + qs.length + " questions.")) return;
-    }
     busy = true; submitBtn.disabled = true;
     var ids = qs.map(function (q) { return q.id; });
     var answers = {};

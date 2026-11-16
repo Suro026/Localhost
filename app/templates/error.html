@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% from "components/ftp.html" import arrow, folder, page %}
+{% block title %}{{ title }} — {{ app_name }}{% endblock %}
+{% block head %}<meta name="robots" content="noindex">{% endblock %}
+{% block content %}
+{% call page("err", "#" ~ code, word, message, h1=title) %}
+  <div class="ks-errart" aria-hidden="true">
+    <svg viewBox="0 0 220 150" role="presentation" class="ks-art" data-art="{{ art }}">
+      <ellipse cx="110" cy="136" rx="62" ry="7" class="ks-art-shadow"/>
+      <path d="M62 128V74a48 48 0 0 1 96 0v54" fill="none" class="ks-art-arch"/>
+      {% if art == "missing" %}
+      <g class="ks-art-float"><path d="M92 14h36l10 30H82z" class="ks-art-key"/><text x="110" y="38" text-anchor="middle" class="ks-art-q">?</text></g>
+      {% elif art == "lock" %}
+      <rect x="86" y="58" width="48" height="40" rx="9" class="ks-art-key"/><path d="M95 58V48a15 15 0 0 1 30 0v10" fill="none" class="ks-art-ring"/><circle cx="110" cy="78" r="5" class="ks-art-dot"/>
+      {% elif art == "clock" %}
+      <circle cx="110" cy="70" r="30" class="ks-art-face"/><path d="M110 70V52" class="ks-art-hand ks-art-spin"/><path d="M110 70l12 7" class="ks-art-hand"/>
+      {% else %}
+      <path d="M28 128h164" class="ks-art-ground"/><path d="M110 28l-9 22 14 10-12 24" fill="none" class="ks-art-crack"/><path d="M112 14h-4l-2 10h8z" class="ks-art-key ks-art-float"/>
+      {% endif %}
+    </svg>
+  </div>
+  <div class="ks-pair">
+    {% call folder("blue", tab="Home", tab_at=0.08) %}<div class="ks-pad"><a class="ftp-btn" data-ghost="true" href="/">Go home {{ arrow("ne") }}</a></div>{% endcall %}
+    {% if retry %}
+    {% call folder("green", tab="Retry", tab_at=0.08) %}<div class="ks-pad"><a class="ftp-btn" data-ghost="true" href="" data-reload>Try again {{ arrow("ne") }}</a></div>{% endcall %}
+    {% else %}
+    {% call folder("green", tab="Tests", tab_at=0.08) %}<div class="ks-pad"><a class="ftp-btn" data-ghost="true" href="/tests">Open tests {{ arrow("ne") }}</a></div>{% endcall %}
+    {% endif %}
+  </div>
+{% endcall %}
+{% endblock %}
+{% block scripts %}<script src="{{ static_v('js/folder.js') }}" defer></script>{% endblock %}

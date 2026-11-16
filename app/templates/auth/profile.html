@@ -4,7 +4,7 @@
 {% block content %}
 {% call page("profile", "#YOU", "Profile", None, h1="Your profile", narrow=True) %}
   <noscript><p class="ks-alert">This page needs JavaScript.</p></noscript>
-  <div id="profile-root" class="ks-skin"><p class="ks-p">Loading…</p></div>
+  <div id="profile-root" class="ks-skin"><p class="ks-p ks-loading"><i></i><i></i><i></i><span>Loading…</span></p></div>
 {% endcall %}
 {% endblock %}
 {% block scripts %}<script src="{{ static_v('js/folder.js') }}" defer></script><script src="{{ static_v('js/ks-activity.js') }}" defer></script><script src="{{ static_v('js/ks-cloud.js') }}" defer></script><script src="{{ static_v('js/auth-page.js') }}" defer></script>{% endblock %}

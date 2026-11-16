@@ -1,0 +1,90 @@
+/* Keystone UI kit: splash loader, loading dots, error art, confirm dialog, toasts, scrollbar, selection. */
+:root{--ks-v:#6b26d9;--ks-v2:#5a1fb8;--ks-c:#0bb8da;--ks-p:#eb4799;--ks-ink:#1b2234;--ks-bg:#eef0f4;--ks-tint:#f4effd;--ks-ease:cubic-bezier(.22,1,.36,1)}
+::selection{background:#e6dafb;color:#2a1163}
+html{scrollbar-color:#b9a4ee #eef0f4}
+::-webkit-scrollbar{width:11px;height:11px}
+::-webkit-scrollbar-track{background:#eef0f4}
+::-webkit-scrollbar-thumb{background:#c9b8f3;border-radius:99px;border:3px solid #eef0f4}
+::-webkit-scrollbar-thumb:hover{background:#6b26d9}
+:focus-visible{outline:3px solid rgba(107,38,217,.55);outline-offset:2px}
+
+/* ---- splash: shown once per browser session, never blocks longer than ~2.5s ---- */
+#ks-splash{position:fixed;inset:0;z-index:1000;display:none;place-items:center;background:var(--ks-bg);opacity:1;transition:opacity .45s ease}
+html[data-splash] #ks-splash{display:grid;animation:ks-splash-out .4s ease 2.4s forwards}
+#ks-splash[data-done]{opacity:0;pointer-events:none}
+.ks-splash-in{display:grid;justify-items:center;gap:18px}
+.ks-splash-mark{width:84px;height:84px;filter:drop-shadow(0 18px 24px rgba(107,38,217,.35))}
+.ks-splash-mark .bg{fill:var(--ks-v);transform-origin:center;animation:ks-pop-in .5s var(--ks-ease) both}
+.ks-splash-mark .arch{fill:none;stroke:#fff;stroke-width:7;stroke-dasharray:90;stroke-dashoffset:90;animation:ks-draw .7s var(--ks-ease) .2s forwards}
+.ks-splash-mark .key{fill:var(--ks-c);opacity:0;transform:translateY(-22px);animation:ks-drop .5s cubic-bezier(.3,1.6,.5,1) .75s forwards}
+.ks-splash-word{font:800 22px/1 "Plus Jakarta Sans",system-ui,sans-serif;letter-spacing:-.02em;color:var(--ks-ink);opacity:0;animation:ks-rise .5s var(--ks-ease) .9s forwards}
+.ks-splash-bar{display:block;width:120px;height:4px;border-radius:9px;background:#dcd3f3;overflow:hidden}
+.ks-splash-bar i{display:block;height:100%;width:40%;border-radius:9px;background:linear-gradient(90deg,var(--ks-v),var(--ks-c),var(--ks-p));animation:ks-slide 1s ease-in-out infinite}
+@keyframes ks-pop-in{from{transform:scale(.6);opacity:0}}
+@keyframes ks-draw{to{stroke-dashoffset:0}}
+@keyframes ks-drop{to{opacity:1;transform:none}}
+@keyframes ks-rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes ks-slide{0%{transform:translateX(-100%)}100%{transform:translateX(300%)}}
+@keyframes ks-splash-out{to{opacity:0;visibility:hidden}}
+
+/* ---- loading dots in place of plain "Loading…" ---- */
+.ks-loading{display:flex;align-items:center;justify-content:center;gap:10px}
+.ks-loading i{display:block;width:9px;height:9px;border-radius:50%;background:var(--ks-v);animation:ks-bounce 1s ease-in-out infinite}
+.ks-loading i:nth-child(2){background:var(--ks-c);animation-delay:.15s}
+.ks-loading i:nth-child(3){background:var(--ks-p);animation-delay:.3s}
+.ks-loading span{margin-left:4px}
+@keyframes ks-bounce{0%,80%,100%{transform:translateY(0);opacity:.55}40%{transform:translateY(-8px);opacity:1}}
+
+/* ---- error page art ---- */
+.ks-errart{display:grid;place-items:center;margin:8px 0 4px}
+.ks-art{width:min(260px,70vw);height:auto;overflow:visible}
+.ks-art-shadow{fill:rgba(61,22,144,.12)}
+.ks-art-arch{stroke:var(--ks-v);stroke-width:14;stroke-linecap:butt}
+.ks-art-key{fill:var(--ks-c)}
+.ks-art-q{font:800 24px "Plus Jakarta Sans",system-ui,sans-serif;fill:#fff}
+.ks-art-ring{stroke:var(--ks-v);stroke-width:7;stroke-linecap:round}
+.ks-art-dot{fill:#fff}
+.ks-art-face{fill:#fff;stroke:var(--ks-c);stroke-width:7}
+.ks-art-hand{stroke:var(--ks-v);stroke-width:5;stroke-linecap:round;fill:none}
+.ks-art-spin{transform-origin:110px 70px;animation:ks-spin 6s linear infinite}
+.ks-art-ground{stroke:#c9b8f3;stroke-width:4;stroke-linecap:round;fill:none}
+.ks-art-crack{stroke:var(--ks-p);stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.ks-art-float{animation:ks-float 3.2s ease-in-out infinite}
+@keyframes ks-float{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-9px) rotate(3deg)}}
+@keyframes ks-spin{to{transform:rotate(360deg)}}
+
+/* ---- confirm dialog ---- */
+.ks-modal{position:fixed;inset:0;z-index:900;display:grid;place-items:center;padding:20px;background:rgba(27,34,52,.5);backdrop-filter:blur(3px);animation:ks-fade .18s ease both}
+.ks-dialog{width:min(440px,100%);padding:26px 24px 22px;border-radius:22px;background:#fff;color:var(--ks-ink);box-shadow:0 30px 70px -20px rgba(42,17,99,.55);animation:ks-dlg .28s cubic-bezier(.3,1.4,.5,1) both}
+.ks-dialog-ic{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:var(--ks-tint);margin-bottom:14px}
+.ks-dialog-ic svg{width:26px;height:26px}
+.ks-dialog[data-danger] .ks-dialog-ic{background:#fde8f1}
+.ks-dialog h2{margin:0;font:800 19px/1.25 "Plus Jakarta Sans",system-ui,sans-serif;letter-spacing:-.01em}
+.ks-dialog p{margin:8px 0 0;font-size:14px;line-height:1.6;color:#4a5268}
+.ks-dialog-btns{display:flex;justify-content:flex-end;gap:10px;margin-top:22px;flex-wrap:wrap}
+.ks-dbtn{height:42px;padding:0 20px;border-radius:12px;border:0;font:700 14px "Plus Jakarta Sans",system-ui,sans-serif;cursor:pointer;transition:transform .15s,background-color .15s}
+.ks-dbtn:active{transform:scale(.97)}
+.ks-dbtn-ghost{background:#f1edfb;color:var(--ks-v2)}
+.ks-dbtn-ghost:hover{background:#e6dafb}
+.ks-dbtn-ok{background:var(--ks-v);color:#fff}
+.ks-dbtn-ok:hover{background:var(--ks-v2)}
+.ks-dialog[data-danger] .ks-dbtn-ok{background:#d6246e}
+.ks-dialog[data-danger] .ks-dbtn-ok:hover{background:#b81b5b}
+@keyframes ks-fade{from{opacity:0}}
+@keyframes ks-dlg{from{opacity:0;transform:translateY(14px) scale(.94)}}
+
+/* ---- toasts ---- */
+#ks-toasts{position:fixed;left:50%;bottom:22px;z-index:950;display:grid;gap:8px;transform:translateX(-50%);width:min(420px,calc(100vw - 32px));pointer-events:none}
+.ks-toast{display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:14px;background:var(--ks-ink);color:#fff;font:600 14px/1.4 "Plus Jakarta Sans",system-ui,sans-serif;box-shadow:0 14px 34px -10px rgba(0,0,0,.45);animation:ks-toast-in .3s cubic-bezier(.3,1.4,.5,1) both}
+.ks-toast::before{content:"";flex:none;width:10px;height:10px;border-radius:50%;background:var(--ks-c)}
+.ks-toast[data-kind="ok"]::before{background:#34d399}
+.ks-toast[data-kind="warn"]::before{background:#f59e3a}
+.ks-toast[data-kind="err"]::before{background:var(--ks-p)}
+.ks-toast[data-out]{animation:ks-toast-out .25s ease forwards}
+@keyframes ks-toast-in{from{opacity:0;transform:translateY(16px) scale(.96)}}
+@keyframes ks-toast-out{to{opacity:0;transform:translateY(8px)}}
+
+@media (prefers-reduced-motion:reduce){
+  html[data-splash] #ks-splash{display:none}
+  .ks-loading i,.ks-art-float,.ks-art-spin,.ks-splash-bar i,.ks-modal,.ks-dialog,.ks-toast{animation:none!important}
+}

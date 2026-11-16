@@ -1,5 +1,6 @@
 (function () {
   "use strict";
+  function ask(o) { return window.KSUI ? KSUI.confirm(o) : Promise.resolve(window.confirm(o.title + "\n" + (o.body || ""))); }
   var root = document.getElementById("progress-root");
   if (!root || !window.KS) return;
 
@@ -115,7 +116,8 @@
   var clear = el("button", "btn-secondary mt-4", "Clear history on this device");
   clear.type = "button";
   clear.addEventListener("click", function () {
-    if (window.confirm("Delete all saved test history from this device? This cannot be undone.")) { KS.clearAttempts(); window.location.reload(); }
+    ask({ title: "Delete your test history?", body: "All saved results are removed from this device. This cannot be undone.", ok: "Delete history", danger: true })
+      .then(function (yes) { if (yes) { KS.clearAttempts(); window.location.reload(); } });
   });
   hist.appendChild(clear);
 

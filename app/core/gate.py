@@ -13,6 +13,8 @@ import urllib.request
 
 from fastapi import APIRouter, Request
 from fastapi.responses import JSONResponse, RedirectResponse, Response
+
+from app.core.errors import error_response
 from starlette.middleware.base import BaseHTTPMiddleware
 
 COOKIE = "ks_session"
@@ -127,13 +129,13 @@ class LoginGateMiddleware(BaseHTTPMiddleware):
         path = request.url.path
         wait = rate_limited(request)
         if wait:
-            return JSONResponse({"detail": "Too many requests. Try again shortly."}, status_code=429, headers={"Retry-After": str(wait)})
+            return error_response(request, 429, "Too many requests. Try again shortly.", {"Retry-After": str(wait)})
         if is_public(path):
             return await call_next(request)
         try:
             uid = verify(request.cookies.get(COOKIE))
         except Unavailable:
-            return Response("Sign-in check is unavailable right now. Try again in a moment.", status_code=503, headers={"Retry-After": "5"})
+            return error_response(request, 503, "Sign-in check is unavailable right now. Try again in a moment.", {"Retry-After": "5"})
         if uid:
             request.state.uid = uid
             if request.cookies.get(CONSENT_COOKIE) != LEGAL_VERSION:  # signed in, but has not read and accepted the policies yet

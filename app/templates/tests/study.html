@@ -4,7 +4,7 @@
 {% block content %}
 {% call page("study", "#FOCUS", "Study", "A study timer, a plan you write yourself, and a daily reminder. Saved in this browser and synced to your account, so it is on every device.") %}
   <noscript><p class="ks-alert">This page needs JavaScript for the timer, plan and reminder.</p></noscript>
-  <div id="study-root" class="ks-skin" data-subjects="{{ subjects|tojson|forceescape }}"><p class="ks-p">Loading…</p></div>
+  <div id="study-root" class="ks-skin" data-subjects="{{ subjects|tojson|forceescape }}"><p class="ks-p ks-loading"><i></i><i></i><i></i><span>Loading…</span></p></div>
 {% endcall %}
 {% endblock %}
 {% block scripts %}<script src="{{ static_v('js/folder.js') }}" defer></script><script src="{{ static_v('js/study.js') }}" defer></script>{% endblock %}

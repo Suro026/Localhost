@@ -1,5 +1,6 @@
 (function () {
   "use strict";
+  function ask(o) { return window.KSUI ? KSUI.confirm(o) : Promise.resolve(window.confirm(o.title + "\n" + (o.body || ""))); }
   var loginRoot = document.getElementById("auth-root"), acctRoot = document.getElementById("profile-root");
   var root = loginRoot || acctRoot;
   if (!root) return;
@@ -198,7 +199,7 @@
         b.addEventListener("click", function () {
           if (!open) return;
           C.setAvatar(a.id).then(function (r) {
-            if (!r.ok) say(r.error, false); else say(a.id ? a.name + " selected." : "Using your " + (p.photo ? "photo" : "initial") + ".", true);
+            if (!r.ok) say(r.error, false); else { var m = a.id ? a.name + " selected." : "Using your " + (p.photo ? "photo" : "initial") + "."; say(m, true); if (window.KSUI) KSUI.toast(m, "ok"); }
             paintPick(); drawAv();
           });
         });
@@ -244,8 +245,9 @@
       C.syncNow().then(function (r) { syncBtn.disabled = false; paintSync(); say(r.ok ? "Up to date." : r.error, r.ok); });
     });
     out.addEventListener("click", function () {
-      if (!window.confirm("Sign out? Your data stays in your account, and is removed from this device.")) return;
-      C.signOut().then(function (r) { if (r.ok) location.replace("/"); else say(r.error, false); });
+      ask({ title: "Sign out?", body: "Your data stays in your account and is removed from this device.", ok: "Sign out" }).then(function (yes) {
+        if (yes) C.signOut().then(function (r) { if (r.ok) location.replace("/"); else say(r.error, false); });
+      });
     });
     card.append(syncBtn, out, msg);
 
@@ -253,9 +255,11 @@
     danger.append(el("h2", "font-bold", "Delete my account"), el("p", "mt-1 text-sm text-muted", "Removes your email, test results, study log and plan from our cloud, and deletes the account. This cannot be undone."));
     var del = el("button", "btn-secondary mt-3 border-red-300 text-red-700", "Delete account and data"); del.type = "button";
     del.addEventListener("click", function () {
-      if (!window.confirm("Delete your account and all synced data permanently?")) return;
-      del.disabled = true; say("Deleting…", true);
-      C.deleteAccount().then(function (r) { if (r.ok) location.replace("/"); else { del.disabled = false; say(r.error, false); } });
+      ask({ title: "Delete your account?", body: "Your email, results, study log and plan are removed from our cloud for good. This cannot be undone.", ok: "Delete everything", danger: true }).then(function (yes) {
+        if (!yes) return;
+        del.disabled = true; say("Deleting…", true);
+        C.deleteAccount().then(function (r) { if (r.ok) location.replace("/"); else { del.disabled = false; say(r.error, false); } });
+      });
     });
     danger.appendChild(del);
     var activity = window.KSActivity ? KSActivity.card() : document.createComment("");

@@ -13,17 +13,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ static_v('css/app.css') }}">
+  <link rel="stylesheet" href="{{ static_v('css/ks-ui.css') }}">
   {% block head %}{% endblock %}
   <script>document.documentElement.classList.add("js")</script>
   <script src="{{ static_v('js/ks-boot.js') }}"></script>
   <script src="{{ static_v('js/htmx.min.js') }}" defer></script>
   <script src="{{ static_v('js/ks-avatars.js') }}" defer></script>
+  <script src="{{ static_v('js/ks-ui.js') }}" defer></script>
   <script src="{{ static_v('js/ks.js') }}" defer></script>
   <script src="{{ static_v('js/pwa.js') }}" defer></script>
   <script src="{{ static_v('js/motion.js') }}" defer></script>
   <script src="{{ static_v('js/img-fallback.js') }}" defer></script>
 </head>
 <body class="min-h-screen flex flex-col">
+  <div id="ks-splash" aria-hidden="true"><div class="ks-splash-in">
+    <svg class="ks-splash-mark" viewBox="0 0 64 64"><rect class="bg" width="64" height="64" rx="15"/><path class="arch" pathLength="90" d="M20 50V30a12 12 0 0 1 24 0v20"/><path class="key" d="M28 14.5h8l2.5 7.5h-13z"/></svg>
+    <span class="ks-splash-word">Keystone</span><span class="ks-splash-bar"><i></i></span>
+  </div></div>
   <div id="progress" aria-hidden="true"></div>
   <div id="cursor" aria-hidden="true"></div>
   {% include "components/navbar.html" %}

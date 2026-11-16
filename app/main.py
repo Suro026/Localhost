@@ -6,7 +6,9 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
-from app.core.dependencies import templates
+from fastapi.exceptions import RequestValidationError
+
+from app.core.errors import error_response, wants_html
 from app.core import gate
 from app.core.headers import SecurityHeadersMiddleware
 from app.routers import home, legal, library, tests
@@ -100,7 +102,15 @@ app.include_router(tests.router)
 
 @app.exception_handler(StarletteHTTPException)
 async def http_error(request: Request, exc: StarletteHTTPException):
-    if exc.status_code == 404:
-        return templates.TemplateResponse(request, "not_found.html", {}, status_code=404)
-    from fastapi.exception_handlers import http_exception_handler
-    return await http_exception_handler(request, exc)
+    return error_response(request, exc.status_code, exc.detail, getattr(exc, "headers", None))
+
+
+@app.exception_handler(RequestValidationError)
+async def bad_input(request: Request, exc: RequestValidationError):
+    return error_response(request, 422 if not wants_html(request) else 400, "That request did not look right")
+
+
+@app.exception_handler(Exception)
+async def crashed(request: Request, exc: Exception):
+    logging.getLogger("keystone").exception("unhandled error on %s", request.url.path)
+    return error_response(request, 500)
