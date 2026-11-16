@@ -366,3 +366,41 @@ body:has(.ftp-root) [data-nav] .nav-tab[aria-current="page"]::before,body:has(.f
 .tm-avatars>span+span{margin-left:-10px}
 .tm-name{font-weight:600;color:#f5f5f5}
 .tm-role{font-size:14px;color:#a3a3a3}
+
+/* ---- official GATE links, right under the navbar on the landing page ---- */
+.ks-official{background:#f4effd;border-bottom:1px solid #e6dafb}
+.ks-official-in{max-width:1240px;margin:0 auto;padding:10px 20px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.ks-official-label{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#5a1fb8;margin-right:4px}
+.ks-off-link{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 14px;border-radius:12px;border:1.5px solid #6b26d9;background:#fff;color:#5a1fb8;font-size:14px;font-weight:700;transition:background-color .2s,color .2s,transform .2s}
+.ks-off-link:hover{background:#6b26d9;color:#fff;transform:translateY(-1px)}
+.ks-off-wa{border-color:#1fa855;background:#1fa855;color:#fff}
+.ks-off-wa:hover{background:#188a45;color:#fff}
+@media(max-width:560px){.ks-official-label{width:100%}.ks-off-link{flex:1 1 100%;justify-content:space-between}}
+
+/* ---- tests page (same folder-tab UI as the landing page) ---- */
+.ks-alert{margin-top:18px;padding:12px 16px;border-radius:12px;background:var(--ftp-ghost);color:var(--ftp-ink);font-size:14px;font-weight:600}
+.ks-dates-wrap{margin-top:26px;max-width:980px}
+.ks-pad{padding:22px 24px 26px}
+.ks-dates{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.ks-dates>div{padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.14)}
+.ks-dates small{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
+.ks-dates b{display:block;margin-top:4px;font-size:18px;font-weight:700;line-height:1.3}
+.ks-note{margin:12px 0 16px;font-size:12px;opacity:.9}
+.ks-pair{display:grid;grid-template-columns:1fr 1fr;gap:26px 22px;margin-top:26px;align-items:start}
+@media(max-width:860px){.ks-pair{grid-template-columns:1fr}}
+.ks-h{font-size:24px;font-weight:800;letter-spacing:-.01em;line-height:1.2}
+.ks-p{margin:8px 0 18px;font-size:14px;line-height:1.6;opacity:.92}
+.ks-fs{border:0;padding:0;margin:12px 0 0;min-width:0}
+.ks-checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:2px 12px}
+.ks-check{display:flex;align-items:center;gap:8px;min-height:42px;padding:0 8px;border-radius:10px;font-size:14px;cursor:pointer}
+.ks-check:hover{background:var(--ftp-ghost)}
+.ks-check input{width:18px;height:18px;accent-color:#6b26d9}
+.ks-check small{color:var(--ftp-muted)}
+.ks-count{display:flex;align-items:center;gap:10px;margin:10px 0 16px;font-size:14px;font-weight:600}
+.ks-count input{width:84px;height:42px;padding:0 10px;border-radius:10px;border:1.5px solid var(--ftp-line);background:var(--ftp-sheet);color:var(--ftp-ink);font:inherit;font-size:16px}
+.ks-subjects{grid-template-columns:repeat(auto-fill,minmax(240px,1fr));margin-top:26px}
+.ks-subjects a{background:var(--ftp-ghost)}
+.ks-pair .ftp-folder[data-tone="sheet"],.ks-pair .ftp-folder[data-tone="sheet"] .ftp-tabshape{--c:#f4effd}
+.ks-pair .ftp-folder[data-tone="sheet"] .ftp-tabshape{color:#5a1fb8}
+.ks-pair .ks-check:hover{background:#fff}
+.ks-count input{background:#fff}

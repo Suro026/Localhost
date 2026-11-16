@@ -96,8 +96,8 @@ def test_question_text_is_escaped(client, monkeypatch):
     q = Question(id="9999-CSX-01", year=9999, paper="CSX", number=1, section="CS", marks=1, qtype="MCQ",
                  subject="Algorithms", topic="t", text="<script>alert(1)</script>", options=("a", "b", "c", "d"),
                  figure=None, answer=("A",), answer_min=None, answer_max=None, mta=False)
+    monkeypatch.setattr(testing, "load_questions", lambda: [q])
     for mod in (testing, __import__("app.routers.tests", fromlist=["x"])):
-        monkeypatch.setattr(mod, "load_questions", lambda: [q])
         monkeypatch.setattr(mod, "get_question", lambda qid: q if qid == q.id else None)
     html = client.get("/tests/start?mode=paper&year=9999&paper=CSX").text
     assert "<script>alert(1)</script>" not in html
@@ -117,9 +117,14 @@ def test_runner_script_served_and_never_uses_inner_html(client):
     assert "innerHTML" not in r.text.replace("never innerHTML", "")
 
 
-def test_hub_shows_official_gate_links_and_dates(client):
-    r = client.get("/tests")
-    assert "https://gate2027.iitm.ac.in/important_dates" in r.text
-    assert "https://whatsapp.com/channel/0029VbAY5biBVJkyO3GOT72S" in r.text
-    assert "6, 7, 13, 14, 20 and 21 February 2027" in r.text and "19 March 2027" in r.text
-    assert "gate2027.iitm.ac.in" not in client.get("/").text  # kept off the landing page on purpose
+def test_tests_page_has_dates_papers_and_landing_has_official_links(client):
+    t = client.get("/tests").text
+    assert "https://gate2027.iitm.ac.in/important_dates" in t
+    assert "6, 7, 13, 14, 20 and 21 February 2027" in t and "19 March 2027" in t
+    assert 'id="papers"' in t and 'id="subject"' in t and 'id="mixed"' in t and 'id="full"' in t
+    home = client.get("/").text
+    assert "https://gate2027.iitm.ac.in" in home and "https://whatsapp.com/channel/0029VbAY5biBVJkyO3GOT72S" in home
+    # shown right after the navbar, before the landing sheets
+    assert home.index("ks-official") < home.index("ftp-mast")
+    # landing links go straight to the tests page
+    assert 'href="/tests#papers"' in home and "data-open-cat" not in home

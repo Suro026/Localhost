@@ -1,76 +1,136 @@
 {% extends "base.html" %}
+{% from "components/ftp.html" import arrow, folder, head %}
 {% block title %}Mock tests — {{ app_name }}{% endblock %}
 {% block content %}
-<section class="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14">
-  <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Mock tests</h1>
-  <p class="mt-2 max-w-2xl text-muted">Real GATE CS and DA papers, subject-wise practice, mixed sets and a full mock in the GATE pattern. Free, and no sign-in needed. Sign in to keep your results on every device.</p>
-  {% if message %}<p role="alert" class="mt-6 rounded-xl border border-line bg-brand-50 px-4 py-3 text-sm font-semibold">{{ message }}</p>{% endif %}
+<link rel="stylesheet" href="{{ static_v('css/folder.css') }}">
+<noscript><style>.ftp-rv{opacity:1!important;transform:none!important}</style></noscript>
+{% set BR = {"cs": ("Computer Science", "blue"), "da": ("Data Science & AI", "green")} %}
 
-  <aside class="mt-8" aria-labelledby="gate-dates">
-    <div class="ml-6 inline-flex items-center gap-2 rounded-t-xl bg-[#0bb8da] px-4 pb-1 pt-2 text-xs font-extrabold uppercase tracking-wider text-[#2a1163]">GATE 2027 &middot; Official</div>
-    <div class="rounded-2xl bg-brand-600 p-5 text-white sm:p-6">
-      <h2 id="gate-dates" class="text-xl font-extrabold tracking-tight">Key dates</h2>
-      <div class="mt-4 grid gap-3 sm:grid-cols-3">
-        <div class="rounded-xl bg-white/10 p-4"><p class="text-xs font-semibold uppercase tracking-wider text-brand-100">Exam days</p><p class="mt-1 text-lg font-extrabold leading-snug">6, 7, 13, 14, 20 and 21 February 2027</p></div>
-        <div class="rounded-xl bg-white/10 p-4"><p class="text-xs font-semibold uppercase tracking-wider text-brand-100">City allotment</p><p class="mt-1 text-lg font-extrabold leading-snug">4 January 2027</p></div>
-        <div class="rounded-xl bg-white/10 p-4"><p class="text-xs font-semibold uppercase tracking-wider text-brand-100">Results</p><p class="mt-1 text-lg font-extrabold leading-snug">19 March 2027</p></div>
-      </div>
-      <p class="mt-3 text-xs text-brand-100">All dates are liable to change. Check the official site before you plan around them.</p>
-      <div class="mt-4 flex flex-wrap gap-3">
-        <a href="{{ gate_site_url }}/important_dates" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-[44px] items-center rounded-xl bg-white px-4 text-sm font-bold text-brand-700 hover:bg-brand-50">All dates on the official site</a>
-        <a href="{{ gate_channel_url }}" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-[44px] items-center rounded-xl bg-[#1fa855] px-4 text-sm font-bold text-white hover:bg-[#188a45]">Official GATE WhatsApp channel</a>
-      </div>
-    </div>
-  </aside>
+<div class="ftp-root">
+  <main class="ftp-wrap ftp-sheets">
+    <h1 class="ftp-sr">Mock tests</h1>
 
-  {% if total %}
-  <div class="mt-8 grid gap-6 lg:grid-cols-2">
-    <section class="rounded-2xl border border-line bg-surface p-5">
-      <h2 class="text-xl font-bold">Full mock test</h2>
-      <p class="mt-1 text-sm text-muted">65 questions, 100 marks, 180 minutes. MCQ carries negative marking (1/3 and 2/3). MSQ and NAT have none.</p>
-      <a href="/tests/start?mode=mock" class="btn-primary mt-4 inline-flex">Start mock test</a>
-    </section>
-
-    <section class="rounded-2xl border border-line bg-surface p-5">
-      <h2 class="text-xl font-bold">Mixed subjects</h2>
-      <form action="/tests/start" method="get" class="mt-3">
-        <input type="hidden" name="mode" value="mixed">
-        <fieldset>
-          <legend class="sr-only">Subjects</legend>
-          <div class="grid gap-1 sm:grid-cols-2">
-            {% for s, n in subjects %}
-            <label class="flex min-h-[44px] items-center gap-2 rounded-lg px-2 text-sm hover:bg-canvas"><input type="checkbox" name="subjects" value="{{ s }}" class="h-4 w-4"> <span>{{ s }} <span class="text-muted">({{ n }})</span></span></label>
-            {% endfor %}
+    {# ---- intro and official dates ---- #}
+    <section class="ftp-sheet" data-sheet="top" aria-labelledby="s-top-h">
+      {{ head("top", "#MOCK", "Mock tests", "Real GATE CS and DA papers, subject-wise practice, mixed sets and a full mock in the GATE pattern. Free, and no sign-in needed. Sign in to keep your results on every device.") }}
+      {% if message %}<p role="alert" class="ks-alert">{{ message }}</p>{% endif %}
+      <div class="ks-dates-wrap">
+        {% call folder("blue", tab="GATE 2027 · Official", tab_at=0.04, tab_arrow=0) %}
+          <div class="ks-pad">
+            <div class="ks-dates">
+              <div><small>Exam days</small><b>6, 7, 13, 14, 20 and 21 February 2027</b></div>
+              <div><small>City allotment</small><b>4 January 2027</b></div>
+              <div><small>Results</small><b>19 March 2027</b></div>
+            </div>
+            <p class="ks-note">All dates are liable to change. Check the official site before you plan around them.</p>
+            <a class="ftp-btn" data-ghost="true" href="{{ gate_site_url }}/important_dates" target="_blank" rel="noopener noreferrer">All dates on the official site {{ arrow("ne") }}</a>
           </div>
-        </fieldset>
-        <label class="mt-3 flex items-center gap-2 text-sm font-semibold">Questions
-          <input type="number" name="count" value="20" min="1" max="65" class="w-20 rounded-lg border border-line px-2 py-2 text-base">
-        </label>
-        <button type="submit" class="btn-primary mt-4">Start mixed test</button>
-      </form>
+        {% endcall %}
+      </div>
     </section>
-  </div>
 
-  <h2 class="mt-12 text-xl font-bold">Past papers</h2>
-  <ul class="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-    {% for year, paper, n in papers %}
-    <li><a href="/tests/start?mode=paper&amp;year={{ year }}&amp;paper={{ paper }}" class="flex min-h-[48px] items-center justify-between rounded-xl border border-line bg-surface px-4 py-3 font-semibold hover:border-brand-600">
-      <span>{% if paper == "DA" %}GATE DA {{ year }}{% else %}GATE CS {{ year }} <span class="text-muted">({{ paper }})</span>{% endif %}</span><span class="text-sm font-medium text-muted">{{ n }} Q</span></a></li>
-    {% endfor %}
-  </ul>
+    {% if total %}
+    {# ---- exam papers ---- #}
+    <section class="ftp-sheet ftp-rv" id="papers" data-sheet="work" aria-labelledby="s-work-h">
+      {{ head("work", "(%02d)"|format(papers|length), "Exam papers", "Every paper is a full 65-question GATE paper with its official key. Filter by branch, open one for its details; arrow keys page through.") }}
+      <div class="ftp-filter">
+        <div class="ftp-tabbar" role="tablist" aria-label="Filter papers by branch" data-filterbar>
+          <button type="button" role="tab" class="ftp-tabshape ftp-tabbtn" data-filter="all" data-tab="blue">All<span class="ftp-tchip">{{ "%02d"|format(papers|length) }}</span></button>
+          {% for key, info in BR.items() %}{% if papers|selectattr("branch", "equalto", key)|list %}
+          <button type="button" role="tab" class="ftp-tabshape ftp-tabbtn" data-filter="{{ key }}" data-tab="{{ info[1] }}">{{ key|upper }}<span class="ftp-tchip">{{ "%02d"|format(papers|selectattr("branch", "equalto", key)|list|length) }}</span></button>
+          {% endif %}{% endfor %}
+        </div>
+        <div class="ftp-bar"></div>
+      </div>
+      <div class="ftp-grid" role="tabpanel">
+        {% for paper in papers %}
+        {% set key = paper.branch %}
+        {% set tone = BR[key][1] %}
+        {% call folder(tone, tab="GATE " ~ key|upper, chip="%02d"|format(loop.index), tab_at=[0.1, 0.47, 0.84, 0.21, 0.58, 0.05][loop.index0 % 6], cls="ftp-card", tag="button",
+                       attrs={"type": "button", "aria-haspopup": "dialog", "data-exam": "", "data-cat": key, "data-tone": tone, "data-cat-label": "GATE " ~ key|upper,
+                              "data-title": paper.title, "data-sub": BR[key][0],
+                              "data-year": paper.year, "data-subject": "", "data-dur": paper.minutes ~ " min", "data-qs": paper.total,
+                              "data-level": "Official paper and key", "data-href": paper.href, "data-mark": paper.year,
+                              "aria-label": paper.title ~ ". Open details"},
+                       style="--i:" ~ loop.index0) %}
+          <span class="ftp-card-art" style="display:block"><span data-cover="{{ paper.title }}" data-tone="{{ tone }}" data-mark="{{ paper.year }}"></span></span>
+          <span class="ftp-card-cap"><span><span class="ftp-card-t" style="display:block">{{ paper.title }}</span></span><span class="ftp-card-y">{{ paper.year }}</span></span>
+        {% endcall %}
+        {% endfor %}
+        <p class="ftp-empty" data-empty hidden>No papers in this folder yet.</p>
+      </div>
+    </section>
 
-  <h2 class="mt-12 text-xl font-bold">Subject-wise</h2>
-  <ul class="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-    {% for s, n in subjects %}
-    <li><a href="/tests/start?mode=subject&amp;subject={{ s|urlencode }}&amp;count=20" class="flex min-h-[48px] items-center justify-between rounded-xl border border-line bg-surface px-4 py-3 font-semibold hover:border-brand-600">
-      <span>{{ s }}</span><span class="text-sm font-medium text-muted">{{ n }} Q</span></a></li>
-    {% endfor %}
-  </ul>
-  {% else %}
-  <div class="mt-10 rounded-2xl border border-dashed border-line bg-surface p-8 text-center">
-    <p class="font-semibold">Questions are being added.</p>
-    <p class="mt-1 text-muted">Tests appear here as soon as the first papers are ready.</p>
+    {# ---- full mock and mixed sets ---- #}
+    <section class="ftp-sheet ftp-rv" data-sheet="practice" aria-labelledby="s-practice-h">
+      {{ head("practice", "(02)", "Mock and mixed", "Sit the whole paper pattern end to end, or build a set across the subjects you choose.") }}
+      <div class="ks-pair">
+        {% call folder("blue", tab="Full mock", tab_at=0.08, attrs={"id": "full"}) %}
+          <div class="ks-pad">
+            <h3 class="ks-h">Full mock test</h3>
+            <p class="ks-p">65 questions, 100 marks, 180 minutes. MCQ carries negative marking (1/3 and 2/3). MSQ and NAT have none.</p>
+            <a class="ftp-btn" data-ghost="true" href="/tests/start?mode=mock">Start mock test {{ arrow("ne") }}</a>
+          </div>
+        {% endcall %}
+        {% call folder("sheet", tab="Mixed", tab_at=0.08, attrs={"id": "mixed"}) %}
+          <div class="ks-pad">
+            <h3 class="ks-h">Mixed subjects</h3>
+            <form action="/tests/start" method="get">
+              <input type="hidden" name="mode" value="mixed">
+              <fieldset class="ks-fs">
+                <legend class="ftp-sr">Subjects</legend>
+                <div class="ks-checks">
+                  {% for s, n in subjects %}
+                  <label class="ks-check"><input type="checkbox" name="subjects" value="{{ s }}"><span>{{ s }} <small>({{ n }})</small></span></label>
+                  {% endfor %}
+                </div>
+              </fieldset>
+              <label class="ks-count">Questions <input type="number" name="count" value="20" min="1" max="65"></label>
+              <button type="submit" class="ftp-btn">Start mixed test {{ arrow("ne") }}</button>
+            </form>
+          </div>
+        {% endcall %}
+      </div>
+    </section>
+
+    {# ---- subject-wise ---- #}
+    <section class="ftp-sheet ftp-rv" id="subject" data-sheet="subject" aria-labelledby="s-subject-h">
+      {{ head("subject", "(%02d)"|format(subjects|length), "Subject-wise", "Twenty questions from one subject. Pick the subject you want to practise.") }}
+      <div class="ftp-else ks-subjects">
+        {% for s, n in subjects %}
+        <a href="/tests/start?mode=subject&amp;subject={{ s|urlencode }}&amp;count=20"><span><small>{{ n }} questions</small>{{ s }}</span>{{ arrow("ne") }}</a>
+        {% endfor %}
+      </div>
+    </section>
+    {% else %}
+    <section class="ftp-sheet">
+      <p class="ks-h">Questions are being added.</p>
+      <p class="ks-p">Tests appear here as soon as the first papers are ready.</p>
+    </section>
+    {% endif %}
+  </main>
+
+  {# exam details sheet (filled by folder.js) #}
+  <div class="ftp-overlay" data-overlay hidden>
+    {% call folder("blue", tab_html='<span data-m="cat"></span><span class="ftp-tchip" data-m="n"></span>', tab_at=0.04, cls="ftp-modal", attrs={"role": "dialog", "aria-modal": "true", "aria-labelledby": "m-title"}) %}
+      <button type="button" class="ftp-close" data-m="close" aria-label="Close details">Close ✕</button>
+      <div class="ftp-modal-grid">
+        <div class="ftp-modal-art" data-m="art"></div>
+        <div class="ftp-modal-info">
+          <div><h3 class="ftp-modal-t" id="m-title" data-m="title"></h3><p class="ftp-modal-p" data-m="sub"></p></div>
+          <dl class="ftp-dl2" data-m="dl"></dl>
+          <div class="ftp-modal-nav">
+            <div class="ftp-btns">
+              <button type="button" class="ftp-btn" data-ghost="true" data-m="prev" aria-label="Previous paper">{{ arrow("left") }}</button>
+              <button type="button" class="ftp-btn" data-ghost="true" data-m="next" aria-label="Next paper">{{ arrow() }}</button>
+            </div>
+            <a class="ftp-btn" data-m="go" href="/tests">Start exam {{ arrow("ne") }}</a>
+          </div>
+        </div>
+      </div>
+    {% endcall %}
   </div>
-  {% endif %}
-</section>
+</div>
+
+<script src="{{ static_v('js/folder.js') }}" defer></script>
 {% endblock %}

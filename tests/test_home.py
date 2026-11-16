@@ -24,9 +24,12 @@ def test_homepage_lists_bank_papers_and_note_counts(client, db):
     db.commit()
 
     html = client.get("/").text
-    assert "GATE CS 2021 (CS1)" in html and "GATE DA 2025" in html
-    assert "/tests/start?mode=paper&amp;year=2021&amp;paper=CS1" in html or "/tests/start?mode=paper&year=2021&paper=CS1" in html
-    assert 'data-dur="180 min"' in html and 'data-qs="65"' in html
+    # the exam papers live on the tests page now, not on the landing page
+    assert "GATE CS 2021 (CS1)" not in html and "data-exam" not in html
+    tests_html = client.get("/tests").text
+    assert "GATE CS 2021 (CS1)" in tests_html and "GATE DA 2025" in tests_html
+    assert "/tests/start?mode=paper&amp;year=2021&amp;paper=CS1" in tests_html or "/tests/start?mode=paper&year=2021&paper=CS1" in tests_html
+    assert 'data-dur="180 min"' in tests_html and 'data-qs="65"' in tests_html
     assert "coming soon" not in html.lower()
     # the About sheet shows live counts: bank questions and 2 active notes
     assert f'data-count="{bank_stats()["total"]}"' in html

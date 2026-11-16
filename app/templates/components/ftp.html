@@ -1,0 +1,26 @@
+{# Folder-tab UI macros shared by the landing page and the tests page #}
+{% macro arrow(dir="right", size=14) -%}
+{%- set rot = {"right": 0, "down": 90, "left": 180, "up": -90, "ne": -45}[dir] -%}
+<svg width="{{ size }}" height="{{ size }}" viewBox="0 0 16 16" aria-hidden="true" style="transform:rotate({{ rot }}deg)"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+{%- endmacro %}
+
+{% macro folder(tone, tab=None, tab_at=0.1, glass=False, cls="", body_cls="", tag="div", attrs={}, style="", chip=None, tab_arrow=0, tab_html="") -%}
+{%- set flush = "left" if tab_at <= 0 else ("right" if tab_at >= 1 else "") -%}
+<{{ tag }} class="ftp-folder {{ cls }}" data-tone="{{ tone }}"{% if glass %} data-glass="true"{% endif %}{% if flush %} data-flush="{{ flush }}"{% endif %} style="--tx:{{ tab_at }};{{ style }}"{% for k, v in attrs.items() %} {{ k }}="{{ v }}"{% endfor %}>
+  {%- if tab or tab_html %}<span class="ftp-tabshape ftp-ftab" data-tone="{{ tone }}"{% if flush %} data-flush="{{ flush }}"{% endif %}>{{ tab or "" }}{{ tab_html|safe }}{% if chip is not none %}<span class="ftp-tchip">{{ chip }}</span>{% endif %}{% if tab_arrow %}{{ arrow("right", tab_arrow) }}{% endif %}</span>{% endif %}
+  <div class="ftp-fbody {{ body_cls }}">{{ caller() }}</div>
+</{{ tag }}>
+{%- endmacro %}
+
+{% macro head(id, tag, word, kicker=None, sig=False) -%}
+<div class="ftp-head">
+  <span class="ftp-plus" style="left:-18px;top:-6px"></span><span class="ftp-plus" style="right:-18px;top:-6px"></span>
+  <span class="ftp-head-tag" data-st="{{ tag }}" data-weight="9" data-outline="1.6" data-color="var(--ftp-faint)" data-decorative>{{ tag }}</span>
+  <div class="ftp-head-row">
+    <h2 id="s-{{ id }}-h" style="min-width:0;flex:1 1 auto"><span class="ftp-head-word" data-st="{{ word }}" data-weight="10" data-outline="2.2" data-color="var(--ftp-blue)">{{ word }}</span></h2>
+  </div>
+  {% if sig %}<span class="ftp-head-sig" data-sig="Keystone" data-delay="500"></span>{% endif %}
+  {% if kicker %}<p class="ftp-kicker" style="margin-top:14px">{{ kicker }}</p>{% endif %}
+</div>
+{%- endmacro %}
+

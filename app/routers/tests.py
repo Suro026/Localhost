@@ -1,12 +1,12 @@
 import json
-from collections import Counter
 
 from fastapi import APIRouter, Request
 from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 
 from app.core.dependencies import templates
 from app.services import testing
-from app.services.questions import bank_stats, get_question, load_questions, scorable
+from app.services.catalog import bank_view
+from app.services.questions import bank_stats, get_question
 
 router = APIRouter()
 
@@ -15,13 +15,12 @@ MAX_ANSWER = 4096
 
 
 def _hub(request: Request, message: str | None = None) -> HTMLResponse:
-    qs = [q for q in load_questions() if scorable(q)]
-    papers = sorted(Counter((q.year, q.paper) for q in qs).items(), reverse=True)
     stats = bank_stats()
+    papers, _, _ = bank_view()
     subjects = [(s, stats["by_subject"].get(s, 0)) for s in testing.SUBJECTS if stats["by_subject"].get(s, 0)]
     return templates.TemplateResponse(
         request, "tests/hub.html",
-        {"papers": [(y, p, n) for (y, p), n in papers], "subjects": subjects, "total": stats["total"], "message": message},
+        {"papers": papers, "subjects": subjects, "total": stats["total"], "message": message},
     )
 
 
