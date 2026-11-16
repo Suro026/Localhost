@@ -1,0 +1,652 @@
+[
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 1,
+  "type": "MCQ",
+  "key": "B",
+  "page": 53,
+  "marks": 1,
+  "image": "img/p/2015-CS3-01.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 2,
+  "type": "MCQ",
+  "key": "B",
+  "page": 53,
+  "marks": 1,
+  "image": "img/p/2015-CS3-02.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 3,
+  "type": "MCQ",
+  "key": "C",
+  "page": 53,
+  "marks": 1,
+  "image": "img/p/2015-CS3-03.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 4,
+  "type": "MCQ",
+  "key": "B",
+  "page": 54,
+  "marks": 1,
+  "image": "img/p/2015-CS3-04.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 5,
+  "type": "MCQ",
+  "key": "C",
+  "page": 54,
+  "marks": 1,
+  "image": "img/p/2015-CS3-05.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 6,
+  "type": "MCQ",
+  "key": "A",
+  "page": 54,
+  "marks": 2,
+  "image": "img/p/2015-CS3-06.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 7,
+  "type": "MCQ",
+  "key": "B",
+  "page": 55,
+  "marks": 2,
+  "image": "img/p/2015-CS3-07.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 8,
+  "type": "NAT",
+  "key": "2006",
+  "page": 55,
+  "marks": 2,
+  "image": "img/p/2015-CS3-08.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 9,
+  "type": "MCQ",
+  "key": "B",
+  "page": 56,
+  "marks": 2,
+  "image": "img/p/2015-CS3-09.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 10,
+  "type": "MCQ",
+  "key": "B",
+  "page": 56,
+  "marks": 2,
+  "image": "img/p/2015-CS3-10.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 11,
+  "type": "MCQ",
+  "key": "C",
+  "page": 57,
+  "marks": 1,
+  "image": "img/p/2015-CS3-11.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 12,
+  "type": "MCQ",
+  "key": "D",
+  "page": 57,
+  "marks": 1,
+  "image": "img/p/2015-CS3-12.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 13,
+  "type": "MCQ",
+  "key": "C",
+  "page": 57,
+  "marks": 1,
+  "image": "img/p/2015-CS3-13.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 14,
+  "type": "MCQ",
+  "key": "D",
+  "page": 58,
+  "marks": 1,
+  "image": "img/p/2015-CS3-14.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 15,
+  "type": "MCQ",
+  "key": "C",
+  "page": 58,
+  "marks": 1,
+  "image": "img/p/2015-CS3-15.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 16,
+  "type": "MCQ",
+  "key": "B",
+  "page": 58,
+  "marks": 1,
+  "image": "img/p/2015-CS3-16.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 17,
+  "type": "NAT",
+  "key": "612 to 613",
+  "page": 59,
+  "marks": 1,
+  "image": "img/p/2015-CS3-17.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 18,
+  "type": "MCQ",
+  "key": "B",
+  "page": 59,
+  "marks": 1,
+  "image": "img/p/2015-CS3-18.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 19,
+  "type": "MCQ",
+  "key": "A",
+  "page": 59,
+  "marks": 1,
+  "image": "img/p/2015-CS3-19.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 20,
+  "type": "MCQ",
+  "key": "C",
+  "page": 60,
+  "marks": 1,
+  "image": "img/p/2015-CS3-20.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 21,
+  "type": "NAT",
+  "key": "199",
+  "page": 60,
+  "marks": 1,
+  "image": "img/p/2015-CS3-21.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 22,
+  "type": "NAT",
+  "key": "80",
+  "page": 60,
+  "marks": 1,
+  "image": "img/p/2015-CS3-22.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 23,
+  "type": "MCQ",
+  "key": "B",
+  "page": 61,
+  "marks": 1,
+  "image": "img/p/2015-CS3-23.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 24,
+  "type": "MCQ",
+  "key": "C",
+  "page": 61,
+  "marks": 1,
+  "image": "img/p/2015-CS3-24.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 25,
+  "type": "NAT",
+  "key": "15",
+  "page": 61,
+  "marks": 1,
+  "image": "img/p/2015-CS3-25.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 26,
+  "type": "MCQ",
+  "key": "A",
+  "page": 61,
+  "marks": 1,
+  "image": "img/p/2015-CS3-26.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 27,
+  "type": "MCQ",
+  "key": "B",
+  "page": 62,
+  "marks": 1,
+  "image": "img/p/2015-CS3-27.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 28,
+  "type": "MCQ",
+  "key": "C",
+  "page": 62,
+  "marks": 1,
+  "image": "img/p/2015-CS3-28.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 29,
+  "type": "MCQ",
+  "key": "A",
+  "page": 62,
+  "marks": 1,
+  "image": "img/p/2015-CS3-29.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 30,
+  "type": "MCQ",
+  "key": "D",
+  "page": 63,
+  "marks": 1,
+  "image": "img/p/2015-CS3-30.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 31,
+  "type": "MCQ",
+  "key": "A",
+  "page": 63,
+  "marks": 1,
+  "image": "img/p/2015-CS3-31.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 32,
+  "type": "MCQ",
+  "key": "B",
+  "page": 64,
+  "marks": 1,
+  "image": "img/p/2015-CS3-32.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 33,
+  "type": "NAT",
+  "key": "28",
+  "page": 64,
+  "marks": 1,
+  "image": "img/p/2015-CS3-33.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 34,
+  "type": "MCQ",
+  "key": "A",
+  "page": 65,
+  "marks": 1,
+  "image": "img/p/2015-CS3-34.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 35,
+  "type": "MCQ",
+  "key": "D",
+  "page": 65,
+  "marks": 1,
+  "image": "img/p/2015-CS3-35.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 36,
+  "type": "NAT",
+  "key": "308 to 310",
+  "page": 65,
+  "marks": 2,
+  "image": "img/p/2015-CS3-36.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 37,
+  "type": "MCQ",
+  "key": "B",
+  "page": 65,
+  "marks": 2,
+  "image": "img/p/2015-CS3-37.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 38,
+  "type": "MCQ",
+  "key": "B",
+  "page": 66,
+  "marks": 2,
+  "image": "img/p/2015-CS3-38.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 39,
+  "type": "NAT",
+  "key": "50",
+  "page": 66,
+  "marks": 2,
+  "image": "img/p/2015-CS3-39.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 40,
+  "type": "MCQ",
+  "key": "A",
+  "page": 66,
+  "marks": 2,
+  "image": "img/p/2015-CS3-40.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 41,
+  "type": "MCQ",
+  "key": "C",
+  "page": 67,
+  "marks": 2,
+  "image": "img/p/2015-CS3-41.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 42,
+  "type": "NAT",
+  "key": "230",
+  "page": 67,
+  "marks": 2,
+  "image": "img/p/2015-CS3-42.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 43,
+  "type": "NAT",
+  "key": "140",
+  "page": 68,
+  "marks": 2,
+  "image": "img/p/2015-CS3-43.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 44,
+  "type": "MCQ",
+  "key": "B",
+  "page": 68,
+  "marks": 2,
+  "image": "img/p/2015-CS3-44.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 45,
+  "type": "MCQ",
+  "key": "D",
+  "page": 69,
+  "marks": 2,
+  "image": "img/p/2015-CS3-45.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 46,
+  "type": "NAT",
+  "key": "158",
+  "page": 69,
+  "marks": 2,
+  "image": "img/p/2015-CS3-46.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 47,
+  "type": "NAT",
+  "key": "8",
+  "page": 69,
+  "marks": 2,
+  "image": "img/p/2015-CS3-47.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 48,
+  "type": "NAT",
+  "key": "3",
+  "page": 70,
+  "marks": 2,
+  "image": "img/p/2015-CS3-48.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 49,
+  "type": "MCQ",
+  "key": "B",
+  "page": 70,
+  "marks": 2,
+  "image": "img/p/2015-CS3-49.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 50,
+  "type": "MCQ",
+  "key": "C",
+  "page": 71,
+  "marks": 2,
+  "image": "img/p/2015-CS3-50.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 51,
+  "type": "MCQ",
+  "key": "B",
+  "page": 72,
+  "marks": 2,
+  "image": "img/p/2015-CS3-51.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 52,
+  "type": "MCQ",
+  "key": "C",
+  "page": 73,
+  "marks": 2,
+  "image": "img/p/2015-CS3-52.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 53,
+  "type": "NAT",
+  "key": "10",
+  "page": 74,
+  "marks": 2,
+  "image": "img/p/2015-CS3-53.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 54,
+  "type": "MCQ",
+  "key": "A",
+  "page": 74,
+  "marks": 2,
+  "image": "img/p/2015-CS3-54.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 55,
+  "type": "NAT",
+  "key": "995",
+  "page": 75,
+  "marks": 2,
+  "image": "img/p/2015-CS3-55.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 56,
+  "type": "NAT",
+  "key": "1575",
+  "page": 75,
+  "marks": 2,
+  "image": "img/p/2015-CS3-56.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 57,
+  "type": "MCQ",
+  "key": "C",
+  "page": 75,
+  "marks": 2,
+  "image": "img/p/2015-CS3-57.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 58,
+  "type": "MCQ",
+  "key": "A",
+  "page": 75,
+  "marks": 2,
+  "image": "img/p/2015-CS3-58.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 59,
+  "type": "NAT",
+  "key": "5",
+  "page": 76,
+  "marks": 2,
+  "image": "img/p/2015-CS3-59.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 60,
+  "type": "MCQ",
+  "key": "C",
+  "page": 77,
+  "marks": 2,
+  "image": "img/p/2015-CS3-60.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 61,
+  "type": "NAT",
+  "key": "0.75",
+  "page": 77,
+  "marks": 2,
+  "image": "img/p/2015-CS3-61.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 62,
+  "type": "NAT",
+  "key": "3",
+  "page": 77,
+  "marks": 2,
+  "image": "img/p/2015-CS3-62.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 63,
+  "type": "NAT",
+  "key": "0",
+  "page": 77,
+  "marks": 2,
+  "image": "img/p/2015-CS3-63.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 64,
+  "type": "MCQ",
+  "key": "D",
+  "page": 78,
+  "marks": 2,
+  "image": "img/p/2015-CS3-64.webp"
+ },
+ {
+  "year": 2015,
+  "paper": "CS3",
+  "number": 65,
+  "type": "MCQ",
+  "key": "D",
+  "page": 78,
+  "marks": 2,
+  "image": "img/p/2015-CS3-65.webp"
+ }
+]
