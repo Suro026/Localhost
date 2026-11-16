@@ -113,3 +113,9 @@ def test_account_redirects_to_profile(client):
 def test_navbar_has_both_auth_states_and_boot_script(client):
     html = client.get("/").text
     assert "ks-boot.js" in html and "ks-out" in html and "ks-in" in html and 'href="/profile"' in html
+
+
+def test_google_search_console_verification_file(client):
+    r = client.get("/google1589151a9c65e3a8.html")
+    assert r.status_code == 200
+    assert r.text == "google-site-verification: google1589151a9c65e3a8.html"

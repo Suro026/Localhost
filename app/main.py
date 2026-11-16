@@ -35,6 +35,16 @@ async def offline():
     return FileResponse(PWA / "offline.html", media_type="text/html")
 
 
+GOOGLE_VERIFY = "google1589151a9c65e3a8.html"  # Search Console ownership file; must stay live to keep the site verified
+
+
+@app.get(f"/{GOOGLE_VERIFY}", include_in_schema=False)
+async def google_site_verification():
+    from fastapi.responses import PlainTextResponse
+
+    return PlainTextResponse(f"google-site-verification: {GOOGLE_VERIFY}", media_type="text/html", headers={"Cache-Control": "public, max-age=3600"})
+
+
 @app.get("/.well-known/security.txt", include_in_schema=False)
 async def security_txt():
     """RFC 9116. Only published once SECURITY_CONTACT is set, so we never advertise a contact nobody reads."""
