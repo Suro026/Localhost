@@ -572,3 +572,13 @@ body:has(.ftp-root) [data-nav] .nav-tab[aria-current="page"]::before,body:has(.f
 .ks-act-name{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px}
 .ks-act-num{font-size:13px;color:rgba(255,255,255,.82);font-variant-numeric:tabular-nums}
 @media (prefers-reduced-motion:reduce){.ks-act-listwrap,.ks-act-toggle svg,.ks-avclick,.ks-avface{transition:none!important}.ks-avopt[aria-checked="true"] .ks-avface{animation:none}}
+
+/* ---- practice-only questions ---- */
+.ks-years{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 6px}
+.ks-years a{padding:7px 14px;border-radius:99px;background:#f4effd;color:#5a1fb8;font-size:13px;font-weight:700;transition:background-color .2s,color .2s}
+.ks-years a:hover{background:#e6dafb}
+.ks-years a[aria-current="true"]{background:#6b26d9;color:#fff}
+.ks-pq{list-style:none;margin:14px 0 8px;padding:0;display:grid;gap:14px}
+.ks-pq li{padding:14px 16px 16px;border-radius:18px;background:#fff;box-shadow:inset 0 0 0 1.5px #e6dafb}
+.ks-pq-h{margin:0 0 10px;font-size:12.5px;font-weight:700;color:#5a1fb8}
+.ks-pq img{display:block;max-width:100%;height:auto}

@@ -11,7 +11,7 @@ from fastapi.exceptions import RequestValidationError
 from app.core.errors import error_response, wants_html
 from app.core import gate
 from app.core.headers import SecurityHeadersMiddleware
-from app.routers import home, legal, library, tests
+from app.routers import home, legal, library, practice, tests
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
 
@@ -97,6 +97,7 @@ app.include_router(gate.router)
 app.include_router(home.router)
 app.include_router(legal.router)
 app.include_router(library.router)
+app.include_router(practice.router)
 app.include_router(tests.router)
 
 

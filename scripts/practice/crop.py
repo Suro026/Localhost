@@ -18,8 +18,9 @@ ROOT = Path(__file__).resolve().parents[2]
 IMG = ROOT / "static" / "img" / "p"
 OUT = ROOT / "scripts" / "practice" / "out"
 LABEL = re.compile(r"^Q\.\s?(\d+)\s*$")
-FOOT = re.compile(r"^(CS\s?\(Set [A-Z0-9]\)|\d+\s*/\s*\d+|Page \d+ of \d+|GATE \d{4}.*|[A-Z ]*\s?-\s?[A-Z]{2}\s*\d*/\d+)$")
-STOP = re.compile(r"(^Q\.\s?\d+\s*(to|–|-)\s*Q\.\s?\d+.*carry|END OF (THE )?QUESTION PAPER|^Page \d+|Space for rough)", re.I)
+FOOT = re.compile(r"^(\d{4}|COMPUTER SCIENCE.{0,40}CS|CS\s?\(Set [A-Z0-9]\)|\d+\s*/\s*\d+|Page \d+ of \d+|GATE \d{4}.*|[A-Z ]*\s?-\s?[A-Z]{2}\s*\d*/\d+)$")
+GROUP = re.compile(r"^(Common Data Questions?|Statement for Linked Answer Questions?|Common Data for Questions)", re.I)
+STOP = re.compile(r"(^General Aptitude \(GA\) Questions|^Linked Answer Questions\s*$|^(Common Data Questions?|Statement for Linked Answer Questions?|Common Data for Questions)|^Q\.\s?\d+\s*(to|–|-)\s*Q\.\s?\d+.*carry|END OF (THE )?QUESTION PAPER|^Page \d+|Space for rough)", re.I)
 
 
 def lines(doc, lo=0, hi=None):
@@ -44,28 +45,50 @@ def main():
     tag = sys.argv[sys.argv.index("--tag") + 1] if "--tag" in sys.argv else paper
     marks = lambda n: 1 if n <= 5 or 11 <= n <= 35 else 2
     # collect anchors: sequence GA 1..10 then CS 1..55, taking the first set only
+    seq65 = "--seq65" in sys.argv  # paper numbered Q.1..Q.65 (CS first, General Aptitude last)
     anchors, seq_ga, seq_cs = [], 0, 0
-    stops, foot = [], {}
+    stops, foot, groups = [], {}, []
     for pn, bb, t in lines(doc, lo, hi):
         if FOOT.match(t) and bb[1] > doc[pn].rect.height * 0.8:
             foot[pn] = min(foot.get(pn, 1e9), bb[1])
         if STOP.search(t):
             stops.append((pn, bb[1]))
+        if GROUP.match(t):
+            groups.append((pn, bb[1]))
         m = LABEL.match(t)
         if not m:
             continue
         n = int(m.group(1))
+        if seq65:
+            if n == len(anchors) + 1:
+                anchors.append((pn, bb[1], n))
+            continue
         if seq_ga < 10 and n == seq_ga + 1:
             seq_ga += 1; anchors.append((pn, bb[1], n))
         elif seq_ga == 10 and seq_cs < 55 and n == seq_cs + 1:
             seq_cs += 1; anchors.append((pn, bb[1], 10 + n))
-        if seq_cs == 55:
-            break
     nums = [a[2] for a in anchors]
     assert nums == list(range(1, len(nums) + 1)), nums
     print("anchors", len(anchors), "of 65")
+    anchors.sort(key=lambda a: a[2]) if False else None
     IMG.mkdir(parents=True, exist_ok=True); OUT.mkdir(parents=True, exist_ok=True)
     rows = []
+    def span(a_pn, a_y, e_pn, e_y):
+        out = []
+        for p in range(a_pn, e_pn + 1):
+            H = doc[p].rect.height
+            y0 = max(top, a_y - 4) if p == a_pn else top
+            y1 = (e_y - 3) if (p == e_pn and e_y is not None) else min(H - bottom, foot.get(p, 1e9) - 3)
+            if y1 - y0 > 6:
+                out.append((p, y0, y1))
+        return out
+    pre = {}  # anchor index -> segments of the shared "common data / linked answer" statement printed above the pair
+    for gp, gy in groups:
+        later = [i for i, a in enumerate(anchors) if (a[0], a[1]) > (gp, gy)][:2]
+        if len(later) == 2:
+            f = anchors[later[0]]
+            for i in later:
+                pre[i] = span(gp, gy + 0, f[0], f[1] - 6)
     for i, (pn, y, n) in enumerate(anchors):
         nxt = anchors[i + 1] if i + 1 < len(anchors) else None
         segs = []
@@ -80,6 +103,8 @@ def main():
             y1 = (end_y - 3) if (p == end_pn and end_y is not None) else min(H - bottom, foot.get(p, 1e9) - 3)
             if y1 - y0 > 6:
                 segs.append((p, y0, y1))
+        if i in pre:
+            segs = pre[i] + segs
         ims, txt = [], []
         for p, y0, y1 in segs:
             r = doc[p].rect
@@ -94,9 +119,11 @@ def main():
         if bbox:
             pad = 10
             sh = sh.crop((max(0, bbox[0] - pad), max(0, bbox[1] - pad), min(W, bbox[2] + pad), min(Ht, bbox[3] + pad)))
-        name = f"{year}-{tag}-{n:02d}.webp"
+        k = (n + 10 if n <= 55 else n - 55) if seq65 else n
+        mk = (1 if n <= 25 or 56 <= n <= 60 else 2) if seq65 else marks(n)
+        name = f"{year}-{tag}-{k:02d}.webp"
         sh.save(IMG / name, "WEBP", quality=82, method=6)
-        rows.append({"year": year, "paper": tag, "number": n, "section": "GA" if n <= 10 else "CS", "marks": marks(n), "page": pn + 1, "has_options": "(A)" in "".join(txt), "raw": " ".join("".join(txt).split())[:300], "image": f"img/p/{name}"})
+        rows.append({"year": year, "paper": tag, "number": k, "orig": n, "section": "GA" if k <= 10 else "CS", "marks": mk, "page": pn + 1, "has_options": "(A)" in "".join(txt), "raw": " ".join("".join(txt).split())[:300], "image": f"img/p/{name}"})
     (OUT / f"{year}-{tag}.json").write_text(json.dumps(rows, indent=1), encoding="utf-8")
     print("wrote", len(rows))
 

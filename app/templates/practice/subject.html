@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% from "components/ftp.html" import arrow, folder, page %}
+{% block title %}{{ name }} practice — {{ app_name }}{% endblock %}
+{% block content %}
+{% call page("practice", "#PRACTICE", name, "Official questions as printed in the paper. No answers are shown here. Solve first, then check with your books.", h1=name ~ " practice") %}
+  <nav class="ks-years" aria-label="Filter by year">
+    <a href="/practice/{{ slug }}"{% if not year %} aria-current="true"{% endif %}>All years</a>
+    {% for y in years %}<a href="/practice/{{ slug }}?year={{ y }}"{% if year == y %} aria-current="true"{% endif %}>{{ y }}</a>{% endfor %}
+  </nav>
+  <ol class="ks-pq">
+    {% for q in qs %}
+    <li>
+      <p class="ks-pq-h">{{ q.year }} · {{ q.paper }} · Q.{{ q.paper_no }} · {{ q.marks }} mark{{ "s" if q.marks != 1 }}{% if q.topic %} · {{ q.topic }}{% endif %}</p>
+      <img src="/static/{{ q.image }}" alt="{{ name }} question from GATE {{ q.year }} {{ q.paper }}, question {{ q.paper_no }}" loading="lazy">
+    </li>
+    {% endfor %}
+  </ol>
+  <p class="ks-p"><a class="ks-link" href="/practice">All practice subjects</a></p>
+{% endcall %}
+{% endblock %}
+{% block scripts %}<script src="{{ static_v('js/folder.js') }}" defer></script>{% endblock %}

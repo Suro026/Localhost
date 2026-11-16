@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% from "components/ftp.html" import arrow, folder, page %}
+{% block title %}Practice questions — {{ app_name }}{% endblock %}
+{% block content %}
+{% call page("practice", "#PRACTICE", "Practice", "Older official GATE questions, grouped by subject. Read, solve on paper, and check against your books. These have no scored answers here.", h1="Practice questions") %}
+  {% if groups %}
+  <div class="ks-pair">
+    {% for subject, sl, count, years in groups %}
+    {% call folder(["blue", "green"][loop.index0 % 2], tab=subject, chip="%02d"|format(count), tab_at=0.06) %}
+      <div class="ks-pad">
+        <p class="ks-p" style="margin:0 0 12px">{% if years|length == 1 %}GATE {{ years[0] }}{% else %}{{ years|length }} years: {{ years|min }}–{{ years|max }}{% endif %}</p>
+        <a class="ftp-btn" data-ghost="true" href="/practice/{{ sl }}">Open {{ arrow("ne") }}</a>
+      </div>
+    {% endcall %}
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="ks-p">Practice questions are being added. Check back soon.</p>
+  {% endif %}
+{% endcall %}
+{% endblock %}
+{% block scripts %}<script src="{{ static_v('js/folder.js') }}" defer></script>{% endblock %}
