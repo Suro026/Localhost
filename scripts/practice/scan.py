@@ -6,7 +6,8 @@ python scan.py crop <pdf> <year> <tag> <spec.json>            -> static/img/p/<y
 spec.json: {"marks": {"1-25": 1, "26-55": 2, ...}, "pages": {"3": [[y, flag], ...], ...}}
  y is where a question starts on that page (100-dpi pixels, read off the ruler of the annotated image; it is snapped to the
  blank gap just above). A question runs to the next entry (any page), minus header and footer. flag "q" = question,
- "x" = skip (heading / end line). "p" = shared statement (common data / linked answers): repeated above the next two questions, not a question itself.
+ "x" = skip (heading / end line). "p" = shared statement (common data / linked answers): repeated above the next two questions (p3: three), not a question itself.
+ A trailing "e" (qe, pe, xe) keeps y exactly instead of snapping it to the blank gap above (for skewed scans).
 """
 import json
 import sys
@@ -123,7 +124,7 @@ def crop(doc, year, tag, spec):
     for pn, items in sorted(spec["pages"].items(), key=lambda kv: int(kv[0])):
         pg = int(pn)
         for y, flag in items:
-            entries.append((pg, snap(doc[pg - 1], y), flag))
+            entries.append((pg, y if "e" in flag else snap(doc[pg - 1], y), flag))  # "e" = exact y (skewed scans, where snapping fails)
     entries.sort(key=lambda e: (e[0], e[1]))
 
     def body_end(pg):
@@ -146,10 +147,12 @@ def crop(doc, year, tag, spec):
     for i, (pg, y, flag) in enumerate(entries):
         nxt = (entries[i + 1][0], entries[i + 1][1]) if i + 1 < len(entries) else None
         segs = seg((pg, y), nxt)
+        reps = int(next((c for c in flag if c.isdigit()), 2))  # "p3" = the shared statement is repeated above three questions
+        flag = flag[0]
         if flag == "x":  # not part of any question (section heading, end-of-paper line)
             continue
         if flag == "p":
-            pend = [segs, 2]
+            pend = [segs, reps]
             continue
         n += 1
         if pend and pend[1] > 0:
