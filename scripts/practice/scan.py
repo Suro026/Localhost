@@ -21,6 +21,7 @@ HERE = Path(__file__).resolve().parent
 IMG = HERE.parents[1] / "static" / "img" / "p"
 OUT = HERE / "out"
 DPI, GAP = 100, 13
+NO_RULES = None  # spec "no_rules": {"top": px, "bottom_margin": px} for papers with no header/footer rules (2007)
 FOOT_BAND = 110  # rows above the page bottom searched for the footer rule (spec "foot_band" overrides)
 
 
@@ -90,6 +91,8 @@ RULE_TRIES = ((150, 40), (200, 120), (200, 60))  # (gray threshold, min run): fa
 def page_body(page):
     """(top, bottom) of the printed area in 100-dpi px: below the header rule, above the footer rule"""
     H = ink_of(page).shape[0]
+    if NO_RULES:
+        return NO_RULES["top"], H - NO_RULES["bottom_margin"]
     head = foot = []
     for thr, run in RULE_TRIES:
         ink = ink_of(page, thr)
@@ -114,7 +117,8 @@ def snap(page, y):
 
 
 def crop(doc, year, tag, spec):
-    global FOOT_BAND
+    global FOOT_BAND, NO_RULES
+    NO_RULES = spec.get("no_rules")
     FOOT_BAND = spec.get("foot_band", FOOT_BAND)
     marks_rule = {}
     for rng, m in spec["marks"].items():
