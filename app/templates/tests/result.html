@@ -1,8 +1,11 @@
 {% extends "base.html" %}
 {% block title %}Result — {{ app_name }}{% endblock %}
+{% block head %}<link rel="stylesheet" href="{{ static_v('css/folder.css') }}">{% endblock %}
 {% block content %}
-<section id="result" class="mx-auto max-w-4xl px-4 py-10 sm:px-6">
-  <h1 class="text-3xl font-extrabold tracking-tight">Your result</h1>
+{# the runner copies #result into the page after submit, so everything it needs sits inside it #}
+<div id="result"><div class="ftp-root"><div class="ftp-wrap ftp-sheets"><section class="ftp-sheet ks-page">
+<h1 class="ftp-head-local ks-resulth">Your result</h1>
+<div class="ks-skin">
   <p class="mt-4 text-5xl font-extrabold">{{ res.total }} <span class="text-xl font-semibold text-muted">/ {{ res.max_marks }}</span></p>
   <p class="mt-2 text-muted">{{ res.correct }} correct · {{ res.wrong }} wrong · {{ res.skipped }} skipped</p>
   {% set lost = res.rows|selectattr("marks", "lt", 0)|sum(attribute="marks") %}
@@ -44,5 +47,6 @@
     {% endfor %}
   </ol>
   <a href="/tests" class="btn-primary mt-8 inline-flex">Back to tests</a>
-</section>
+</div>
+</section></div></div></div>
 {% endblock %}

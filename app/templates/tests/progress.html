@@ -1,11 +1,10 @@
 {% extends "base.html" %}
+{% from "components/ftp.html" import page %}
 {% block title %}Your progress — {{ app_name }}{% endblock %}
 {% block content %}
-<section class="mx-auto max-w-4xl px-4 py-10 sm:px-6">
-  <h1 class="text-3xl font-extrabold tracking-tight">Your progress</h1>
-  <p class="mt-2 text-muted">Scores, weak topics and time per question from the tests you have taken. It is saved in this browser and synced to your account, so it is on every device.</p>
-  <noscript><p class="mt-4 rounded-xl border border-line bg-brand-50 p-4 font-semibold">This page needs JavaScript to read your saved tests.</p></noscript>
-  <div id="progress-root"><p class="mt-6 text-muted">Loading…</p></div>
-</section>
+{% call page("progress", "#SCORES", "Progress", "Scores, weak topics and time per question from the tests you have taken. It is saved in this browser and synced to your account, so it is on every device.", h1="Your progress") %}
+  <noscript><p class="ks-alert">This page needs JavaScript to read your saved tests.</p></noscript>
+  <div id="progress-root" class="ks-skin"><p class="ks-p">Loading…</p></div>
+{% endcall %}
 {% endblock %}
-{% block scripts %}<script src="{{ static_v('js/progress.js') }}" defer></script>{% endblock %}
+{% block scripts %}<script src="{{ static_v('js/folder.js') }}" defer></script><script src="{{ static_v('js/progress.js') }}" defer></script>{% endblock %}

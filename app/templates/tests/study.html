@@ -1,11 +1,10 @@
 {% extends "base.html" %}
+{% from "components/ftp.html" import page %}
 {% block title %}Study — {{ app_name }}{% endblock %}
 {% block content %}
-<section class="mx-auto max-w-4xl px-4 py-10 sm:px-6">
-  <h1 class="text-3xl font-extrabold tracking-tight">Study</h1>
-  <p class="mt-2 text-muted">A study timer, a plan you write yourself, and a daily reminder. Saved in this browser and synced to your account, so it is on every device.</p>
-  <noscript><p class="mt-4 rounded-xl border border-line bg-brand-50 p-4 font-semibold">This page needs JavaScript for the timer, plan and reminder.</p></noscript>
-  <div id="study-root" data-subjects="{{ subjects|tojson|forceescape }}"><p class="mt-6 text-muted">Loading…</p></div>
-</section>
+{% call page("study", "#FOCUS", "Study", "A study timer, a plan you write yourself, and a daily reminder. Saved in this browser and synced to your account, so it is on every device.") %}
+  <noscript><p class="ks-alert">This page needs JavaScript for the timer, plan and reminder.</p></noscript>
+  <div id="study-root" class="ks-skin" data-subjects="{{ subjects|tojson|forceescape }}"><p class="ks-p">Loading…</p></div>
+{% endcall %}
 {% endblock %}
-{% block scripts %}<script src="{{ static_v('js/study.js') }}" defer></script>{% endblock %}
+{% block scripts %}<script src="{{ static_v('js/folder.js') }}" defer></script><script src="{{ static_v('js/study.js') }}" defer></script>{% endblock %}

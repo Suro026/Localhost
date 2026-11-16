@@ -1,12 +1,17 @@
 {% extends "base.html" %}
 {% block title %}{{ spec.title }} — {{ app_name }}{% endblock %}
+{% block head %}<link rel="stylesheet" href="{{ static_v('css/folder.css') }}">{% endblock %}
 {% block content %}
-<section class="mx-auto max-w-6xl px-4 py-6 sm:px-6">
-  <noscript><p class="rounded-xl border border-line bg-brand-50 p-4 font-semibold">This test needs JavaScript to run the timer and save your answers.</p></noscript>
-  <div id="runner" data-minutes="{{ spec.minutes }}">
-    <p class="text-muted">Loading test…</p>
+<div class="ftp-root">
+  <div class="ftp-wrap ftp-sheets">
+    <section class="ftp-sheet ks-page ks-run">
+      <noscript><p class="ks-alert">This test needs JavaScript to run the timer and save your answers.</p></noscript>
+      <div id="runner" class="ks-skin" data-minutes="{{ spec.minutes }}">
+        <p class="ks-p">Loading test…</p>
+      </div>
+      <script type="application/json" id="test-data">{{ payload|tojson }}</script>
+    </section>
   </div>
-  <script type="application/json" id="test-data">{{ payload|tojson }}</script>
-</section>
+</div>
 {% endblock %}
 {% block scripts %}<script src="{{ static_v('js/test-runner.js') }}" defer></script>{% endblock %}

@@ -12,8 +12,7 @@
 
 {# page order, label in the nav, name on the sheet #}
 {% set SECT = [("cover", "Cover", "Cover page"), ("contents", "Modes", "Practice modes"), ("about", "About", "About us"),
-               ("process", "Process", "How it works"), ("team", "Team", "Mentors"),
-               ("contact", "Contact", "Join us")] %}
+               ("process", "Process", "How it works"), ("team", "Team", "Mentors")] %}
 {# key, label, tone, short line, description, points #}
 {% set MODES = [
   ("year_wise", "Year-wise", "blue", "Papers by year", "One complete paper per year, in its original order, with the original time limit.", ["One paper per year", "Original question order", "Original time limit"]),
@@ -235,36 +234,6 @@
       <div class="tm-foot">
         <p class="tm-quote">Doubts, updates and new papers, shared with students and mentors in one group.</p>
         <a class="ftp-btn" href="{{ whatsapp_group_url }}" target="_blank" rel="noopener noreferrer">Join the WhatsApp group {{ arrow("ne") }}</a>
-      </div>
-    </section>
-
-    {# ---------------- 07 contact ---------------- #}
-    <section class="ftp-sheet ftp-rv" data-sheet="contact" aria-labelledby="s-contact-h">
-      {{ meta(6, "Join us") }}
-      {{ head("contact", "(:)", "Join us", sig=True) }}
-      <div class="ftp-stack">
-        {% call folder("blue", tab="Start", tab_arrow=12, tab_at=0.78) %}
-          <div class="ftp-talk">
-            <span data-st="Start today" data-weight="15" data-tracking="22" data-color="#ffffff" data-label="Start today">Start today</span>
-            <p>Take a paper from any year, or build a test around the subjects you find hardest. Free, with the official answer keys.</p>
-          </div>
-        {% endcall %}
-        {% call folder("green", tab="Tests", tab_arrow=12, tab_at=0.56) %}
-          <div class="ftp-mail">
-            <a class="ftp-mail-a" href="/tests">Open the tests</a>
-            <div class="ftp-btns">
-              <a class="ftp-btn" href="/tests">Tests</a>
-              <a class="ftp-btn" data-ghost="true" href="/books">Books {{ arrow("ne") }}</a>
-            </div>
-          </div>
-        {% endcall %}
-        {% call folder("sheet", tab="Browse", tab_arrow=12, tab_at=0.3, style="filter:drop-shadow(0 -6px 14px rgba(60,30,140,.08))") %}
-          <div class="ftp-else">
-            <a href="/tests/start?mode=mock"><span><small>Full mock</small>65 questions, 180 minutes</span>{{ arrow("ne") }}</a>
-            <a href="/notes"><span><small>Notes</small>Study notes</span>{{ arrow("ne") }}</a>
-            <a href="{{ whatsapp_group_url }}" target="_blank" rel="noopener noreferrer"><span><small>Community</small>WhatsApp group</span>{{ arrow("ne") }}</a>
-          </div>
-        {% endcall %}
       </div>
     </section>
   </main>

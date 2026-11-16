@@ -1,14 +1,12 @@
 {% extends "base.html" %}
+{% from "components/ftp.html" import arrow, folder, page %}
 {% block title %}Page not found — {{ app_name }}{% endblock %}
 {% block content %}
-<section class="mx-auto flex min-h-[70vh] max-w-2xl flex-col items-center justify-center px-4 py-16 text-center sm:px-6">
-  <img src="/static/img/logo-mark.svg" alt="" width="72" height="72" class="rounded-3xl shadow-lg shadow-brand-600/25">
-  <h1 class="mt-8 text-4xl font-extrabold tracking-tight sm:text-5xl">Page not found</h1>
-  <p class="mt-4 max-w-md text-lg text-muted">That link does not lead anywhere. Try the books or notes instead.</p>
-  <div class="mt-8 flex flex-wrap justify-center gap-3">
-    <a href="/" class="rounded-xl border border-line bg-surface px-5 py-3 font-semibold hover:border-brand-600">Home</a>
-    <a href="/notes" class="rounded-xl border border-line bg-surface px-5 py-3 font-semibold hover:border-brand-600">Notes</a>
-    <a href="/books" class="rounded-xl border border-line bg-surface px-5 py-3 font-semibold hover:border-brand-600">Books</a>
+{% call page("lost", "#404", "Not found", "That link does not lead anywhere. Pick one of these instead.", h1="Page not found") %}
+  <div class="ks-pair">
+    {% call folder("blue", tab="Home", tab_at=0.08) %}<div class="ks-pad"><a class="ftp-btn" data-ghost="true" href="/">Go home {{ arrow("ne") }}</a></div>{% endcall %}
+    {% call folder("green", tab="Tests", tab_at=0.08) %}<div class="ks-pad"><a class="ftp-btn" data-ghost="true" href="/tests">Open tests {{ arrow("ne") }}</a></div>{% endcall %}
   </div>
-</section>
+{% endcall %}
 {% endblock %}
+{% block scripts %}<script src="{{ static_v('js/folder.js') }}" defer></script>{% endblock %}

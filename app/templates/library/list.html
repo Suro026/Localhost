@@ -1,51 +1,52 @@
 {% extends "base.html" %}
+{% from "components/ftp.html" import arrow, folder, page %}
 {% block title %}{{ title }} — {{ app_name }}{% endblock %}
 {% block content %}
-<section class="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14">
-  <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">{{ title }}</h1>
-  <p class="mt-2 max-w-2xl text-muted">{{ intro }}</p>
+{% set tag = "#BOOKS" if kind == "book" else "#NOTES" %}
+{% call page(kind, tag, title, intro) %}
   {% if kind == "book" %}
-  <aside role="note" class="mt-6 rounded-2xl border border-line bg-brand-50 p-4 text-sm leading-relaxed text-ink">
-    <p class="font-semibold">Disclaimer</p>
-    <p class="mt-1">These books were collected from Google and other public sources on the internet. {{ app_name }} does not own them and claims no rights over them. All rights belong to the respective authors and publishers. If you are a rights holder and want a book removed, email <a class="font-semibold text-brand-700 underline" href="mailto:{{ mentors[0].email }}">{{ mentors[0].email }}</a> and it will be taken down.</p>
-  </aside>
+  <div class="ks-tint ks-block">
+    {% call folder("yellow", tab="Disclaimer", tab_at=0.03) %}
+      <div class="ks-pad">
+        <p class="ks-p" style="margin:0">These books were collected from Google and other public sources on the internet. {{ app_name }} does not own them and claims no rights over them. All rights belong to the respective authors and publishers. If you are a rights holder and want a book removed, email <a class="ks-link" href="mailto:{{ mentors[0].email }}">{{ mentors[0].email }}</a> and it will be taken down.</p>
+      </div>
+    {% endcall %}
+  </div>
   {% endif %}
 
   {% if groups %}
-  <label class="mt-8 block">
-    <span class="sr-only">Search {{ title|lower }}</span>
-    <input id="lib-search" type="search" autocomplete="off" placeholder="Search {{ title|lower }}"
-           class="w-full rounded-xl border border-line bg-surface px-4 py-3 text-base outline-none focus:border-brand-600 focus:ring-2 focus:ring-brand-100">
+  <label class="ks-search ks-block">
+    <span class="ftp-sr">Search {{ title|lower }}</span>
+    <input id="lib-search" type="search" autocomplete="off" placeholder="Search {{ title|lower }}">
   </label>
-  <p id="lib-nomatch" class="mt-6 text-muted" hidden>No match. Try a different word.</p>
+  <p id="lib-nomatch" class="ks-p" hidden>No match. Try a different word.</p>
 
-  <div class="mt-8 space-y-10">
+  <div class="ks-groups ks-tint">
     {% for subject, files in groups %}
-    <section data-subject>
-      <h2 class="flex items-baseline gap-2 text-xl font-bold">{{ subject }} <span class="text-sm font-medium text-muted">{{ files|length }} file{{ "s" if files|length != 1 }}</span></h2>
-      <ul class="mt-3 divide-y divide-line overflow-hidden rounded-2xl border border-line bg-surface">
-        {% for f in files %}
-        <li data-file data-title="{{ f.title|lower }}" class="flex flex-wrap items-center justify-between gap-3 px-4 py-3">
-          <div class="min-w-0">
-            <p class="break-words font-semibold">{{ f.title }}</p>
-            <p class="text-sm text-muted">{{ f.ext|upper }} · {{ "%.1f"|format(f.size_mb) }} MB</p>
-          </div>
-          <div class="flex shrink-0 gap-2">
-            <a href="/read/{{ f.id }}" class="btn-primary">Read</a>
-            <a href="/download/{{ f.id }}" class="btn-secondary" rel="noopener" aria-label="Download {{ f.title }}">Download</a>
-          </div>
-        </li>
-        {% endfor %}
-      </ul>
-    </section>
+    <div data-subject>
+      {% call folder("sheet", tab=subject, chip="%02d"|format(files|length), tab_at=0.04) %}
+        <ul class="ks-files">
+          {% for f in files %}
+          <li data-file data-title="{{ f.title|lower }}" class="ks-file">
+            <div class="ks-file-t"><span class="ks-file-b">{{ f.title }}</span><small>{{ f.ext|upper }} · {{ "%.1f"|format(f.size_mb) }} MB</small></div>
+            <div class="ks-file-a">
+              <a href="/read/{{ f.id }}" class="ks-act">Read {{ arrow("ne") }}</a>
+              <a href="/download/{{ f.id }}" class="ks-act" data-ghost="true" rel="noopener" aria-label="Download {{ f.title }}">Download</a>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      {% endcall %}
+    </div>
     {% endfor %}
   </div>
   {% else %}
-  <div class="mt-10 rounded-2xl border border-dashed border-line bg-surface p-8 text-center">
-    <p class="font-semibold">No files yet.</p>
-    <p class="mt-1 text-muted">They appear here once they are added.</p>
+  <div class="ks-tint ks-block">
+    {% call folder("sheet", tab="Empty", tab_at=0.03) %}
+      <div class="ks-pad"><p class="ks-h">No files yet.</p><p class="ks-p" style="margin:6px 0 0">They appear here once they are added.</p></div>
+    {% endcall %}
   </div>
   {% endif %}
-</section>
+{% endcall %}
 {% endblock %}
-{% block scripts %}{% if groups %}<script src="{{ static_v('js/library.js') }}" defer></script>{% endif %}{% endblock %}
+{% block scripts %}<script src="{{ static_v('js/folder.js') }}" defer></script>{% if groups %}<script src="{{ static_v('js/library.js') }}" defer></script>{% endif %}{% endblock %}

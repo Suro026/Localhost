@@ -24,3 +24,17 @@
 </div>
 {%- endmacro %}
 
+{# One full folder-tab page: {% call page("id", "#TAG", "Word", "intro") %}...{% endcall %}. Add folder.js in the page's scripts block. #}
+{% macro page(id, tag, word, kicker=None, h1=None, narrow=False) -%}
+<link rel="stylesheet" href="{{ static_v('css/folder.css') }}">
+<div class="ftp-root">
+  <div class="ftp-wrap ftp-sheets">
+    <h1 class="ftp-sr">{{ h1 or word }}</h1>
+    <section class="ftp-sheet ks-page" data-sheet="{{ id }}" aria-labelledby="s-{{ id }}-h"{% if narrow %} data-narrow="true"{% endif %}>
+      {{ head(id, tag, word, kicker) }}
+      {{ caller() }}
+    </section>
+  </div>
+</div>
+{%- endmacro %}
+
