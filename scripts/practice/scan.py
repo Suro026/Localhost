@@ -20,6 +20,7 @@ HERE = Path(__file__).resolve().parent
 IMG = HERE.parents[1] / "static" / "img" / "p"
 OUT = HERE / "out"
 DPI, GAP = 100, 13
+FOOT_BAND = 110  # rows above the page bottom searched for the footer rule (spec "foot_band" overrides)
 
 
 def ink_of(page):
@@ -87,7 +88,7 @@ def page_body(page):
     ink = ink_of(page)
     H = ink.shape[0]
     head = [y for y in range(0, 110) if long_run(ink[y, 60:-60]) >= 40]
-    foot = [y for y in range(H - 110, H) if long_run(ink[y, 60:-60]) >= 40]
+    foot = [y for y in range(H - FOOT_BAND, H) if long_run(ink[y, 60:-60]) >= 40]
     top = min(head[0] + 9, head[-1] + 2) if head else 80
     bottom = (foot[0] - 3) if foot else H - 85
     return top, bottom
@@ -107,6 +108,8 @@ def snap(page, y):
 
 
 def crop(doc, year, tag, spec):
+    global FOOT_BAND
+    FOOT_BAND = spec.get("foot_band", FOOT_BAND)
     marks_rule = {}
     for rng, m in spec["marks"].items():
         a, b = rng.split("-"); marks_rule.update({n: m for n in range(int(a), int(b) + 1)})
