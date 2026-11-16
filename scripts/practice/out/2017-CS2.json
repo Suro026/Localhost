@@ -1,0 +1,652 @@
+[
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 1,
+  "orig": 56,
+  "section": "GA",
+  "marks": 1,
+  "page": 23,
+  "image": "img/p/2017-CS2-01.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 2,
+  "orig": 57,
+  "section": "GA",
+  "marks": 1,
+  "page": 23,
+  "image": "img/p/2017-CS2-02.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 3,
+  "orig": 58,
+  "section": "GA",
+  "marks": 1,
+  "page": 23,
+  "image": "img/p/2017-CS2-03.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 4,
+  "orig": 59,
+  "section": "GA",
+  "marks": 1,
+  "page": 23,
+  "image": "img/p/2017-CS2-04.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 5,
+  "orig": 60,
+  "section": "GA",
+  "marks": 1,
+  "page": 24,
+  "image": "img/p/2017-CS2-05.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 6,
+  "orig": 61,
+  "section": "GA",
+  "marks": 2,
+  "page": 24,
+  "image": "img/p/2017-CS2-06.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 7,
+  "orig": 62,
+  "section": "GA",
+  "marks": 2,
+  "page": 24,
+  "image": "img/p/2017-CS2-07.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 8,
+  "orig": 63,
+  "section": "GA",
+  "marks": 2,
+  "page": 24,
+  "image": "img/p/2017-CS2-08.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 9,
+  "orig": 64,
+  "section": "GA",
+  "marks": 2,
+  "page": 24,
+  "image": "img/p/2017-CS2-09.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 10,
+  "orig": 65,
+  "section": "GA",
+  "marks": 2,
+  "page": 25,
+  "image": "img/p/2017-CS2-10.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 11,
+  "orig": 1,
+  "section": "CS",
+  "marks": 1,
+  "page": 2,
+  "image": "img/p/2017-CS2-11.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 12,
+  "orig": 2,
+  "section": "CS",
+  "marks": 1,
+  "page": 2,
+  "image": "img/p/2017-CS2-12.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 13,
+  "orig": 3,
+  "section": "CS",
+  "marks": 1,
+  "page": 2,
+  "image": "img/p/2017-CS2-13.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 14,
+  "orig": 4,
+  "section": "CS",
+  "marks": 1,
+  "page": 3,
+  "image": "img/p/2017-CS2-14.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 15,
+  "orig": 5,
+  "section": "CS",
+  "marks": 1,
+  "page": 3,
+  "image": "img/p/2017-CS2-15.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 16,
+  "orig": 6,
+  "section": "CS",
+  "marks": 1,
+  "page": 3,
+  "image": "img/p/2017-CS2-16.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 17,
+  "orig": 7,
+  "section": "CS",
+  "marks": 1,
+  "page": 4,
+  "image": "img/p/2017-CS2-17.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 18,
+  "orig": 8,
+  "section": "CS",
+  "marks": 1,
+  "page": 4,
+  "image": "img/p/2017-CS2-18.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 19,
+  "orig": 9,
+  "section": "CS",
+  "marks": 1,
+  "page": 4,
+  "image": "img/p/2017-CS2-19.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 20,
+  "orig": 10,
+  "section": "CS",
+  "marks": 1,
+  "page": 5,
+  "image": "img/p/2017-CS2-20.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 21,
+  "orig": 11,
+  "section": "CS",
+  "marks": 1,
+  "page": 5,
+  "image": "img/p/2017-CS2-21.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 22,
+  "orig": 12,
+  "section": "CS",
+  "marks": 1,
+  "page": 5,
+  "image": "img/p/2017-CS2-22.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 23,
+  "orig": 13,
+  "section": "CS",
+  "marks": 1,
+  "page": 5,
+  "image": "img/p/2017-CS2-23.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 24,
+  "orig": 14,
+  "section": "CS",
+  "marks": 1,
+  "page": 6,
+  "image": "img/p/2017-CS2-24.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 25,
+  "orig": 15,
+  "section": "CS",
+  "marks": 1,
+  "page": 6,
+  "image": "img/p/2017-CS2-25.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 26,
+  "orig": 16,
+  "section": "CS",
+  "marks": 1,
+  "page": 7,
+  "image": "img/p/2017-CS2-26.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 27,
+  "orig": 17,
+  "section": "CS",
+  "marks": 1,
+  "page": 7,
+  "image": "img/p/2017-CS2-27.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 28,
+  "orig": 18,
+  "section": "CS",
+  "marks": 1,
+  "page": 7,
+  "image": "img/p/2017-CS2-28.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 29,
+  "orig": 19,
+  "section": "CS",
+  "marks": 1,
+  "page": 8,
+  "image": "img/p/2017-CS2-29.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 30,
+  "orig": 20,
+  "section": "CS",
+  "marks": 1,
+  "page": 8,
+  "image": "img/p/2017-CS2-30.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 31,
+  "orig": 21,
+  "section": "CS",
+  "marks": 1,
+  "page": 9,
+  "image": "img/p/2017-CS2-31.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 32,
+  "orig": 22,
+  "section": "CS",
+  "marks": 1,
+  "page": 9,
+  "image": "img/p/2017-CS2-32.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 33,
+  "orig": 23,
+  "section": "CS",
+  "marks": 1,
+  "page": 9,
+  "image": "img/p/2017-CS2-33.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 34,
+  "orig": 24,
+  "section": "CS",
+  "marks": 1,
+  "page": 10,
+  "image": "img/p/2017-CS2-34.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 35,
+  "orig": 25,
+  "section": "CS",
+  "marks": 1,
+  "page": 10,
+  "image": "img/p/2017-CS2-35.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 36,
+  "orig": 26,
+  "section": "CS",
+  "marks": 2,
+  "page": 10,
+  "image": "img/p/2017-CS2-36.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 37,
+  "orig": 27,
+  "section": "CS",
+  "marks": 2,
+  "page": 10,
+  "image": "img/p/2017-CS2-37.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 38,
+  "orig": 28,
+  "section": "CS",
+  "marks": 2,
+  "page": 11,
+  "image": "img/p/2017-CS2-38.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 39,
+  "orig": 29,
+  "section": "CS",
+  "marks": 2,
+  "page": 11,
+  "image": "img/p/2017-CS2-39.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 40,
+  "orig": 30,
+  "section": "CS",
+  "marks": 2,
+  "page": 11,
+  "image": "img/p/2017-CS2-40.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 41,
+  "orig": 31,
+  "section": "CS",
+  "marks": 2,
+  "page": 12,
+  "image": "img/p/2017-CS2-41.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 42,
+  "orig": 32,
+  "section": "CS",
+  "marks": 2,
+  "page": 12,
+  "image": "img/p/2017-CS2-42.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 43,
+  "orig": 33,
+  "section": "CS",
+  "marks": 2,
+  "page": 13,
+  "image": "img/p/2017-CS2-43.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 44,
+  "orig": 34,
+  "section": "CS",
+  "marks": 2,
+  "page": 13,
+  "image": "img/p/2017-CS2-44.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 45,
+  "orig": 35,
+  "section": "CS",
+  "marks": 2,
+  "page": 13,
+  "image": "img/p/2017-CS2-45.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 46,
+  "orig": 36,
+  "section": "CS",
+  "marks": 2,
+  "page": 14,
+  "image": "img/p/2017-CS2-46.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 47,
+  "orig": 37,
+  "section": "CS",
+  "marks": 2,
+  "page": 14,
+  "image": "img/p/2017-CS2-47.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 48,
+  "orig": 38,
+  "section": "CS",
+  "marks": 2,
+  "page": 14,
+  "image": "img/p/2017-CS2-48.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 49,
+  "orig": 39,
+  "section": "CS",
+  "marks": 2,
+  "page": 15,
+  "image": "img/p/2017-CS2-49.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 50,
+  "orig": 40,
+  "section": "CS",
+  "marks": 2,
+  "page": 15,
+  "image": "img/p/2017-CS2-50.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 51,
+  "orig": 41,
+  "section": "CS",
+  "marks": 2,
+  "page": 16,
+  "image": "img/p/2017-CS2-51.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 52,
+  "orig": 42,
+  "section": "CS",
+  "marks": 2,
+  "page": 16,
+  "image": "img/p/2017-CS2-52.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 53,
+  "orig": 43,
+  "section": "CS",
+  "marks": 2,
+  "page": 17,
+  "image": "img/p/2017-CS2-53.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 54,
+  "orig": 44,
+  "section": "CS",
+  "marks": 2,
+  "page": 18,
+  "image": "img/p/2017-CS2-54.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 55,
+  "orig": 45,
+  "section": "CS",
+  "marks": 2,
+  "page": 18,
+  "image": "img/p/2017-CS2-55.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 56,
+  "orig": 46,
+  "section": "CS",
+  "marks": 2,
+  "page": 19,
+  "image": "img/p/2017-CS2-56.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 57,
+  "orig": 47,
+  "section": "CS",
+  "marks": 2,
+  "page": 19,
+  "image": "img/p/2017-CS2-57.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 58,
+  "orig": 48,
+  "section": "CS",
+  "marks": 2,
+  "page": 20,
+  "image": "img/p/2017-CS2-58.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 59,
+  "orig": 49,
+  "section": "CS",
+  "marks": 2,
+  "page": 20,
+  "image": "img/p/2017-CS2-59.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 60,
+  "orig": 50,
+  "section": "CS",
+  "marks": 2,
+  "page": 20,
+  "image": "img/p/2017-CS2-60.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 61,
+  "orig": 51,
+  "section": "CS",
+  "marks": 2,
+  "page": 21,
+  "image": "img/p/2017-CS2-61.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 62,
+  "orig": 52,
+  "section": "CS",
+  "marks": 2,
+  "page": 21,
+  "image": "img/p/2017-CS2-62.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 63,
+  "orig": 53,
+  "section": "CS",
+  "marks": 2,
+  "page": 21,
+  "image": "img/p/2017-CS2-63.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 64,
+  "orig": 54,
+  "section": "CS",
+  "marks": 2,
+  "page": 22,
+  "image": "img/p/2017-CS2-64.webp"
+ },
+ {
+  "year": 2017,
+  "paper": "CS2",
+  "number": 65,
+  "orig": 55,
+  "section": "CS",
+  "marks": 2,
+  "page": 22,
+  "image": "img/p/2017-CS2-65.webp"
+ }
+]

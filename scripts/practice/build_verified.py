@@ -21,11 +21,18 @@ rows = json.loads((HERE / "out" / f"{year}-{paper}.json").read_text(encoding="ut
 table = keys.tables(pdf)[idx]
 assert len(rows) == len(table) == 65 == len(tags), (len(rows), len(table), len(tags))
 out = []
-for r, k in zip(rows, table):
-    no, typ, sec, key, marks = k
+by_no = {k[0]: k for k in table}
+for r in rows:
     n = r["number"]
-    assert no == (n if n <= 10 else n - 10), (n, no)
-    assert typ == ("MCQ" if r["has_options"] else "NAT") and marks == r["marks"], (n, typ, marks)
+    if "orig" in r:  # GOAPS-style paper: the key lists questions in the paper's own order
+        k = by_no[r["orig"]]
+        assert k[2].startswith("GA") == (n <= 10), (n, k)
+    else:
+        k = table[n - 1]
+        assert k[0] == (n if n <= 10 else n - 10), (n, k)
+        assert k[1] == ("MCQ" if r["has_options"] else "NAT"), (n, k)
+    no, typ, sec, key, marks = k
+    assert marks == r["marks"], (n, typ, marks, r["marks"])
     subject, topic = tags[n]
     assert (subject == "General Aptitude") == (n <= 10), n
     q = {"year": year, "paper": paper, "number": n, "section": "GA" if n <= 10 else "CS", "marks": marks, "type": typ,
@@ -35,7 +42,7 @@ for r, k in zip(rows, table):
         assert re.fullmatch(r"[A-D]", key), (n, key)
         q["answer"] = [key]
     else:
-        m = re.fullmatch(r"\s*(-?[\d.]+)\s*:\s*(-?[\d.]+)\s*", key)
+        m = re.fullmatch(r"\s*(-?[\d.]+)\s*(?::|to)\s*(-?[\d.]+)\s*", key)
         assert m, (n, key)
         q["answer"], q["answer_min"], q["answer_max"] = [], float(m.group(1)), float(m.group(2))
     q["source"] = {"document": label, "page": r["page"], "source_type": "official GATE question paper PDF",
