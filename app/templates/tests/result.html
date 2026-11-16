@@ -31,9 +31,9 @@
     {% for r in res.rows %}
     <li class="rounded-2xl border border-line bg-surface p-4">
       <p class="text-sm text-muted">Q{{ loop.index }} · {{ r.question.subject }} · {{ r.question.year }} {{ r.question.paper }} · {{ r.question.qtype }} · {{ r.question.marks }} mark{{ "s" if r.question.marks != 1 }}</p>
-      <p class="mt-2 whitespace-pre-line break-words">{{ r.question.text }}</p>
-      {% if r.question.figure %}<img src="/static/{{ r.question.figure }}" alt="Figure for question {{ loop.index }}" class="mt-3 max-w-full" loading="lazy">{% endif %}
-      {% if r.question.options %}
+      {% if not r.question.image_only %}<p class="mt-2 whitespace-pre-line break-words">{{ r.question.text }}</p>{% endif %}
+      {% if r.question.figure %}<img src="/static/{{ r.question.figure }}" alt="Figure for question {{ loop.index }}" class="mt-3 max-w-full rounded-lg border border-line bg-white" style="max-width:100%;height:auto" loading="lazy">{% endif %}
+      {% if r.question.options and not r.question.image_only %}
       <ul class="mt-3 space-y-1 text-sm">
         {% for o in r.question.options %}<li class="break-words"><span class="font-semibold">{{ "ABCD"[loop.index0] }}.</span> {{ o }}</li>{% endfor %}
       </ul>

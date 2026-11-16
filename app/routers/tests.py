@@ -90,7 +90,7 @@ def start(request: Request) -> HTMLResponse:
         {
             "id": q.id, "number": i + 1, "section": q.section, "marks": q.marks, "type": q.qtype,
             "subject": q.subject, "text": q.text, "options": list(q.options),
-            "figure": f"/static/{q.figure}" if q.figure else None,
+            "figure": f"/static/{q.figure}" if q.figure else None, "image_only": q.image_only,
         }
         for i, q in enumerate(get_question(qid) for qid in spec.ids)
     ]

@@ -38,6 +38,7 @@ class Question:
     mta: bool
     alt_answers: tuple[tuple[str, ...], ...] = ()  # other accepted MSQ sets
     alt_ranges: tuple[tuple[float, float], ...] = ()  # other accepted NAT ranges
+    image_only: bool = False  # the figure image holds the whole question; options are just the letters A-D
 
 
 def _parse(r: dict) -> Question:
@@ -47,6 +48,8 @@ def _parse(r: dict) -> Question:
     answer = tuple(str(a) for a in r.get("answer") or ())
     amin = None if r.get("answer_min") is None else float(r["answer_min"])
     amax = None if r.get("answer_max") is None else float(r["answer_max"])
+    if r.get("image_only") and not r.get("figure"):
+        raise ValueError("image-only question needs its image")
     if qtype not in TYPES or marks not in (1, 2):
         raise ValueError("bad type or marks")
     if qtype in ("MCQ", "MSQ") and len(options) != 4:
@@ -69,7 +72,7 @@ def _parse(r: dict) -> Question:
         id=f"{year}-{paper}-{number:02d}", year=year, paper=paper, number=number, section=str(r["section"]),
         marks=marks, qtype=qtype, subject=str(r["subject"]), topic=str(r.get("topic", "")), text=str(r["text"]),
         options=options, figure=r.get("figure"), answer=answer, answer_min=amin, answer_max=amax,
-        mta=bool(r.get("mta", False)), alt_answers=alt_answers, alt_ranges=alt_ranges,
+        mta=bool(r.get("mta", False)), alt_answers=alt_answers, alt_ranges=alt_ranges, image_only=bool(r.get("image_only", False)),
     )
 
 

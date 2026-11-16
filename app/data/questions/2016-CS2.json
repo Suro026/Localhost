@@ -1,0 +1,1687 @@
+[
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 1,
+  "section": "GA",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Verbal Ability: Sentence Completion",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-01.webp",
+  "image_only": true,
+  "answer": [
+   "B"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 23,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 2,
+  "section": "GA",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Verbal Ability: Sentence Completion",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-02.webp",
+  "image_only": true,
+  "answer": [
+   "A"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 23,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 3,
+  "section": "GA",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Verbal Ability: Odd One Out",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-03.webp",
+  "image_only": true,
+  "answer": [
+   "C"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 23,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 4,
+  "section": "GA",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Verbal Reasoning: Odd One Out",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-04.webp",
+  "image_only": true,
+  "answer": [
+   "D"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 23,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 5,
+  "section": "GA",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Numerical Ability: Quadratic Equations",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-05.webp",
+  "image_only": true,
+  "answer": [
+   "B"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 23,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 6,
+  "section": "GA",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Numerical Ability: Sets",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-06.webp",
+  "image_only": true,
+  "answer": [
+   "A"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 23,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 7,
+  "section": "GA",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Verbal Reasoning: Inference",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-07.webp",
+  "image_only": true,
+  "answer": [
+   "D"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 24,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 8,
+  "section": "GA",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Verbal Reasoning: Logical Deduction",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-08.webp",
+  "image_only": true,
+  "answer": [
+   "D"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 24,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 9,
+  "section": "GA",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Numerical Ability: Counting",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-09.webp",
+  "image_only": true,
+  "answer": [
+   "C"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 24,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 10,
+  "section": "GA",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "General Aptitude",
+  "topic": "Numerical Ability: Graphs of Functions",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-10.webp",
+  "image_only": true,
+  "answer": [
+   "C"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 25,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 11,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Discrete Mathematics",
+  "topic": "Propositional Logic",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-11.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 4.0,
+  "answer_max": 4.0,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 26,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 12,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Calculus",
+  "topic": "Polynomials and Derivatives",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-12.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 9.0,
+  "answer_max": 9.0,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 26,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 13,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Discrete Mathematics",
+  "topic": "Graph Coloring",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-13.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 4.0,
+  "answer_max": 4.0,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 26,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 14,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Linear Algebra",
+  "topic": "Systems of Linear Equations",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-14.webp",
+  "image_only": true,
+  "answer": [
+   "C"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 26,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 15,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Probability and Statistics",
+  "topic": "Conditional Probability",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-15.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 0.55,
+  "answer_max": 0.55,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 27,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 16,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Linear Algebra",
+  "topic": "Eigenvalues and Determinant",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-16.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 0.124,
+  "answer_max": 0.126,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 27,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 17,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Digital Logic",
+  "topic": "Adders and Overflow",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-17.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": -1.0,
+  "answer_max": -1.0,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 27,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 18,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Digital Logic",
+  "topic": "Boolean Algebra",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-18.webp",
+  "image_only": true,
+  "answer": [
+   "C"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 27,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 19,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Digital Logic",
+  "topic": "Number Representation",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-19.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 1.0,
+  "answer_max": 1.0,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 27,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 20,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Computer Organization",
+  "topic": "Instruction Format",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-20.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 16.0,
+  "answer_max": 16.0,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 27,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 21,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Algorithms",
+  "topic": "Graph Traversal: BFS",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-21.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 31.0,
+  "answer_max": 31.0,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 28,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 22,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Programming and Data Structures",
+  "topic": "Pointers: Call by Value",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-22.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 30.0,
+  "answer_max": 30.0,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 28,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 23,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Algorithms",
+  "topic": "Sorting",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-23.webp",
+  "image_only": true,
+  "answer": [
+   "D"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 28,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 24,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Algorithms",
+  "topic": "Dynamic Programming",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-24.webp",
+  "image_only": true,
+  "answer": [
+   "C"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 29,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 25,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Programming and Data Structures",
+  "topic": "Linked Lists",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-25.webp",
+  "image_only": true,
+  "answer": [
+   "C"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 29,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 26,
+  "section": "CS",
+  "marks": 1,
+  "type": "NAT",
+  "subject": "Theory of Computation",
+  "topic": "Minimal DFA",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-26.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 2.0,
+  "answer_max": 2.0,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 29,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 27,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Theory of Computation",
+  "topic": "Context-Free Languages",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-27.webp",
+  "image_only": true,
+  "answer": [
+   "C"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 29,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 28,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Theory of Computation",
+  "topic": "Language Hierarchy",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-28.webp",
+  "image_only": true,
+  "answer": [
+   "D"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 30,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 29,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Compiler Design",
+  "topic": "Phases of a Compiler",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-29.webp",
+  "image_only": true,
+  "answer": [
+   "B"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 30,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 30,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Operating System",
+  "topic": "Page Replacement",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-30.webp",
+  "image_only": true,
+  "answer": [
+   "D"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 30,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 31,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Databases",
+  "topic": "Indexing: B+ Trees",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-31.webp",
+  "image_only": true,
+  "answer": [
+   "A"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 31,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 32,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Databases",
+  "topic": "Concurrency Control: Serializability",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-32.webp",
+  "image_only": true,
+  "answer": [
+   "A"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 31,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 33,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Computer Networks",
+  "topic": "Network Security: Digital Signatures",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-33.webp",
+  "image_only": true,
+  "answer": [
+   "A"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 31,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 34,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Computer Networks",
+  "topic": "Ethernet and MAC",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-34.webp",
+  "image_only": true,
+  "answer": [
+   "D"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 31,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 35,
+  "section": "CS",
+  "marks": 1,
+  "type": "MCQ",
+  "subject": "Computer Networks",
+  "topic": "Application Layer Protocols",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-35.webp",
+  "image_only": true,
+  "answer": [
+   "C"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 32,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 36,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Discrete Mathematics",
+  "topic": "Relations",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-36.webp",
+  "image_only": true,
+  "answer": [
+   "B"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 32,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 37,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Discrete Mathematics",
+  "topic": "Predicate Logic",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-37.webp",
+  "image_only": true,
+  "answer": [
+   "D"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 32,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 38,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Discrete Mathematics",
+  "topic": "Graph Theory",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-38.webp",
+  "image_only": true,
+  "answer": [
+   "B"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 33,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 39,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Discrete Mathematics",
+  "topic": "Modular Arithmetic",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-39.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 4.0,
+  "answer_max": 4.0,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 33,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 40,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Computer Organization",
+  "topic": "Pipelining",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-40.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 28.0,
+  "answer_max": 28.0,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 33,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 41,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Computer Organization",
+  "topic": "Instruction Format",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-41.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 500.0,
+  "answer_max": 500.0,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 33,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 42,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Computer Organization",
+  "topic": "Cache Memory",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-42.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 24.0,
+  "answer_max": 24.0,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 33,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 43,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Computer Organization",
+  "topic": "Pipelining",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-43.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 3.9,
+  "answer_max": 4.1,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 34,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 44,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Programming and Data Structures",
+  "topic": "Heaps",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-44.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 8.0,
+  "answer_max": 8.0,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 34,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 45,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Programming and Data Structures",
+  "topic": "Loop Invariants",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-45.webp",
+  "image_only": true,
+  "answer": [
+   "C"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 34,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 46,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Programming and Data Structures",
+  "topic": "Tree Traversal",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-46.webp",
+  "image_only": true,
+  "answer": [
+   "C"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 35,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 47,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Programming and Data Structures",
+  "topic": "Recursion",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-47.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 3.0,
+  "answer_max": 3.0,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 35,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 48,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Algorithms",
+  "topic": "Dynamic Programming: Matrix Chain",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-48.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 1500.0,
+  "answer_max": 1500.0,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 35,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 49,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Algorithms",
+  "topic": "Recurrence and Time Complexity",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-49.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 2.2,
+  "answer_max": 2.4,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 36,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 50,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Programming and Data Structures",
+  "topic": "Binary Search Trees",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-50.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 64.0,
+  "answer_max": 64.0,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 36,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 51,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Algorithms",
+  "topic": "Graph Representation",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-51.webp",
+  "image_only": true,
+  "answer": [
+   "B"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 37,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 52,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Theory of Computation",
+  "topic": "Finite Automata",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-52.webp",
+  "image_only": true,
+  "answer": [
+   "B"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 37,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 53,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Theory of Computation",
+  "topic": "Context-Free Languages",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-53.webp",
+  "image_only": true,
+  "answer": [
+   "B"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 37,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 54,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Theory of Computation",
+  "topic": "Decidability",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-54.webp",
+  "image_only": true,
+  "answer": [
+   "C"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 38,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 55,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Compiler Design",
+  "topic": "Left Recursion",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-55.webp",
+  "image_only": true,
+  "answer": [
+   "B"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 38,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 56,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Compiler Design",
+  "topic": "Grammars",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-56.webp",
+  "image_only": true,
+  "answer": [
+   "A"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 39,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 57,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Operating System",
+  "topic": "CPU Scheduling",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-57.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 8.2,
+  "answer_max": 8.3,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 39,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 58,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Operating System",
+  "topic": "Process Synchronization",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-58.webp",
+  "image_only": true,
+  "answer": [
+   "C"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 40,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 59,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Operating System",
+  "topic": "Semaphores",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-59.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 7.0,
+  "answer_max": 7.0,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 40,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 60,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Operating System",
+  "topic": "File Systems and Caching",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-60.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 30.0,
+  "answer_max": 30.0,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 41,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 61,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Databases",
+  "topic": "Transactions: Recoverability",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-61.webp",
+  "image_only": true,
+  "answer": [
+   "C"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 41,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 62,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Databases",
+  "topic": "SQL",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-62.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 2.0,
+  "answer_max": 2.0,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 42,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 63,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Computer Networks",
+  "topic": "CSMA/CD",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-63.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 200.0,
+  "answer_max": 200.0,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 42,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 64,
+  "section": "CS",
+  "marks": 2,
+  "type": "MCQ",
+  "subject": "Computer Networks",
+  "topic": "IEEE 802.11 Wireless LAN",
+  "text": "",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "figure": "img/p/2016-CS2-64.webp",
+  "image_only": true,
+  "answer": [
+   "B"
+  ],
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 43,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ },
+ {
+  "year": 2016,
+  "paper": "CS2",
+  "number": 65,
+  "section": "CS",
+  "marks": 2,
+  "type": "NAT",
+  "subject": "Computer Networks",
+  "topic": "Sliding Window: Selective Repeat",
+  "text": "",
+  "options": [],
+  "figure": "img/p/2016-CS2-65.webp",
+  "image_only": true,
+  "answer": [],
+  "answer_min": 4.0,
+  "answer_max": 4.0,
+  "source": {
+   "document": "GATE 2016 CS question paper (Set 2)",
+   "page": 43,
+   "source_type": "official GATE question paper PDF",
+   "answer_key": "official key table appended to the same IITG PDF"
+  }
+ }
+]

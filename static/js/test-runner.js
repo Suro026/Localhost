@@ -51,7 +51,7 @@
   right.append(warnEl, timerEl, calcBtn, paletteToggle, submitBtn);
   head.append(title, right);
 
-  var body = el("div", "mt-4 grid gap-4 lg:grid-cols-[1fr_280px]");
+  var body = el("div", "mt-4 grid gap-4 lg:grid-cols-[minmax(0,1fr)_280px]");
   var card = el("div", "min-w-0 rounded-2xl border border-line bg-surface p-4 sm:p-6");
   var side = el("aside", "hidden rounded-2xl border border-line bg-surface p-4 lg:block");
   side.setAttribute("aria-label", "Question palette");
@@ -232,10 +232,10 @@
     var q = qs[st.cur];
     var parts = [];
     parts.push(el("p", "text-sm text-muted", "Question " + (st.cur + 1) + " of " + qs.length + " · " + q.subject + " · " + q.type + " · " + q.marks + " mark" + (q.marks === 1 ? "" : "s")));
-    parts.push(el("p", "mt-3 whitespace-pre-line break-words text-base leading-relaxed", q.text));
+    if (!q.image_only) parts.push(el("p", "mt-3 whitespace-pre-line break-words text-base leading-relaxed", q.text));
     if (q.figure) {
-      var img = el("img", "mt-3 max-w-full rounded-lg border border-line");
-      img.src = q.figure; img.alt = "Figure for question " + (st.cur + 1); img.loading = "lazy";
+      var img = el("img", "mt-3 max-w-full rounded-lg border border-line bg-white");
+      img.style.height = "auto"; img.style.maxWidth = "100%"; img.src = q.figure; img.alt = q.image_only ? "Question " + (st.cur + 1) + " as printed in the paper" : "Figure for question " + (st.cur + 1); img.loading = "lazy";
       parts.push(img);
     }
     var cur = st.answers[q.id];
@@ -277,7 +277,7 @@
             setAnswer(q, set);
           } else { setAnswer(q, letter); }
         });
-        row.append(box, el("span", "min-w-0 break-words", letter + ". " + opt));
+        row.append(box, el("span", "min-w-0 break-words", q.image_only ? "Option " + letter : letter + ". " + opt));
         list.appendChild(row);
       });
       parts.push(list);
