@@ -17,8 +17,9 @@ from PIL import Image, ImageChops
 ROOT = Path(__file__).resolve().parents[2]
 IMG = ROOT / "static" / "img" / "p"
 OUT = ROOT / "scripts" / "practice" / "out"
-LABEL = re.compile(r"^Q\.\s?(\d+)\s*$")
-FOOT = re.compile(r"^(\d{4}|COMPUTER SCIENCE.{0,40}CS|CS\s?\(Set [A-Z0-9]\)|\d+\s*/\s*\d+|Page \d+ of \d+|GATE \d{4}.*|[A-Z ]*\s?-\s?[A-Z]{2}\s*\d*/\d+)$")
+LABEL = re.compile(r"^Q\.\s?(\d+)(?=\s|$)")
+CARRY = re.compile(r"^Q\.\s?\d+\s*(to|–|-)\s*Q\.\s?\d+", re.I)
+FOOT = re.compile(r"^(\d{4}|.*INFORMATION TECH.*|CS-[A-Z]|COMPUTER SCIENCE.{0,40}CS|CS\s?\(Set [A-Z0-9]\)|\d+\s*/\s*\d+|Page \d+ of \d+|GATE \d{4}.*|[A-Z ]*\s?-\s?[A-Z]{2}\s*\d*/\d+)$")
 GROUP = re.compile(r"^(Common Data Questions?|Statement for Linked Answer Questions?|Common Data for Questions)", re.I)
 STOP = re.compile(r"(^General Aptitude \(GA\) Questions|^Linked Answer Questions\s*$|^(Common Data Questions?|Statement for Linked Answer Questions?|Common Data for Questions)|^Q\.\s?\d+\s*(to|–|-)\s*Q\.\s?\d+.*carry|END OF (THE )?QUESTION PAPER|^Page \d+|Space for rough)", re.I)
 
@@ -47,15 +48,17 @@ def main():
     # collect anchors: sequence GA 1..10 then CS 1..55, taking the first set only
     seq65 = "--seq65" in sys.argv  # paper numbered Q.1..Q.65 (CS first, General Aptitude last)
     anchors, seq_ga, seq_cs = [], 0, 0
-    stops, foot, groups = [], {}, []
+    stops, foot, groups, head = [], {}, [], {}
     for pn, bb, t in lines(doc, lo, hi):
         if FOOT.match(t) and bb[1] > doc[pn].rect.height * 0.8:
             foot[pn] = min(foot.get(pn, 1e9), bb[1])
+        if FOOT.match(t) and bb[3] < doc[pn].rect.height * 0.2:
+            head[pn] = max(head.get(pn, 0), bb[3])
         if STOP.search(t):
             stops.append((pn, bb[1]))
         if GROUP.match(t):
             groups.append((pn, bb[1]))
-        m = LABEL.match(t)
+        m = None if CARRY.match(t) else LABEL.match(t)
         if not m:
             continue
         n = int(m.group(1))
@@ -77,7 +80,8 @@ def main():
         out = []
         for p in range(a_pn, e_pn + 1):
             H = doc[p].rect.height
-            y0 = max(top, a_y - 4) if p == a_pn else top
+            base = head[p] + 2 if p in head else top
+            y0 = max(base, a_y - 4) if p == a_pn else base
             y1 = (e_y - 3) if (p == e_pn and e_y is not None) else min(H - bottom, foot.get(p, 1e9) - 3)
             if y1 - y0 > 6:
                 out.append((p, y0, y1))
@@ -99,7 +103,8 @@ def main():
                 end_pn, end_y = sp, sy; break
         for p in range(pn, end_pn + 1):
             H = doc[p].rect.height
-            y0 = max(top, y - 4) if p == pn else top
+            base = head[p] + 2 if p in head else top
+            y0 = max(base, y - 4) if p == pn else base
             y1 = (end_y - 3) if (p == end_pn and end_y is not None) else min(H - bottom, foot.get(p, 1e9) - 3)
             if y1 - y0 > 6:
                 segs.append((p, y0, y1))

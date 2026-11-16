@@ -9,10 +9,11 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 year, paper, mod, name = int(sys.argv[1]), sys.argv[2], sys.argv[3], sys.argv[4]
 tags = getattr(import_module(mod), name)
+bynum = "--bynum" in sys.argv  # tags keyed by our number (1-10 GA, 11-65 CS) for papers whose GA and CS numbering both restart
 rows = json.loads((HERE / "out" / f"{year}-{paper}.json").read_text(encoding="utf-8"))
 out = []
 for r in sorted(rows, key=lambda r: r["number"]):
-    subject, topic = tags[r["orig"]]
+    subject, topic = tags[r["number"] if bynum else r["orig"]]
     assert (subject == "General Aptitude") == (r["number"] <= 10), r["number"]
     out.append({"year": year, "paper": paper, "number": r["number"], "paper_no": r["orig"], "marks": r["marks"], "subject": subject, "topic": topic,
                 "image": r["image"], "source": "official GATE question paper PDF, first set; answer key not published in the file"})
