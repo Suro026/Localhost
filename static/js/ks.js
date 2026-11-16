@@ -86,10 +86,14 @@
     if (who) document.documentElement.setAttribute("data-auth", "in"); else document.documentElement.removeAttribute("data-auth");
     document.querySelectorAll("[data-avatar]").forEach(function (a) {
       var letter = a.querySelector("[data-avatar-letter]"), img = a.querySelector("[data-avatar-img]");
-      if (letter) letter.textContent = who ? who.trim().charAt(0).toUpperCase() : "";
+      var old = a.querySelector("[data-avatar-svg]"); if (old) old.remove();
+      var chosen = who && window.KSAvatars ? KSAvatars.current() : "";
+      if (letter) letter.textContent = who && !chosen ? who.trim().charAt(0).toUpperCase() : "";
+      if (chosen) { var sv = KSAvatars.node(chosen); if (sv) { sv.setAttribute("data-avatar-svg", ""); sv.setAttribute("class", "absolute inset-0 h-full w-full"); a.appendChild(sv); } }
       a.setAttribute("aria-label", who ? "Your profile: " + who : "Your profile");
       if (img) {
-        if (h && h.p) { if (img.getAttribute("src") !== h.p) { img.onload = function () { img.hidden = false; }; img.onerror = function () { img.hidden = true; }; img.src = h.p; } }
+        if (chosen) { img.hidden = true; }
+        else if (h && h.p) { if (img.getAttribute("src") !== h.p) { img.onload = function () { img.hidden = false; }; img.onerror = function () { img.hidden = true; }; img.src = h.p; } }
         else { img.hidden = true; img.removeAttribute("src"); }
       }
     });

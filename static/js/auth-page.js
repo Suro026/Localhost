@@ -134,7 +134,9 @@
     var head = el("div", "rounded-2xl border border-line bg-surface p-5 sm:flex sm:items-center sm:gap-5");
     var av = el("div", "relative mb-4 flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-full bg-brand-600 text-3xl font-extrabold text-white sm:mb-0");
     av.appendChild(el("span", "", name.trim().charAt(0).toUpperCase()));
-    if (p.photo) {
+    var chosen = window.KSAvatars ? KSAvatars.current() : "";
+    if (chosen) { var big = KSAvatars.node(chosen); if (big) { big.setAttribute("class", "absolute inset-0 h-full w-full"); av.replaceChildren(big); } }
+    else if (p.photo) {
       var img = el("img", "absolute inset-0 h-full w-full object-cover"); img.alt = ""; img.width = 80; img.height = 80;
       img.referrerPolicy = "no-referrer"; img.hidden = true; img.onload = function () { img.hidden = false; }; img.src = p.photo; av.appendChild(img);
     }
@@ -169,6 +171,37 @@
       });
     });
 
+    // ---- avatar picker ----
+    var pick = el("section", "ks-avpick"); pick.setAttribute("aria-labelledby", "av-h");
+    pick.appendChild(el("h2", "text-lg font-bold", "Choose your avatar")); pick.firstChild.id = "av-h";
+    pick.appendChild(el("p", "mt-1 text-sm text-muted", "Pick a character to show instead of a photo. You can change it any time."));
+    var avGrid = el("div", "ks-avgrid"); avGrid.setAttribute("role", "radiogroup"); avGrid.setAttribute("aria-label", "Avatars");
+    var streakNow = KS.streak();
+    function paintPick() {
+      var cur = KSAvatars.current(); avGrid.replaceChildren();
+      var opts = [{ id: "", name: p.photo ? "My photo" : "My initial" }].concat(KSAvatars.list);
+      opts.forEach(function (a) {
+        var open = !a.id || KSAvatars.unlocked(a.id, streakNow);
+        var b = el("button", "ks-avopt"); b.type = "button"; b.setAttribute("role", "radio"); b.setAttribute("aria-checked", cur === a.id ? "true" : "false"); b.disabled = !open;
+        b.setAttribute("aria-label", a.name + (open ? "" : ", locked: needs a " + a.days + "-day streak"));
+        var face = el("span", "ks-avface");
+        if (a.id) { var n = KSAvatars.node(a.id); if (n) face.appendChild(n); }
+        else if (p.photo) { var im = el("img"); im.src = p.photo; im.alt = ""; im.referrerPolicy = "no-referrer"; face.appendChild(im); }
+        else face.textContent = name.trim().charAt(0).toUpperCase();
+        b.append(face, el("span", "ks-avname", open ? a.name : a.days + "-day streak"));
+        b.addEventListener("click", function () {
+          if (!open) return;
+          C.setAvatar(a.id).then(function (r) {
+            if (!r.ok) say(r.error, false); else say(a.id ? a.name + " selected." : "Using your " + (p.photo ? "photo" : "initial") + ".", true);
+            paintPick(); var big2 = KSAvatars.current();
+            av.replaceChildren(); if (big2) { var nn = KSAvatars.node(big2); nn.setAttribute("class", "absolute inset-0 h-full w-full"); av.appendChild(nn); } else av.appendChild(el("span", "", name.trim().charAt(0).toUpperCase()));
+          });
+        });
+        avGrid.appendChild(b);
+      });
+    }
+    paintPick(); pick.appendChild(avGrid);
+
     // ---- your numbers (from this device's saved results) ----
     var at = KS.attempts(), seen = 0, right = 0, wrong = 0;
     at.forEach(function (a) { a.rows.forEach(function (r) { seen++; if (r[3] === "c") right++; else if (r[3] === "w") wrong++; }); });
@@ -178,7 +211,9 @@
     [["Tests taken", String(at.length)], ["Questions seen", String(seen)], ["Accuracy", KS.pct(right, right + wrong) + "%"],
      ["Day streak", String(KS.streak())], ["Studied this week", mins + " min"]].forEach(function (t) {
       var c = el("div", "rounded-2xl border border-line bg-surface p-4");
-      c.append(el("p", "text-xl font-extrabold", t[1]), el("p", "mt-1 text-xs text-muted", t[0]));
+      var big = el("p", "text-xl font-extrabold", t[1]), num = parseInt(t[1], 10);
+      if (window.KSActivity && isFinite(num)) KSActivity.countUp(big, num, t[1].replace(/^\d+/, ""));
+      c.append(big, el("p", "mt-1 text-xs text-muted", t[0]));
       grid.appendChild(c);
     });
     var links = el("p", "mt-3 text-sm");
@@ -218,7 +253,11 @@
       C.deleteAccount().then(function (r) { if (r.ok) location.replace("/"); else { del.disabled = false; say(r.error, false); } });
     });
     danger.appendChild(del);
-    root.replaceChildren(head, grid, links, card, danger);
+    var activity = window.KSActivity ? KSActivity.card() : document.createComment("");
+    av.classList.add("ks-avclick"); av.title = "Change avatar"; av.setAttribute("role", "button"); av.tabIndex = 0;
+    function toPicker() { pick.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "center" }); var f = pick.querySelector("[aria-checked='true']"); if (f) f.focus({ preventScroll: true }); }
+    av.addEventListener("click", toPicker); av.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toPicker(); } });
+    root.replaceChildren(head, pick, activity, grid, links, card, danger);
   }
 
   if (window.KSCloud) start(); else document.addEventListener("kscloud:ready", start, { once: true });

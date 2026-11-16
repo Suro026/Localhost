@@ -25,7 +25,7 @@ try { initializeAppCheck(app, { provider: new ReCaptchaEnterpriseProvider("6Lep7
 const auth = getAuth(app);
 const db = getFirestore(app);
 const PULL_EVERY = 10 * 60 * 1000;
-const LOCAL_KEYS = ["ks-attempts", "ks-study", "ks-timer", "ks-auth", "ks-synced-uid", "ks-last-pull"];
+const LOCAL_KEYS = ["ks-attempts", "ks-study", "ks-timer", "ks-auth", "ks-synced-uid", "ks-last-pull", "ks-avatar"];
 
 const MESSAGES = {
   "auth/invalid-credential": "Wrong email or password.",
@@ -60,6 +60,7 @@ const subs = [];
 // Firestore refuses nested arrays, so rows and the study object are stored as JSON strings.
 const attemptsRef = (uid) => collection(db, "users", uid, "attempts");
 const studyRef = (uid) => doc(db, "users", uid, "meta", "study");
+const profileRef = (uid) => doc(db, "users", uid, "meta", "profile"); // { avatar: "owl" }
 const attemptDoc = (a) => ({
   t: a.t, title: String(a.title || ""), mode: String(a.mode || ""), total: a.total, max: a.max,
   correct: a.correct, wrong: a.wrong, skipped: a.skipped, secs: a.secs || 0, rows: JSON.stringify(a.rows),
@@ -126,6 +127,12 @@ async function pull(force) {
     else if ((ls.updated || 0) > (remoteStudy.updated || 0)) await pushStudy();
   } else if (ls.sessions.length || (ls.tasks && ls.tasks.length) || ls.reminder.on || ls.plan.target) { await pushStudy(); }
 
+  try { // avatar: the account wins on a new device; a choice made on this device is uploaded
+    const pd = await getDoc(profileRef(uid)), remoteAv = pd.exists() && typeof pd.data().avatar === "string" ? pd.data().avatar : "";
+    const localAv = lsGet("ks-avatar") || "";
+    if (remoteAv && remoteAv !== localAv && (first || !localAv)) { lsSet("ks-avatar", remoteAv); if (KS.renderAccount) KS.renderAccount(); changed = changed || false; }
+    else if (localAv && localAv !== remoteAv) await setDoc(profileRef(uid), { avatar: localAv });
+  } catch (e) { /* the avatar still works on this device */ }
   lsSet("ks-synced-uid", uid); lsSet("ks-last-pull", String(Date.now()));
   return changed;
 }
@@ -196,6 +203,11 @@ window.KSCloud = {
   google: wrap(() => signInWithPopup(auth, new GoogleAuthProvider())),
   reset: wrap((email) => sendPasswordResetEmail(auth, email)),
   syncNow: wrap(() => pull(true)),
+  setAvatar: wrap(async (id) => {
+    if (id) lsSet("ks-avatar", id); else lsDel("ks-avatar");
+    if (user) await setDoc(profileRef(user.uid), { avatar: id || "" });
+    if (KS.renderAccount) KS.renderAccount();
+  }),
   session: async () => (auth.currentUser ? startSession(auth.currentUser) : false),
   signOut: wrap(async () => { await endSession(); await fbSignOut(auth); wipeLocal(); }),
   deleteAccount: wrap(async () => {
@@ -203,6 +215,7 @@ window.KSCloud = {
     const uid = auth.currentUser.uid;
     await clearRemoteAttempts(uid);
     await deleteDoc(studyRef(uid));
+    try { await deleteDoc(profileRef(uid)); } catch (e) { /* nothing to remove */ }
     await deleteUser(auth.currentUser);
     await endSession();
     wipeLocal();
