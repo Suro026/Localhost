@@ -25,7 +25,11 @@ def anchors(doc):
             near = [w for w in words if abs(w[1] - r.y0) < 5 and w[0] > r.x1 and w[0] < r.x1 + 120 and w[4].strip().isdigit()]
             right = [w for w in words if abs(w[1] - r.y0) < 5 and w[0] > 330 and w[4].strip().isdigit()]
             assert near and right, (pn, r)
-            found.append((pn, r.y1 + 2, int(near[0][4]), int(right[0][4])))  # page, y below the heading, number, marks
+            near.sort(key=lambda w: w[0]); num = near[0][4].strip(); last = near[0]
+            for w in near[1:]:  # a two-digit number can be split into two words ("3" "5")
+                if w[0] - last[2] < 6:
+                    num += w[4].strip(); last = w
+            found.append((pn, r.y1 + 2, int(num), int(right[0][4])))  # page, y below the heading, number, marks
     return sorted(found, key=lambda a: (a[0], a[1]))
 
 
