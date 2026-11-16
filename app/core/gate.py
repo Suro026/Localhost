@@ -27,7 +27,7 @@ LEGAL_VERSION = "2026-11-16"  # bump when the Privacy, Terms or Cookie text chan
 RATE_LIMITS = {"/auth/session": (20, 60), "/tests/result": (30, 60), "/legal/accept": (20, 60)}
 MAX_TOKEN = 4096
 
-PUBLIC_EXACT = {"/", "/login", "/account", "/privacy", "/terms", "/cookies", "/consent", "/legal/accept", "/sw.js", "/manifest.webmanifest", "/offline", "/sitemap.xml", "/robots.txt", "/auth/session", "/auth/logout"}
+PUBLIC_EXACT = {"/", "/login", "/account", "/books", "/notes", "/privacy", "/terms", "/cookies", "/consent", "/legal/accept", "/sw.js", "/manifest.webmanifest", "/offline", "/sitemap.xml", "/robots.txt", "/auth/session", "/auth/logout"}
 PUBLIC_PREFIX = ("/static/", "/.well-known/")
 
 router = APIRouter()

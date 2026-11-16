@@ -3,8 +3,8 @@ import pytest
 from app.core import gate
 from tests.conftest import TEST_TOKEN
 
-GATED = ["/tests", "/tests/start?mode=mock", "/books", "/notes", "/progress", "/study", "/profile", "/exams", "/download/x", "/read/x", "/nope"]
-PUBLIC = ["/", "/login", "/offline", "/manifest.webmanifest", "/sitemap.xml", "/robots.txt", "/sw.js", "/google1589151a9c65e3a8.html", "/static/css/app.css"]
+GATED = ["/tests", "/tests/start?mode=mock", "/progress", "/study", "/profile", "/exams", "/download/x", "/read/x", "/nope"]
+PUBLIC = ["/", "/books", "/notes", "/login", "/offline", "/manifest.webmanifest", "/sitemap.xml", "/robots.txt", "/sw.js", "/google1589151a9c65e3a8.html", "/static/css/app.css"]
 
 
 @pytest.mark.parametrize("path", GATED)

@@ -39,7 +39,7 @@ async def offline():
     return FileResponse(PWA / "offline.html", media_type="text/html")
 
 
-SITEMAP_PATHS = ["/"]  # everything else needs sign-in, so only the public landing page is listed
+SITEMAP_PATHS = ["/", "/books", "/notes"]  # the public pages; reading, downloading and tests need sign-in
 
 
 @app.get("/sitemap.xml", include_in_schema=False)
