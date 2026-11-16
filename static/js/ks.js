@@ -93,7 +93,7 @@
       a.setAttribute("aria-label", who ? "Your profile: " + who : "Your profile");
       if (img) {
         if (chosen) { img.hidden = true; }
-        else if (h && h.p) { if (img.getAttribute("src") !== h.p) { img.onload = function () { img.hidden = false; }; img.onerror = function () { img.hidden = true; }; img.src = h.p; } }
+        else if (h && h.p) { if (img.getAttribute("src") !== h.p) { img.onload = function () { img.hidden = false; }; img.onerror = function () { img.hidden = true; }; img.src = h.p; } else { img.hidden = false; } }
         else { img.hidden = true; img.removeAttribute("src"); }
       }
     });

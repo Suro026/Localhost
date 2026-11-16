@@ -133,13 +133,19 @@
     // ---- identity ----
     var head = el("div", "rounded-2xl border border-line bg-surface p-5 sm:flex sm:items-center sm:gap-5");
     var av = el("div", "relative mb-4 flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-full bg-brand-600 text-3xl font-extrabold text-white sm:mb-0");
-    av.appendChild(el("span", "", name.trim().charAt(0).toUpperCase()));
-    var chosen = window.KSAvatars ? KSAvatars.current() : "";
-    if (chosen) { var big = KSAvatars.node(chosen); if (big) { big.setAttribute("class", "absolute inset-0 h-full w-full"); av.replaceChildren(big); } }
-    else if (p.photo) {
-      var img = el("img", "absolute inset-0 h-full w-full object-cover"); img.alt = ""; img.width = 80; img.height = 80;
-      img.referrerPolicy = "no-referrer"; img.hidden = true; img.onload = function () { img.hidden = false; }; img.src = p.photo; av.appendChild(img);
+    // one place draws the header picture: chosen avatar, else the account photo, else the initial
+    function drawAv() {
+      var cur = window.KSAvatars ? KSAvatars.current() : "";
+      av.replaceChildren();
+      var node = cur ? KSAvatars.node(cur) : null;
+      if (node) { node.setAttribute("class", "absolute inset-0 h-full w-full"); av.appendChild(node); return; }
+      av.appendChild(el("span", "", name.trim().charAt(0).toUpperCase()));
+      if (p.photo) {
+        var img = el("img", "absolute inset-0 h-full w-full object-cover"); img.alt = ""; img.width = 80; img.height = 80;
+        img.referrerPolicy = "no-referrer"; img.hidden = true; img.onload = function () { img.hidden = false; }; img.src = p.photo; av.appendChild(img);
+      }
     }
+    drawAv();
     var who = el("div", "min-w-0 flex-1");
     var nameRow = el("div", "flex flex-wrap items-center gap-2");
     var nameEl = el("h2", "break-words text-2xl font-extrabold", name);
@@ -193,8 +199,7 @@
           if (!open) return;
           C.setAvatar(a.id).then(function (r) {
             if (!r.ok) say(r.error, false); else say(a.id ? a.name + " selected." : "Using your " + (p.photo ? "photo" : "initial") + ".", true);
-            paintPick(); var big2 = KSAvatars.current();
-            av.replaceChildren(); if (big2) { var nn = KSAvatars.node(big2); nn.setAttribute("class", "absolute inset-0 h-full w-full"); av.appendChild(nn); } else av.appendChild(el("span", "", name.trim().charAt(0).toUpperCase()));
+            paintPick(); drawAv();
           });
         });
         avGrid.appendChild(b);
